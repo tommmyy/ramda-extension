@@ -1,0 +1,10 @@
+{
+  "rootDir": "./src",
+  "cacheDirectory": "/tmp/jest_cache",
+  "testPathDirs": [
+    "<rootDir>"
+  ],
+  "modulePathIgnorePatterns": [
+    "/build/"
+  ]
+}

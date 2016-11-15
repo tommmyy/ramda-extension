@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "latest",
+    "stage-1"
+  ],
+  "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-react-constant-elements",
+    [
+      "transform-regenerator",
+      {
+        "async": false
+      }
+    ],
+    [
+      "transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true
+      }
+    ]
+  ]
+}

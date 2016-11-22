@@ -5,9 +5,9 @@ export const isString = R.is(String);
 export const isFunction = R.is(Function);
 export const isObject = R.is(Object);
 export const isPromise = R.allPass([isObject, R.compose(isFunction, R.prop('then'))]);
-export const deepMerge = (a, b) => (isObject(a) && isObject(b)) ?
+export const deepMerge = R.curry((a, b) => (isObject(a) && isObject(b)) ?
 	R.mergeWith(deepMerge, a, b) :
-	b;
+	b);
 export const notNil = R.compose(R.not, R.isNil);
 export const notEmpty = R.compose(R.not, R.isEmpty);
 export const log = R.tap((x) => console.log(x));
@@ -43,6 +43,10 @@ export const dispatch = R.curry(
 export const alwaysNull = R.always(null);
 export const noop = alwaysNull;
 
+export const startsWith = R.curry((prefix, x) =>
+	R.test(new RegExp(`^${prefix}`), x)
+);
+
 export default {
 	deepMerge,
 	dispatch,
@@ -61,4 +65,5 @@ export default {
 	isNilOrEmptyString,
 	alwaysNull,
 	noop,
+	startsWith,
 };

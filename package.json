@@ -1,7 +1,12 @@
 {
   "name": "ramda-extension-build",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https://github.com/tommmyy/ramda-extension.git"
+  },
   "description": "Utilities function built on top of Ramda",
   "main": "./src/index.js",
   "scripts": {

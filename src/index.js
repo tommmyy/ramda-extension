@@ -43,9 +43,24 @@ export const dispatch = R.curry(
 export const alwaysNull = R.always(null);
 export const noop = alwaysNull;
 
+/**
+ * Testing string if starts with some prefix.
+ *
+ * @param  {string} prefix
+ * @param  {string} x
+ * @return {boolean}          True if `x` starts with `prefix`
+ */
 export const startsWith = R.curry((prefix, x) =>
 	R.test(new RegExp(`^${prefix}`), x)
 );
+
+
+/**
+ * Converts variadic function to function that accepts list.
+
+ * (a, b, c, ... → d) → ([a, b, c, ...] → d)
+ */
+export const fromVariadic = R.unapply(R.identity);
 
 export default {
 	deepMerge,
@@ -66,4 +81,5 @@ export default {
 	alwaysNull,
 	noop,
 	startsWith,
+	fromVariadic,
 };

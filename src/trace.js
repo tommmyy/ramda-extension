@@ -1,3 +1,6 @@
 import R from 'ramda';
 
-export default R.tap((x, y) => console.log(x, y));
+/**
+ * @sig a -> b -> b
+ */
+export default R.curry((x, y) => (console.log(x, y), y));

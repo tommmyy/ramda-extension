@@ -1,13 +1,13 @@
 {
   "name": "ramda-extension-build",
   "private": true,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "repository" :
   {
     "type" : "git",
     "url" : "https://github.com/tommmyy/ramda-extension.git"
   },
-  "description": "Utilities function built on top of Ramda",
+  "description": "Utilities functions built on top of Ramda",
   "main": "./src/index.js",
   "scripts": {
     "build": "npm run build:js && npm run copy",
@@ -22,9 +22,9 @@
     "lint:eslint": "eslint --ext .js ./"
   },
   "author": "",
-  "license": "proprietary",
+  "license": "MIT",
   "peerDependencies": {
-    "ramda": "^0.24.1"
+    "ramda": "^0.24.0 || ^0.25.0"
   },
   "devDependencies": {
     "babel-cli": "6.14.0",

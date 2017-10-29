@@ -7,6 +7,7 @@
     "type" : "git",
     "url" : "https://github.com/tommmyy/ramda-extension.git"
   },
+  "keywords": ["ramda", "ramdajs", "utils", "functional programming"],
   "description": "Utilities functions built on top of Ramda",
   "main": "./src/index.js",
   "scripts": {
@@ -21,7 +22,7 @@
     "test:watch": "npm run test:js -- --watch",
     "lint:eslint": "eslint --ext .js ./"
   },
-  "author": "",
+  "author": "Tomas Konrady <tomaskonrady@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "ramda": "^0.24.0 || ^0.25.0"

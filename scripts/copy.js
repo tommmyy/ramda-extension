@@ -17,6 +17,7 @@ function createPackageFile() {
 		const {
 			author,
 			version,
+			keywords,
 			description,
 			repository,
 			license,
@@ -30,6 +31,7 @@ function createPackageFile() {
 			author,
 			version,
 			description,
+			keywords,
 			main: './index.js',
 			repository,
 			license,

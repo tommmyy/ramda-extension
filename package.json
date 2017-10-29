@@ -1,7 +1,7 @@
 {
   "name": "ramda-extension-build",
   "private": true,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository" :
   {
     "type" : "git",
@@ -13,7 +13,7 @@
     "build": "npm run build:js && npm run copy",
     "build:js": "cross-env NODE_ENV=release node_modules/.bin/babel ./src --out-dir ./build --ignore __tests__/*",
     "prebuild": "npm run clean",
-    "lint": "npm run lint:eslint && npm run lint:stylelint",
+    "lint": "npm run lint:eslint",
     "clean": "rimraf build",
     "copy": "babel-node scripts/run copy",
     "test": "npm run lint && npm run test:js",

@@ -1,3 +1,3 @@
-import R from 'ramda';
+import { tap } from 'ramda';
 
-export default R.tap(x => console.log(x));
+export default tap((x) => console.log(x));

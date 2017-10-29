@@ -1,7 +1,7 @@
-import R from 'ramda';
+import { anyPass, isNil } from 'ramda';
 import isEmptyString from './isEmptyString';
 
 /**
  * @sig a -> Boolean
  */
-export default R.anyPass([R.isNil, isEmptyString]);
+export default anyPass([isNil, isEmptyString]);

@@ -1,7 +1,12 @@
-import R from 'ramda';
+import { reduce, call } from 'ramda';
 
-// (a → ... → b) → [a, ..., b] → c
-// @xample:
-// const f = (a) => (b) => a + b
-// reduceCallable(f, [1, 2]) // 3
-export default R.reduce((acc, next) => acc(next));
+/**
+ *
+ * @sig (a → ... → b) → [a, ..., b] → c
+ *
+ * @example
+ *
+ * 		const f = (a) => (b) => a + b
+ *   	reduceCallable(f, [1, 2]) // 3
+ */
+export default reduce(call);

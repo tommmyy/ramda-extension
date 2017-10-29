@@ -1,4 +1,4 @@
-import R from 'ramda';
+import { curry, compose, isEmpty, intersection } from 'ramda';
 
 /**
  * Returns `true` if any of the items from first array is not the second array.
@@ -11,4 +11,4 @@ import R from 'ramda';
  *  containsNone(['a', 'f'], ['a', 'b', 'c']) // false
  *
  */
-export default R.curry(R.compose(R.isEmpty, R.intersection));
+export default curry(compose(isEmpty, intersection));

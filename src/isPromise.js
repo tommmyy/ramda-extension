@@ -1,8 +1,8 @@
-import R from 'ramda';
+import { allPass, o, prop } from 'ramda';
 import isFunction from './isFunction';
 import isObject from './isObject';
 
-export default R.allPass([
+export default allPass([
 	isObject,
-	R.o(isFunction, R.prop('then')),
+	o(isFunction, prop('then')),
 ]);

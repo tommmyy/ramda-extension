@@ -1,4 +1,4 @@
-import R from 'ramda';
+import { o, not } from 'ramda';
 import isNumeric from './isNumeric';
 
-export default R.o(R.not, isNumeric);
+export default o(not, isNumeric);

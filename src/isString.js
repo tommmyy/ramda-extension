@@ -1,3 +1,3 @@
-import R from 'ramda';
+import { is } from 'ramda';
 
-export default R.is(String);
+export default is(String);

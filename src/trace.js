@@ -1,6 +1,6 @@
-import R from 'ramda';
+import { curry } from 'ramda';
 
 /**
  * @sig a -> b -> b
  */
-export default R.curry((x, y) => (console.log(x, y), y));
+export default curry((x, y) => (console.log(x, y), y));

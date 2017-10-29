@@ -1,4 +1,4 @@
-import R from 'ramda';
+import { curry, compose, isEmpty, difference } from 'ramda';
 /**
  * Returns `true` if all items from first array are in the second array.
  * @sig [a] -> [a] -> Boolean
@@ -10,4 +10,4 @@ import R from 'ramda';
  *  containsAll(['a', 'b', 'd'], ['a', 'b', 'c']) // false
  *
  */
-export default R.curry(R.compose(R.isEmpty, R.difference));
+export default curry(compose(isEmpty, difference));

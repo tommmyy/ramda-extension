@@ -1,4 +1,4 @@
-import R from 'ramda';
+import { find } from 'ramda';
 import notNil from './notNil';
 
 /**
@@ -6,4 +6,4 @@ import notNil from './notNil';
  *
  * @sig [a] -> a
  */
-export default R.find(notNil);
+export default find(notNil);

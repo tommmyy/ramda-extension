@@ -1,4 +1,4 @@
-import R from 'ramda';
+import {curry, compose, not, isEmpty, intersection } from 'ramda';
 /**
  * Returns `true` if any of the items from first array are in the second array.
  * @sig [a] -> [a] -> Boolean
@@ -10,4 +10,4 @@ import R from 'ramda';
  *  containsAny(['e', 'f'], ['a', 'b', 'c']) // false
  *
  */
-export default R.curry(R.compose(R.not, R.isEmpty, R.intersection));
+export default curry(compose(not, isEmpty, intersection));

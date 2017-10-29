@@ -1,3 +1,3 @@
-import R from 'ramda';
+import { o, not, isNil } from 'ramda';
 
-export default R.o(R.not, R.isNil);
+export default o(not, isNil);

@@ -1,6 +1,7 @@
-import R from 'ramda';
+import { equals } from 'ramda';
+import { emptyString } from './internal';
 
 /**
  * @sig a -> Boolean
  */
-export default R.equals('');
+export default equals(emptyString);

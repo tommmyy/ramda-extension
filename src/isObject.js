@@ -1,4 +1,3 @@
+import { is } from 'ramda';
 
-import R from 'ramda';
-
-export default R.is(Object);
+export default is(Object);

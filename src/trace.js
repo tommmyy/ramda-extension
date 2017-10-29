@@ -1,6 +1,11 @@
 import { curry } from 'ramda';
 
 /**
+ * Function with side-effect. Logs input to console and returns that input.
+ * Similar to "log" but allowes to label logged value.
+ *
+ * @category Function
+ *
  * @sig a -> b -> b
  *
  * @example

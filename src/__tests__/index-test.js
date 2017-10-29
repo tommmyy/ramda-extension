@@ -17,12 +17,15 @@ import {
 	dispatch,
 	noop,
 	isNumeric,
-	unfoldObject,
+	unfoldObjectDots,
 	reduceCallable,
 	constructRegExp,
 	listToString,
 	splitByNonAlphaNumeric,
 	argumentsToList,
+	splitByDot,
+	containsAll,
+	containsAny,
 } from '../';
 
 describe('noop', () => {
@@ -74,9 +77,9 @@ describe('isNumeric', () => {
 	});
 });
 
-describe('unfoldProject', () => {
+describe('unfoldObjectDots', () => {
 	it('should unfold object', () => {
-		expect(unfoldObject({ 'a.b.c': 1, 'd.e.f': 2, g: 3 })).toEqual({
+		expect(unfoldObjectDots({ 'a.b.c': 1, 'd.e.f': 2, g: 3 })).toEqual({
 			a: { b: { c: 1 } },
 			d: { e: { f: 2 } },
 			g: 3,
@@ -254,7 +257,32 @@ describe('toDotCase', () => {
 });
 
 describe('argumentsToList', () => {
-	it('converts variadic function to function that receives array of arguments', () => {
+	it('converts variadic arguments into list', () => {
 		expect(argumentsToList(1, 3, 4, 3)).toEqual([1, 3, 4, 3]);
+	});
+});
+
+describe('splitByDot', () => {
+	it('splits string by dot', () => {
+		expect(splitByDot('a.b.c')).toEqual(['a', 'b', 'c']);
+	});
+});
+
+describe('containsAll', () => {
+	it('resolves to true if all elements in first list are found within the second list', () => {
+		expect(containsAll(['a', 'b'], ['a', 'b', 'c'])).toBe(true);
+	});
+	it('resolves to false if any element in first list is not found within the second list', () => {
+		expect(containsAll(['a', 'b', 'd'], ['a', 'b', 'c'])).toBe(false);
+	});
+});
+
+
+describe('containsAny', () => {
+	it('resolves to true if at least one element from first list is found within the second list', () => {
+		expect(containsAny(['a', 'e'], ['a', 'b', 'c'])).toBe(true);
+	});
+	it('resolves to false if non element from first list is not found within the second list', () => {
+		expect(containsAny(['e', 'f'], ['a', 'b', 'c'])).toBe(false);
 	});
 });

@@ -1,6 +1,6 @@
 import { curry, compose, isEmpty, difference } from 'ramda';
 /**
- * Returns `true` if all items from first array are in the second array.
+ * Resolves to true if all elements in first list are found within the second list
  *
  * @category List
  *

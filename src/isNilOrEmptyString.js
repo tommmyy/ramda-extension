@@ -2,7 +2,7 @@ import { anyPass, isNil } from 'ramda';
 import equalsEmptyString from './equalsEmptyString';
 
 /**
- * Returns true if arguments is null, undefined or ''.
+ * Returns true if argument is null, undefined or ''.
  *
  * @category Logic
  *

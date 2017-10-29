@@ -1,5 +1,24 @@
 import R from 'ramda';
-import { alwaysNull, startsWith, dispatch, noop, isNumeric, unfoldObject, reduceCallable, constructRegExp } from '../';
+import {
+	toUpperFirst,
+	toLowerFirst,
+	toCamelCase,
+	toPascalCase,
+	toSnakeCase,
+	toKebabCase,
+	toDotCase,
+	toScreamingSnakeCase,
+	alwaysNull,
+	startsWith,
+	dispatch,
+	noop,
+	isNumeric,
+	unfoldObject,
+	reduceCallable,
+	constructRegExp,
+	listToString,
+	splitByNonAlphaNumeric,
+} from '../';
 
 describe('noop', () => {
 	it('returns null', () => {
@@ -56,7 +75,7 @@ describe('dispatch', () => {
 
 describe('reduceCallable', () => {
 	it('should return result after appling arguments ', () => {
-		expect(reduceCallable(a => b => a + b, [1, 2])).toBe(3);
+		expect(reduceCallable((a) => (b) => a + b, [1, 2])).toBe(3);
 	});
 });
 
@@ -79,11 +98,127 @@ describe('constructRegExp', () => {
 	});
 
 	it('should return proper RegExp ', () => {
-		expect(
-			R.test(
-				constructRegExp('end$', 'gi'),
-				'in the end'
-			)
-		).toBe(true);
+		expect(R.test(constructRegExp('end$', 'gi'), 'in the end')).toBe(true);
+	});
+});
+
+describe('toUpperFirst', () => {
+	it('capitalize first letter', () => {
+		expect(toUpperFirst('hello')).toBe('Hello');
+	});
+});
+
+describe('toLowerFirst', () => {
+	it('decapitalize first letter', () => {
+		expect(toLowerFirst('HELLO')).toBe('hELLO');
+	});
+});
+
+describe('splitByNonAlphaNumeric', () => {
+	describe('should split string by non-alphanumeric characters', () => {
+		const splitByNonAlphaNumericUtil = (str, result) =>
+			it(`${str} to be ${result}`, () => expect(splitByNonAlphaNumeric(str)).toEqual(result));
+
+		splitByNonAlphaNumericUtil('h  e.l//l o wo.../r8****ld', ['h', 'e', 'l', 'l', 'o', 'wo', 'r8', 'ld']);
+	});
+});
+
+describe('listToString', () => {
+	it('converts list to string', () => {
+		expect(listToString(['h', 'e', 'l', 'l', 'o'])).toBe('hello');
+	});
+});
+
+describe('toPascalCase', () => {
+	describe('should convert string to PascalCase', () => {
+		const toPascalCaseUtil = (str, result) =>
+			it(`${str} to be ${result}`, () => expect(toPascalCase(str)).toBe(result));
+
+		toPascalCaseUtil('hello', 'Hello');
+		toPascalCaseUtil('hello-', 'Hello');
+		toPascalCaseUtil('   hello  ', 'Hello');
+		toPascalCaseUtil('hello world', 'HelloWorld');
+		toPascalCaseUtil('hello world AND univerSe', 'HelloWorldANDUniverSe');
+	});
+});
+
+describe('toCamelCase', () => {
+	describe('should convert string to cascalCase', () => {
+		const toCamelCaseUtil = (str, result) =>
+			it(`${str} to be ${result}`, () => expect(toCamelCase(str)).toBe(result));
+
+		toCamelCaseUtil('hello', 'hello');
+		toCamelCaseUtil('hello-', 'hello');
+		toCamelCaseUtil('   hello  ', 'hello');
+		toCamelCaseUtil('hello world', 'helloWorld');
+		toCamelCaseUtil('hello world AND univerSe', 'helloWorldANDUniverSe');
+	});
+});
+
+describe('toCamelCase', () => {
+	describe('should convert string to cascalCase', () => {
+		const toCamelCaseUtil = (str, result) =>
+			it(`${str} to be ${result}`, () => expect(toCamelCase(str)).toBe(result));
+
+		toCamelCaseUtil('hello', 'hello');
+		toCamelCaseUtil('hello-', 'hello');
+		toCamelCaseUtil('   hello  ', 'hello');
+		toCamelCaseUtil('hello world', 'helloWorld');
+		toCamelCaseUtil('hello world AND univerSe', 'helloWorldANDUniverSe');
+	});
+});
+
+
+describe('toScreamingSnakeCase', () => {
+	describe('should convert string to SCREAMING_SNAKE_CASE', () => {
+		const toScreamingSnakeCaseUtil = (str, result) =>
+			it(`${str} to be ${result}`, () => expect(toScreamingSnakeCase(str)).toBe(result));
+
+		toScreamingSnakeCaseUtil('hello', 'HELLO');
+		toScreamingSnakeCaseUtil('hello-', 'HELLO');
+		toScreamingSnakeCaseUtil('   hello  ', 'HELLO');
+		toScreamingSnakeCaseUtil('hello world', 'HELLO_WORLD');
+		toScreamingSnakeCaseUtil('hello world AND univerSe', 'HELLO_WORLD_AND_UNIVERSE');
+	});
+});
+
+describe('toSnakeCase', () => {
+	describe('should convert string to snake_case', () => {
+		const toSnakeCaseUtil = (str, result) =>
+			it(`${str} to be ${result}`, () => expect(toSnakeCase(str)).toBe(result));
+
+		toSnakeCaseUtil('hello', 'hello');
+		toSnakeCaseUtil('hello-', 'hello');
+		toSnakeCaseUtil('   hello  ', 'hello');
+		toSnakeCaseUtil('hello world', 'hello_world');
+		toSnakeCaseUtil('hello world AND univerSe', 'hello_world_and_universe');
+	});
+});
+
+
+describe('toKebabCase', () => {
+	describe('should convert string to kebab-case', () => {
+		const toKebabCaseUtil = (str, result) =>
+			it(`${str} to be ${result}`, () => expect(toKebabCase(str)).toBe(result));
+
+		toKebabCaseUtil('hello', 'hello');
+		toKebabCaseUtil('hello-', 'hello');
+		toKebabCaseUtil('   hello  ', 'hello');
+		toKebabCaseUtil('hello world', 'hello-world');
+		toKebabCaseUtil('hello world AND univerSe', 'hello-world-and-universe');
+	});
+});
+
+
+describe('toDotCase', () => {
+	describe('should convert string to dot.case', () => {
+		const toDotCaseUtil = (str, result) =>
+			it(`${str} to be ${result}`, () => expect(toDotCase(str)).toBe(result));
+
+		toDotCaseUtil('hello', 'hello');
+		toDotCaseUtil('hello-', 'hello');
+		toDotCaseUtil('   hello  ', 'hello');
+		toDotCaseUtil('hello world', 'hello.world');
+		toDotCaseUtil('hello world AND univerSe', 'hello.world.and.universe');
 	});
 });

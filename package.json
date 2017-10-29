@@ -2,12 +2,22 @@
   "name": "ramda-extension-build",
   "private": true,
   "version": "0.0.7",
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com/tommmyy/ramda-extension.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tommmyy/ramda-extension.git"
   },
-  "keywords": ["ramda", "ramdajs", "utils", "functional programming"],
+  "keywords": [
+    "ramda",
+    "ramdajs",
+    "utils",
+    "functional programming",
+    "case conversion",
+    "PascalCase",
+    "dot.case",
+    "camelCase",
+    "lower first letter",
+    "upper first letter"
+  ],
   "description": "Utilities functions built on top of Ramda",
   "main": "./src/index.js",
   "scripts": {

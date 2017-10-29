@@ -2,6 +2,19 @@
 import path from 'path';
 import fse from 'fs-extra';
 
+function copyFiles() {
+	return new Promise((resolve) => fse.copyFile(
+		path.resolve(__dirname, '../README.md'),
+		path.resolve(__dirname, '../build/README.md'),
+		(err) => {
+			if (err) throw new Error(err);
+			console.log('Copied README file.');
+
+			resolve();
+		}
+	));
+}
+
 function createPackageFile() {
 	return new Promise((resolve) => {
 		fse.readFile(path.resolve(__dirname, '../package.json'), 'utf8', (err, data) => {
@@ -54,6 +67,7 @@ function createPackageFile() {
 
 async function copy() {
 	await createPackageFile();
+	await copyFiles();
 }
 /* eslint-enable no-console */
 

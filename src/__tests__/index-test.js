@@ -1,5 +1,9 @@
 import R from 'ramda';
 import {
+	alwaysNull,
+	alwaysEmptyString,
+	alwaysEmptyObject,
+	alwaysEmptyArray,
 	toUpperFirst,
 	toLowerFirst,
 	toCamelCase,
@@ -8,7 +12,6 @@ import {
 	toKebabCase,
 	toDotCase,
 	toScreamingSnakeCase,
-	alwaysNull,
 	startsWithPrefix,
 	endsWithSuffix,
 	dispatch,
@@ -19,6 +22,7 @@ import {
 	constructRegExp,
 	listToString,
 	splitByNonAlphaNumeric,
+	argumentsToList,
 } from '../';
 
 describe('noop', () => {
@@ -30,6 +34,21 @@ describe('noop', () => {
 describe('alwaysNull', () => {
 	it('returns null', () => {
 		expect(alwaysNull()).toBe(null);
+	});
+});
+describe('alwaysEmptyString', () => {
+	it('returns \'\'', () => {
+		expect(alwaysEmptyString()).toBe('');
+	});
+});
+describe('alwaysEmptyObject', () => {
+	it('returns {}', () => {
+		expect(alwaysEmptyObject()).toEqual({});
+	});
+});
+describe('alwaysEmptyArray', () => {
+	it('returns []', () => {
+		expect(alwaysEmptyArray()).toEqual([]);
 	});
 });
 
@@ -231,5 +250,11 @@ describe('toDotCase', () => {
 		toDotCaseUtil('   hello  ', 'hello');
 		toDotCaseUtil('hello world', 'hello.world');
 		toDotCaseUtil('hello world AND univerSe', 'hello.world.and.universe');
+	});
+});
+
+describe('argumentsToList', () => {
+	it('converts variadic function to function that receives array of arguments', () => {
+		expect(argumentsToList(1, 3, 4, 3)).toEqual([1, 3, 4, 3]);
 	});
 });

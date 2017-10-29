@@ -5,11 +5,13 @@ import constructRegExp from './constructRegExp';
 const getRegExp_ = useWith(flip(constructRegExp)('gi'), [flip(concat)('$')]);
 
 /**
- * Testing string if starts with some prefix.
+ * Testing string if ends with some suffix.
  *
- * @param  {string} prefix
+ * @category String
+ *
+ * @param  {string} suffix
  * @param  {string} x
- * @return {boolean}          True if `x` starts with `prefix`
+ * @return {boolean}          True if `x` ends with `suffix`
  *
  * @example
  *

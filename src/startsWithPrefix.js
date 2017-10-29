@@ -6,6 +6,8 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [concat('^')]);
 
 /**
  * Testing string if starts with some prefix.
+
+ * @category String
  *
  * @param  {string} prefix
  * @param  {string} x

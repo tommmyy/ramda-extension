@@ -1,8 +1,8 @@
-import { gt } from 'ramda';
+import { lt } from 'ramda';
 
 
 /**
- * Returns true if argument is lower than 0.
+ * Returns true if argument is greater than 0.
  *
  * @category Math
  *
@@ -14,4 +14,4 @@ import { gt } from 'ramda';
  *
  * @sig Number -> Boolean
  */
-export default gt(0);
+export default lt(0);

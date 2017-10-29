@@ -1,6 +1,13 @@
 import { always } from 'ramda';
 /**
- * Returns always null.
- * @sig a -> null
+ * Always returns null.
+ *
+ * @category Function
+ *
+ * @example
+ *
+ *		alwaysNull() // null
+ *
+ * @sig a -> Object
  */
 export default always(null);

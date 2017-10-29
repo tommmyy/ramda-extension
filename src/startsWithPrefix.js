@@ -13,9 +13,9 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [concat('^')]);
  *
  * @example
  *
- * 		startsWith('h', 'hello') // true
- * 		startsWith('hell', 'hello') // true
- * 		startsWith('h', 'good bye') // false
+ * 		startsWithPrefix('h', 'hello') // true
+ * 		startsWithPrefix('hell', 'hello') // true
+ * 		startsWithPrefix('h', 'good bye') // false
  *
  * @sig a -> b -> Boolean
  */

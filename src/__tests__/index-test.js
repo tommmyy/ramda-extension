@@ -9,7 +9,8 @@ import {
 	toDotCase,
 	toScreamingSnakeCase,
 	alwaysNull,
-	startsWith,
+	startsWithPrefix,
+	endsWithSuffix,
 	dispatch,
 	noop,
 	isNumeric,
@@ -79,17 +80,27 @@ describe('reduceCallable', () => {
 	});
 });
 
-describe('startsWith', () => {
-	const startsWithUtil = (str, prefix, result) =>
-		it(`should return ${result} if is testing '${str}' to start with '${prefix}'`, () => {
-			expect(startsWith('h', 'hello')).toBe(true);
-			expect(startsWith('he', 'hello')).toBe(true);
+describe('startsWithPrefix', () => {
+	const startsWithPrefixUtil = (prefix, str, result) =>
+		it(`should return ${result} if '${str}' starts with '${prefix}'`, () => {
+			expect(startsWithPrefix(prefix, str)).toBe(result);
 		});
 
-	startsWithUtil('', 'hello', true);
-	startsWithUtil('h', 'hello', true);
-	startsWithUtil('he', 'hello', true);
-	startsWithUtil('h', 'good bye', false);
+	startsWithPrefixUtil('', 'hello', true);
+	startsWithPrefixUtil('h', 'hello', true);
+	startsWithPrefixUtil('he', 'hello', true);
+	startsWithPrefixUtil('h', 'good bye', false);
+});
+describe('endsWithSuffix', () => {
+	const endsWithSuffixUtil = (suffix, str, result) =>
+		it(`should return ${result} if '${str}' to ends with '${suffix}'`, () => {
+			expect(endsWithSuffix(suffix, str)).toBe(result);
+		});
+
+	endsWithSuffixUtil('', 'hello', true);
+	endsWithSuffixUtil('o', 'hello', true);
+	endsWithSuffixUtil('lo', 'hello', true);
+	endsWithSuffixUtil('d', 'good bye', false);
 });
 
 describe('constructRegExp', () => {

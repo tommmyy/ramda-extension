@@ -1,6 +1,6 @@
 # ramda-extension
 
-Library that adds utilities functions composed mainly on the top of the marvelous [Ramda](ramdajs.com) library.
+Library that adds utilities functions composed mainly on the top of the marvelous [Ramda](http://ramdajs.com) library.
 
 Most of the functions have its own tests and examples in the JS Doc.
 
@@ -28,7 +28,7 @@ import toKebabCase from 'ramda-extension/toKebabCase';
 toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
 ```
 
-Or as a named import (not recommended without [treeshaking](https://webpack.js.org/guides/tree-shaking/):
+Or as a named import (not recommended without [treeshaking](https://webpack.js.org/guides/tree-shaking/)):
 
 ```js
 import { toKebabCase } from 'ramda-extension';

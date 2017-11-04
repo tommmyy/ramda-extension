@@ -8,6 +8,7 @@ coverage
 *.iml
 *.sublime-project
 *.sublime-workspace
+.history
 jsconfig.json
 
 # OS files

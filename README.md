@@ -26,15 +26,13 @@ Import function as a named export (not recommended without [treeshaking](https:/
 
 ```js
 import { toKebabCase } from 'ramda-extension';
-const { toKebabCase } = require('ramda-extension');
 
 toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
 ```
 Or if your environment doesn't support treeshaking you can import it separately (Alternatively you can use [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports)):
 
 ```js
-import toKebabCase from 'ramda-extension/src/toKebabCase';
-const toKebabCase = require('ramda-extension/src/toKebabCase');
+import toKebabCase from 'ramda-extension/lib/toKebabCase';
 
 toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
 ```
@@ -43,7 +41,6 @@ If you prefer browser/jQuery/global-namespace style:
 
 ```js
 import R_ from 'ramda-extension';
-const R_ = require('ramda-extension');
 
 R_.toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
 ```

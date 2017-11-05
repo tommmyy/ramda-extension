@@ -2,8 +2,8 @@ node_modules
 npm-debug.log
 build
 es
-src
 dist
+lib
 coverage
 
 # Exclude IDE project folders

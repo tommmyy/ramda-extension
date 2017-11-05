@@ -10,7 +10,7 @@ const banner = `
 `;
 
 const config = {
-	input: 'source/index.js',
+	input: 'src/index.js',
 	output: {
 		format: 'umd',
 		name: 'R_',
@@ -27,7 +27,7 @@ const config = {
 			},
 		}),
 		babel({
-			include: 'source/**',
+			include: 'src/**',
 		}),
 	],
 	external: ['ramda'],

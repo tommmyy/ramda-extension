@@ -7,7 +7,8 @@ import { is } from 'ramda';
  *
  * @example
  *
- * 		isFunction({}) // true
+ * 		isFunction(() => {}) // true
+ * 		isFunction({}) // false
  * 		isFunction([]) // false
  * 		isFunction('') // false
  *

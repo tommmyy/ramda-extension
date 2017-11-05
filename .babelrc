@@ -1,25 +1,50 @@
 {
-  "presets": [
-    "latest",
-    "stage-1"
-  ],
-  "plugins": [
-    "transform-class-properties",
-    "transform-object-rest-spread",
-    "transform-react-constant-elements",
-    [
-      "transform-regenerator",
-      {
-        "async": false
-      }
-    ],
-    [
-      "transform-runtime",
-      {
-        "helpers": false,
-        "polyfill": false,
-        "regenerator": true
-      }
-    ]
-  ]
+  "env": {
+    "cjs": {
+      "ignore": [
+        "**/*-test.js"
+      ],
+      "presets": [
+        "env",
+        "stage-1"
+      ]
+    },
+    "es": {
+      "ignore": [
+        "**/*-test.js"
+      ],
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false
+          }
+        ],
+        "stage-1"
+      ]
+    },
+    "rollup": {
+      "ignore": [
+        "**/*-test.js"
+      ],
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false
+          }
+        ],
+        "stage-1"
+      ],
+      "plugins": [
+        "external-helpers"
+      ]
+    },
+    "test": {
+      "presets": [
+        "env",
+        "stage-1"
+      ]
+    }
+  }
 }

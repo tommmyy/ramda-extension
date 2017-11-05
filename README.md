@@ -20,27 +20,46 @@ $ yarn add ramda ramda-extension
 
 ## Usage
 
-Functions can be imported separately:
+We supports cjs and es6 modules syntax.
 
-```js
-import toKebabCase from 'ramda-extension/toKebabCase';
-
-toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
-```
-
-Or as a named import (not recommended without [treeshaking](https://webpack.js.org/guides/tree-shaking/)):
+Import function as a named export (not recommended without [treeshaking](https://webpack.js.org/guides/tree-shaking/)):
 
 ```js
 import { toKebabCase } from 'ramda-extension';
+const { toKebabCase } = require('ramda-extension');
+
+toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
+```
+Or if your environment doesn't support treeshaking you can import it separately (Alternatively you can use [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports)):
+
+```js
+import toKebabCase from 'ramda-extension/src/toKebabCase';
+const toKebabCase = require('ramda-extension/src/toKebabCase');
 
 toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
 ```
 
-
-And if you prefer browser/jQuery/global-namespace style:
+If you prefer browser/jQuery/global-namespace style:
 
 ```js
 import R_ from 'ramda-extension';
+const R_ = require('ramda-extension');
 
 R_.toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
 ```
+
+Or you can use it directly in the browser:
+
+```html
+<script src="path/to/yourCopyOf/ramda.js"></script>
+<script src="path/to/yourCopyOf/ramda-extension.js"></script>
+```
+
+The minified version:
+
+```html
+<script src="path/to/yourCopyOf/ramda.min.js"></script>
+<script src="path/to/yourCopyOf/ramda-extension.min.js"></script>
+```
+
+NOTE: ramda itself is not part of bundle, you need to add it manually

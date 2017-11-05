@@ -26,6 +26,12 @@ import {
 	splitByDot,
 	containsAll,
 	containsAny,
+	dissocDotPath,
+	overHead,
+	dotPath,
+	assocDotPath,
+	mergeWithDotPath,
+	mapKeys,
 } from '../';
 
 describe('noop', () => {
@@ -66,7 +72,7 @@ describe('isNumeric', () => {
 				isNumeric(Infinity),
 				isNumeric(NaN),
 				isNumeric(''),
-				isNumeric(() => {}),
+				isNumeric(() => { }),
 				isNumeric(false),
 				isNumeric(null),
 				isNumeric(undefined),
@@ -284,5 +290,51 @@ describe('containsAny', () => {
 	});
 	it('resolves to false if non element from first list is not found within the second list', () => {
 		expect(containsAny(['e', 'f'], ['a', 'b', 'c'])).toBe(false);
+	});
+});
+
+describe('overHead', () => {
+	it('should remap first index of array', () => {
+		expect(overHead(R.toUpper, ['foo', 'bar', 'baz'])).toEqual(['FOO', 'bar', 'baz']);
+	});
+});
+
+describe('dissocDotPath', () => {
+	it('should return object without attribute defined in given path', () => {
+		const result = dissocDotPath('k1.k2', { k1: { k2: { a: '', b: 2, c: [] }, k3: {} }} );
+		expect(result.k1).toBeDefined();
+		expect(result.k1.k3).toBeDefined();
+		expect(result.k1.k2).toBeUndefined();
+	});
+	it('should return whole object when nothing find on path', () => {
+		const result = dissocDotPath('key1.key4', { k1: { k2: { a: '', b: 2, c: [] }, k3: {} } });
+		expect(result).toEqual({ k1: { k2: { a: '', b: 2, c: [] }, k3: {} } });
+	});
+});
+
+describe('dotPath', () => {
+	it('should get property on the given dot path', () => {
+		expect(dotPath('a.b', { a: { b: 2 } })).toEqual(2);
+	});
+	it('should return undefined when nothing found on the path', () => {
+		expect(dotPath('b.c', { a: { b: 2 } })).toBeUndefined();
+	});
+});
+
+describe('assocDotPath', () => {
+	it('should set property on the given dot path', () => {
+		expect(assocDotPath('a.b', 2, { a: undefined })).toEqual({ a: { b: 2 } });
+	});
+});
+
+describe('mergeWithDotPath', () => {
+	it('should merge the data in resulting object', () => {
+		expect(mergeWithDotPath('a.b', R.merge, { d: 30 }, { a: { b: { c: 20 } } }))
+			.toEqual({ a: { b: { c: 20, d: 30 } } });
+	});
+});
+describe('mapKeys', () => {
+	it('should map keys of the object', () => {
+		expect(mapKeys(toUpperFirst, { x: 1, y: 2, z: 3 })).toEqual({ X: 1, Y: 2, Z: 3 });
 	});
 });

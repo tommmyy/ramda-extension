@@ -18,6 +18,6 @@ import overHead from './overHead';
  *      R_.assocDotPath(['a', 'b', 'c'], 42, {a: {b: {c: 0}}}); //=> {a: {b: {c: 42}}}
  *
  *      // Any missing or non-object keys in path will be overridden
- *      R.assocDotPath(['a', 'b', 'c'], 42, {a: 5}); //=> {a: {b: {c: 42}}}
+ *      R_.assocDotPath(['a', 'b', 'c'], 42, {a: 5}); //=> {a: {b: {c: 42}}}
  */
 export default curryN(2, compose(apply(assocPath), overHead(splitByDoth), argumentsToList));

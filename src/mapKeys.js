@@ -1,10 +1,11 @@
 import {
-	curry,
-	keys,
+	useWith,
 	map,
-	values,
-	zipObj,
+	compose,
+	fromPairs,
+	toPairs,
 } from 'ramda';
+import overHead from './overHead';
 
 /**
  * Use map function over the keys of the given object
@@ -18,4 +19,4 @@ import {
  *      R_.mapKeys(R_.toUpperFirst, {x: 1, y: 2, z: 3}); //=> {X: 2, Y: 4, Z: 6}
  */
 
-export default curry((fn, obj) => zipObj(map(fn, keys(obj)), values(obj)));
+export default useWith(compose(fromPairs, map), [overHead, toPairs]);

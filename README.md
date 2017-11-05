@@ -1,5 +1,7 @@
 # ramda-extension
 
+[![build status](https://img.shields.io/travis/tommmyy/ramda-extension/master.svg?style=flat-square)](https://travis-ci.org/tommmyy/ramda-extension)
+
 Library that adds utilities functions composed mainly on the top of the marvelous [Ramda](http://ramdajs.com) library.
 
 Most of the functions have its own tests and examples in the JS Doc.

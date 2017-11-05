@@ -330,7 +330,7 @@ describe('assocDotPath', () => {
 describe('mergeWithDotPath', () => {
 	it('should merge the data in resulting object', () => {
 		expect(mergeWithDotPath('a.b', R.merge, { d: 30 }, { a: { b: { c: 20 } } }))
-			.not.toEqual({ a: { b: { c: 20, d: 30 } } });
+			.toEqual({ a: { b: { c: 20, d: 30 } } });
 	});
 });
 describe('mapKeys', () => {

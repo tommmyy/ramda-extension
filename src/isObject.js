@@ -2,7 +2,7 @@ import { is } from 'ramda';
 
 /**
  * Returns true if argument is type of Object.
- *
+ * @func
  * @category Type
  *
  * @example
@@ -13,4 +13,5 @@ import { is } from 'ramda';
 
  * @sig a -> Boolean
  */
-export default is(Object);
+const isObject = is(Object);
+export default isObject;

@@ -3,7 +3,7 @@ import equalsEmptyString from './equalsEmptyString';
 
 /**
  * Returns true if argument is null, undefined or ''.
- *
+ * @func
  * @category Logic
  *
  * @example
@@ -18,4 +18,5 @@ import equalsEmptyString from './equalsEmptyString';
  *
  * @sig a -> Boolean
  */
-export default anyPass([isNil, equalsEmptyString]);
+const isNilOrEmptyString = anyPass([isNil, equalsEmptyString]);
+export default isNilOrEmptyString;

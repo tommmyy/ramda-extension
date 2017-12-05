@@ -2,7 +2,7 @@ import { is } from 'ramda';
 
 /**
  * Returns true if argument is type of String.
- *
+ * @func
  * @category Type
  *
  * @example
@@ -14,4 +14,5 @@ import { is } from 'ramda';
  * @sig a -> Boolean
  *
  */
-export default is(String);
+const isString = is(String);
+export default isString;

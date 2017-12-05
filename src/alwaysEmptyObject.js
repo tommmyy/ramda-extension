@@ -3,7 +3,7 @@ import { emptyObject } from './internal';
 
 /**
  * Always returns empty object.
- *
+ * @func
  * @category Function
  *
  * @example
@@ -12,4 +12,5 @@ import { emptyObject } from './internal';
  *
  * @sig a -> [a]
  */
-export default always(emptyObject);
+const alwaysEmptyObject = always(emptyObject);
+export default alwaysEmptyObject;

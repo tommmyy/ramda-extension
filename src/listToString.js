@@ -3,7 +3,7 @@ import { emptyString } from './internal';
 
 /**
  * Converts list of strings to string.
- *
+ * @func
  * @category List
  *
  * @example
@@ -13,4 +13,5 @@ import { emptyString } from './internal';
  * @sig [String] -> String
  *
  */
-export default join(emptyString);
+const listToString = join(emptyString);
+export default listToString;

@@ -2,7 +2,7 @@ import { split } from 'ramda';
 
 /**
  * Splits string by dot into list.
- *
+ * @func
  * @category String
  *
  * @example
@@ -11,4 +11,5 @@ import { split } from 'ramda';
  *
  * @sig String -> [String]
  */
-export default split('.');
+const splitByDot = split('.');
+export default splitByDot;

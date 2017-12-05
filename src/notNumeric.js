@@ -3,7 +3,7 @@ import isNumeric from './isNumeric';
 
 /**
  * Returns true if argument is not finite numeric value.
- *
+ * @func
  * @category Logic
  *
  * @example
@@ -25,4 +25,5 @@ import isNumeric from './isNumeric';
  * @sig a -> Boolean
  *
  */
-export default o(not, isNumeric);
+const notNumeric = o(not, isNumeric);
+export default notNumeric;

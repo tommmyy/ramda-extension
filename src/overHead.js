@@ -2,7 +2,7 @@ import { lensIndex, over } from 'ramda';
 
 /**
  * Returns an over lens to the first index of list.
- *
+ * @func
  * @category List
  * @param {*} v
  * @param {*} x
@@ -11,4 +11,5 @@ import { lensIndex, over } from 'ramda';
  *
  *      R_.overHead(R.toUpper, ['foo', 'bar', 'baz']); //=> ['FOO', 'bar', 'baz']
  */
-export default over(lensIndex(0));
+const overHead = over(lensIndex(0));
+export default overHead;

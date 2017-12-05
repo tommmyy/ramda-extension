@@ -2,7 +2,7 @@ import alwaysNull from './alwaysNull';
 
 /**
  * Alias for `alwaysNull`
- *
+ * @func
  * @category Function
  *
  * @example
@@ -11,4 +11,5 @@ import alwaysNull from './alwaysNull';
  *
  * @sig a -> Object
  */
-export default alwaysNull;
+const noop = alwaysNull;
+export default noop;

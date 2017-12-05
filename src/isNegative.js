@@ -3,7 +3,7 @@ import { gt } from 'ramda';
 
 /**
  * Returns true if argument is lower than 0.
- *
+ * @func
  * @category Math
  *
  * @example
@@ -14,4 +14,5 @@ import { gt } from 'ramda';
  *
  * @sig Number -> Boolean
  */
-export default gt(0);
+const isNegative = gt(0);
+export default isNegative;

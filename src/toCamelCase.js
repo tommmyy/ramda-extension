@@ -4,7 +4,7 @@ import toLowerFirst from './toLowerFirst';
 
 /**
  * Converts string into camelCase.
- *
+ * @func
  * @category String
  *
  * @example
@@ -16,4 +16,5 @@ import toLowerFirst from './toLowerFirst';
  * @sig String -> String
  *
  */
-export default o(toLowerFirst, toPascalCase);
+const toCamelCase = o(toLowerFirst, toPascalCase);
+export default toCamelCase;

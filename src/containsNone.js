@@ -2,7 +2,7 @@ import { curry, compose, isEmpty, intersection } from 'ramda';
 
 /**
  * Returns `true` if any of the items from first array is not the second array.
- *
+ * @func
  * @category List
  *
  * @param {Array} List
@@ -16,4 +16,5 @@ import { curry, compose, isEmpty, intersection } from 'ramda';
  *
  * @sig [a] -> [a] -> Boolean
  */
-export default curry(compose(isEmpty, intersection));
+const containsNone = curry(compose(isEmpty, intersection));
+export default containsNone;

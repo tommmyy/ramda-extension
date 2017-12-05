@@ -3,7 +3,7 @@ import notNil from './notNil';
 
 /**
  * Returns first not nil value
- *
+ * @func
  * @category List
  *
  * @example
@@ -13,4 +13,5 @@ import notNil from './notNil';
  * @sig [a] -> a
  *
  */
-export default find(notNil);
+const findNotNil = find(notNil);
+export default findNotNil;

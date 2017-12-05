@@ -2,7 +2,7 @@ import { not, o, isEmpty } from 'ramda';
 
 /**
  * Returns true if the given value is not its type's empty value
- *
+ * @func
  * @category Logic
  *
  * @example
@@ -16,4 +16,5 @@ import { not, o, isEmpty } from 'ramda';
  *
  * @sig a -> Boolean
  */
-export default o(not, isEmpty);
+const notEmpty = o(not, isEmpty);
+export default notEmpty;

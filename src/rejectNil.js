@@ -2,7 +2,7 @@ import { reject, isNil } from 'ramda';
 
 /**
  * Filters out every nil value in a list.
- *
+ * @func
  * @category List
  *
  * @example
@@ -12,4 +12,5 @@ import { reject, isNil } from 'ramda';
  * @sig [a] -> [a]
  *
  */
-export default reject(isNil);
+const rejectNil = reject(isNil);
+export default rejectNil;

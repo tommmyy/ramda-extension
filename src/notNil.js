@@ -2,7 +2,7 @@ import { o, not, isNil } from 'ramda';
 
 /**
  * Returns true if argument is neither null or undefined.
- *
+ * @func
  * @category Logic
  *
  * @example
@@ -17,4 +17,5 @@ import { o, not, isNil } from 'ramda';
  *
  * @sig a -> Boolean
  */
-export default o(not, isNil);
+const notNil = o(not, isNil);
+export default notNil;

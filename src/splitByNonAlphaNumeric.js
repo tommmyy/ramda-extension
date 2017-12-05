@@ -3,7 +3,7 @@ import { emptyString, nonAlphaNumericRegExp } from './internal';
 
 /**
  * Splits string into list. Delimeter is every sequnce of non-alphanumerical values.
- *
+ * @func
  * @category String
  *
  * @example
@@ -13,4 +13,5 @@ import { emptyString, nonAlphaNumericRegExp } from './internal';
  * @sig String -> [String]
  *
  */
-export default o(reject(equals(emptyString)), split(nonAlphaNumericRegExp));
+const splitByNonAlphaNumeric = o(reject(equals(emptyString)), split(nonAlphaNumericRegExp));
+export default splitByNonAlphaNumeric;

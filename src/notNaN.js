@@ -3,7 +3,7 @@ import { o, not } from 'ramda';
 /* eslint-disable max-len */
 /**
  * Return negation of native isNaN function.
- *
+ * @func
  * @category Logic
  *
  * @example
@@ -20,5 +20,6 @@ import { o, not } from 'ramda';
  *
  * @sig a -> Boolean
  */
-export default o(not, isNaN);
+const notNan = o(not, isNaN);
+export default notNan;
 /* eslint-enable max-len */

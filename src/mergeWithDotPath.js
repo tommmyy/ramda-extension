@@ -5,7 +5,7 @@ import assocDotPath from './assocDotPath';
 /**
  * Merge data in object using custom merge fn.
  * @func
- * @category Object*
+ * @category Object
  *
  * @param {String} path The dot path to the value
  * @param {Function} mergeFn The merging function

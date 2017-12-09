@@ -7,7 +7,7 @@ import alwaysNull from './alwaysNull';
  *
  * @example
  *
- *		alwaysNull() // null
+ *		R_.noop() // null
  *
  * @sig a -> Object
  */

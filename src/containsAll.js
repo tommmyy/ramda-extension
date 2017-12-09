@@ -11,8 +11,8 @@ import { curry, compose, isEmpty, difference } from 'ramda';
  *
  * @example
  *
- *  	containsAll(['a', 'b'], ['a', 'b', 'c']) // true
- *   	containsAll(['a', 'b', 'd'], ['a', 'b', 'c']) // false
+ *  	R_.containsAll(['a', 'b'], ['a', 'b', 'c']) // true
+ *   	R_.containsAll(['a', 'b', 'd'], ['a', 'b', 'c']) // false
  *
  * @sig [a] -> [a] -> Boolean
  *

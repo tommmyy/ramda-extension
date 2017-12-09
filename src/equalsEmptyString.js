@@ -11,8 +11,8 @@ import { emptyString } from './internal';
  *
  * @example
  *
- * 		equalsEmptyString('') // true
- * 		equalsEmptyString('hi') // false
+ * 		R_.equalsEmptyString('') // true
+ * 		R_.equalsEmptyString('hi') // false
  *
  * @sig a -> Boolean
  */

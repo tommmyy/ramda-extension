@@ -8,9 +8,9 @@ import { equals } from 'ramda';
  *
  * @example
  *
- * 		equalsZero(3) // false
- * 		equalsZero(0) // true
- * 		equalsZero(-3) // false
+ * 		R_.equalsZero(3) // false
+ * 		R_.equalsZero(0) // true
+ * 		R_.equalsZero(-3) // false
  *
  * @sig Number -> Boolean
  */

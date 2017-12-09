@@ -9,8 +9,8 @@ import isObject from './isObject';
  *
  * @example
  *
- * 		isPromise(Promise.resolve()) // true
- *   	isPromise(0) // false
+ * 		R_.isPromise(Promise.resolve()) // true
+ *   	R_.isPromise(0) // false
  *
  * @sig a -> Boolean
  *

@@ -7,7 +7,7 @@ import { split } from 'ramda';
  *
  * @example
  *
- * 		splitByDot('a.b.c') // ['a', 'b', 'c']
+ * 		R_.splitByDot('a.b.c') // ['a', 'b', 'c']
  *
  * @sig String -> [String]
  */

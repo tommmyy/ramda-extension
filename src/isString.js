@@ -7,9 +7,9 @@ import { is } from 'ramda';
  *
  * @example
  *
- * 		isObject({}) // false
- * 		isObject([]) // false
- * 		isObject('') // true
+ * 		R_.isObject({}) // false
+ * 		R_.isObject([]) // false
+ * 		R_.isObject('') // true
 
  * @sig a -> Boolean
  *

@@ -7,12 +7,12 @@ import { not, o, isEmpty } from 'ramda';
  *
  * @example
  *
- * 		notEmpty([1, 2, 3]);   //=> true
- *   	notEmpty([]);          //=> false
- * 		notEmpty('');          //=> false
- * 		notEmpty(null);        //=> true
- * 		notEmpty({});          //=> false
- * 		notEmpty({length: 0}); //=> true
+ * 		R_.notEmpty([1, 2, 3]);   //=> true
+ *   	R_.notEmpty([]);          //=> false
+ * 		R_.notEmpty('');          //=> false
+ * 		R_.notEmpty(null);        //=> true
+ * 		R_.notEmpty({});          //=> false
+ * 		R_.notEmpty({length: 0}); //=> true
  *
  * @sig a -> Boolean
  */

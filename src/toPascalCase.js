@@ -10,9 +10,9 @@ import listToString from './listToString';
  *
  * @example
  *
- * 		toPascalCase('hello-world') // 'HelloWorld'
- * 		toPascalCase('hello- world') // 'HelloWorld'
- * 		toPascalCase('  hello-/ world/ ') // 'HelloWorld'
+ * 		R_.toPascalCase('hello-world') // 'HelloWorld'
+ * 		R_.toPascalCase('hello- world') // 'HelloWorld'
+ * 		R_.toPascalCase('  hello-/ world/ ') // 'HelloWorld'
  *
  * @sig String -> String
  */

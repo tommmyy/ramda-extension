@@ -8,9 +8,9 @@ import { gt } from 'ramda';
  *
  * @example
  *
- * 		isNegative(3) // false
- * 		isNegative(0) // false
- * 		isNegative(-3) // true
+ * 		R_.isNegative(3) // false
+ * 		R_.isNegative(0) // false
+ * 		R_.isNegative(-3) // true
  *
  * @sig Number -> Boolean
  */

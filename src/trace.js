@@ -10,7 +10,7 @@ import { curry } from 'ramda';
  *
  * @example
  *
- *		compose(calculation2, trace('Page A'), calculation1); // logs "Page A" and result of calculation1
+ *		compose(calculation2, R_.trace('Page A'), calculation1); // logs "Page A" and result of calculation1
  *
  */
 const trace = curry((x, y) => (console.log(x, y), y));

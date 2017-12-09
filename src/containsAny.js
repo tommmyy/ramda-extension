@@ -10,8 +10,8 @@ import {curry, compose, not, isEmpty, intersection } from 'ramda';
  *
  * @example
  *
- *  	containsAny(['a', 'e'], ['a', 'b', 'c']) // true
- *   	containsAny(['e', 'f'], ['a', 'b', 'c']) // false
+ *  	R_.containsAny(['a', 'e'], ['a', 'b', 'c']) // true
+ *   	R_.containsAny(['e', 'f'], ['a', 'b', 'c']) // false
  *
  * @sig [a] -> [a] -> Boolean
  *

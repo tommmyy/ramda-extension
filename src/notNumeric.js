@@ -8,19 +8,19 @@ import isNumeric from './isNumeric';
  *
  * @example
  *
- * 		notNumeric(-1) // false
- *   	notNumeric(0) // false
- *    	notNumeric(1) // false
- *    	notNumeric(1.1) // false
- *     	notNumeric(Infinity) // true
- *		notNumeric(NaN) // true
- *		notNumeric('') // true
- *		notNumeric(() => {}) // true
- *		notNumeric(false) // true
- *		notNumeric(null) // true
- *		notNumeric(undefined) // true
- *		notNumeric({}) // true
- *		notNumeric([]) // true
+ * 		R_.notNumeric(-1) // false
+ *   	R_.notNumeric(0) // false
+ *    	R_.notNumeric(1) // false
+ *    	R_.notNumeric(1.1) // false
+ *     	R_.notNumeric(Infinity) // true
+ *		R_.notNumeric(NaN) // true
+ *		R_.notNumeric('') // true
+ *		R_.notNumeric(() => {}) // true
+ *		R_.notNumeric(false) // true
+ *		R_.notNumeric(null) // true
+ *		R_.notNumeric(undefined) // true
+ *		R_.notNumeric({}) // true
+ *		R_.notNumeric([]) // true
  *
  * @sig a -> Boolean
  *

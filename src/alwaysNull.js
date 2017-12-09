@@ -6,7 +6,7 @@ import { always } from 'ramda';
  *
  * @example
  *
- *		alwaysNull() // null
+ *		R_.alwaysNull() // null
  *
  * @sig a -> Object
  */

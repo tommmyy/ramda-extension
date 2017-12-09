@@ -9,9 +9,9 @@ import toLowerFirst from './toLowerFirst';
  *
  * @example
  *
- * 		toCamelCase('hello-world') // 'helloWorld'
- * 		toCamelCase('hello- world') // 'helloWorld'
- * 		toCamelCase('  hello-/ world/ ') // 'helloWorld'
+ * 		R_.toCamelCase('hello-world') // 'helloWorld'
+ * 		R_.toCamelCase('hello- world') // 'helloWorld'
+ * 		R_.toCamelCase('  hello-/ world/ ') // 'helloWorld'
  *
  * @sig String -> String
  *

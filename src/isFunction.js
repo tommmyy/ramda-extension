@@ -7,10 +7,10 @@ import { is } from 'ramda';
  *
  * @example
  *
- * 		isFunction(() => {}) // true
- * 		isFunction({}) // false
- * 		isFunction([]) // false
- * 		isFunction('') // false
+ * 		R_.isFunction(() => {}) // true
+ * 		R_.isFunction({}) // false
+ * 		R_.isFunction([]) // false
+ * 		R_.isFunction('') // false
  *
  * @sig a -> Boolean
  *

@@ -8,7 +8,7 @@ import { emptyString, nonAlphaNumericRegExp } from './internal';
  *
  * @example
  *
- * 		splitByNonAlphaNumeric('Hello    world/1'); // ['Hello', 'world', '1']
+ * 		R_.splitByNonAlphaNumeric('Hello    world/1'); // ['Hello', 'world', '1']
  *
  * @sig String -> [String]
  *

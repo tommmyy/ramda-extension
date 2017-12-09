@@ -8,19 +8,19 @@ import notNaN from './notNaN';
  *
  * @example
  *
- * 		isNumeric(-1) // true
- *   	isNumeric(0) // true
- *    	isNumeric(1) // true
- *    	isNumeric(1.1) // true
- *     	isNumeric(Infinity) // false
- *		isNumeric(NaN) // false
- *		isNumeric('') // false
- *		isNumeric(() => {}) // false
- *		isNumeric(false) // false
- *		isNumeric(null) // false
- *		isNumeric(undefined) // false
- *		isNumeric({}) // false
- *		isNumeric([]) // false
+ * 		R_.isNumeric(-1) // true
+ *   	R_.isNumeric(0) // true
+ *    	R_.isNumeric(1) // true
+ *    	R_.isNumeric(1.1) // true
+ *     	R_.isNumeric(Infinity) // false
+ *		R_.isNumeric(NaN) // false
+ *		R_.isNumeric('') // false
+ *		R_.isNumeric(() => {}) // false
+ *		R_.isNumeric(false) // false
+ *		R_.isNumeric(null) // false
+ *		R_.isNumeric(undefined) // false
+ *		R_.isNumeric({}) // false
+ *		R_.isNumeric([]) // false
  *
  * @sig a -> Boolean
  *

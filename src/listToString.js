@@ -8,7 +8,7 @@ import { emptyString } from './internal';
  *
  * @example
  *
- * 		listToString(['h', 'e', 'l', 'l', 'o']) // 'hello'
+ * 		R_.listToString(['h', 'e', 'l', 'l', 'o']) // 'hello'
  *
  * @sig [String] -> String
  *

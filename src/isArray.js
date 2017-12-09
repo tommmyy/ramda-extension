@@ -7,8 +7,8 @@ import { is } from 'ramda';
  *
  * @example
  *
- * 		isArray([]) // true
- * 		isArray('') // false
+ * 		R_.isArray([]) // true
+ * 		R_.isArray('') // false
 
  * @sig a -> Boolean
  */

@@ -8,9 +8,9 @@ import { lt } from 'ramda';
  *
  * @example
  *
- * 		isPositive(3) // true
- * 		isPositive(0) // false
- * 		isPositive(-3) // false
+ * 		R_.isPositive(3) // true
+ * 		R_.isPositive(0) // false
+ * 		R_.isPositive(-3) // false
  *
  * @sig Number -> Boolean
  */

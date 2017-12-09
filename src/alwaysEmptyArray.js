@@ -8,7 +8,7 @@ import { emptyArray } from './internal';
  *
  * @example
  *
- *		alwaysEmptyArray() // []
+ *		R_.alwaysEmptyArray() // []
  *
  * @sig a -> [a]
  */

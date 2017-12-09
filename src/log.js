@@ -7,8 +7,8 @@ import { tap } from 'ramda';
  *
  * @example
  *
- * 		log('hello') // logs 'hello'
- * 		compose(log, R.sum)([1, 3]) // logs 4
+ * 		R_.log('hello') // logs 'hello'
+ * 		compose(R_.log, R.sum)([1, 3]) // logs 4
  *
  * @sig a -> a
  *

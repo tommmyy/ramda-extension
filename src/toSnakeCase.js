@@ -8,9 +8,9 @@ import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
  *
  * @example
  *
- * 		toSnakeCase('hello-world') // 'hello_world'
- * 		toSnakeCase('hello- world') // 'hello_world'
- * 		toSnakeCase('  hello-/ world/ ') // 'hello_world'
+ * 		R_.toSnakeCase('hello-world') // 'hello_world'
+ * 		R_.toSnakeCase('hello- world') // 'hello_world'
+ * 		R_.toSnakeCase('  hello-/ world/ ') // 'hello_world'
  *
  * @sig String -> String
  */

@@ -6,6 +6,7 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [flip(concat)('$')]);
 
 /**
  * Testing string if ends with some suffix.
+ *
  * @func
  * @category String
  *
@@ -22,4 +23,5 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [flip(concat)('$')]);
  * @sig a -> b -> Boolean
  */
 const endsWithSuffix = useWith(test, [getRegExp_, identity]);
+
 export default endsWithSuffix;

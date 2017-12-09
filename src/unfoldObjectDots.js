@@ -16,6 +16,7 @@ import splitByDot from './splitByDot';
 
 /**
  * Unfolds input object by dot delimetered path inside its keys.
+ *
  * @func
  * @category Object
  *
@@ -30,4 +31,5 @@ const unfoldObjectDots = o(
 	o(mergeAll, values),
 	mapObjIndexed(useWith(flip(call), [identity, compose(apply(compose), map(objOf), splitByDot)]))
 );
+
 export default unfoldObjectDots;

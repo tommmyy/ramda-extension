@@ -4,6 +4,7 @@ import findNotNil from './findNotNil';
 /**
  * Returns result of first not nil evaluated functions in the list.
  * Undefined otherwise.
+ *
  * @func
  * @category Function
  *
@@ -15,4 +16,5 @@ import findNotNil from './findNotNil';
  * @sig [a] -> b|undefined
  */
 const dispatch = useWith(compose(findNotNil, call), [juxt, identity]);
+
 export default dispatch;

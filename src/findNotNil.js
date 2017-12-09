@@ -3,6 +3,7 @@ import notNil from './notNil';
 
 /**
  * Returns first not nil value
+ *
  * @func
  * @category List
  *
@@ -14,4 +15,5 @@ import notNil from './notNil';
  *
  */
 const findNotNil = find(notNil);
+
 export default findNotNil;

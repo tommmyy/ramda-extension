@@ -3,6 +3,7 @@ import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
 
 /**
  * Converts string into snake_case.
+ *
  * @func
  * @category String
  *
@@ -18,4 +19,5 @@ const toSnakeCase = o(
 	join('_'),
 	o(map(toLower), splitByNonAlphaNumeric)
 );
+
 export default toSnakeCase;

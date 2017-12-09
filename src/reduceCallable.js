@@ -2,6 +2,7 @@ import { reduce, call } from 'ramda';
 
 /**
  * Call function passed as first argument with arguments determined by second parameter in order.
+ *
  * @func
  * @category Function
  *
@@ -14,4 +15,5 @@ import { reduce, call } from 'ramda';
  *
  */
 const reduceCallable = reduce(call);
+
 export default reduceCallable;

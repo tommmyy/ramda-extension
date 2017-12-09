@@ -5,6 +5,7 @@ import listToString from './listToString';
 
 /**
  * Converts string into PascalCase.
+ *
  * @func
  * @category String
  *
@@ -20,4 +21,5 @@ const toPascalCase = o(
 	listToString,
 	o(map(toUpperFirst), splitByNonAlphaNumeric)
 );
+
 export default toPascalCase;

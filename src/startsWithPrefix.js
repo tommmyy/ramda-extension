@@ -6,6 +6,7 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [concat('^')]);
 
 /**
  * Testing string if starts with some prefix.
+ *
  * @func
  * @category String
  *
@@ -22,4 +23,5 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [concat('^')]);
  * @sig a -> b -> Boolean
  */
 const startsWithPrefix = useWith(test, [getRegExp_, identity]);
+
 export default startsWithPrefix;

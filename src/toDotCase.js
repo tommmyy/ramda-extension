@@ -3,6 +3,7 @@ import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
 
 /**
  * Converts string into dot.case.
+ *
  * @func
  * @category String
  *
@@ -18,4 +19,5 @@ const toDotCase = o(
 	join('.'),
 	o(map(toLower), splitByNonAlphaNumeric)
 );
+
 export default toDotCase;

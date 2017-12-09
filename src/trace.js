@@ -3,6 +3,7 @@ import { curry } from 'ramda';
 /**
  * Function with side-effect. Logs input to console and returns that input.
  * Similar to "log" but allows to label logged value.
+ *
  * @func
  * @category Function
  *
@@ -14,4 +15,5 @@ import { curry } from 'ramda';
  *
  */
 const trace = curry((x, y) => (console.log(x, y), y));
+
 export default trace;

@@ -2,6 +2,7 @@ import { unapply, identity } from 'ramda';
 
 /**
  * Converts arguments to list.
+ *
  * @func
  * @category Function
  *
@@ -12,4 +13,5 @@ import { unapply, identity } from 'ramda';
  * @sig (a, b, c, ...) → ([a, b, c, ...])
  */
 const argumentsToList = unapply(identity);
+
 export default argumentsToList;

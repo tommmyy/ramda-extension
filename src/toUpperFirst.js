@@ -2,6 +2,7 @@ import { o, join, adjust, toUpper } from 'ramda';
 
 /**
  * Capitalize first letter.
+ *
  * @func
  * @category String
  *
@@ -12,4 +13,5 @@ import { o, join, adjust, toUpper } from 'ramda';
  * @sig String -> String
  */
 const toUpperFirst = o(join(''), adjust(toUpper, 0));
+
 export default toUpperFirst;

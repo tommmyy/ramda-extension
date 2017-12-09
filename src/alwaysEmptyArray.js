@@ -3,6 +3,7 @@ import { emptyArray } from './internal';
 
 /**
  * Always returns empty array.
+ *
  * @func
  * @category Function
  *
@@ -13,4 +14,5 @@ import { emptyArray } from './internal';
  * @sig a -> [a]
  */
 const alwaysEmptyArray = always(emptyArray);
+
 export default alwaysEmptyArray;

@@ -3,6 +3,7 @@ import { equals } from 'ramda';
 
 /**
  * Returns true if argument equals 0.
+ *
  * @func
  * @category Math
  *
@@ -15,4 +16,5 @@ import { equals } from 'ramda';
  * @sig Number -> Boolean
  */
 const equalsZero = equals(0);
+
 export default equalsZero;

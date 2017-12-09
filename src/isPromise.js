@@ -4,6 +4,7 @@ import isObject from './isObject';
 
 /**
  * Returns true if argument is Promise.
+ *
  * @func
  * @category Type
  *
@@ -15,8 +16,6 @@ import isObject from './isObject';
  * @sig a -> Boolean
  *
  */
-const isPromise = allPass([
-	isObject,
-	o(isFunction, prop('then')),
-]);
+const isPromise = allPass([isObject, o(isFunction, prop('then'))]);
+
 export default isPromise;

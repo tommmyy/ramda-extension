@@ -2,6 +2,7 @@ import { reject, isNil } from 'ramda';
 
 /**
  * Filters out every nil value in a list.
+ *
  * @func
  * @category List
  *
@@ -13,4 +14,5 @@ import { reject, isNil } from 'ramda';
  *
  */
 const rejectNil = reject(isNil);
+
 export default rejectNil;

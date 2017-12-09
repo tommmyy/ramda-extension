@@ -2,6 +2,7 @@ import { is } from 'ramda';
 
 /**
  * Returns true if argument is type of Function.
+ *
  * @func
  * @category Type
  *
@@ -16,4 +17,5 @@ import { is } from 'ramda';
  *
  */
 const isFunction = is(Function);
+
 export default isFunction;

@@ -3,6 +3,7 @@ import notNaN from './notNaN';
 
 /**
  * Returns true if argument is finite numeric value.
+ *
  * @func
  * @category Logic
  *
@@ -26,4 +27,5 @@ import notNaN from './notNaN';
  *
  */
 const isNumeric = allPass([o(notNaN, parseFloat), isFinite]);
+
 export default isNumeric;

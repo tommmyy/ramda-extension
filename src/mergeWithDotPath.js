@@ -4,6 +4,7 @@ import assocDotPath from './assocDotPath';
 
 /**
  * Merge data in object using custom merge fn.
+ *
  * @func
  * @category Object
  *
@@ -14,8 +15,11 @@ import assocDotPath from './assocDotPath';
  * @return {Object} A new object with merge data
  * @example
  *
- *      R_.mergeWithDotPath('a.b', R.merge, {d : 30 }, {a: {b: { c: 20 }}}); //=> {a: {b: { c: 20, d: 30 }}}
+ *      R_.mergeWithDotPath('a.b', R.merge, { d: 30 }, {a: {b: { c: 20 }}}); //=> {a: {b: { c: 20, d: 30 }}}
  */
-const mergeWithDotPath = curry((path, mergeFn, value, obj) =>
-assocDotPath(path, mergeFn(dotPath(path, obj), value), obj));
+const mergeWithDotPath = curry((path, mergeFn, value, obj) => assocDotPath(
+	path,
+	mergeFn(dotPath(path, obj), value), obj)
+);
+
 export default mergeWithDotPath;

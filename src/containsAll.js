@@ -1,6 +1,7 @@
 import { curry, compose, isEmpty, difference } from 'ramda';
 /**
  * Resolves to true if all elements in first list are found within the second list
+ *
  * @func
  * @category List
  *
@@ -18,4 +19,5 @@ import { curry, compose, isEmpty, difference } from 'ramda';
  *
  */
 const containsAll = curry(compose(isEmpty, difference));
+
 export default containsAll;

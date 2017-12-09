@@ -3,6 +3,7 @@ import { emptyString } from './internal';
 
 /**
  * Converts list of strings to string.
+ *
  * @func
  * @category List
  *
@@ -14,4 +15,5 @@ import { emptyString } from './internal';
  *
  */
 const listToString = join(emptyString);
+
 export default listToString;

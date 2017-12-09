@@ -2,6 +2,7 @@ import { tap } from 'ramda';
 
 /**
  * Function with side-effect. Logs input to console and returns that input.
+ *
  * @func
  * @category Function
  *
@@ -14,4 +15,5 @@ import { tap } from 'ramda';
  *
  */
 const log = tap((x) => console.log(x));
+
 export default log;

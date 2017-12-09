@@ -3,6 +3,7 @@ import { emptyObject } from './internal';
 
 /**
  * Always returns empty object.
+ *
  * @func
  * @category Function
  *
@@ -13,4 +14,5 @@ import { emptyObject } from './internal';
  * @sig a -> [a]
  */
 const alwaysEmptyObject = always(emptyObject);
+
 export default alwaysEmptyObject;

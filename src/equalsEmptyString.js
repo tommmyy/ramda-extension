@@ -3,6 +3,7 @@ import { emptyString } from './internal';
 
 /**
  * Testing if function is equals to ''
+ *
  * @func
  * @category String
  *
@@ -17,4 +18,5 @@ import { emptyString } from './internal';
  * @sig a -> Boolean
  */
 const equalsEmptyString = equals(emptyString);
+
 export default equalsEmptyString;

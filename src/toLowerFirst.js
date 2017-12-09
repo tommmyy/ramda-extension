@@ -2,6 +2,7 @@ import { o, join, adjust, toLower } from 'ramda';
 
 /**
  * Decapitalize first letter.
+ *
  * @func
  * @category String
  *
@@ -12,4 +13,5 @@ import { o, join, adjust, toLower } from 'ramda';
  * @sig String -> String
  */
 const toLowerFirst = o(join(''), adjust(toLower, 0));
+
 export default toLowerFirst;

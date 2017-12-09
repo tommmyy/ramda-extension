@@ -3,6 +3,7 @@ import { lt } from 'ramda';
 
 /**
  * Returns true if argument is greater than 0.
+ *
  * @func
  * @category Math
  *
@@ -15,4 +16,5 @@ import { lt } from 'ramda';
  * @sig Number -> Boolean
  */
 const isPositive = lt(0);
+
 export default isPositive;

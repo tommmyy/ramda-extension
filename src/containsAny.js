@@ -1,6 +1,7 @@
 import {curry, compose, not, isEmpty, intersection } from 'ramda';
 /**
  * Returns `true` if any of the items from first array are in the second array.
+ *
  * @func
  * @category List
  *
@@ -17,4 +18,5 @@ import {curry, compose, not, isEmpty, intersection } from 'ramda';
  *
  */
 const containsAny = curry(compose(not, isEmpty, intersection));
+
 export default containsAny;

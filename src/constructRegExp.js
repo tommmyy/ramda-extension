@@ -2,6 +2,7 @@ import { constructN } from 'ramda';
 
 /**
  * Constructs RegExp.
+ *
  * @func
  * @category Function
  *
@@ -11,4 +12,5 @@ import { constructN } from 'ramda';
  *
  */
 const constructRegExp = constructN(2, RegExp);
+
 export default constructRegExp;

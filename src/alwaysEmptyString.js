@@ -3,6 +3,7 @@ import { emptyString } from './internal';
 
 /**
  * Always returns empty string.
+ *
  * @func
  * @category Function
  *
@@ -13,4 +14,5 @@ import { emptyString } from './internal';
  * @sig a -> String
  */
 const alwaysEmptyString = always(emptyString);
+
 export default alwaysEmptyString;

@@ -2,6 +2,7 @@ import { is } from 'ramda';
 
 /**
  * Returns true if argument is type of String.
+ *
  * @func
  * @category Type
  *
@@ -15,4 +16,5 @@ import { is } from 'ramda';
  *
  */
 const isString = is(String);
+
 export default isString;

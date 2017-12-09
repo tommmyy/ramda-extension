@@ -8,7 +8,7 @@ import { o, join, adjust, toLower } from 'ramda';
  *
  * @example
  *
- * 		R_.toLowerFirst('HELLO') // 'hELLO'
+ * 		R_.toLowerFirst('HELLO WORLD') // 'hELLO WORLD'
  *
  * @sig String -> String
  */

@@ -1,7 +1,7 @@
 import {curry, compose, not, isEmpty, intersection } from 'ramda';
 /**
  * Returns `true` if any of the items from first array are in the second array.
- *
+ * @func
  * @category List
  *
  * @param {Array} List
@@ -10,10 +10,11 @@ import {curry, compose, not, isEmpty, intersection } from 'ramda';
  *
  * @example
  *
- *  	containsAny(['a', 'e'], ['a', 'b', 'c']) // true
- *   	containsAny(['e', 'f'], ['a', 'b', 'c']) // false
+ *  	R_.containsAny(['a', 'e'], ['a', 'b', 'c']) // true
+ *   	R_.containsAny(['e', 'f'], ['a', 'b', 'c']) // false
  *
  * @sig [a] -> [a] -> Boolean
  *
  */
-export default curry(compose(not, isEmpty, intersection));
+const containsAny = curry(compose(not, isEmpty, intersection));
+export default containsAny;

@@ -2,13 +2,14 @@ import alwaysNull from './alwaysNull';
 
 /**
  * Alias for `alwaysNull`
- *
+ * @func
  * @category Function
  *
  * @example
  *
- *		alwaysNull() // null
+ *		R_.noop() // null
  *
  * @sig a -> Object
  */
-export default alwaysNull;
+const noop = alwaysNull;
+export default noop;

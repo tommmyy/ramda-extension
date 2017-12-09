@@ -3,14 +3,15 @@ import { emptyString } from './internal';
 
 /**
  * Converts list of strings to string.
- *
+ * @func
  * @category List
  *
  * @example
  *
- * 		listToString(['h', 'e', 'l', 'l', 'o']) // 'hello'
+ * 		R_.listToString(['h', 'e', 'l', 'l', 'o']) // 'hello'
  *
  * @sig [String] -> String
  *
  */
-export default join(emptyString);
+const listToString = join(emptyString);
+export default listToString;

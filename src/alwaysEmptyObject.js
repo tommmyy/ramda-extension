@@ -3,13 +3,14 @@ import { emptyObject } from './internal';
 
 /**
  * Always returns empty object.
- *
+ * @func
  * @category Function
  *
  * @example
  *
- *		alwaysEmptyObject() // {}
+ *		R_.alwaysEmptyObject() // {}
  *
  * @sig a -> [a]
  */
-export default always(emptyObject);
+const alwaysEmptyObject = always(emptyObject);
+export default alwaysEmptyObject;

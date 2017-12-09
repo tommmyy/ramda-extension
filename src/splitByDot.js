@@ -2,13 +2,14 @@ import { split } from 'ramda';
 
 /**
  * Splits string by dot into list.
- *
+ * @func
  * @category String
  *
  * @example
  *
- * 		splitByDot('a.b.c') // ['a', 'b', 'c']
+ * 		R_.splitByDot('a.b.c') // ['a', 'b', 'c']
  *
  * @sig String -> [String]
  */
-export default split('.');
+const splitByDot = split('.');
+export default splitByDot;

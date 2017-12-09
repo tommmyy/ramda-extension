@@ -2,17 +2,18 @@ import { is } from 'ramda';
 
 /**
  * Returns true if argument is type of Function.
- *
+ * @func
  * @category Type
  *
  * @example
  *
- * 		isFunction(() => {}) // true
- * 		isFunction({}) // false
- * 		isFunction([]) // false
- * 		isFunction('') // false
+ * 		R_.isFunction(() => {}) // true
+ * 		R_.isFunction({}) // false
+ * 		R_.isFunction([]) // false
+ * 		R_.isFunction('') // false
  *
  * @sig a -> Boolean
  *
  */
-export default is(Function);
+const isFunction = is(Function);
+export default isFunction;

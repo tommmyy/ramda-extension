@@ -2,12 +2,13 @@ import { constructN } from 'ramda';
 
 /**
  * Constructs RegExp.
- *
+ * @func
  * @category Function
  *
  * @example
  *
- * 		test(constructRegExp('end$', 'gi'), 'in the end') // true
+ * 		test(R_.constructRegExp('end$', 'gi'), 'in the end') // true
  *
  */
-export default constructN(2, RegExp);
+const constructRegExp = constructN(2, RegExp);
+export default constructRegExp;

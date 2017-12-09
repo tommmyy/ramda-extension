@@ -2,13 +2,14 @@ import { o, join, adjust, toLower } from 'ramda';
 
 /**
  * Decapitalize first letter.
- *
+ * @func
  * @category String
  *
  * @example
  *
- * 		toLowerFirst('HELLO') // 'hELLO'
+ * 		R_.toLowerFirst('HELLO') // 'hELLO'
  *
  * @sig String -> String
  */
-export default o(join(''), adjust(toLower, 0));
+const toLowerFirst = o(join(''), adjust(toLower, 0));
+export default toLowerFirst;

@@ -4,16 +4,17 @@ import toLowerFirst from './toLowerFirst';
 
 /**
  * Converts string into camelCase.
- *
+ * @func
  * @category String
  *
  * @example
  *
- * 		toCamelCase('hello-world') // 'helloWorld'
- * 		toCamelCase('hello- world') // 'helloWorld'
- * 		toCamelCase('  hello-/ world/ ') // 'helloWorld'
+ * 		R_.toCamelCase('hello-world') // 'helloWorld'
+ * 		R_.toCamelCase('hello- world') // 'helloWorld'
+ * 		R_.toCamelCase('  hello-/ world/ ') // 'helloWorld'
  *
  * @sig String -> String
  *
  */
-export default o(toLowerFirst, toPascalCase);
+const toCamelCase = o(toLowerFirst, toPascalCase);
+export default toCamelCase;

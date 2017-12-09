@@ -4,18 +4,19 @@ import isObject from './isObject';
 
 /**
  * Returns true if argument is Promise.
- *
+ * @func
  * @category Type
  *
  * @example
  *
- * 		isPromise(Promise.resolve()) // true
- *   	isPromise(0) // false
+ * 		R_.isPromise(Promise.resolve()) // true
+ *   	R_.isPromise(0) // false
  *
  * @sig a -> Boolean
  *
  */
-export default allPass([
+const isPromise = allPass([
 	isObject,
 	o(isFunction, prop('then')),
 ]);
+export default isPromise;

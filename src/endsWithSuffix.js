@@ -6,7 +6,7 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [flip(concat)('$')]);
 
 /**
  * Testing string if ends with some suffix.
- *
+ * @func
  * @category String
  *
  * @param  {string} suffix
@@ -15,10 +15,11 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [flip(concat)('$')]);
  *
  * @example
  *
- * 		endsWithPrefix('o', 'hello') // true
- * 		endsWithPrefix('ello', 'hello') // true
- * 		endsWithPrefix('y', 'good bye') // false
+ * 		R_.endsWithSuffix('o', 'hello') // true
+ * 		R_.endsWithSuffix('ello', 'hello') // true
+ * 		R_.endsWithSuffix('y', 'good bye') // false
  *
  * @sig a -> b -> Boolean
  */
-export default useWith(test, [getRegExp_, identity]);
+const endsWithSuffix = useWith(test, [getRegExp_, identity]);
+export default endsWithSuffix;

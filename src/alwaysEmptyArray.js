@@ -3,13 +3,14 @@ import { emptyArray } from './internal';
 
 /**
  * Always returns empty array.
- *
+ * @func
  * @category Function
  *
  * @example
  *
- *		alwaysEmptyArray() // []
+ *		R_.alwaysEmptyArray() // []
  *
  * @sig a -> [a]
  */
-export default always(emptyArray);
+const alwaysEmptyArray = always(emptyArray);
+export default alwaysEmptyArray;

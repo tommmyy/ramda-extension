@@ -2,16 +2,17 @@ import { is } from 'ramda';
 
 /**
  * Returns true if argument is type of String.
- *
+ * @func
  * @category Type
  *
  * @example
  *
- * 		isObject({}) // false
- * 		isObject([]) // false
- * 		isObject('') // true
+ * 		R_.isObject({}) // false
+ * 		R_.isObject([]) // false
+ * 		R_.isObject('') // true
 
  * @sig a -> Boolean
  *
  */
-export default is(String);
+const isString = is(String);
+export default isString;

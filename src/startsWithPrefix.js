@@ -6,7 +6,7 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [concat('^')]);
 
 /**
  * Testing string if starts with some prefix.
-
+ * @func
  * @category String
  *
  * @param  {string} prefix
@@ -15,10 +15,11 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [concat('^')]);
  *
  * @example
  *
- * 		startsWithPrefix('h', 'hello') // true
- * 		startsWithPrefix('hell', 'hello') // true
- * 		startsWithPrefix('h', 'good bye') // false
+ * 		R_.startsWithPrefix('h', 'hello') // true
+ * 		R_.startsWithPrefix('hell', 'hello') // true
+ * 		R_.startsWithPrefix('h', 'good bye') // false
  *
  * @sig a -> b -> Boolean
  */
-export default useWith(test, [getRegExp_, identity]);
+const startsWithPrefix = useWith(test, [getRegExp_, identity]);
+export default startsWithPrefix;

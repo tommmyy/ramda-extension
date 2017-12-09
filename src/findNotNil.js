@@ -3,14 +3,15 @@ import notNil from './notNil';
 
 /**
  * Returns first not nil value
- *
+ * @func
  * @category List
  *
  * @example
  *
- * 		findNotNil([null, undefined, 0, true]) // 0
+ * 		R_.findNotNil([null, undefined, 0, true]) // 0
  *
  * @sig [a] -> a
  *
  */
-export default find(notNil);
+const findNotNil = find(notNil);
+export default findNotNil;

@@ -2,14 +2,15 @@ import { is } from 'ramda';
 
 /**
  * Returns true if argument is type of Array.
- *
+ * @func
  * @category Type
  *
  * @example
  *
- * 		isArray([]) // true
- * 		isArray('') // false
+ * 		R_.isArray([]) // true
+ * 		R_.isArray('') // false
 
  * @sig a -> Boolean
  */
-export default is(Array);
+const isArray = is(Array);
+export default isArray;

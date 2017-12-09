@@ -8,7 +8,7 @@ import { o, join, adjust, toUpper } from 'ramda';
  *
  * @example
  *
- * 		R_.toUpperFirst('hello') // 'Hello'
+ * 		R_.toUpperFirst('hello world') // 'Hello world'
  *
  * @sig String -> String
  */

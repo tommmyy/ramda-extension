@@ -1,6 +1,7 @@
 {
   "name": "ramda-extension",
   "version": "0.1.1",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/tommmyy/ramda-extension.git"
@@ -17,29 +18,39 @@
     "lower first letter",
     "upper first letter"
   ],
-  "description": "Utilities functions built on top of Ramda",
+  "description": "Helpful functions built on top of the mighty Ramda",
   "module": "es/index.js",
-  "main": ".lib/index.js",
+  "main": "lib/index.js",
   "files": [
     "es",
     "lib",
     "dist"
+  ],
+  "author": {
+    "name": "Tomas Konrady",
+    "email": "tomaskonrady@gmail.com",
+    "web": "https://github.com/tommmyy"
+  },
+  "contributors": [
+    {
+      "name": "Lukas Sulik",
+      "email": "lukas.sulik@hotmail.com",
+      "web": "https://github.com/aizerin"
+    }
   ],
   "scripts": {
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build:cjs": "cross-env BABEL_ENV=cjs babel src --out-dir lib",
     "build:umd": "cross-env BABEL_ENV=rollup NODE_ENV=development rollup -c -o dist/ramda-extension.js",
     "build:umd:min": "cross-env BABEL_ENV=rollup NODE_ENV=production rollup -c -o dist/ramda-extension.min.js",
-    "build": "npm run build:es && npm run build:cjs && npm run build:umd && npm run build:umd:min",
-    "lint": "npm run lint:eslint",
+    "build": "yarn build:es && yarn build:cjs && yarn build:umd && yarn build:umd:min",
+    "lint": "yarn lint:eslint",
     "clean": "rimraf es lib dist",
-    "test": "npm run lint && npm run test:js",
+    "test": "yarn lint && yarn test:js",
     "test:js": "jest --config=./jest.config.json",
-    "test:watch": "npm run test:js -- --watch",
+    "test:watch": "yarn test:js -- --watch",
     "lint:eslint": "eslint --ext .js ./"
   },
-  "author": "Tomas Konrady <tomaskonrady@gmail.com>",
-  "license": "MIT",
   "peerDependencies": {
     "ramda": "^0.24.0 || ^0.25.0"
   },

@@ -12,6 +12,7 @@ import { is } from 'ramda';
  * 		R_.isFunction({}) // false
  * 		R_.isFunction([]) // false
  * 		R_.isFunction('') // false
+ * 		R_.isFunction(0) // false
  *
  * @sig a -> Boolean
  *

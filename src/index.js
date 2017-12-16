@@ -50,3 +50,4 @@ export dotPath from './dotPath';
 export assocDotPath from './assocDotPath';
 export mergeWithDotPath from './mergeWithDotPath';
 export mapKeys from './mapKeys';
+export applyIfNotNil from './applyIfNotNil';

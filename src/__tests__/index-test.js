@@ -24,6 +24,7 @@ import {
 	splitByNonAlphaNumeric,
 	argumentsToList,
 	splitByDot,
+	joinWithDot,
 	containsAll,
 	containsAny,
 	dissocDotPath,
@@ -271,6 +272,12 @@ describe('argumentsToList', () => {
 describe('splitByDot', () => {
 	it('splits string by dot', () => {
 		expect(splitByDot('a.b.c')).toEqual(['a', 'b', 'c']);
+	});
+});
+
+describe('joinWithDot', () => {
+	it('join array of string with dot determiner', () => {
+		expect(joinWithDot(['a', 'b', 'c'])).toEqual('a.b.c');
 	});
 });
 

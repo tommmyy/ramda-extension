@@ -8,12 +8,11 @@ import { is } from 'ramda';
  *
  * @example
  *
- * 		R_.isObject({}) // false
- * 		R_.isObject([]) // false
- * 		R_.isObject('') // true
-
- * @sig a -> Boolean
+ * 		R_.isString({}) // false
+ * 		R_.isString([]) // false
+ * 		R_.isString('') // true
  *
+ * @sig a -> Boolean
  */
 const isString = is(String);
 

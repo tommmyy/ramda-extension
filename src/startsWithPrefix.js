@@ -12,7 +12,7 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [concat('^')]);
  *
  * @param  {string} prefix
  * @param  {string} x
- * @return {boolean}          True if `x` starts with `prefix`
+ * @return {boolean} True if `x` starts with `prefix`
  *
  * @example
  *

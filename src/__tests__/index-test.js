@@ -24,6 +24,7 @@ import {
 	splitByNonAlphaNumeric,
 	argumentsToList,
 	splitByDot,
+	joinWithDot,
 	containsAll,
 	containsAny,
 	dissocDotPath,
@@ -273,6 +274,14 @@ describe('splitByDot', () => {
 		expect(splitByDot('a.b.c')).toEqual(['a', 'b', 'c']);
 	});
 });
+
+
+describe('joinWithDot', () => {
+	it('join array of string with dot determiner', () => {
+		expect(joinWithDot(['a', 'b', 'c'])).toEqual('a.b.c');
+	});
+});
+
 
 describe('containsAll', () => {
 	it('resolves to true if all elements in first list are found within the second list', () => {

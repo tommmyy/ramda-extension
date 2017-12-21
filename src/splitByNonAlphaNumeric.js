@@ -2,7 +2,7 @@ import { o, equals, split, reject } from 'ramda';
 import { emptyString, nonAlphaNumericRegExp } from './internal';
 
 /**
- * Splits string into list. Delimeter is every sequnce of non-alphanumerical values.
+ * Splits string into list. Delimiter is every sequence of non-alphanumerical values.
  *
  * @func
  * @category String

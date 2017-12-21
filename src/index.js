@@ -43,6 +43,7 @@ export splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
 export constructRegExp from './constructRegExp';
 export rejectNil from './rejectNil';
 export splitByDot from './splitByDot';
+export joinWithDot from './joinWithDot';
 export dissocDotPath from './dissocDotPath';
 export overHead from './overHead';
 export dotPath from './dotPath';

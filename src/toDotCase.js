@@ -1,5 +1,6 @@
-import { o, map, toLower, join } from 'ramda';
+import { o, map, toLower } from 'ramda';
 import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
+import joinWithDot from './joinWithDot';
 
 /**
  * Converts string into dot.case.
@@ -16,7 +17,7 @@ import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
  * @sig String -> String
  */
 const toDotCase = o(
-	join('.'),
+	joinWithDot,
 	o(map(toLower), splitByNonAlphaNumeric)
 );
 

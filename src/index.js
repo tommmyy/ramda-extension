@@ -56,4 +56,4 @@ export gteThanLength from './gteThanLength';
 export gtThanLength from './gtThanLength';
 export lteThanLength from './lteThanLength';
 export ltThanLength from './ltThanLength';
-
+export propNotEq from './propNotEq';

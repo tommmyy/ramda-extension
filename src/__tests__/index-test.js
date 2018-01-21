@@ -34,6 +34,7 @@ import {
 	mergeWithDotPath,
 	mapKeys,
 	applyIfNotNil,
+	propNotEq,
 } from '../';
 
 describe('applyIfNotNil', () => {
@@ -375,5 +376,19 @@ describe('mergeWithDotPath', () => {
 describe('mapKeys', () => {
 	it('should map keys of the object', () => {
 		expect(mapKeys(toUpperFirst, { x: 1, y: 2, z: 3 })).toEqual({ X: 1, Y: 2, Z: 3 });
+	});
+});
+
+describe('propNotEq', () => {
+	it('should return true when object literal does not contain the property at all', () => {
+		expect(propNotEq('a', 1, {})).toBeTruthy();
+	});
+	describe('when object literal contains the property', () => {
+		it('should return true when the value of property differs', () => {
+			expect(propNotEq('a', 1, { a: 2 })).toBeTruthy();
+		});
+		it('should return false when the value of property equals', () => {
+			expect(propNotEq('a', 1, { a: 1}));
+		});
 	});
 });

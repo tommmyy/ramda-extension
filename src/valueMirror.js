@@ -25,7 +25,7 @@ import duplicate from './duplicate';
  * 		action.type === actionTypes.ITEM_REQUEST // true
  * 		actionTypes.ITEM_SUCCESS // "ITEM_SUCCESS"
  *
- * @sig a -> b
+ * @sig [String] -> Object
  *
  */
 const valueMirror = o(fromPairs, map(duplicate));

@@ -36,6 +36,8 @@ import {
 	applyIfNotNil,
 	viewEq,
 	viewWith,
+	propNotEq,
+	pathNotEq,
 } from '../';
 
 describe('applyIfNotNil', () => {
@@ -390,5 +392,34 @@ describe('viewWith', () => {
 	});
 	it('it should use division with lens view', () => {
 		expect(viewWith(R.lensIndex(0), R.divide(R.__, 2), [4])).toEqual(2);
+	});
+});
+describe('propNotEq', () => {
+	it('should return true when object literal does not contain the property at all', () => {
+		expect(propNotEq('a', 1, {})).toBeTruthy();
+	});
+	describe('when object literal contains the property', () => {
+		it('should return true when the value of property differs', () => {
+			expect(propNotEq('a', 1, { a: 2 })).toBeTruthy();
+		});
+		it('should return false when the value of property equals', () => {
+			expect(propNotEq('a', 1, { a: 1 }));
+		});
+	});
+});
+describe('pathNotEq', () => {
+	it('should return true when object literal does not contain the path at all', () => {
+		expect(pathNotEq(['a', 'b'], 1, {})).toBeTruthy();
+	});
+	it('should return true when object literal does not contain the path', () => {
+		expect(pathNotEq(['a', 'b'], 1, { a: {} })).toBeTruthy();
+	});
+	describe('when object literal contains the path', () => {
+		it('should return true when the value of path differs', () => {
+			expect(pathNotEq(['a', 'b'], 1, { a: { b: 2 } })).toBeTruthy();
+		});
+		it('should return false when the value of path equals', () => {
+			expect(pathNotEq(['a', 'b'], 1, { a: { b: 1 } }));
+		});
 	});
 });

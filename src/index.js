@@ -58,3 +58,7 @@ export lteThanLength from './lteThanLength';
 export ltThanLength from './ltThanLength';
 export viewEq from './viewEq';
 export viewWith from './viewWith';
+export duplicate from './duplicate';
+export replicate from './replicate';
+export keyMirror from './keyMirror';
+export valueMirror from './valueMirror';

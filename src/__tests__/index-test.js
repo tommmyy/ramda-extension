@@ -36,6 +36,10 @@ import {
 	applyIfNotNil,
 	viewEq,
 	viewWith,
+	replicate,
+	duplicate,
+	keyMirror,
+	valueMirror,
 } from '../';
 
 describe('applyIfNotNil', () => {
@@ -54,7 +58,7 @@ describe('applyIfNotNil', () => {
 		expect(fn).toHaveBeenCalledWith(1, 2, 3);
 	});
 	it('should return result from fn', () => {
-		const fn = jest.fn((arg) => {
+		const fn = jest.fn(arg => {
 			return arg;
 		});
 		expect(applyIfNotNil(fn, [1])).toBe(1);
@@ -79,7 +83,7 @@ describe('alwaysNull', () => {
 	});
 });
 describe('alwaysEmptyString', () => {
-	it('returns \'\'', () => {
+	it("returns ''", () => {
 		expect(alwaysEmptyString()).toBe('');
 	});
 });
@@ -105,7 +109,7 @@ describe('isNumeric', () => {
 				isNumeric(Infinity),
 				isNumeric(NaN),
 				isNumeric(''),
-				isNumeric(() => { }),
+				isNumeric(() => {}),
 				isNumeric(false),
 				isNumeric(null),
 				isNumeric(undefined),
@@ -137,7 +141,7 @@ describe('dispatch', () => {
 
 describe('reduceCallable', () => {
 	it('should return result after appling arguments ', () => {
-		expect(reduceCallable((a) => (b) => a + b, [1, 2])).toBe(3);
+		expect(reduceCallable(a => b => a + b, [1, 2])).toBe(3);
 	});
 });
 
@@ -240,7 +244,6 @@ describe('toCamelCase', () => {
 	});
 });
 
-
 describe('toScreamingSnakeCase', () => {
 	describe('should convert string to SCREAMING_SNAKE_CASE', () => {
 		const toScreamingSnakeCaseUtil = (str, result) =>
@@ -267,7 +270,6 @@ describe('toSnakeCase', () => {
 	});
 });
 
-
 describe('toKebabCase', () => {
 	describe('should convert string to kebab-case', () => {
 		const toKebabCaseUtil = (str, result) =>
@@ -281,11 +283,9 @@ describe('toKebabCase', () => {
 	});
 });
 
-
 describe('toDotCase', () => {
 	describe('should convert string to dot.case', () => {
-		const toDotCaseUtil = (str, result) =>
-			it(`${str} to be ${result}`, () => expect(toDotCase(str)).toBe(result));
+		const toDotCaseUtil = (str, result) => it(`${str} to be ${result}`, () => expect(toDotCase(str)).toBe(result));
 
 		toDotCaseUtil('hello', 'hello');
 		toDotCaseUtil('hello-', 'hello');
@@ -307,13 +307,11 @@ describe('splitByDot', () => {
 	});
 });
 
-
 describe('joinWithDot', () => {
 	it('join array of string with dot determiner', () => {
 		expect(joinWithDot(['a', 'b', 'c'])).toEqual('a.b.c');
 	});
 });
-
 
 describe('containsAll', () => {
 	it('resolves to true if all elements in first list are found within the second list', () => {
@@ -323,7 +321,6 @@ describe('containsAll', () => {
 		expect(containsAll(['a', 'b', 'd'], ['a', 'b', 'c'])).toBe(false);
 	});
 });
-
 
 describe('containsAny', () => {
 	it('resolves to true if at least one element from first list is found within the second list', () => {
@@ -342,7 +339,7 @@ describe('overHead', () => {
 
 describe('dissocDotPath', () => {
 	it('should return object without attribute defined in given path', () => {
-		const result = dissocDotPath('k1.k2', { k1: { k2: { a: '', b: 2, c: [] }, k3: {} }} );
+		const result = dissocDotPath('k1.k2', { k1: { k2: { a: '', b: 2, c: [] }, k3: {} } });
 		expect(result.k1).toBeDefined();
 		expect(result.k1.k3).toBeDefined();
 		expect(result.k1.k2).toBeUndefined();
@@ -370,8 +367,9 @@ describe('assocDotPath', () => {
 
 describe('mergeWithDotPath', () => {
 	it('should merge the data in resulting object', () => {
-		expect(mergeWithDotPath('a.b', R.merge, { d: 30 }, { a: { b: { c: 20 } } }))
-			.toEqual({ a: { b: { c: 20, d: 30 } } });
+		expect(mergeWithDotPath('a.b', R.merge, { d: 30 }, { a: { b: { c: 20 } } })).toEqual({
+			a: { b: { c: 20, d: 30 } },
+		});
 	});
 });
 describe('mapKeys', () => {
@@ -381,7 +379,7 @@ describe('mapKeys', () => {
 });
 describe('viewEq', () => {
 	it('lens prop foo should be same as bar', () => {
-		expect(viewEq(R.lensProp('foo'), 'bar', { foo: 'bar'})).toEqual(true);
+		expect(viewEq(R.lensProp('foo'), 'bar', { foo: 'bar' })).toEqual(true);
 	});
 });
 describe('viewWith', () => {
@@ -390,5 +388,52 @@ describe('viewWith', () => {
 	});
 	it('it should use division with lens view', () => {
 		expect(viewWith(R.lensIndex(0), R.divide(R.__, 2), [4])).toEqual(2);
+	});
+});
+
+describe('replicate', () => {
+	it('it should replicate a value n times', () => {
+		expect(replicate(3, 6)).toEqual([6, 6, 6]);
+	});
+	it('it should be curried', () => {
+		expect(replicate(3)(6)).toEqual([6, 6, 6]);
+	});
+});
+
+describe('duplicate', () => {
+	it('it should duplicate a value', () => {
+		expect(duplicate(1)).toEqual([1, 1]);
+	});
+});
+
+describe('keyMirror', () => {
+	it('it should mirror keys to values', () => {
+		expect(
+			keyMirror({
+				ITEM_REQUEST: null,
+				ITEM_SUCCESS: null,
+				ITEM_ERROR: null,
+			})
+		).toEqual({
+			ITEM_REQUEST: 'ITEM_REQUEST',
+			ITEM_SUCCESS: 'ITEM_SUCCESS',
+			ITEM_ERROR: 'ITEM_ERROR',
+		});
+	});
+});
+
+describe('valueMirror', () => {
+	it('it should mirror keys to values', () => {
+		expect(
+			valueMirror([
+				'ITEM_REQUEST',
+				'ITEM_SUCCESS',
+				'ITEM_ERROR',
+			])
+		).toEqual({
+			ITEM_REQUEST: 'ITEM_REQUEST',
+			ITEM_SUCCESS: 'ITEM_SUCCESS',
+			ITEM_ERROR: 'ITEM_ERROR',
+		});
 	});
 });

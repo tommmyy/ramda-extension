@@ -58,7 +58,7 @@ describe('applyIfNotNil', () => {
 		expect(fn).toHaveBeenCalledWith(1, 2, 3);
 	});
 	it('should return result from fn', () => {
-		const fn = jest.fn(arg => {
+		const fn = jest.fn((arg) => {
 			return arg;
 		});
 		expect(applyIfNotNil(fn, [1])).toBe(1);
@@ -141,7 +141,7 @@ describe('dispatch', () => {
 
 describe('reduceCallable', () => {
 	it('should return result after appling arguments ', () => {
-		expect(reduceCallable(a => b => a + b, [1, 2])).toBe(3);
+		expect(reduceCallable((a) => (b) => a + b, [1, 2])).toBe(3);
 	});
 });
 

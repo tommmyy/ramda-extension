@@ -59,3 +59,4 @@ export ltThanLength from './ltThanLength';
 export viewEq from './viewEq';
 export viewWith from './viewWith';
 export propNotEq from './propNotEq';
+export pathNotEq from './pathNotEq';

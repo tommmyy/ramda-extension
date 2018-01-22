@@ -56,4 +56,6 @@ export gteThanLength from './gteThanLength';
 export gtThanLength from './gtThanLength';
 export lteThanLength from './lteThanLength';
 export ltThanLength from './ltThanLength';
+export viewEq from './viewEq';
+export viewWith from './viewWith';
 export propNotEq from './propNotEq';

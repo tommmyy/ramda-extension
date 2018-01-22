@@ -34,6 +34,8 @@ import {
 	mergeWithDotPath,
 	mapKeys,
 	applyIfNotNil,
+	viewEq,
+	viewWith,
 	propNotEq,
 } from '../';
 
@@ -378,7 +380,19 @@ describe('mapKeys', () => {
 		expect(mapKeys(toUpperFirst, { x: 1, y: 2, z: 3 })).toEqual({ X: 1, Y: 2, Z: 3 });
 	});
 });
-
+describe('viewEq', () => {
+	it('lens prop foo should be same as bar', () => {
+		expect(viewEq(R.lensProp('foo'), 'bar', { foo: 'bar'})).toEqual(true);
+	});
+});
+describe('viewWith', () => {
+	it('it should use pathEq with lens view', () => {
+		expect(viewWith(R.lensIndex(0), R.pathEq(['foo'], 'boo'), [{ foo: 'boo' }])).toEqual(true);
+	});
+	it('it should use division with lens view', () => {
+		expect(viewWith(R.lensIndex(0), R.divide(R.__, 2), [4])).toEqual(2);
+	});
+});
 describe('propNotEq', () => {
 	it('should return true when object literal does not contain the property at all', () => {
 		expect(propNotEq('a', 1, {})).toBeTruthy();

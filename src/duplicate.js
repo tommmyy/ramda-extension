@@ -8,7 +8,7 @@ import replicate from './replicate';
  * @return List Pair in which every item equals to `input` parameter
  *
  * @func
- * @category Function
+ * @category List
  *
  * @example
  *

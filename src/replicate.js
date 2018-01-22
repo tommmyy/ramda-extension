@@ -9,7 +9,7 @@ import { flip, repeat } from 'ramda';
  * @return List List of length `n`. Every item in list equals to `input` parameter
  *
  * @func
- * @category Function
+ * @category List
  *
  * @example
  *

@@ -1,10 +1,10 @@
 import { tap } from 'ramda';
 
 /**
- * Function with side-effect. Logs input to console and returns that input.
+ * Function with side-effect. Logs input to console and returns that input. Should be used only in development.
  *
  * @func
- * @category Function
+ * @category Debugging
  *
  * @example
  *

@@ -2,10 +2,10 @@ import { curry } from 'ramda';
 
 /**
  * Function with side-effect. Logs input to console and returns that input.
- * Similar to "log" but allows to label logged value.
+ * Similar to "log" but allows to label logged value. Should be used only in development.
  *
  * @func
- * @category Function
+ * @category Debugging
  *
  * @sig a -> b -> b
  *

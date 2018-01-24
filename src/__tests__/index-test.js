@@ -25,6 +25,7 @@ import {
 	argumentsToList,
 	splitByDot,
 	joinWithDot,
+	joinWithSpace,
 	containsAll,
 	containsAny,
 	dissocDotPath,
@@ -36,9 +37,56 @@ import {
 	applyIfNotNil,
 	viewEq,
 	viewWith,
+	flattenArgs,
+	cx,
+	replicate,
+	duplicate,
+	keyMirror,
+	valueMirror,
 	propNotEq,
 	pathNotEq,
 } from '../';
+
+describe('flattenArgs', () => {
+	it('should exists', () => {
+		expect(flattenArgs).toBeDefined();
+	});
+	it('should return array of arguments', () => {
+		expect(flattenArgs('one', 'two')).toEqual(['one', 'two']);
+	});
+	it('should return flatten array of arguments', () => {
+		expect(flattenArgs('one', ['two', 'tree'])).toEqual(['one', 'two', 'tree']);
+	});
+	it('should return flatten array from nested array arguments', () => {
+		expect(flattenArgs('one', ['two', ['tree', 'four'], 'five']))
+			.toEqual(['one', 'two', 'tree', 'four', 'five']);
+	});
+});
+
+describe('cx', () => {
+	it('should exists', () => {
+		expect(cx).toBeDefined();
+	});
+	it('should handle strings', () => {
+		expect(cx('one', 'two')).toBe('one two');
+	});
+	it('should handle arrays', () => {
+		expect(cx(['one', 'two'])).toBe('one two');
+	});
+	it('should handle nested arrays', () => {
+		expect(cx(['one', ['two', 'three']])).toBe('one two three');
+	});
+	it('should handle objects', () => {
+		expect(cx({ one: true, two: false })).toBe('one');
+	});
+	it('should always overwrite other types', () => {
+		expect(cx('one', { one: false, two: false, three: true }, 'two')).toBe('three');
+	});
+	it('should handle a mix of strings, arrays, and objects', () => {
+		expect(cx(['one', ['two'], { three: true, four: 0 }], 'five six', { two: false }))
+			.toBe('one five six three');
+	});
+});
 
 describe('applyIfNotNil', () => {
 	it('should call fn when exist', () => {
@@ -81,7 +129,7 @@ describe('alwaysNull', () => {
 	});
 });
 describe('alwaysEmptyString', () => {
-	it('returns \'\'', () => {
+	it("returns ''", () => {
 		expect(alwaysEmptyString()).toBe('');
 	});
 });
@@ -107,7 +155,7 @@ describe('isNumeric', () => {
 				isNumeric(Infinity),
 				isNumeric(NaN),
 				isNumeric(''),
-				isNumeric(() => { }),
+				isNumeric(() => {}),
 				isNumeric(false),
 				isNumeric(null),
 				isNumeric(undefined),
@@ -242,7 +290,6 @@ describe('toCamelCase', () => {
 	});
 });
 
-
 describe('toScreamingSnakeCase', () => {
 	describe('should convert string to SCREAMING_SNAKE_CASE', () => {
 		const toScreamingSnakeCaseUtil = (str, result) =>
@@ -269,7 +316,6 @@ describe('toSnakeCase', () => {
 	});
 });
 
-
 describe('toKebabCase', () => {
 	describe('should convert string to kebab-case', () => {
 		const toKebabCaseUtil = (str, result) =>
@@ -283,11 +329,9 @@ describe('toKebabCase', () => {
 	});
 });
 
-
 describe('toDotCase', () => {
 	describe('should convert string to dot.case', () => {
-		const toDotCaseUtil = (str, result) =>
-			it(`${str} to be ${result}`, () => expect(toDotCase(str)).toBe(result));
+		const toDotCaseUtil = (str, result) => it(`${str} to be ${result}`, () => expect(toDotCase(str)).toBe(result));
 
 		toDotCaseUtil('hello', 'hello');
 		toDotCaseUtil('hello-', 'hello');
@@ -309,13 +353,16 @@ describe('splitByDot', () => {
 	});
 });
 
-
 describe('joinWithDot', () => {
 	it('join array of string with dot determiner', () => {
 		expect(joinWithDot(['a', 'b', 'c'])).toEqual('a.b.c');
 	});
 });
-
+describe('joinWithSpace', () => {
+	it('join array of string with space determiner', () => {
+		expect(joinWithSpace(['a', 'b', 'c'])).toEqual('a b c');
+	});
+});
 
 describe('containsAll', () => {
 	it('resolves to true if all elements in first list are found within the second list', () => {
@@ -325,7 +372,6 @@ describe('containsAll', () => {
 		expect(containsAll(['a', 'b', 'd'], ['a', 'b', 'c'])).toBe(false);
 	});
 });
-
 
 describe('containsAny', () => {
 	it('resolves to true if at least one element from first list is found within the second list', () => {
@@ -344,7 +390,7 @@ describe('overHead', () => {
 
 describe('dissocDotPath', () => {
 	it('should return object without attribute defined in given path', () => {
-		const result = dissocDotPath('k1.k2', { k1: { k2: { a: '', b: 2, c: [] }, k3: {} }} );
+		const result = dissocDotPath('k1.k2', { k1: { k2: { a: '', b: 2, c: [] }, k3: {} } });
 		expect(result.k1).toBeDefined();
 		expect(result.k1.k3).toBeDefined();
 		expect(result.k1.k2).toBeUndefined();
@@ -372,8 +418,9 @@ describe('assocDotPath', () => {
 
 describe('mergeWithDotPath', () => {
 	it('should merge the data in resulting object', () => {
-		expect(mergeWithDotPath('a.b', R.merge, { d: 30 }, { a: { b: { c: 20 } } }))
-			.toEqual({ a: { b: { c: 20, d: 30 } } });
+		expect(mergeWithDotPath('a.b', R.merge, { d: 30 }, { a: { b: { c: 20 } } })).toEqual({
+			a: { b: { c: 20, d: 30 } },
+		});
 	});
 });
 describe('mapKeys', () => {
@@ -383,7 +430,7 @@ describe('mapKeys', () => {
 });
 describe('viewEq', () => {
 	it('lens prop foo should be same as bar', () => {
-		expect(viewEq(R.lensProp('foo'), 'bar', { foo: 'bar'})).toEqual(true);
+		expect(viewEq(R.lensProp('foo'), 'bar', { foo: 'bar' })).toEqual(true);
 	});
 });
 describe('viewWith', () => {
@@ -394,10 +441,12 @@ describe('viewWith', () => {
 		expect(viewWith(R.lensIndex(0), R.divide(R.__, 2), [4])).toEqual(2);
 	});
 });
+
 describe('propNotEq', () => {
 	it('should return true when object literal does not contain the property at all', () => {
 		expect(propNotEq('a', 1, {})).toBeTruthy();
 	});
+
 	describe('when object literal contains the property', () => {
 		it('should return true when the value of property differs', () => {
 			expect(propNotEq('a', 1, { a: 2 })).toBeTruthy();
@@ -407,19 +456,70 @@ describe('propNotEq', () => {
 		});
 	});
 });
+
 describe('pathNotEq', () => {
 	it('should return true when object literal does not contain the path at all', () => {
 		expect(pathNotEq(['a', 'b'], 1, {})).toBeTruthy();
 	});
+
 	it('should return true when object literal does not contain the path', () => {
 		expect(pathNotEq(['a', 'b'], 1, { a: {} })).toBeTruthy();
 	});
+
 	describe('when object literal contains the path', () => {
 		it('should return true when the value of path differs', () => {
 			expect(pathNotEq(['a', 'b'], 1, { a: { b: 2 } })).toBeTruthy();
 		});
 		it('should return false when the value of path equals', () => {
 			expect(pathNotEq(['a', 'b'], 1, { a: { b: 1 } }));
+		});
+	});
+});
+
+
+describe('replicate', () => {
+	it('it should replicate a value n times', () => {
+		expect(replicate(3, 6)).toEqual([6, 6, 6]);
+	});
+	it('it should be curried', () => {
+		expect(replicate(3)(6)).toEqual([6, 6, 6]);
+	});
+});
+
+describe('duplicate', () => {
+	it('it should duplicate a value', () => {
+		expect(duplicate(1)).toEqual([1, 1]);
+	});
+});
+
+describe('keyMirror', () => {
+	it('it should mirror keys to values', () => {
+		expect(
+			keyMirror({
+				ITEM_REQUEST: null,
+				ITEM_SUCCESS: null,
+				ITEM_ERROR: null,
+			})
+		).toEqual({
+			ITEM_REQUEST: 'ITEM_REQUEST',
+			ITEM_SUCCESS: 'ITEM_SUCCESS',
+			ITEM_ERROR: 'ITEM_ERROR',
+		});
+	});
+});
+
+describe('valueMirror', () => {
+	it('it should mirror keys to values', () => {
+		expect(
+			valueMirror([
+				'ITEM_REQUEST',
+				'ITEM_SUCCESS',
+				'ITEM_ERROR',
+			])
+		).toEqual({
+			ITEM_REQUEST: 'ITEM_REQUEST',
+			ITEM_SUCCESS: 'ITEM_SUCCESS',
+			ITEM_ERROR: 'ITEM_ERROR',
 		});
 	});
 });

@@ -26,6 +26,8 @@ import {
 	splitByDot,
 	joinWithDot,
 	joinWithSpace,
+	joinWithUnderscore,
+	joinWithDash,
 	containsAll,
 	containsAny,
 	dissocDotPath,
@@ -361,6 +363,16 @@ describe('joinWithDot', () => {
 describe('joinWithSpace', () => {
 	it('join array of string with space determiner', () => {
 		expect(joinWithSpace(['a', 'b', 'c'])).toEqual('a b c');
+	});
+});
+describe('joinWithUnderscore', () => {
+	it('join array of string with underscore determiner', () => {
+		expect(joinWithUnderscore(['a', 'b', 'c'])).toEqual('a_b_c');
+	});
+});
+describe('joinWithDash', () => {
+	it('join array of string with dash determiner', () => {
+		expect(joinWithDash(['a', 'b', 'c'])).toEqual('a-b-c');
 	});
 });
 

@@ -25,6 +25,7 @@ import {
 	argumentsToList,
 	splitByDot,
 	joinWithDot,
+	joinWithSpace,
 	containsAll,
 	containsAny,
 	dissocDotPath,
@@ -36,7 +37,50 @@ import {
 	applyIfNotNil,
 	viewEq,
 	viewWith,
+	flattenArgs,
+	cx,
 } from '../';
+
+describe('flattenArgs', () => {
+	it('should exists', () => {
+		expect(flattenArgs).toBeDefined();
+	});
+	it('should return array of arguments', () => {
+		expect(flattenArgs('one', 'two')).toEqual(['one', 'two']);
+	});
+	it('should return flatten array of arguments', () => {
+		expect(flattenArgs('one', ['two', 'tree'])).toEqual(['one', 'two', 'tree']);
+	});
+	it('should return flatten array from nested array arguments', () => {
+		expect(flattenArgs('one', ['two', ['tree', 'four'], 'five']))
+			.toEqual(['one', 'two', 'tree', 'four', 'five']);
+	});
+});
+
+describe('cx', () => {
+	it('should exists', () => {
+		expect(cx).toBeDefined();
+	});
+	it('should handle strings', () => {
+		expect(cx('one', 'two')).toBe('one two');
+	});
+	it('should handle arrays', () => {
+		expect(cx(['one', 'two'])).toBe('one two');
+	});
+	it('should handle nested arrays', () => {
+		expect(cx(['one', ['two', 'three']])).toBe('one two three');
+	});
+	it('should handle objects', () => {
+		expect(cx({ one: true, two: false })).toBe('one');
+	});
+	it('should always overwrite other types', () => {
+		expect(cx('one', { one: false, two: false, three: true }, 'two')).toBe('three');
+	});
+	it('should handle a mix of strings, arrays, and objects', () => {
+		expect(cx(['one', ['two'], { three: true, four: 0 }], 'five six', { two: false }))
+			.toBe('one five six three');
+	});
+});
 
 describe('applyIfNotNil', () => {
 	it('should call fn when exist', () => {
@@ -311,6 +355,11 @@ describe('splitByDot', () => {
 describe('joinWithDot', () => {
 	it('join array of string with dot determiner', () => {
 		expect(joinWithDot(['a', 'b', 'c'])).toEqual('a.b.c');
+	});
+});
+describe('joinWithSpace', () => {
+	it('join array of string with space determiner', () => {
+		expect(joinWithSpace(['a', 'b', 'c'])).toEqual('a b c');
 	});
 });
 

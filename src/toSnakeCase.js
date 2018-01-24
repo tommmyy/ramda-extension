@@ -1,5 +1,6 @@
-import { o, map, toLower, join } from 'ramda';
+import { o, map, toLower } from 'ramda';
 import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
+import joinWithUnderscore from './joinWithUnderscore';
 
 /**
  * Converts string into snake_case.
@@ -16,7 +17,7 @@ import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
  * @sig String -> String
  */
 const toSnakeCase = o(
-	join('_'),
+	joinWithUnderscore,
 	o(map(toLower), splitByNonAlphaNumeric)
 );
 

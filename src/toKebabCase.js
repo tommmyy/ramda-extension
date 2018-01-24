@@ -1,5 +1,6 @@
-import { o, map, toLower, join } from 'ramda';
+import { o, map, toLower } from 'ramda';
 import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
+import joinWithDash from './joinWithDash';
 
 /**
  * Converts string into kebab-case.
@@ -16,7 +17,7 @@ import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
  * @sig String -> String
  */
 const toKebabCase = o(
-	join('-'),
+	joinWithDash,
 	o(map(toLower), splitByNonAlphaNumeric)
 );
 

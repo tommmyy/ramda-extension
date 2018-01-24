@@ -53,7 +53,7 @@ const handleArgs = converge(createAndApplyModifiers, [filter(isObject), filter(i
  *
  * @example
  *
- *        R_.cx('Table', ['MagicTable'], {'Table--active': true }) // 'Table MagicTable Table-active'
+ *        R_.cx('Table', ['MagicTable'], {'Table--active': true }) // 'Table MagicTable Table--active'
  *        R_.cx('Table', ['MagicTable'], {'Table--active': false }) // 'Table MagicTable'
  *        R_.cx(['Table', ['MagicTable']]) // 'Table MagicTable'
  *

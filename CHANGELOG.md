@@ -1,3 +1,6 @@
+# 0.2.1
+Hotfix release. Some of the new functions were not published to npm.
+
 # 0.2.0
 
 New release brings hand full of new functions.

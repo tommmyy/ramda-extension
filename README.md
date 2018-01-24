@@ -10,7 +10,7 @@ Most of the functions have its own tests and examples in the JS Doc.
 
 Feel free to either contribute yourself or submit an issue if there is a bug or you have an idea for a new extension.
 
-# Why to choose ramda-extension over other libraries ?
+# Why to choose ramda-extension over other libraries?
 
 We focus on functional point-free code. Our goal is to keep codebase composed only from ramda functions, not from own code. Basically, we are using only `const` and `ES6 modules` from the JavaScript itself.
 

@@ -53,6 +53,7 @@
     "test": "yarn lint && yarn test:js",
     "test:js": "jest --config=./jest.config.json",
     "test:watch": "yarn test:js -- --watch",
+    "test:coverage": "yarn test:js -- --coverage",
     "lint:eslint": "eslint --ext .js ./"
   },
   "peerDependencies": {

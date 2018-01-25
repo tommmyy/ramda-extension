@@ -1,5 +1,6 @@
-import { o, map, toUpper, join } from 'ramda';
+import { o, map, toUpper } from 'ramda';
 import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
+import joinWithUnderscore from './joinWithUnderscore';
 
 /**
  * Converts string into SCREAMINT_SNAKE_CASE.
@@ -16,7 +17,7 @@ import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
  * @sig String -> String
  */
 const toScreamingSnakeCase = o(
-	join('_'),
+	joinWithUnderscore,
 	o(map(toUpper), splitByNonAlphaNumeric)
 );
 

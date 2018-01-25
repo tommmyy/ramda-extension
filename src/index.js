@@ -45,6 +45,8 @@ export rejectNil from './rejectNil';
 export splitByDot from './splitByDot';
 export joinWithDot from './joinWithDot';
 export joinWithSpace from './joinWithSpace';
+export joinWithUnderscore from './joinWithUnderscore';
+export joinWithDash from './joinWithDash';
 export dissocDotPath from './dissocDotPath';
 export overHead from './overHead';
 export dotPath from './dotPath';

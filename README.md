@@ -50,7 +50,7 @@ toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
 If you prefer browser/jQuery/global-namespace style:
 
 ```js
-import R_ from 'ramda-extension';
+import * as R_ from 'ramda-extension'
 
 R_.toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
 ```
@@ -69,4 +69,4 @@ The minified version:
 <script src="path/to/yourCopyOf/ramda-extension.min.js"></script>
 ```
 
-NOTE: ramda itself is not part of bundle, you need to add it manually
+_NOTE_: Ramda itself is not part of bundle, you need to add it manually

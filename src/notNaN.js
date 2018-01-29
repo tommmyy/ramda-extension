@@ -21,7 +21,7 @@ import { o, not } from 'ramda';
  *
  * @sig a -> Boolean
  */
-const notNan = o(not, isNaN);
+const notNaN = o(not, isNaN);
 
-export default notNan;
+export default notNaN;
 /* eslint-enable max-len */

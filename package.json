@@ -1,83 +1,17 @@
 {
-  "name": "ramda-extension",
-  "version": "0.2.1",
-  "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tommmyy/ramda-extension.git"
-  },
-  "keywords": [
-    "ramda",
-    "ramdajs",
-    "utils",
-    "functional programming",
-    "case conversion",
-    "PascalCase",
-    "dot.case",
-    "camelCase",
-    "lower first letter",
-    "upper first letter"
-  ],
-  "description": "Helpful functions built on top of the mighty Ramda",
-  "module": "es/index.js",
-  "main": "lib/index.js",
-  "files": [
-    "es",
-    "lib",
-    "dist"
-  ],
-  "author": {
-    "name": "Tomas Konrady",
-    "email": "tomaskonrady@gmail.com",
-    "web": "https://github.com/tommmyy"
-  },
-  "contributors": [
-    {
-      "name": "Lukas Sulik",
-      "email": "lukas.sulik@hotmail.com",
-      "web": "https://github.com/aizerin"
-    },
-    {
-      "name": "Lukas Duspiva",
-      "web": "https://github.com/lukasduspiva"
-    }
-  ],
+  "private": true,
+  "workspaces": ["packages/*"],
   "scripts": {
-    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel src --out-dir lib",
-    "build:umd": "cross-env BABEL_ENV=rollup NODE_ENV=development rollup -c -o dist/ramda-extension.js",
-    "build:umd:min": "cross-env BABEL_ENV=rollup NODE_ENV=production rollup -c -o dist/ramda-extension.min.js",
-    "build": "yarn build:es && yarn build:cjs && yarn build:umd && yarn build:umd:min",
-    "lint": "yarn lint:eslint",
-    "clean": "rimraf es lib dist",
     "test": "yarn lint && yarn test:js",
     "test:js": "jest --config=./jest.config.json",
     "test:watch": "yarn test:js -- --watch",
     "test:coverage": "yarn test:js -- --coverage",
-    "lint:eslint": "eslint --ext .js ./"
-  },
-  "peerDependencies": {
-    "ramda": "^0.24.0 || ^0.25.0"
+    "lint": "eslint --ext .js ./packages"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-eslint": "6.1.2",
-    "babel-jest": "21.2.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "1.6.1",
-    "babel-preset-stage-1": "^6.24.1",
-    "cross-env": "2.0.0",
-    "escope": "3.6.0",
     "eslint": "4.13.0",
     "eslint-plugin-babel": "4.1.2",
     "eslint-plugin-ramda": "2.3.0",
-    "fs-extra": "^0.30.0",
-    "jest": "21.2.1",
-    "ramda": "^0.25.0",
-    "rimraf": "2.5.3",
-    "rollup": "^0.50.0",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^2.0.1"
+    "jest": "21.2.1"
   }
 }

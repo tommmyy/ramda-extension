@@ -1,0 +1,13 @@
+extends ../layout.pug
+
+block main
+	.ramda-repl-wrapper
+		textarea.ramda-repl-target
+
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.18.1/URI.min.js")
+	script(src="https://cdn.rawgit.com/ramda/repl/1.1.0/dist/bundle.js")
+	script(src="index.js")
+
+block styles
+	link(href="https://cdn.rawgit.com/ramda/repl/1.1.0/dist/bundle.css" rel="stylesheet")

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ramda extension REPL</title>
+
+    <!-- Bootstrap -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Site styles -->
+    <link href="css/page.css" rel="stylesheet">
+
+    <!-- Style for the REPL -->
+    <link href="https://cdn.rawgit.com/ramda/repl/1.1.0/dist/bundle.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+
+    <input type="checkbox" id="open-nav">
+    <header class="navbar navbar-fixed-top navbar-inverse container-fluid">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <label class="open-nav" for="open-nav"></label>
+                <a class="navbar-brand" href="#">
+                    <strong>Ramda Extension</strong>
+                    <span class="version">v0.2.1</span>
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="/docs">Documentation</a></li>
+                <li class="active"><a href="/repl?v=0.25.0">Try Ramda</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://github.com/tommmyy/ramda-extension">GitHub</a></li>
+                <li><a href="https://gitter.im/ramda/ramda">Discuss</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="ramda-repl-wrapper">
+        <textarea class="ramda-repl-target"></textarea>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.18.1/URI.min.js"></script>
+    <script src="https://cdn.rawgit.com/ramda/repl/master/dist/bundle.js"></script>
+
+    <script>
+
+      (function() {
+
+        // --------------------------------------------------------------------
+
+        // Regex for matching version strings
+        // Example match: "0.21.123"
+        var rx = /^\d+\.\d+(\.\d+)?$/;
+
+        // :: String, String -> String
+       var grabVersion = function (libType) {
+        function toVersion(acc, pair) {
+          var splitPair = pair.split('=');
+          return splitPair[0] === libType && rx.test(splitPair[1]) ? splitPair[1] : acc;
+        }
+        return location.search.substr(1).split('&').reduce(toVersion, 'latest');
+      }
+
+      var ramdaUrl = '//cdn.jsdelivr.net/npm/ramda@' + grabVersion('v') + '/dist/ramda.min.js';
+      var extensionUrl = '//cdn.jsdelivr.net/npm/ramda-extension@' + grabVersion('ve') + '/dist/ramda-extension.min.js';
+
+        // --------------------------------------------------------------------
+
+        ramdaRepl(document.querySelector('.ramda-repl-target'), {
+
+          apiUrl: 'https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyDhbAvT5JqkxFPkoeezJp19-S_mAJudxyk',
+          returnUrl: 'http://ramdajs.com/repl/',
+
+          // If unset, initialValue will use the value or textcontent of the
+          // target element.
+          initialValue: URI.decode(window.location.hash).substring(2),
+
+          // Called with the pre-compiled content
+          onChange : function(code) {
+            window.location.hash = '?' + URI.encode(code);
+          },
+
+          // The following config defines scripts that will be dynamically
+          // loaded upon creating the REPL. Each has the following properties:
+          //
+          // src      - The source of the script, a URL
+          // global   - (Optional) a name of a global that the script introduces
+          // exposeAs - (Optional) a name that can alias the global
+          // expose   - (Optional) a list of methods to expose globally
+
+          // Required.
+          // As ramda may be a dependency for other scripts, it will
+          // be intentionally loaded before any other script.
+          ramdaScript: {
+            src    : ramdaUrl,
+            global : 'R'
+          },
+
+          // Optional.
+          // Here we can declare a list of libraries that we wish to have
+          // loaded and exposed in the repl.
+          scripts: [
+            {
+              src      : '//wzrd.in/standalone/sanctuary@latest',
+              global   : 'sanctuary',
+              exposeAs : 'S'
+            },
+            {
+              src    : '//wzrd.in/standalone/ramda-fantasy@latest',
+              global : 'ramdaFantasy',
+              expose : [
+                'Either',
+                'Future',
+                'Identity',
+                'IO',
+                'lift2',
+                'lift3',
+                'Maybe',
+                'Tuple',
+                'Reader'
+              ]
+            },
+            {
+              src: extensionUrl,
+              global: 'ramda-extension',
+              exposeAs: 'R_'
+            }
+          ]
+
+        });
+
+      }());
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

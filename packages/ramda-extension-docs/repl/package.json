@@ -1,0 +1,31 @@
+{
+  "name": "ramda-repl",
+  "description": "Ramda + Ramda Fantasy + Sanctuary REPL",
+  "version": "1.0.0",
+  "dependencies": {
+    "babel-core": "6.3.26",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-stage-0": "6.3.13",
+    "babelify": "7.2.0",
+    "babylon": "6.3.26",
+    "browserify": "^13.1.0",
+    "debounce": "1.0.0",
+    "pretty-js": "^0.1.8",
+    "query-string": "2.4.1",
+    "ramda": "0.19.0",
+    "ramda-fantasy": "0.4.0",
+    "sanctuary": "0.7.0",
+    "through2": "2.0.0",
+    "vinyl-fs": "1.0.0"
+  },
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ramda/ramda.github.io.git"
+  },
+  "scripts": {
+    "build": "browserify ./lib/js/main.js -t babelify ./lib/js/repl.js -o ./lib/js/bundle.js",
+    "build-examples": "babel-node create-examples.js && npm run build"
+  }
+}

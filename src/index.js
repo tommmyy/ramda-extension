@@ -69,3 +69,5 @@ export duplicate from './duplicate';
 export replicate from './replicate';
 export keyMirror from './keyMirror';
 export valueMirror from './valueMirror';
+export headArg from './headArg';
+export lastArg from './lastArg';

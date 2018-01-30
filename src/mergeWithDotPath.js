@@ -1,6 +1,8 @@
-import { curry } from 'ramda';
+import { converge, nthArg, call } from 'ramda';
 import dotPath from './dotPath';
 import assocDotPath from './assocDotPath';
+import headArg from './headArg';
+import lastArg from './lastArg';
 
 /**
  * Merge data in object using custom merge fn.
@@ -17,9 +19,8 @@ import assocDotPath from './assocDotPath';
  *
  *      R_.mergeWithDotPath('a.b', R.merge, { d: 30 }, {a: {b: { c: 20 }}}); //=> {a: {b: { c: 20, d: 30 }}}
  */
-const mergeWithDotPath = curry((path, mergeFn, value, obj) => assocDotPath(
-	path,
-	mergeFn(dotPath(path, obj), value), obj)
-);
+const resolveDotPath = converge(dotPath, [headArg, lastArg]);
+const performMerge = converge(call, [nthArg(1), resolveDotPath, nthArg(2)]);
+const mergeWithDotPath = converge(assocDotPath, [headArg, performMerge, lastArg]);
 
 export default mergeWithDotPath;

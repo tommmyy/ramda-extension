@@ -69,3 +69,6 @@ export duplicate from './duplicate';
 export replicate from './replicate';
 export keyMirror from './keyMirror';
 export valueMirror from './valueMirror';
+export mapKeysWithValue from './mapKeysWithValue';
+export isNotNilObject from './isNotNilObject';
+export camelizeKeys from './camelizeKeys';

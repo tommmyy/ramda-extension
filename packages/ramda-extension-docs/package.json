@@ -1,0 +1,27 @@
+{
+  "name": "ramda-extension-docs",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Ramda extension website",
+  "license": "Apache-2.0",
+  "scripts": {
+    "buildRamda": "cd ../ramda-extension && yarn run build:cjs",
+    "jsdoc": "yarn run buildRamda && jsdoc -c .jsdoc.config.json --destination ./docs --template . ../ramda-extension/lib",
+    "less": "lessc --autoprefix --clean-css ./less/ramda.less ./style.css",
+    "publishToFirebase": "yarn run jsdoc && node generateIndexRepl && node publishToFirebase"
+  },
+  "devDependencies": {
+    "bootstrap": "3.3.x",
+    "fs-extra": "^4.0.3",
+    "handlebars": "4.x.x",
+    "highlight.js": "9.x.x",
+    "jsdoc": "3.4.x",
+    "less": "2.7.x",
+    "less-plugin-autoprefix": "1.5.x",
+    "less-plugin-clean-css": "1.5.x",
+    "marked": "0.3.x",
+    "ramda": "0.25.0",
+    "ramda-extension": "0.2.1",
+    "walk": "2.3.x"
+  }
+}

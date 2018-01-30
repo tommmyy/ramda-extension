@@ -1,0 +1,122 @@
+@padding: 15px;
+@sidebar-width: 250px;
+
+.main-content() {
+    right: 0;
+    bottom: 0;
+    margin-top: @navbar-height;
+    padding-top: @padding;
+}
+
+.forkme {
+    margin-top: 10px;
+}
+
+#open-nav {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .open-nav {
+        display: none;
+    }
+}
+
+/**
+ * Home
+ */
+html.home-page {
+    header .navbar-left {
+        transform: translateX(-@sidebar-width);
+        transition: transform 100ms ease-in;
+    }
+    #open-nav:checked ~ header .navbar-left {
+        transform: translateX(0);
+    }
+    @media screen and (min-width: 768px) {
+        header .navbar-left {
+            transform: translateX(0);
+        }
+    }
+    body {
+        .main-content();
+        position: relative;
+        left: 0;
+        background: #eee;
+        margin: @padding;
+        // margin-top: 0;
+        padding-top: @navbar-height;
+    }
+    main {
+        background: #fff;
+        border: 1px solid white;
+        box-shadow: 0 0 0 1px #ccc;
+        border-radius: @border-radius-base;
+    }
+}
+
+/**
+ * Documentation
+ *
+ * 1. Prevent content from overflowing the viewport
+ */
+html.docs-page {
+    overflow-x: hidden; /* 1 */
+
+    header .navbar-left {
+        transform: translateX(-@sidebar-width);
+    }
+    header .navbar-left,
+    aside, main {
+        transition: transform 100ms ease-in;
+    }
+    aside {
+        position: fixed;
+        left: 0;
+        top: @navbar-height * 5; // (1x navbar-height + 4x menu item)
+        bottom: 0;
+        width: @sidebar-width;
+        transform: translateX(-@sidebar-width);
+    }
+    main {
+        .main-content();
+        min-width: 320px;
+    }
+    body {
+        background: #eee;
+         overflow-x: hidden; /* 1 */
+    }
+
+    #open-nav:checked ~ header .navbar-left,
+    #open-nav:checked ~ aside {
+        transform: translateX(0);
+    }
+    #open-nav:checked ~ main {
+        transform: translateX(@sidebar-width);
+    }
+
+    @media screen and (min-width: 768px) {
+        aside {
+            top: @navbar-height;
+        }
+        aside,
+        #open-nav:checked ~ aside {
+            position: fixed;
+            transform: translateX(0);
+        }
+        header .navbar-left,
+        #open-nav:checked ~ header .navbar-left {
+            transform: translateX(0);
+        }
+        main,
+        #open-nav:checked ~ main {
+            transform: translateX(0);
+            margin-left: @sidebar-width;
+        }
+    }
+}
+
+.section-id {
+	height: 0;
+	position: relative;
+    top: -@navbar-height;
+}

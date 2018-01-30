@@ -1,0 +1,52 @@
+{
+  "fantasy": [
+    {
+      "category": [
+        "fantasy"
+      ],
+      "title": "futures",
+      "code": "const log = console::console.log;\nconst error = console::console.error;\n\nconst url = 'http://reqr.es/api/users?page=3';\n\nconst xhr = function(url) {\n    return new Future(function(rej, res) {\n        const oReq = new XMLHttpRequest();\n        oReq.addEventListener(\"load\", res, false);\n        oReq.addEventListener(\"error\", rej, false);\n        oReq.addEventListener(\"abort\", rej, false);\n        oReq.open(\"get\", url, true);\n        oReq.send();\n    });\n};\n\nconst f = R.compose(R.map(S.parseJson), R.map(R.path(['target', 'response'])), xhr)(url);\n\nf.fork(error, R.map(log)); //=> Object {page: \"3\", per_page: 3, total: 12, total_pages: 4, data: Array[3]}"
+    }
+  ],
+  "list": [
+    {
+      "category": [
+        "list"
+      ],
+      "title": "filter",
+      "code": "const isEven = n => n % 2 === 0;\nR.filter(isEven, [1, 2, 3, 4]);"
+    },
+    {
+      "category": [
+        "list"
+      ],
+      "title": "map",
+      "code": "const double = x => x * 2;\n\nR.map(double, [1, 2, 3]);"
+    }
+  ],
+  "function": [
+    {
+      "category": [
+        "function"
+      ],
+      "title": "compose",
+      "code": "const f = R.compose(R.inc, R.negate, Math.pow);\n\nf(3, 4);"
+    },
+    {
+      "category": [
+        "function"
+      ],
+      "title": "useWith",
+      "code": "const double = y => y * 2;\nconst square = x => x * x;\nconst add = (a, b) => a + b;\n// Adds any number of arguments together\nconst addAll = (...args) => R.reduce(add, 0, args);\n\n// Basic example\nconst addDoubleAndSquare = R.useWith(addAll, [double, square]);\n\n//≅ addAll(double(10), square(5));\naddDoubleAndSquare(10, 5); //=> 45\n"
+    }
+  ],
+  "object": [
+    {
+      "category": [
+        "object"
+      ],
+      "title": "prop",
+      "code": "R.prop('x', {x: 100}); //=> 100\nR.prop('x', {}); //=> undefined"
+    }
+  ]
+}

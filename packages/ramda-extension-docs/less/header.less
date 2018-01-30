@@ -1,0 +1,49 @@
+@media screen and (max-width: 767px) { // 768px - 1
+
+    header {
+
+        .open-nav {
+            float: left;
+            position: relative;
+            width: @navbar-height;
+            height: @navbar-height;
+            margin: 0 0 0 -15px;
+            padding: 15px;
+            font-size: 24px;
+            line-height: 20px;
+            cursor: pointer;
+            color: #e1d0e6;
+            font-weight: normal;
+
+            background: none left top no-repeat;
+            background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2250%22%20height%3D%22100%22%3E%3Cpath%20fill%3D%22%23849%22%20d%3D%22M0%200h50v100H0z%22%2F%3E%3Cpath%20fill%3D%22%23e1d0e6%22%20d%3D%22M14%2015h22v4H14zm0%208h22v4H14zm0%208h22v4H14z%22%2F%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M14%2065h22v4H14zm0%208h22v4H14zm0%208h22v4H14z%22%2F%3E%3C%2Fsvg%3E');
+
+            &:hover {
+                color: white;
+                background-position: left bottom;
+            }
+        }
+        #open-nav:checked ~ & .open-nav {
+            background-position: left bottom;
+        }
+
+        .navbar-left {
+            position: fixed;
+            top: @navbar-height;
+            left: 0;
+            width: @sidebar-width;
+
+            border-width: 0 1px 1px 0;
+            border-style: solid;
+            border-color: #693476;
+            background-color: #849;
+            box-shadow: 5px 5px 11px -3px rgba(0, 0, 0, 0.2);
+
+            .navbar-nav,
+            .navbar-nav > li {
+                float: none;
+            }
+        }
+    }
+
+}

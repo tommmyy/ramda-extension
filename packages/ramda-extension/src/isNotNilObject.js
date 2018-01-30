@@ -11,9 +11,10 @@ import isObject from './isObject';
  *
  * @example
  *
- * 		R_.isNotNilObject(null) // false
  * 		R_.isNotNilObject({}) // true
  * 		R_.isNotNilObject([]) // true
+ * 		R_.isNotNilObject(() => {}) // true
+ * 		R_.isNotNilObject(null) // false
  * 		R_.isNotNilObject() // false
  * 		R_.isNotNilObject(1) // false
  * 		R_.isNotNilObject("") // false

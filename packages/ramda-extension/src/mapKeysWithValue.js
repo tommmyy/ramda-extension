@@ -1,4 +1,4 @@
-import { append, apply, last, map, o, of } from 'ramda';
+import { append, apply, last, map, o, of, juxt, compose, toPairs, fromPairs, useWith } from 'ramda';
 
 const appendLast = append(last);
 const applyFnFirstAndAppendLast = compose(appendLast, map(apply), of);
@@ -14,7 +14,7 @@ const wrapMapping = o(juxt, applyFnFirstAndAppendLast);
  *
  *      R_.mapKeysWithValue((key, value) => value)({ foo: "bar" }) // { bar: "bar" }
  *
- * @sig (String,a -> b) -> Object -> Object
+ * @sig ((String, a) -> b) -> Object -> Object
  */
 
 const mapKeysWithValue = useWith(compose(fromPairs, map), [wrapMapping, toPairs]);

@@ -2,8 +2,18 @@ import { T, compose, cond, fromPairs, toPairs, identity, juxt, map, o, head, las
 import toCamelCase from './toCamelCase';
 import isNotNilObject from './isNotNilObject';
 import isArray from './isArray';
+import isFunction from './isFunction';
 
-const camelizeObj = compose(fromPairs, map(juxt([o(toCamelCase, head), o((x) => camelizeKeys(x), last)])), toPairs);
+// Must be written as arrow `x => camelizeKeys(x)` due to recursion
+// prettier-ignore
+const camelizeObj = compose(
+	fromPairs,
+	map(juxt([
+		o(toCamelCase, head),
+		o((x) => camelizeKeys(x), last),
+	])),
+	toPairs
+);
 const camelizeArray = map((x) => camelizeKeys(x));
 
 /**
@@ -41,6 +51,12 @@ const camelizeArray = map((x) => camelizeKeys(x));
  *      // }
  *
  */
-const camelizeKeys = cond([[isArray, camelizeArray], [isNotNilObject, camelizeObj], [T, identity]]);
+// prettier-ignore
+const camelizeKeys = cond([
+	[isArray, camelizeArray],
+	[isFunction, identity],
+	[isNotNilObject, camelizeObj],
+	[T, identity],
+]);
 
 export default camelizeKeys;

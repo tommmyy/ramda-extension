@@ -1,0 +1,27 @@
+/*
+  Custimizations on top of base style.css
+
+*/
+
+
+/* Fixes long function names
+   in sidebar which cause the category label
+   to overflow the enclosing <li>
+*/
+.sidebar .toc li {
+  display: flex;
+}
+
+.sidebar .toc a {
+  width: 100%;
+  word-wrap: break-word;
+}
+/* End Fixes long function names ... */
+
+/* reset <pre> formatting for .symbol class */
+.card .symbol {
+  margin: 0;
+  color: #333333;
+  background: white;
+}
+

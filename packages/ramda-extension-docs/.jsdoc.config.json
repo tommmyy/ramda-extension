@@ -1,0 +1,5 @@
+{
+  "source": {
+  	"exclude": ["node_modules/ramda/src/index.js"]
+  }
+}

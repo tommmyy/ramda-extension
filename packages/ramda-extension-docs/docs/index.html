@@ -1,0 +1,2845 @@
+<!DOCTYPE html>
+<html class="docs-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ramda extension Documentation</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <input type="checkbox" id="open-nav">
+    <header class="navbar navbar-fixed-top navbar-inverse container-fluid">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <label class="open-nav" for="open-nav"></label>
+                <a class="navbar-brand" href="#">
+                    <strong>Ramda Extension</strong>
+                    <span class="version">v0.2.1</span>
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a href="#">Documentation</a></li>
+                <li><a href="/repl?v=0.25.0&ve=0.2.1">Try Ramda</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://github.com/tommmyy/ramda-extension">GitHub</a></li>
+                <li><a href="https://gitter.im/ramda/ramda">Discuss</a></li>
+            </ul>
+        </div>
+    </header>
+    <aside class="sidebar container-fluid">
+        <div class="form-group has-feedback filter">
+            <input class="form-control"
+                   tabindex="1"
+                   id="name-filter"
+                   placeholder="Filter"
+                   type="text"
+                   data-bind="textInput: filter"
+                   autofocus
+            >
+            <span class="form-control-feedback">
+                <span class="glyphicon glyphicon-search"></span>
+            </span>
+        </div>
+        <ul class="nav nav-pills nav-stacked toc">
+            <li class="func" data-name="alwaysEmptyArray" data-category="Function">
+                <a href="#alwaysEmptyArray">
+                    alwaysEmptyArray
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="alwaysEmptyObject" data-category="Function">
+                <a href="#alwaysEmptyObject">
+                    alwaysEmptyObject
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="alwaysEmptyString" data-category="Function">
+                <a href="#alwaysEmptyString">
+                    alwaysEmptyString
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="alwaysNull" data-category="Function">
+                <a href="#alwaysNull">
+                    alwaysNull
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="applyIfNotNil" data-category="Function">
+                <a href="#applyIfNotNil">
+                    applyIfNotNil
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="argumentsToList" data-category="Function">
+                <a href="#argumentsToList">
+                    argumentsToList
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="assocDotPath" data-category="Object">
+                <a href="#assocDotPath">
+                    assocDotPath
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
+            <li class="func" data-name="constructRegExp" data-category="Function">
+                <a href="#constructRegExp">
+                    constructRegExp
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="containsAll" data-category="List">
+                <a href="#containsAll">
+                    containsAll
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="containsAny" data-category="List">
+                <a href="#containsAny">
+                    containsAny
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="containsNone" data-category="List">
+                <a href="#containsNone">
+                    containsNone
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="cx" data-category="String">
+                <a href="#cx">
+                    cx
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="dispatch" data-category="Function">
+                <a href="#dispatch">
+                    dispatch
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="dissocDotPath" data-category="Object">
+                <a href="#dissocDotPath">
+                    dissocDotPath
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
+            <li class="func" data-name="dotPath" data-category="Object">
+                <a href="#dotPath">
+                    dotPath
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
+            <li class="func" data-name="duplicate" data-category="List">
+                <a href="#duplicate">
+                    duplicate
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="endsWithSuffix" data-category="String">
+                <a href="#endsWithSuffix">
+                    endsWithSuffix
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="equalsEmptyString" data-category="String">
+                <a href="#equalsEmptyString">
+                    equalsEmptyString
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="equalsLength" data-category="List">
+                <a href="#equalsLength">
+                    equalsLength
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="equalsZero" data-category="Math">
+                <a href="#equalsZero">
+                    equalsZero
+                    <span data-category="Math" class="label label-category pull-right"
+                    >Math</span>
+                </a>
+            </li>
+            <li class="func" data-name="findNotNil" data-category="List">
+                <a href="#findNotNil">
+                    findNotNil
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="flattenArgs" data-category="List">
+                <a href="#flattenArgs">
+                    flattenArgs
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="gteThanLength" data-category="List">
+                <a href="#gteThanLength">
+                    gteThanLength
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="gtThanLength" data-category="List">
+                <a href="#gtThanLength">
+                    gtThanLength
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="isArray" data-category="Type">
+                <a href="#isArray">
+                    isArray
+                    <span data-category="Type" class="label label-category pull-right"
+                    >Type</span>
+                </a>
+            </li>
+            <li class="func" data-name="isFunction" data-category="Type">
+                <a href="#isFunction">
+                    isFunction
+                    <span data-category="Type" class="label label-category pull-right"
+                    >Type</span>
+                </a>
+            </li>
+            <li class="func" data-name="isNegative" data-category="Math">
+                <a href="#isNegative">
+                    isNegative
+                    <span data-category="Math" class="label label-category pull-right"
+                    >Math</span>
+                </a>
+            </li>
+            <li class="func" data-name="isNilOrEmptyString" data-category="Logic">
+                <a href="#isNilOrEmptyString">
+                    isNilOrEmptyString
+                    <span data-category="Logic" class="label label-category pull-right"
+                    >Logic</span>
+                </a>
+            </li>
+            <li class="func" data-name="isNumeric" data-category="Logic">
+                <a href="#isNumeric">
+                    isNumeric
+                    <span data-category="Logic" class="label label-category pull-right"
+                    >Logic</span>
+                </a>
+            </li>
+            <li class="func" data-name="isObject" data-category="Type">
+                <a href="#isObject">
+                    isObject
+                    <span data-category="Type" class="label label-category pull-right"
+                    >Type</span>
+                </a>
+            </li>
+            <li class="func" data-name="isPositive" data-category="Math">
+                <a href="#isPositive">
+                    isPositive
+                    <span data-category="Math" class="label label-category pull-right"
+                    >Math</span>
+                </a>
+            </li>
+            <li class="func" data-name="isPromise" data-category="Type">
+                <a href="#isPromise">
+                    isPromise
+                    <span data-category="Type" class="label label-category pull-right"
+                    >Type</span>
+                </a>
+            </li>
+            <li class="func" data-name="isString" data-category="Type">
+                <a href="#isString">
+                    isString
+                    <span data-category="Type" class="label label-category pull-right"
+                    >Type</span>
+                </a>
+            </li>
+            <li class="func" data-name="joinWithDash" data-category="String">
+                <a href="#joinWithDash">
+                    joinWithDash
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="joinWithDot" data-category="String">
+                <a href="#joinWithDot">
+                    joinWithDot
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="joinWithSpace" data-category="String">
+                <a href="#joinWithSpace">
+                    joinWithSpace
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="joinWithUnderscore" data-category="String">
+                <a href="#joinWithUnderscore">
+                    joinWithUnderscore
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="keyMirror" data-category="Object">
+                <a href="#keyMirror">
+                    keyMirror
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
+            <li class="func" data-name="listToString" data-category="List">
+                <a href="#listToString">
+                    listToString
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="log" data-category="Debugging">
+                <a href="#log">
+                    log
+                    <span data-category="Debugging" class="label label-category pull-right"
+                    >Debugging</span>
+                </a>
+            </li>
+            <li class="func" data-name="lteThanLength" data-category="List">
+                <a href="#lteThanLength">
+                    lteThanLength
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="ltThanLength" data-category="List">
+                <a href="#ltThanLength">
+                    ltThanLength
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="mapKeys" data-category="Object">
+                <a href="#mapKeys">
+                    mapKeys
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
+            <li class="func" data-name="mergeWithDotPath" data-category="Object">
+                <a href="#mergeWithDotPath">
+                    mergeWithDotPath
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
+            <li class="func" data-name="noop" data-category="Function">
+                <a href="#noop">
+                    noop
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="notEmpty" data-category="Logic">
+                <a href="#notEmpty">
+                    notEmpty
+                    <span data-category="Logic" class="label label-category pull-right"
+                    >Logic</span>
+                </a>
+            </li>
+            <li class="func" data-name="notNaN" data-category="Logic">
+                <a href="#notNaN">
+                    notNaN
+                    <span data-category="Logic" class="label label-category pull-right"
+                    >Logic</span>
+                </a>
+            </li>
+            <li class="func" data-name="notNil" data-category="Logic">
+                <a href="#notNil">
+                    notNil
+                    <span data-category="Logic" class="label label-category pull-right"
+                    >Logic</span>
+                </a>
+            </li>
+            <li class="func" data-name="notNumeric" data-category="Logic">
+                <a href="#notNumeric">
+                    notNumeric
+                    <span data-category="Logic" class="label label-category pull-right"
+                    >Logic</span>
+                </a>
+            </li>
+            <li class="func" data-name="overHead" data-category="List">
+                <a href="#overHead">
+                    overHead
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="pathNotEq" data-category="Relation">
+                <a href="#pathNotEq">
+                    pathNotEq
+                    <span data-category="Relation" class="label label-category pull-right"
+                    >Relation</span>
+                </a>
+            </li>
+            <li class="func" data-name="propNotEq" data-category="Relation">
+                <a href="#propNotEq">
+                    propNotEq
+                    <span data-category="Relation" class="label label-category pull-right"
+                    >Relation</span>
+                </a>
+            </li>
+            <li class="func" data-name="reduceCallable" data-category="Function">
+                <a href="#reduceCallable">
+                    reduceCallable
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="rejectNil" data-category="List">
+                <a href="#rejectNil">
+                    rejectNil
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="replicate" data-category="List">
+                <a href="#replicate">
+                    replicate
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="splitByDot" data-category="String">
+                <a href="#splitByDot">
+                    splitByDot
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="splitByNonAlphaNumeric" data-category="String">
+                <a href="#splitByNonAlphaNumeric">
+                    splitByNonAlphaNumeric
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="startsWithPrefix" data-category="String">
+                <a href="#startsWithPrefix">
+                    startsWithPrefix
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="toCamelCase" data-category="String">
+                <a href="#toCamelCase">
+                    toCamelCase
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="toDotCase" data-category="String">
+                <a href="#toDotCase">
+                    toDotCase
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="toKebabCase" data-category="String">
+                <a href="#toKebabCase">
+                    toKebabCase
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="toLowerFirst" data-category="String">
+                <a href="#toLowerFirst">
+                    toLowerFirst
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="toPascalCase" data-category="String">
+                <a href="#toPascalCase">
+                    toPascalCase
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="toScreamingSnakeCase" data-category="String">
+                <a href="#toScreamingSnakeCase">
+                    toScreamingSnakeCase
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="toSnakeCase" data-category="String">
+                <a href="#toSnakeCase">
+                    toSnakeCase
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="toUpperFirst" data-category="String">
+                <a href="#toUpperFirst">
+                    toUpperFirst
+                    <span data-category="String" class="label label-category pull-right"
+                    >String</span>
+                </a>
+            </li>
+            <li class="func" data-name="trace" data-category="Debugging">
+                <a href="#trace">
+                    trace
+                    <span data-category="Debugging" class="label label-category pull-right"
+                    >Debugging</span>
+                </a>
+            </li>
+            <li class="func" data-name="unfoldObjectDots" data-category="Object">
+                <a href="#unfoldObjectDots">
+                    unfoldObjectDots
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
+            <li class="func" data-name="valueMirror" data-category="Object">
+                <a href="#valueMirror">
+                    valueMirror
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
+            <li class="func" data-name="viewEq" data-category="Object">
+                <a href="#viewEq">
+                    viewEq
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
+            <li class="func" data-name="viewWith" data-category="Object">
+                <a href="#viewWith">
+                    viewWith
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main class="container-fluid">
+        <div id="alwaysEmptyArray" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#alwaysEmptyArray">alwaysEmptyArray</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/alwaysEmptyArray.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → [a]</code></div>
+
+
+
+
+            <div class="description"><p>Always returns empty array.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.alwaysEmptyArray() <span class="hljs-comment">// []</span></code></pre>
+        </section>
+        <div id="alwaysEmptyObject" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#alwaysEmptyObject">alwaysEmptyObject</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/alwaysEmptyObject.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → [a]</code></div>
+
+
+
+
+            <div class="description"><p>Always returns empty object.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.alwaysEmptyObject() <span class="hljs-comment">// {}</span></code></pre>
+        </section>
+        <div id="alwaysEmptyString" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#alwaysEmptyString">alwaysEmptyString</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/alwaysEmptyString.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → String</code></div>
+
+
+
+
+            <div class="description"><p>Always returns empty string.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.alwaysEmptyString() <span class="hljs-comment">// ''</span></code></pre>
+        </section>
+        <div id="alwaysNull" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#alwaysNull">alwaysNull</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/alwaysNull.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Object</code></div>
+
+
+
+
+            <div class="description"><p>Always returns null.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.alwaysNull() <span class="hljs-comment">// null</span></code></pre>
+        </section>
+        <div id="applyIfNotNil" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#applyIfNotNil">applyIfNotNil</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/applyIfNotNil.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>(*… → a) → [*] → a</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">fn</span>
+                            <span class="description"><p>The function which will be called with <code>args</code> when defined</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">args</span>
+                            <span class="description"><p>The arguments to call <code>fn</code> with</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">*</span>
+                        <span class="description">result The result, equivalent to `fn(...args)` or null</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Call apply on function if the function is defined. Otherwise do nothing and return null.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> nums = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+R_.applyIfNotNil(R.sum, nums) <span class="hljs-comment">// 6</span>
+R_.applyIfNotNil(<span class="hljs-literal">undefined</span>, nums) <span class="hljs-comment">// null</span></code></pre>
+        </section>
+        <div id="argumentsToList" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#argumentsToList">argumentsToList</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/argumentsToList.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>(a, b, c, …) → ([a, b, c, …])</code></div>
+
+
+
+
+            <div class="description"><p>Converts arguments to list.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R.compose(R.sum, R_.argumentsToList)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>) <span class="hljs-comment">// 6</span></code></pre>
+        </section>
+        <div id="assocDotPath" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#assocDotPath">assocDotPath</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/assocDotPath.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">path</span>
+                            <span class="description"><p>the dot path to set</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">val</span>
+                            <span class="description"><p>The new value</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">obj</span>
+                            <span class="description"><p>The object to clone</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Object</span>
+                        <span class="description">A new object equivalent to the original except along the specified path.</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Makes a shallow clone of an object, setting or overriding the nodes required
+to create the given path, and placing the specific value at the tail end of
+that path.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.assocDotPath(<span class="hljs-string">'a.b.c'</span>, <span class="hljs-number">42</span>, {<span class="hljs-attr">a</span>: {<span class="hljs-attr">b</span>: {<span class="hljs-attr">c</span>: <span class="hljs-number">0</span>}}}); <span class="hljs-comment">//=&gt; {a: {b: {c: 42}}}</span>
+
+<span class="hljs-comment">// Any missing or non-object keys in path will be overridden</span>
+R_.assocDotPath(<span class="hljs-string">'a.b.c'</span>, <span class="hljs-number">42</span>, {<span class="hljs-attr">a</span>: <span class="hljs-number">5</span>}); <span class="hljs-comment">//=&gt; {a: {b: {c: 42}}}</span></code></pre>
+        </section>
+        <div id="constructRegExp" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#constructRegExp">constructRegExp</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/constructRegExp.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+
+
+            <div class="description"><p>Constructs RegExp.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">test(R_.constructRegExp(<span class="hljs-string">'end$'</span>, <span class="hljs-string">'gi'</span>), <span class="hljs-string">'in the end'</span>) <span class="hljs-comment">// true</span></code></pre>
+        </section>
+        <div id="containsAll" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#containsAll">containsAll</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/containsAll.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[a] → [a] → Boolean</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">List</span>
+                            <span class="description"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">List</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Boolean</span>
+                        <span class="description">If all items from first array are in the second array.</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Resolves to true if all elements in first list are found within the second list</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.containsAll([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]) <span class="hljs-comment">// true</span>
+R_.containsAll([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'d'</span>], [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="containsAny" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#containsAny">containsAny</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/containsAny.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[a] → [a] → Boolean</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">List</span>
+                            <span class="description"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">List</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Boolean</span>
+                        <span class="description">If any of the items from first array are in the second array.</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Returns <code>true</code> if any of the items from first array are in the second array.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.containsAny([<span class="hljs-string">'a'</span>, <span class="hljs-string">'e'</span>], [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]) <span class="hljs-comment">// true</span>
+R_.containsAny([<span class="hljs-string">'e'</span>, <span class="hljs-string">'f'</span>], [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="containsNone" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#containsNone">containsNone</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/containsNone.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[a] → [a] → Boolean</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">List</span>
+                            <span class="description"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">List</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Boolean</span>
+                        <span class="description">If any of the items from first array is not in the second array.</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Returns <code>true</code> if any of the items from first array is not the second array.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.containsNone([<span class="hljs-string">'e'</span>, <span class="hljs-string">'f'</span>], [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]) <span class="hljs-comment">// true</span>
+R_.containsNone([<span class="hljs-string">'a'</span>, <span class="hljs-string">'f'</span>], [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="cx" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#cx">cx</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/cx.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String | [String] | Object → String</code></div>
+
+
+
+
+            <div class="description"><p>Conditionally joining classNames together.</p>
+<p>The cx function takes any number of arguments which can be a string, object
+even nested arrays of strings and objects.</p>
+<p>The argument &#39;foo&#39; is short for { foo: true }.</p>
+<p>If the value associated with a given key is falsy, that key won&#39;t be included in the output.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.cx(<span class="hljs-string">'Table'</span>, [<span class="hljs-string">'MagicTable'</span>], {<span class="hljs-string">'Table--active'</span>: <span class="hljs-literal">true</span> }) <span class="hljs-comment">// 'Table MagicTable Table--active'</span>
+R_.cx(<span class="hljs-string">'Table'</span>, [<span class="hljs-string">'MagicTable'</span>], {<span class="hljs-string">'Table--active'</span>: <span class="hljs-literal">false</span> }) <span class="hljs-comment">// 'Table MagicTable'</span>
+R_.cx([<span class="hljs-string">'Table'</span>, [<span class="hljs-string">'MagicTable'</span>]]) <span class="hljs-comment">// 'Table MagicTable'</span></code></pre>
+        </section>
+        <div id="dispatch" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#dispatch">dispatch</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/dispatch.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[a] → b|undefined</code></div>
+
+
+
+
+            <div class="description"><p>Returns result of first not nil evaluated functions in the list.
+Undefined otherwise.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.dispatch([R.always(<span class="hljs-literal">null</span>), R.identity, R.always(<span class="hljs-literal">null</span>)], <span class="hljs-number">3</span>) <span class="hljs-comment">// 3</span>
+R_.dispatch([R.always(<span class="hljs-literal">null</span>), R.identity, R.always(<span class="hljs-literal">null</span>)], <span class="hljs-literal">null</span>) <span class="hljs-comment">// undefined</span></code></pre>
+        </section>
+        <div id="dissocDotPath" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#dissocDotPath">dissocDotPath</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/dissocDotPath.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">path</span>
+                            <span class="description"><p>The dot path to the value to omit</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">obj</span>
+                            <span class="description"><p>The object to clone</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Object</span>
+                        <span class="description">A new object without the property at path</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Makes a shallow clone of an object, omitting the property at the given dot path.
+Note that this copies and flattens
+prototype properties onto the new object as well. All non-primitive properties are copied by reference.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.dissocDotPath(<span class="hljs-string">'a.b.c'</span>, {<span class="hljs-attr">a</span>: {<span class="hljs-attr">b</span>: {<span class="hljs-attr">c</span>: <span class="hljs-number">42</span>}}}); <span class="hljs-comment">//=&gt; {a: {b: {}}}</span></code></pre>
+        </section>
+        <div id="dotPath" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#dotPath">dotPath</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/dotPath.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">path</span>
+                            <span class="description"><p>The dot path to use.</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">obj</span>
+                            <span class="description"><p>The object to retrieve the nested property from.</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">*</span>
+                        <span class="description">The data at `path`.</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Retrieve the value at a given dot path.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.dotPath(<span class="hljs-string">'a.b'</span>, {<span class="hljs-attr">a</span>: {<span class="hljs-attr">b</span>: <span class="hljs-number">2</span>}}); <span class="hljs-comment">//=&gt; 2</span>
+R_.dotPath(<span class="hljs-string">'a.b'</span>, {<span class="hljs-attr">c</span>: {<span class="hljs-attr">b</span>: <span class="hljs-number">2</span>}}); <span class="hljs-comment">//=&gt; undefined</span></code></pre>
+        </section>
+        <div id="duplicate" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#duplicate">duplicate</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/duplicate.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → [a]</code></div>
+
+
+
+
+            <div class="description"><p>Creates pair. Every item of pair equals to input parameter.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.duplicate(<span class="hljs-number">1</span>) <span class="hljs-comment">// [1, 1]</span></code></pre>
+        </section>
+        <div id="endsWithSuffix" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#endsWithSuffix">endsWithSuffix</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/endsWithSuffix.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → b → Boolean</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">suffix</span>
+                            <span class="description"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">x</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">boolean</span>
+                        <span class="description">True if `x` ends with `suffix`</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Testing string if ends with some suffix.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.endsWithSuffix(<span class="hljs-string">'o'</span>, <span class="hljs-string">'hello'</span>) <span class="hljs-comment">// true</span>
+R_.endsWithSuffix(<span class="hljs-string">'ello'</span>, <span class="hljs-string">'hello'</span>) <span class="hljs-comment">// true</span>
+R_.endsWithSuffix(<span class="hljs-string">'y'</span>, <span class="hljs-string">'good bye'</span>) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="equalsEmptyString" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#equalsEmptyString">equalsEmptyString</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/equalsEmptyString.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">string</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">boolean</span>
+                        <span class="description">True if string is empty</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Testing if function is equals to &#39;&#39;</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.equalsEmptyString(<span class="hljs-string">''</span>) <span class="hljs-comment">// true</span>
+R_.equalsEmptyString(<span class="hljs-string">'hi'</span>) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="equalsLength" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#equalsLength">equalsLength</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/equalsLength.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Number → [a] → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if length of array equals first argument</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> lengthEqualsOne = R_.equalsLength(<span class="hljs-number">1</span>)
+lengthEqualsOne([{}]) <span class="hljs-comment">// true</span>
+lengthEqualsOne([]) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="equalsZero" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#equalsZero">equalsZero</a>
+                <span class="pull-right">
+                        <span class="label label-category">Math</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/equalsZero.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Number → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument equals 0.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.equalsZero(<span class="hljs-number">3</span>) <span class="hljs-comment">// false</span>
+R_.equalsZero(<span class="hljs-number">0</span>) <span class="hljs-comment">// true</span>
+R_.equalsZero(<span class="hljs-number">-3</span>) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="findNotNil" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#findNotNil">findNotNil</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/findNotNil.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[a] → a</code></div>
+
+
+
+
+            <div class="description"><p>Returns first not nil value</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.findNotNil([<span class="hljs-literal">null</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">true</span>]) <span class="hljs-comment">// 0</span></code></pre>
+        </section>
+        <div id="flattenArgs" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#flattenArgs">flattenArgs</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/flattenArgs.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>(a, [b, c]…) → [a, b, c]</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Array</span>
+                        <span class="description">flatten array</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Applies flatten on array of arguments</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.flattenArgs(<span class="hljs-string">'e'</span>, <span class="hljs-string">'f'</span>, <span class="hljs-string">'a'</span>) <span class="hljs-comment">// ['e', 'f', 'a']</span>
+R_.flattenArgs(<span class="hljs-string">'e'</span>, [<span class="hljs-string">'f'</span>, <span class="hljs-string">'a'</span>]) <span class="hljs-comment">// ['e', 'f', 'a']</span>
+R_.flattenArgs(<span class="hljs-string">'e'</span>, [<span class="hljs-string">'f'</span>, [<span class="hljs-string">'a'</span>]]) <span class="hljs-comment">// ['e', 'f', 'a']</span></code></pre>
+        </section>
+        <div id="gteThanLength" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#gteThanLength">gteThanLength</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/gteThanLength.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Number → [a] → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if length of array is smaller or equals than first argument</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> lengthSmallerThanEqualsOne = R_.gteThanLength(<span class="hljs-number">1</span>)
+lengthSmallerThanEqualsTwo([{},{}]) <span class="hljs-comment">// false</span>
+lengthSmallerThanEqualsTwo([{}]) <span class="hljs-comment">// true</span>
+lengthSmallerThanEqualsTwo([]) <span class="hljs-comment">// true</span></code></pre>
+        </section>
+        <div id="gtThanLength" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#gtThanLength">gtThanLength</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/gtThanLength.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Number → [a] → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if length of array is smaller than first argument</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> lengthSmallerThanTwo = R_.gtThanLength(<span class="hljs-number">2</span>)
+lengthSmallerThanTwo([{}]) <span class="hljs-comment">// true</span>
+lengthSmallerThanTwo([{},{}]) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="isArray" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isArray">isArray</a>
+                <span class="pull-right">
+                        <span class="label label-category">Type</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/isArray.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is type of Array.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isArray([]) <span class="hljs-comment">// true</span>
+R_.isArray(<span class="hljs-string">''</span>) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="isFunction" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isFunction">isFunction</a>
+                <span class="pull-right">
+                        <span class="label label-category">Type</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/isFunction.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is type of Function.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isFunction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// true</span>
+R_.isFunction({}) <span class="hljs-comment">// false</span>
+R_.isFunction([]) <span class="hljs-comment">// false</span>
+R_.isFunction(<span class="hljs-string">''</span>) <span class="hljs-comment">// false</span>
+R_.isFunction(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="isNegative" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isNegative">isNegative</a>
+                <span class="pull-right">
+                        <span class="label label-category">Math</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/isNegative.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Number → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is lower than 0.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isNegative(<span class="hljs-number">3</span>) <span class="hljs-comment">// false</span>
+R_.isNegative(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span>
+R_.isNegative(<span class="hljs-number">-3</span>) <span class="hljs-comment">// true</span></code></pre>
+        </section>
+        <div id="isNilOrEmptyString" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isNilOrEmptyString">isNilOrEmptyString</a>
+                <span class="pull-right">
+                        <span class="label label-category">Logic</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/isNilOrEmptyString.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is null, undefined or &#39;&#39;.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isNilOrEmptyString(<span class="hljs-literal">null</span>) <span class="hljs-comment">// true</span>
+R_.isNilOrEmptyString(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// true</span>
+R_.isNilOrEmptyString(<span class="hljs-string">''</span>) <span class="hljs-comment">// true</span>
+R_.isNilOrEmptyString(<span class="hljs-literal">false</span>) <span class="hljs-comment">// false</span>
+R_.isNilOrEmptyString(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span>
+R_.isNilOrEmptyString([]) <span class="hljs-comment">// false</span>
+R_.isNilOrEmptyString({}) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="isNumeric" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isNumeric">isNumeric</a>
+                <span class="pull-right">
+                        <span class="label label-category">Logic</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/isNumeric.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is finite numeric value.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isNumeric(<span class="hljs-number">-1</span>) <span class="hljs-comment">// true</span>
+R_.isNumeric(<span class="hljs-number">0</span>) <span class="hljs-comment">// true</span>
+R_.isNumeric(<span class="hljs-number">1</span>) <span class="hljs-comment">// true</span>
+R_.isNumeric(<span class="hljs-number">1.1</span>) <span class="hljs-comment">// true</span>
+R_.isNumeric(<span class="hljs-literal">Infinity</span>) <span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-string">''</span>) <span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-literal">false</span>) <span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-literal">null</span>) <span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// false</span>
+R_.isNumeric({}) <span class="hljs-comment">// false</span>
+R_.isNumeric([]) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="isObject" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isObject">isObject</a>
+                <span class="pull-right">
+                        <span class="label label-category">Type</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/isObject.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is type of Object.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isObject({}) <span class="hljs-comment">// true</span>
+R_.isObject([]) <span class="hljs-comment">// true</span>
+R_.isObject(<span class="hljs-string">''</span>) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="isPositive" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isPositive">isPositive</a>
+                <span class="pull-right">
+                        <span class="label label-category">Math</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/isPositive.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Number → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is greater than 0.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isPositive(<span class="hljs-number">3</span>) <span class="hljs-comment">// true</span>
+R_.isPositive(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span>
+R_.isPositive(<span class="hljs-number">-3</span>) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="isPromise" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isPromise">isPromise</a>
+                <span class="pull-right">
+                        <span class="label label-category">Type</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/isPromise.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is Promise.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isPromise(<span class="hljs-built_in">Promise</span>.resolve()) <span class="hljs-comment">// true</span>
+R_.isPromise(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="isString" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isString">isString</a>
+                <span class="pull-right">
+                        <span class="label label-category">Type</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/isString.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is type of String.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isString({}) <span class="hljs-comment">// false</span>
+R_.isString([]) <span class="hljs-comment">// false</span>
+R_.isString(<span class="hljs-string">''</span>) <span class="hljs-comment">// true</span></code></pre>
+        </section>
+        <div id="joinWithDash" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#joinWithDash">joinWithDash</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/joinWithDash.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[String] → String</code></div>
+
+
+
+
+            <div class="description"><p>Joins array of string with dash (hyphen) determiner.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.joinWithDash([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]) <span class="hljs-comment">// 'a-b-c'</span></code></pre>
+        </section>
+        <div id="joinWithDot" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#joinWithDot">joinWithDot</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/joinWithDot.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[String] → String</code></div>
+
+
+
+
+            <div class="description"><p>Joins array of string with dot determiner.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.joinWithDot([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]) <span class="hljs-comment">// 'a.b.c'</span></code></pre>
+        </section>
+        <div id="joinWithSpace" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#joinWithSpace">joinWithSpace</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/joinWithSpace.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[String] → String</code></div>
+
+
+
+
+            <div class="description"><p>Joins array of string with space determiner.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.joinWithSpace([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]) <span class="hljs-comment">// 'a b c'</span></code></pre>
+        </section>
+        <div id="joinWithUnderscore" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#joinWithUnderscore">joinWithUnderscore</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/joinWithUnderscore.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[String] → String</code></div>
+
+
+
+
+            <div class="description"><p>Joins array of string with underscore determiner.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.joinWithUnderscore([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]) <span class="hljs-comment">// 'a_b_c'</span></code></pre>
+        </section>
+        <div id="keyMirror" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#keyMirror">keyMirror</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/keyMirror.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Object → Object</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">Object</span>
+                            <span class="description"><p>where should be keys copied as values.</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Object</span>
+                        <span class="description"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Copies keys of object to appropriate values.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> actionTypes = R_.keyMirror({
+<span class="hljs-attr">ITEM_REQUEST</span>: <span class="hljs-literal">null</span>,
+<span class="hljs-attr">ITEM_SUCCESS</span>: <span class="hljs-literal">null</span>,
+<span class="hljs-attr">ITEM_ERROR</span>: <span class="hljs-literal">null</span>,
+});
+
+<span class="hljs-keyword">const</span> action = { <span class="hljs-attr">type</span>: actionTypes.ITEM_REQUEST };
+
+action.type === actionTypes.ITEM_REQUEST <span class="hljs-comment">// true</span></code></pre>
+        </section>
+        <div id="listToString" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#listToString">listToString</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/listToString.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[String] → String</code></div>
+
+
+
+
+            <div class="description"><p>Converts list of strings to string.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.listToString([<span class="hljs-string">'h'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'l'</span>, <span class="hljs-string">'l'</span>, <span class="hljs-string">'o'</span>]) <span class="hljs-comment">// 'hello'</span></code></pre>
+        </section>
+        <div id="log" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#log">log</a>
+                <span class="pull-right">
+                        <span class="label label-category">Debugging</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/log.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → a</code></div>
+
+
+
+
+            <div class="description"><p>Function with side-effect. Logs input to console and returns that input. Should be used only in development.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.log(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">// logs 'hello'</span>
+compose(R_.log, R.sum)([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>]) <span class="hljs-comment">// logs 4</span></code></pre>
+        </section>
+        <div id="lteThanLength" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#lteThanLength">lteThanLength</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/lteThanLength.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Number → [a] → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if length of array is bigger or equals than first argument</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> lengthBiggerThanEqualsOne = R_.lteThanLength(<span class="hljs-number">1</span>)
+lengthBiggerThanEqualsOne([{},{}]) <span class="hljs-comment">// true</span>
+lengthBiggerThanEqualsOne([{}]) <span class="hljs-comment">// true</span>
+lengthBiggerThanEqualsOne([]) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="ltThanLength" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#ltThanLength">ltThanLength</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/ltThanLength.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Number → [a] → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if length of array is bigger than first argument</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> lengthBiggerThanZero = R_.ltThanLength(<span class="hljs-number">0</span>)
+lengthBiggerThanZero([{}]) <span class="hljs-comment">// true</span>
+lengthBiggerThanZero([]) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="mapKeys" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#mapKeys">mapKeys</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/mapKeys.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">fn</span>
+                            <span class="description"><p>The function to be called on every key of the input object.</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">obj</span>
+                            <span class="description"><p>The object to be iterated over.</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Array</span>
+                        <span class="description">The new object with mapped keys.</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Use map function over the keys of the given object</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.mapKeys(R_.toUpperFirst, {<span class="hljs-attr">x</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">z</span>: <span class="hljs-number">3</span>}); <span class="hljs-comment">//=&gt; {X: 2, Y: 4, Z: 6}</span></code></pre>
+        </section>
+        <div id="mergeWithDotPath" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#mergeWithDotPath">mergeWithDotPath</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/mergeWithDotPath.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">path</span>
+                            <span class="description"><p>The dot path to the value</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">mergeFn</span>
+                            <span class="description"><p>The merging function</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">value</span>
+                            <span class="description"><p>Value to merge</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">obj</span>
+                            <span class="description"><p>The object to clone</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Object</span>
+                        <span class="description">A new object with merge data</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Merge data in object using custom merge fn.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.mergeWithDotPath(<span class="hljs-string">'a.b'</span>, R.merge, { <span class="hljs-attr">d</span>: <span class="hljs-number">30</span> }, {<span class="hljs-attr">a</span>: {<span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-number">20</span> }}}); <span class="hljs-comment">//=&gt; {a: {b: { c: 20, d: 30 }}}</span></code></pre>
+        </section>
+        <div id="noop" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#noop">noop</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/noop.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Object</code></div>
+
+
+
+
+            <div class="description"><p>Alias for <code>alwaysNull</code></p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.noop() <span class="hljs-comment">// null</span></code></pre>
+        </section>
+        <div id="notEmpty" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#notEmpty">notEmpty</a>
+                <span class="pull-right">
+                        <span class="label label-category">Logic</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/notEmpty.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if the given value is not its type&#39;s empty value</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notEmpty([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);   <span class="hljs-comment">//=&gt; true</span>
+R_.notEmpty([]);          <span class="hljs-comment">//=&gt; false</span>
+R_.notEmpty(<span class="hljs-string">''</span>);          <span class="hljs-comment">//=&gt; false</span>
+R_.notEmpty(<span class="hljs-literal">null</span>);        <span class="hljs-comment">//=&gt; true</span>
+R_.notEmpty({});          <span class="hljs-comment">//=&gt; false</span>
+R_.notEmpty({<span class="hljs-attr">length</span>: <span class="hljs-number">0</span>}); <span class="hljs-comment">//=&gt; true</span></code></pre>
+        </section>
+        <div id="notNaN" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#notNaN">notNaN</a>
+                <span class="pull-right">
+                        <span class="label label-category">Logic</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/notNaN.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Return negation of native isNaN function.</p>
+</div>
+
+
+
+            <div class="see">
+                See also
+                <a href="#http://stackoverflow.com/questions/9716468/is-there-any-function-like-isnumeric-in-javascript-to-validate-numbers">http://stackoverflow.com/questions/9716468/is-there-any-function-like-isnumeric-in-javascript-to-validate-numbers</a>.
+            </div>
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notNaN(<span class="hljs-number">0</span>)			<span class="hljs-comment">// true</span>
+R_.notNaN(<span class="hljs-string">''</span>)			<span class="hljs-comment">// true</span>
+R_.notNaN([])			<span class="hljs-comment">// true</span>
+R_.notNaN(<span class="hljs-literal">null</span>)		<span class="hljs-comment">// true</span>
+R_.notNaN({})			<span class="hljs-comment">// false</span>
+R_.notNaN(<span class="hljs-literal">NaN</span>)			<span class="hljs-comment">// false</span>
+R_.notNaN(<span class="hljs-literal">undefined</span>)	<span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="notNil" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#notNil">notNil</a>
+                <span class="pull-right">
+                        <span class="label label-category">Logic</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/notNil.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is neither null or undefined.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notNil(<span class="hljs-literal">null</span>) <span class="hljs-comment">// false</span>
+R_.notNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// false</span>
+R_.notNil(<span class="hljs-string">''</span>) <span class="hljs-comment">// true</span>
+R_.notNil(<span class="hljs-literal">false</span>) <span class="hljs-comment">// true</span>
+R_.notNil(<span class="hljs-number">0</span>) <span class="hljs-comment">// true</span>
+R_.notNil([]) <span class="hljs-comment">// true</span>
+R_.notNil({}) <span class="hljs-comment">// true</span></code></pre>
+        </section>
+        <div id="notNumeric" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#notNumeric">notNumeric</a>
+                <span class="pull-right">
+                        <span class="label label-category">Logic</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/notNumeric.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is not finite numeric value.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notNumeric(<span class="hljs-number">-1</span>) <span class="hljs-comment">// false</span>
+R_.notNumeric(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span>
+R_.notNumeric(<span class="hljs-number">1</span>) <span class="hljs-comment">// false</span>
+R_.notNumeric(<span class="hljs-number">1.1</span>) <span class="hljs-comment">// false</span>
+R_.notNumeric(<span class="hljs-literal">Infinity</span>) <span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-string">''</span>) <span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-literal">false</span>) <span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-literal">null</span>) <span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// true</span>
+R_.notNumeric({}) <span class="hljs-comment">// true</span>
+R_.notNumeric([]) <span class="hljs-comment">// true</span></code></pre>
+        </section>
+        <div id="overHead" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#overHead">overHead</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/overHead.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">v</span>
+                            <span class="description"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">x</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">*</span>
+                        <span class="description"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Returns an over lens to the first index of list.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.overHead(R.toUpper, [<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>]); <span class="hljs-comment">//=&gt; ['FOO', 'bar', 'baz']</span></code></pre>
+        </section>
+        <div id="pathNotEq" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#pathNotEq">pathNotEq</a>
+                <span class="pull-right">
+                        <span class="label label-category">Relation</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/pathNotEq.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[String | Int] → a → {a} → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if nested path of object literal does not contains given value.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: <span class="hljs-number">1</span> } }) <span class="hljs-comment">// false</span>
+R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> } }) <span class="hljs-comment">// true</span>
+R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, {}) <span class="hljs-comment">// true</span>
+R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: {} }) <span class="hljs-comment">// true</span></code></pre>
+        </section>
+        <div id="propNotEq" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#propNotEq">propNotEq</a>
+                <span class="pull-right">
+                        <span class="label label-category">Relation</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/propNotEq.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → a → Object → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if property of object literal does not equals the given value.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.propNotEq(<span class="hljs-string">'a'</span>, <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }) <span class="hljs-comment">// false</span>
+R_.propNotEq(<span class="hljs-string">'a'</span>, <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: <span class="hljs-number">2</span> }) <span class="hljs-comment">// true</span>
+R_.propNotEq(<span class="hljs-string">'a'</span>, <span class="hljs-number">1</span>, {}) <span class="hljs-comment">// true</span></code></pre>
+        </section>
+        <div id="reduceCallable" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#reduceCallable">reduceCallable</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/reduceCallable.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>(a → … → b) → [a, …, b] → c</code></div>
+
+
+
+
+            <div class="description"><p>Call function passed as first argument with arguments determined by second parameter in order.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> f = <span class="hljs-function">(<span class="hljs-params">a</span>) =&gt;</span> (b) =&gt; a + b
+R_.reduceCallable(f, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]) <span class="hljs-comment">// 3</span></code></pre>
+        </section>
+        <div id="rejectNil" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#rejectNil">rejectNil</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/rejectNil.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[a] → [a]</code></div>
+
+
+
+
+            <div class="description"><p>Filters out every nil value in a list.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.rejectNil([<span class="hljs-literal">null</span>, <span class="hljs-literal">undefined</span>, <span class="hljs-string">''</span>]); <span class="hljs-comment">// ['']</span></code></pre>
+        </section>
+        <div id="replicate" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#replicate">replicate</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/replicate.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Number → a → [a]</code></div>
+
+
+
+
+            <div class="description"><p>Creates list of length <code>n</code>. Every item in list equals to <code>input</code> parameter.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.replicate(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>) <span class="hljs-comment">// [6]</span>
+R_.replicate(<span class="hljs-number">2</span>, <span class="hljs-number">6</span>) <span class="hljs-comment">// [6, 6]</span>
+R_.replicate(<span class="hljs-number">3</span>, <span class="hljs-number">6</span>) <span class="hljs-comment">// [6, 6, 6]</span></code></pre>
+        </section>
+        <div id="splitByDot" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#splitByDot">splitByDot</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/splitByDot.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → [String]</code></div>
+
+
+
+
+            <div class="description"><p>Splits string by dot into list.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.splitByDot(<span class="hljs-string">'a.b.c'</span>) <span class="hljs-comment">// ['a', 'b', 'c']</span></code></pre>
+        </section>
+        <div id="splitByNonAlphaNumeric" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#splitByNonAlphaNumeric">splitByNonAlphaNumeric</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/splitByNonAlphaNumeric.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → [String]</code></div>
+
+
+
+
+            <div class="description"><p>Splits string into list. Delimiter is every sequence of non-alphanumerical values.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.splitByNonAlphaNumeric(<span class="hljs-string">'Hello    world/1'</span>); <span class="hljs-comment">// ['Hello', 'world', '1']</span></code></pre>
+        </section>
+        <div id="startsWithPrefix" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#startsWithPrefix">startsWithPrefix</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/startsWithPrefix.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → b → Boolean</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">prefix</span>
+                            <span class="description"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">x</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">boolean</span>
+                        <span class="description">True if `x` starts with `prefix`</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Testing string if starts with some prefix.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.startsWithPrefix(<span class="hljs-string">'h'</span>, <span class="hljs-string">'hello'</span>) <span class="hljs-comment">// true</span>
+R_.startsWithPrefix(<span class="hljs-string">'hell'</span>, <span class="hljs-string">'hello'</span>) <span class="hljs-comment">// true</span>
+R_.startsWithPrefix(<span class="hljs-string">'h'</span>, <span class="hljs-string">'good bye'</span>) <span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="toCamelCase" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#toCamelCase">toCamelCase</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/toCamelCase.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → String</code></div>
+
+
+
+
+            <div class="description"><p>Converts string into camelCase.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toCamelCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'helloWorld'</span>
+R_.toCamelCase(<span class="hljs-string">'hello- world'</span>) <span class="hljs-comment">// 'helloWorld'</span>
+R_.toCamelCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class="hljs-comment">// 'helloWorld'</span></code></pre>
+        </section>
+        <div id="toDotCase" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#toDotCase">toDotCase</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/toDotCase.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → String</code></div>
+
+
+
+
+            <div class="description"><p>Converts string into dot.case.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toDotCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'hello.world'</span>
+R_.toDotCase(<span class="hljs-string">'hello/*? world'</span>) <span class="hljs-comment">// 'hello.world'</span>
+R_.toDotCase(<span class="hljs-string">'  hello -/ world/ '</span>) <span class="hljs-comment">// 'hello.world'</span></code></pre>
+        </section>
+        <div id="toKebabCase" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#toKebabCase">toKebabCase</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/toKebabCase.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → String</code></div>
+
+
+
+
+            <div class="description"><p>Converts string into kebab-case.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toKebabCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'hello-world'</span>
+R_.toKebabCase(<span class="hljs-string">'hello- world'</span>) <span class="hljs-comment">// 'hello-world'</span>
+R_.toKebabCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class="hljs-comment">// 'hello-world'</span></code></pre>
+        </section>
+        <div id="toLowerFirst" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#toLowerFirst">toLowerFirst</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/toLowerFirst.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → String</code></div>
+
+
+
+
+            <div class="description"><p>Decapitalize first letter.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toLowerFirst(<span class="hljs-string">'HELLO WORLD'</span>) <span class="hljs-comment">// 'hELLO WORLD'</span></code></pre>
+        </section>
+        <div id="toPascalCase" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#toPascalCase">toPascalCase</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/toPascalCase.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → String</code></div>
+
+
+
+
+            <div class="description"><p>Converts string into PascalCase.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toPascalCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'HelloWorld'</span>
+R_.toPascalCase(<span class="hljs-string">'hello- world'</span>) <span class="hljs-comment">// 'HelloWorld'</span>
+R_.toPascalCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class="hljs-comment">// 'HelloWorld'</span></code></pre>
+        </section>
+        <div id="toScreamingSnakeCase" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#toScreamingSnakeCase">toScreamingSnakeCase</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/toScreamingSnakeCase.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → String</code></div>
+
+
+
+
+            <div class="description"><p>Converts string into SCREAMINT_SNAKE_CASE.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toScreamingSnakeCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'HELLO_WORLD'</span>
+R_.toScreamingSnakeCase(<span class="hljs-string">'hello- world'</span>) <span class="hljs-comment">// 'HELLO_WORLD'</span>
+R_.toScreamingSnakeCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class="hljs-comment">// 'HELLO_WORLD'</span></code></pre>
+        </section>
+        <div id="toSnakeCase" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#toSnakeCase">toSnakeCase</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/toSnakeCase.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → String</code></div>
+
+
+
+
+            <div class="description"><p>Converts string into snake_case.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toSnakeCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'hello_world'</span>
+R_.toSnakeCase(<span class="hljs-string">'hello- world'</span>) <span class="hljs-comment">// 'hello_world'</span>
+R_.toSnakeCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class="hljs-comment">// 'hello_world'</span></code></pre>
+        </section>
+        <div id="toUpperFirst" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#toUpperFirst">toUpperFirst</a>
+                <span class="pull-right">
+                        <span class="label label-category">String</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/toUpperFirst.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>String → String</code></div>
+
+
+
+
+            <div class="description"><p>Capitalize first letter.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toUpperFirst(<span class="hljs-string">'hello world'</span>) <span class="hljs-comment">// 'Hello world'</span></code></pre>
+        </section>
+        <div id="trace" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#trace">trace</a>
+                <span class="pull-right">
+                        <span class="label label-category">Debugging</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/trace.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → b → b</code></div>
+
+
+
+
+            <div class="description"><p>Function with side-effect. Logs input to console and returns that input.
+Similar to &quot;log&quot; but allows to label logged value. Should be used only in development.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">compose(calculation2, R_.trace(<span class="hljs-string">'Page A'</span>), calculation1); <span class="hljs-comment">// logs "Page A" and result of calculation1</span></code></pre>
+        </section>
+        <div id="unfoldObjectDots" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#unfoldObjectDots">unfoldObjectDots</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/unfoldObjectDots.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>Object → Object</code></div>
+
+
+
+
+            <div class="description"><p>Unfolds input object by dot delimetered path inside its keys.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.unfoldObjectDots({<span class="hljs-string">'a.b.c'</span>: <span class="hljs-number">1</span>, <span class="hljs-string">'d.e.f'</span>: <span class="hljs-number">2</span>, <span class="hljs-string">'g'</span>: <span class="hljs-number">3</span>})
+<span class="hljs-comment">// {a: {b: {c: 1}}, d: {e: {f: 2}}, g: 3}</span></code></pre>
+        </section>
+        <div id="valueMirror" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#valueMirror">valueMirror</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/valueMirror.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>[String] → Object</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">keyList</span>
+                            <span class="description"><p>List of values representing the keys and values of resulting object.</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Object</span>
+                        <span class="description">Object, where keys and appropriate values equals to value in `keyList`.</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Creates object mirror from list of keys.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> actionTypes = R_.valueMirror([
+<span class="hljs-string">'ITEM_REQUEST'</span>,
+<span class="hljs-string">'ITEM_SUCCESS'</span>,
+<span class="hljs-string">'ITEM_ERROR'</span>,
+]);
+
+<span class="hljs-keyword">const</span> action = { <span class="hljs-attr">type</span>: actionTypes.ITEM_REQUEST };
+
+action.type === actionTypes.ITEM_REQUEST <span class="hljs-comment">// true</span>
+actionTypes.ITEM_SUCCESS <span class="hljs-comment">// "ITEM_SUCCESS"</span></code></pre>
+        </section>
+        <div id="viewEq" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#viewEq">viewEq</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/viewEq.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">lens</span>
+                            <span class="description"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">v</span>
+                            <span class="description"><p>value to equal</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">x</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">*</span>
+                        <span class="description"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Returns true if the given lens equals to given value</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.viewEq(R.lensIndex(<span class="hljs-number">0</span>), <span class="hljs-string">'foo'</span>, [<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>]); <span class="hljs-comment">//=&gt; true</span></code></pre>
+        </section>
+        <div id="viewWith" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#viewWith">viewWith</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/viewWith.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">lens</span>
+                            <span class="description"></span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">v</span>
+                            <span class="description"><p>view function</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">x</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">*</span>
+                        <span class="description"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Applies custom view function on the given lens</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.viewWith(R.lensIndex(<span class="hljs-number">0</span>), R.pathEq([<span class="hljs-string">'foo'</span>], <span class="hljs-string">'boo'</span>), [{ <span class="hljs-attr">foo</span>: <span class="hljs-string">'boo'</span> }]); <span class="hljs-comment">//=&gt; true</span>
+R_.viewWith(R.lensIndex(<span class="hljs-number">0</span>), R.divide(R.__, <span class="hljs-number">2</span>), [<span class="hljs-number">4</span>]) <span class="hljs-comment">//=&gt; 2</span></code></pre>
+        </section>
+    </main>
+    <script src="dist/ramda.js"></script>
+    <script src="dist/ramda-extension.js"></script>
+    <script src="main.js"></script>
+    <script src = "https://embed.runkit.com"></script>
+</body>
+</html>

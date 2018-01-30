@@ -1,0 +1,45 @@
+html, body {
+    background-color: #282a36;
+    height: 100%;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top {
+    background-color: #849;
+    background-image: none;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top a {
+   color:#e1d0e6;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top .active > a {
+   padding-bottom: 16px;
+   background-color:#693476;
+   color:#fff;
+}
+
+.ramda-repl-wrapper {
+  padding-top: 3.7em;
+  height: 100%;
+}
+
+.ramda-repl-target {
+  display    : block;
+  background : #282a36;
+  color      : #282a36;
+  border     : 0;
+  resize     : none;
+}
+
+.repl-midline {
+	background-color: #44475a;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	z-index: 1;
+}

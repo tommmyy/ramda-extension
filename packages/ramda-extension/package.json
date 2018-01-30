@@ -62,7 +62,7 @@
     "babel-preset-stage-1": "^6.24.1",
     "cross-env": "2.0.0",
     "escope": "3.6.0",
-    "fs-extra": "^0.30.0",
+    "fs-extra": "^4.0.3",
     "ramda": "^0.25.0",
     "rimraf": "2.5.3",
     "rollup": "^0.50.0",

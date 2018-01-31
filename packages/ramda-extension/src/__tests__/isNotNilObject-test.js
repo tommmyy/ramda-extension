@@ -1,5 +1,5 @@
 import isNotNilObject from '../isNotNilObject';
-import { formatJSVal } from './testUtils';
+import { formatJSVal } from '../testUtils';
 
 
 describe('alwaysEmptyArray', () => {

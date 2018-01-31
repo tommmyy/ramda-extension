@@ -1,8 +1,8 @@
-import { append, apply, last, map, o, of, juxt, compose, toPairs, fromPairs, useWith } from 'ramda';
+import {flip, prepend, apply, last, juxt, compose, identity, useWith } from 'ramda';
 
-const appendLast = append(last);
-const applyFnFirstAndAppendLast = compose(appendLast, map(apply), of);
-const wrapMapping = o(juxt, applyFnFirstAndAppendLast);
+import mapKeysAndValues from './mapKeysAndValues';
+
+const wrapMapping = compose(juxt, flip(prepend)([last]), apply);
 
 /**
  * Map object keys. Mapping functions have both key and value as arguments.
@@ -17,6 +17,6 @@ const wrapMapping = o(juxt, applyFnFirstAndAppendLast);
  * @sig ((String, a) -> b) -> Object -> Object
  */
 
-const mapKeysWithValue = useWith(compose(fromPairs, map), [wrapMapping, toPairs]);
+const mapKeysWithValue = useWith(mapKeysAndValues, [wrapMapping, identity]);
 
 export default mapKeysWithValue;

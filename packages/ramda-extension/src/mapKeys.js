@@ -1,11 +1,7 @@
-import {
-	useWith,
-	map,
-	compose,
-	fromPairs,
-	toPairs,
-} from 'ramda';
+import { useWith, identity } from 'ramda';
 import overHead from './overHead';
+
+import mapKeysAndValues from './mapKeysAndValues';
 
 /**
  * Use map function over the keys of the given object
@@ -21,6 +17,6 @@ import overHead from './overHead';
  *      R_.mapKeys(R_.toUpperFirst, {x: 1, y: 2, z: 3}); //=> {X: 2, Y: 4, Z: 6}
  *
  */
-const mapKeys = useWith(compose(fromPairs, map), [overHead, toPairs]);
+const mapKeys = useWith(mapKeysAndValues, [overHead, identity]);
 
 export default mapKeys;

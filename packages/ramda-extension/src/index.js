@@ -71,3 +71,6 @@ export keyMirror from './keyMirror';
 export valueMirror from './valueMirror';
 export headArg from './headArg';
 export lastArg from './lastArg';
+export mapKeysWithValue from './mapKeysWithValue';
+export isNotNilObject from './isNotNilObject';
+export camelizeKeys from './camelizeKeys';

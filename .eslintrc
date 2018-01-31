@@ -20,7 +20,6 @@
     "ramda/any-pass-simplification": "error",
     "ramda/both-simplification": "error",
     "ramda/complement-simplification": "error",
-    "ramda/compose-pipe-style": "error",
     "ramda/compose-simplification": "error",
     "ramda/cond-simplification": "error",
     "ramda/either-simplification": "error",

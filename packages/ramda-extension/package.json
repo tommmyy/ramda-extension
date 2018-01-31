@@ -16,7 +16,10 @@
     "dot.case",
     "camelCase",
     "lower first letter",
-    "upper first letter"
+    "upper first letter",
+    "classnames",
+    "keymirror",
+    "camelizeKeys"
   ],
   "description": "Helpful functions built on top of the mighty Ramda",
   "module": "es/index.js",
@@ -40,6 +43,10 @@
     {
       "name": "Lukas Duspiva",
       "web": "https://github.com/lukasduspiva"
+    },
+    {
+      "name": "Jiri Bradle",
+      "web": "https://github.com/jbradle"
     }
   ],
   "scripts": {

@@ -13,6 +13,7 @@ import { view, flip, o, identity, useWith } from 'ramda';
  *
  *      R_.viewWith(R.lensIndex(0), R.pathEq(['foo'], 'boo'), [{ foo: 'boo' }]); //=> true
  * 		R_.viewWith(R.lensIndex(0), R.divide(R.__, 2), [4]) //=> 2
+ *
  */
 const viewWith = useWith(flip(o), [view, identity, identity]);
 

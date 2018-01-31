@@ -2,7 +2,7 @@ import isNotNilObject from '../isNotNilObject';
 import { formatJSVal } from '../testUtils';
 
 
-describe('alwaysEmptyArray', () => {
+describe('isNotNilObject', () => {
 	const itHelper = (input, expected) =>
 		it(`${formatJSVal(input)} should be ${expected}`, () => {
 			expect(isNotNilObject(input)).toBe(expected);

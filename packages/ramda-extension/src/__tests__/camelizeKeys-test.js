@@ -1,6 +1,6 @@
 import camelizeKeys from '../camelizeKeys';
 
-describe('equalsLength', () => {
+describe('camelizeKeys', () => {
 	it('should handle objects', () => {
 		expect(
 			camelizeKeys({

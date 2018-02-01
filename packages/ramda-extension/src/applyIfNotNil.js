@@ -14,8 +14,8 @@ import alwaysNull from './alwaysNull';
  * @example
  *
  * 		const nums = [1, 2, 3];
- *		R_.applyIfNotNil(R.sum, nums) // 6
- *		R_.applyIfNotNil(undefined, nums) // null
+ * 		R_.applyIfNotNil(R.sum, nums) // 6
+ * 		R_.applyIfNotNil(undefined, nums) // null
  *
  * @sig (*... -> a) -> [*] -> a
  */

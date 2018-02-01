@@ -14,11 +14,11 @@ import duplicate from './duplicate';
  *
  * @example
  *
- *  	const actionTypes = R_.valueMirror([
- *  		'ITEM_REQUEST',
- *  		'ITEM_SUCCESS',
- *  		'ITEM_ERROR',
- *  	]);
+ * 		const actionTypes = R_.valueMirror([
+ * 			'ITEM_REQUEST',
+ * 			'ITEM_SUCCESS',
+ * 			'ITEM_ERROR',
+ * 		]);
  *
  * 		const action = { type: actionTypes.ITEM_REQUEST };
  *

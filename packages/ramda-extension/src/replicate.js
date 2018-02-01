@@ -13,9 +13,9 @@ import { flip, repeat } from 'ramda';
  *
  * @example
  *
- *		R_.replicate(1, 6) // [6]
- *		R_.replicate(2, 6) // [6, 6]
- *		R_.replicate(3, 6) // [6, 6, 6]
+ * 		R_.replicate(1, 6) // [6]
+ * 		R_.replicate(2, 6) // [6, 6]
+ * 		R_.replicate(3, 6) // [6, 6, 6]
  *
  * @sig Number -> a -> [a]
  */

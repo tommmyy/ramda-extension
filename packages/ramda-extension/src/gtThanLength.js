@@ -9,9 +9,9 @@ import { compareLength } from './lengthUtils';
  *
  * @example
  *
- *		const lengthSmallerThanTwo = R_.gtThanLength(2)
+ * 		const lengthSmallerThanTwo = R_.gtThanLength(2)
  * 		lengthSmallerThanTwo([{}]) // true
- *		lengthSmallerThanTwo([{},{}]) // false
+ * 		lengthSmallerThanTwo([{},{}]) // false
  *
  * @sig Number -> [a] -> Boolean
  */

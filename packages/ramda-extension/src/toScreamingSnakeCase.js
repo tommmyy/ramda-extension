@@ -10,9 +10,9 @@ import joinWithUnderscore from './joinWithUnderscore';
  *
  * @example
  *
- * 		R_.toScreamingSnakeCase('hello-world') // 'HELLO_WORLD'
- * 		R_.toScreamingSnakeCase('hello- world') // 'HELLO_WORLD'
- * 		R_.toScreamingSnakeCase('  hello-/ world/ ') // 'HELLO_WORLD'
+ *        R_.toScreamingSnakeCase('hello-world')		// 'HELLO_WORLD'
+ *        R_.toScreamingSnakeCase('hello- world')		// 'HELLO_WORLD'
+ *        R_.toScreamingSnakeCase('  hello-/ world/ ')	// 'HELLO_WORLD'
  *
  * @sig String -> String
  */

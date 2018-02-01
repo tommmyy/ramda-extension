@@ -10,9 +10,9 @@ import joinWithDot from './joinWithDot';
  *
  * @example
  *
- * 		R_.toDotCase('hello-world') // 'hello.world'
- * 		R_.toDotCase('hello/*? world') // 'hello.world'
- * 		R_.toDotCase('  hello -/ world/ ') // 'hello.world'
+ *        R_.toDotCase('hello-world')		// 'hello.world'
+ *        R_.toDotCase('hello/*? world')		// 'hello.world'
+ *        R_.toDotCase('  hello -/ world/ ')	// 'hello.world'
  *
  * @sig String -> String
  */

@@ -13,15 +13,15 @@ import { mapObjIndexed, nthArg } from 'ramda';
  *
  * @example
  *
- *  	const actionTypes = R_.keyMirror({
- *  		ITEM_REQUEST: null,
- *  		ITEM_SUCCESS: null,
- *  		ITEM_ERROR: null,
- *  	});
+ *    const actionTypes = R_.keyMirror({
+ *        ITEM_REQUEST: null,
+ *        ITEM_SUCCESS: null,
+ *        ITEM_ERROR: null,
+ *    });
  *
- * 		const action = { type: actionTypes.ITEM_REQUEST };
+ *    const action = { type: actionTypes.ITEM_REQUEST };
  *
- * 		action.type === actionTypes.ITEM_REQUEST // true
+ *    action.type === actionTypes.ITEM_REQUEST // true
  *
  * @sig Object -> Object
  *

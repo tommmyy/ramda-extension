@@ -8,7 +8,7 @@ import { nthArg } from 'ramda';
  *
  * @example
  *
- * 		R_.lastArg('a', 'b', 'c') // c
+ *        R_.lastArg('a', 'b', 'c') // c
  *
  *
  */

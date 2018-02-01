@@ -10,9 +10,9 @@ import joinWithDash from './joinWithDash';
  *
  * @example
  *
- * 		R_.toKebabCase('hello-world') // 'hello-world'
- * 		R_.toKebabCase('hello- world') // 'hello-world'
- * 		R_.toKebabCase('  hello-/ world/ ') // 'hello-world'
+ *        R_.toKebabCase('hello-world')		// 'hello-world'
+ *        R_.toKebabCase('hello- world')		// 'hello-world'
+ *        R_.toKebabCase('  hello-/ world/ ')	// 'hello-world'
  *
  * @sig String -> String
  */

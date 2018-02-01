@@ -1,4 +1,5 @@
 import { always } from 'ramda';
+
 /**
  * Always returns null.
  *
@@ -7,7 +8,7 @@ import { always } from 'ramda';
  *
  * @example
  *
- *		R_.alwaysNull() // null
+ *        R_.alwaysNull() // null
  *
  * @sig a -> Object
  */

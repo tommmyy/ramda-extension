@@ -9,7 +9,7 @@ import { emptyArray } from './internal';
  *
  * @example
  *
- *		R_.alwaysEmptyArray() // []
+ *        R_.alwaysEmptyArray() // []
  *
  * @sig a -> [a]
  */

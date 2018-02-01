@@ -12,7 +12,7 @@ import replicate from './replicate';
  *
  * @example
  *
- *		R_.duplicate(1) // [1, 1]
+ *        R_.duplicate(1) // [1, 1]
  *
  * @sig a -> [a]
  */

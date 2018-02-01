@@ -12,8 +12,8 @@ import { curry, compose, isEmpty, intersection } from 'ramda';
  *
  * @example
  *
- *  	R_.containsNone(['e', 'f'], ['a', 'b', 'c']) // true
- *   	R_.containsNone(['a', 'f'], ['a', 'b', 'c']) // false
+ *    R_.containsNone(['e', 'f'], ['a', 'b', 'c']) // true
+ *    R_.containsNone(['a', 'f'], ['a', 'b', 'c']) // false
  *
  * @sig [a] -> [a] -> Boolean
  */

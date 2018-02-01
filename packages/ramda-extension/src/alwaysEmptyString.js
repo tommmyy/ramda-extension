@@ -9,7 +9,7 @@ import { emptyString } from './internal';
  *
  * @example
  *
- *		R_.alwaysEmptyString() // ''
+ *        R_.alwaysEmptyString() // ''
  *
  * @sig a -> String
  */

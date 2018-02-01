@@ -1,4 +1,5 @@
-import {curry, compose, not, isEmpty, intersection } from 'ramda';
+import { curry, compose, not, isEmpty, intersection } from 'ramda';
+
 /**
  * Returns `true` if any of the items from first array are in the second array.
  *
@@ -11,8 +12,8 @@ import {curry, compose, not, isEmpty, intersection } from 'ramda';
  *
  * @example
  *
- *  	R_.containsAny(['a', 'e'], ['a', 'b', 'c']) // true
- *   	R_.containsAny(['e', 'f'], ['a', 'b', 'c']) // false
+ *    R_.containsAny(['a', 'e'], ['a', 'b', 'c']) // true
+ *    R_.containsAny(['e', 'f'], ['a', 'b', 'c']) // false
  *
  * @sig [a] -> [a] -> Boolean
  *

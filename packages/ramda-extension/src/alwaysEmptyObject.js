@@ -9,7 +9,7 @@ import { emptyObject } from './internal';
  *
  * @example
  *
- *		R_.alwaysEmptyObject() // {}
+ *        R_.alwaysEmptyObject() // {}
  *
  * @sig a -> [a]
  */

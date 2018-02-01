@@ -8,7 +8,7 @@ import { join } from 'ramda';
  *
  * @example
  *
- * 		R_.joinWithUnderscore(['a', 'b', 'c']) // 'a_b_c'
+ *        R_.joinWithUnderscore(['a', 'b', 'c']) // 'a_b_c'
  *
  * @sig [String] -> String
  */

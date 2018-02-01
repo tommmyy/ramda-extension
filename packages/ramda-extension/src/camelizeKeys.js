@@ -1,4 +1,4 @@
-import { T, compose, cond, fromPairs, toPairs, identity, juxt, map, o, head, last } from 'ramda';
+import { compose, cond, fromPairs, head, identity, juxt, last, map, o, T, toPairs } from 'ramda';
 import toCamelCase from './toCamelCase';
 import isNotNilObject from './isNotNilObject';
 import isArray from './isArray';

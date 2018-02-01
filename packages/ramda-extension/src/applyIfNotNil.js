@@ -13,9 +13,9 @@ import alwaysNull from './alwaysNull';
  * @return {*} result The result, equivalent to `fn(...args)` or null
  * @example
  *
- * 		const nums = [1, 2, 3];
- *		R_.applyIfNotNil(R.sum, nums) // 6
- *		R_.applyIfNotNil(undefined, nums) // null
+ *        const nums = [1, 2, 3];
+ *        R_.applyIfNotNil(R.sum, nums) // 6
+ *        R_.applyIfNotNil(undefined, nums) // null
  *
  * @sig (*... -> a) -> [*] -> a
  */

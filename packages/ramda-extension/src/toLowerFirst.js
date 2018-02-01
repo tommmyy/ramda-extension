@@ -1,4 +1,4 @@
-import { o, join, adjust, toLower } from 'ramda';
+import { adjust, join, o, toLower } from 'ramda';
 
 /**
  * Decapitalize first letter.
@@ -8,7 +8,7 @@ import { o, join, adjust, toLower } from 'ramda';
  *
  * @example
  *
- * 		R_.toLowerFirst('HELLO WORLD') // 'hELLO WORLD'
+ *        R_.toLowerFirst('HELLO WORLD') // 'hELLO WORLD'
  *
  * @sig String -> String
  */

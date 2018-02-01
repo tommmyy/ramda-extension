@@ -9,7 +9,7 @@ import notNil from './notNil';
  *
  * @example
  *
- * 		R_.findNotNil([null, undefined, 0, true]) // 0
+ *        R_.findNotNil([null, undefined, 0, true]) // 0
  *
  * @sig [a] -> a
  *

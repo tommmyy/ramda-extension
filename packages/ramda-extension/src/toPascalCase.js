@@ -1,4 +1,4 @@
-import { o, map } from 'ramda';
+import { map, o } from 'ramda';
 import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
 import toUpperFirst from './toUpperFirst';
 import listToString from './listToString';
@@ -11,9 +11,9 @@ import listToString from './listToString';
  *
  * @example
  *
- * 		R_.toPascalCase('hello-world') // 'HelloWorld'
- * 		R_.toPascalCase('hello- world') // 'HelloWorld'
- * 		R_.toPascalCase('  hello-/ world/ ') // 'HelloWorld'
+ *        R_.toPascalCase('hello-world') // 'HelloWorld'
+ *        R_.toPascalCase('hello- world') // 'HelloWorld'
+ *        R_.toPascalCase('  hello-/ world/ ') // 'HelloWorld'
  *
  * @sig String -> String
  */

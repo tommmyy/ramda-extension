@@ -1,6 +1,5 @@
-import { useWith, flip, test, identity, concat } from 'ramda';
+import { concat, flip, identity, test, useWith } from 'ramda';
 import constructRegExp from './constructRegExp';
-
 
 const getRegExp_ = useWith(flip(constructRegExp)('gi'), [flip(concat)('$')]);
 
@@ -16,9 +15,9 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [flip(concat)('$')]);
  *
  * @example
  *
- * 		R_.endsWithSuffix('o', 'hello') // true
- * 		R_.endsWithSuffix('ello', 'hello') // true
- * 		R_.endsWithSuffix('y', 'good bye') // false
+ *        R_.endsWithSuffix('o', 'hello') // true
+ *        R_.endsWithSuffix('ello', 'hello') // true
+ *        R_.endsWithSuffix('y', 'good bye') // false
  *
  * @sig a -> b -> Boolean
  */

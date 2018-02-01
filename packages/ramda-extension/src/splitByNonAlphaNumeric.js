@@ -1,4 +1,4 @@
-import { o, equals, split, reject } from 'ramda';
+import { equals, o, reject, split } from 'ramda';
 import { emptyString, nonAlphaNumericRegExp } from './internal';
 
 /**
@@ -9,7 +9,7 @@ import { emptyString, nonAlphaNumericRegExp } from './internal';
  *
  * @example
  *
- * 		R_.splitByNonAlphaNumeric('Hello    world/1'); // ['Hello', 'world', '1']
+ *        R_.splitByNonAlphaNumeric('Hello    world/1'); // ['Hello', 'world', '1']
  *
  * @sig String -> [String]
  *

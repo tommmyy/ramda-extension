@@ -8,7 +8,7 @@ import { join } from 'ramda';
  *
  * @example
  *
- * 		R_.joinWithDot(['a', 'b', 'c']) // 'a.b.c'
+ *        R_.joinWithDot(['a', 'b', 'c']) // 'a.b.c'
  *
  * @sig [String] -> String
  */

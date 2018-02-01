@@ -1,4 +1,4 @@
-import { curryN, path, compose, apply } from 'ramda';
+import { apply, compose, curryN, path } from 'ramda';
 import splitByDoth from './splitByDot';
 import argumentsToList from './argumentsToList';
 import overHead from './overHead';

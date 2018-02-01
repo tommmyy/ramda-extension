@@ -1,16 +1,16 @@
 import {
-	o,
-	mergeAll,
-	values,
-	mapObjIndexed,
+	apply,
+	call,
+	compose,
+	flip,
+	identity,
 	map,
+	mapObjIndexed,
+	mergeAll,
+	o,
 	objOf,
 	useWith,
-	flip,
-	call,
-	identity,
-	compose,
-	apply,
+	values,
 } from 'ramda';
 import splitByDot from './splitByDot';
 
@@ -22,8 +22,8 @@ import splitByDot from './splitByDot';
  *
  * @example
  *
- *		R_.unfoldObjectDots({'a.b.c': 1, 'd.e.f': 2, 'g': 3})
- *	 	// {a: {b: {c: 1}}, d: {e: {f: 2}}, g: 3}
+ *        R_.unfoldObjectDots({'a.b.c': 1, 'd.e.f': 2, 'g': 3})
+ *        // {a: {b: {c: 1}}, d: {e: {f: 2}}, g: 3}
  *
  * @sig Object -> Object
  */

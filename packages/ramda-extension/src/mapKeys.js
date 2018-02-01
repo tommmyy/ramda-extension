@@ -1,4 +1,4 @@
-import { useWith, identity } from 'ramda';
+import { identity, useWith } from 'ramda';
 import overHead from './overHead';
 
 import mapKeysAndValues from './mapKeysAndValues';

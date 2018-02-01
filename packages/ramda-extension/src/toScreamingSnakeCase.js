@@ -1,4 +1,4 @@
-import { o, map, toUpper } from 'ramda';
+import { map, o, toUpper } from 'ramda';
 import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
 import joinWithUnderscore from './joinWithUnderscore';
 
@@ -10,9 +10,9 @@ import joinWithUnderscore from './joinWithUnderscore';
  *
  * @example
  *
- * 		R_.toScreamingSnakeCase('hello-world') // 'HELLO_WORLD'
- * 		R_.toScreamingSnakeCase('hello- world') // 'HELLO_WORLD'
- * 		R_.toScreamingSnakeCase('  hello-/ world/ ') // 'HELLO_WORLD'
+ *        R_.toScreamingSnakeCase('hello-world') // 'HELLO_WORLD'
+ *        R_.toScreamingSnakeCase('hello- world') // 'HELLO_WORLD'
+ *        R_.toScreamingSnakeCase('  hello-/ world/ ') // 'HELLO_WORLD'
  *
  * @sig String -> String
  */

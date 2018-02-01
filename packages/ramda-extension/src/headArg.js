@@ -8,7 +8,7 @@ import { nthArg } from 'ramda';
  *
  * @example
  *
- * 		R_.headArg('a', 'b', 'c') // a
+ *        R_.headArg('a', 'b', 'c') // a
  *
  *
  */

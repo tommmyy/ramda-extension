@@ -1,4 +1,4 @@
-import { o, map, toLower } from 'ramda';
+import { map, o, toLower } from 'ramda';
 import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
 import joinWithDot from './joinWithDot';
 
@@ -10,9 +10,9 @@ import joinWithDot from './joinWithDot';
  *
  * @example
  *
- * 		R_.toDotCase('hello-world') // 'hello.world'
- * 		R_.toDotCase('hello/*? world') // 'hello.world'
- * 		R_.toDotCase('  hello -/ world/ ') // 'hello.world'
+ *        R_.toDotCase('hello-world') // 'hello.world'
+ *        R_.toDotCase('hello/*? world') // 'hello.world'
+ *        R_.toDotCase('  hello -/ world/ ') // 'hello.world'
  *
  * @sig String -> String
  */

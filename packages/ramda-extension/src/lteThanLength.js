@@ -9,10 +9,10 @@ import { compareLength } from './lengthUtils';
  *
  * @example
  *
- *		const lengthBiggerThanEqualsOne = R_.lteThanLength(1)
- *		lengthBiggerThanEqualsOne([{},{}]) // true
- *		lengthBiggerThanEqualsOne([{}]) // true
- *		lengthBiggerThanEqualsOne([]) // false
+ *        const lengthBiggerThanEqualsOne = R_.lteThanLength(1)
+ *        lengthBiggerThanEqualsOne([{},{}]) // true
+ *        lengthBiggerThanEqualsOne([{}]) // true
+ *        lengthBiggerThanEqualsOne([]) // false
  *
  * @sig Number -> [a] -> Boolean
  */

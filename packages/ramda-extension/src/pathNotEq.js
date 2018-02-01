@@ -8,10 +8,10 @@ import { complement, pathEq } from 'ramda';
  *
  * @example
  *
- * 		R_.pathNotEq(['a', 'b'], 1, { a: { b: 1 } }) // false
- * 		R_.pathNotEq(['a', 'b'], 1, { a: { b: 2 } }) // true
- * 		R_.pathNotEq(['a', 'b'], 1, {}) // true
- * 		R_.pathNotEq(['a', 'b'], 1, { a: {} }) // true
+ *        R_.pathNotEq(['a', 'b'], 1, { a: { b: 1 } }) // false
+ *        R_.pathNotEq(['a', 'b'], 1, { a: { b: 2 } }) // true
+ *        R_.pathNotEq(['a', 'b'], 1, {}) // true
+ *        R_.pathNotEq(['a', 'b'], 1, { a: {} }) // true
  *
  * @sig [String | Int] → a → {a} → Boolean
  */

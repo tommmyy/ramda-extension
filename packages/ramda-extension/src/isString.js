@@ -8,9 +8,9 @@ import { is } from 'ramda';
  *
  * @example
  *
- * 		R_.isString({}) // false
- * 		R_.isString([]) // false
- * 		R_.isString('') // true
+ *        R_.isString({}) // false
+ *        R_.isString([]) // false
+ *        R_.isString('') // true
  *
  * @sig a -> Boolean
  */

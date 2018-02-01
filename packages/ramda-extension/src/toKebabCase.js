@@ -1,4 +1,4 @@
-import { o, map, toLower } from 'ramda';
+import { map, o, toLower } from 'ramda';
 import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
 import joinWithDash from './joinWithDash';
 
@@ -10,9 +10,9 @@ import joinWithDash from './joinWithDash';
  *
  * @example
  *
- * 		R_.toKebabCase('hello-world') // 'hello-world'
- * 		R_.toKebabCase('hello- world') // 'hello-world'
- * 		R_.toKebabCase('  hello-/ world/ ') // 'hello-world'
+ *        R_.toKebabCase('hello-world') // 'hello-world'
+ *        R_.toKebabCase('hello- world') // 'hello-world'
+ *        R_.toKebabCase('  hello-/ world/ ') // 'hello-world'
  *
  * @sig String -> String
  */

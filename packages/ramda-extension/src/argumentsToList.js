@@ -1,4 +1,4 @@
-import { unapply, identity } from 'ramda';
+import { identity, unapply } from 'ramda';
 
 /**
  * Converts arguments to list.
@@ -8,7 +8,7 @@ import { unapply, identity } from 'ramda';
  *
  * @example
  *
- *		R.compose(R.sum, R_.argumentsToList)(1, 2, 3) // 6
+ *        R.compose(R.sum, R_.argumentsToList)(1, 2, 3) // 6
  *
  * @sig (a, b, c, ...) → ([a, b, c, ...])
  */

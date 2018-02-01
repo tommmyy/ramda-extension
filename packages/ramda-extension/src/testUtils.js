@@ -1,4 +1,4 @@
-import { T, cond, always, unary } from 'ramda';
+import { always, cond, T, unary } from 'ramda';
 import isFunction from './isFunction';
 
 export const formatJSVal = cond([

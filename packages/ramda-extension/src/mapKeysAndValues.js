@@ -1,4 +1,4 @@
-import { useWith, compose, map, fromPairs, toPairs, identity } from 'ramda';
+import { compose, fromPairs, identity, map, toPairs, useWith } from 'ramda';
 
 /**
  * Always returns null.
@@ -8,8 +8,8 @@ import { useWith, compose, map, fromPairs, toPairs, identity } from 'ramda';
  *
  * @example
  *
- *		R_.mapKeysAndValues(([a, b]) => [b, a], { foo: "bar", baz: "boo" })
- *		// { bar: "foo", boo: "baz" }
+ *        R_.mapKeysAndValues(([a, b]) => [b, a], { foo: "bar", baz: "boo" })
+ *        // { bar: "foo", boo: "baz" }
  *
  * @sig ([a] -> [b]) -> Object -> Object
  */

@@ -1,6 +1,5 @@
-import { useWith, flip, test, identity, concat } from 'ramda';
+import { concat, flip, identity, test, useWith } from 'ramda';
 import constructRegExp from './constructRegExp';
-
 
 const getRegExp_ = useWith(flip(constructRegExp)('gi'), [concat('^')]);
 
@@ -16,9 +15,9 @@ const getRegExp_ = useWith(flip(constructRegExp)('gi'), [concat('^')]);
  *
  * @example
  *
- * 		R_.startsWithPrefix('h', 'hello') // true
- * 		R_.startsWithPrefix('hell', 'hello') // true
- * 		R_.startsWithPrefix('h', 'good bye') // false
+ *        R_.startsWithPrefix('h', 'hello') // true
+ *        R_.startsWithPrefix('hell', 'hello') // true
+ *        R_.startsWithPrefix('h', 'good bye') // false
  *
  * @sig a -> b -> Boolean
  */

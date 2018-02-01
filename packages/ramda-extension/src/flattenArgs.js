@@ -11,9 +11,9 @@ import argumentsToList from './argumentsToList';
  *
  * @example
  *
- *  	R_.flattenArgs('e', 'f', 'a') // ['e', 'f', 'a']
- * 		R_.flattenArgs('e', ['f', 'a']) // ['e', 'f', 'a']
- * 		R_.flattenArgs('e', ['f', ['a']]) // ['e', 'f', 'a']
+ *        R_.flattenArgs('e', 'f', 'a') // ['e', 'f', 'a']
+ *        R_.flattenArgs('e', ['f', 'a']) // ['e', 'f', 'a']
+ *        R_.flattenArgs('e', ['f', ['a']]) // ['e', 'f', 'a']
  *
  * @sig (a, [b, c]...) -> [a, b, c]
  */

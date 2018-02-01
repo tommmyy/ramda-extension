@@ -1,4 +1,4 @@
-import { converge, nthArg, call } from 'ramda';
+import { call, converge, nthArg } from 'ramda';
 import dotPath from './dotPath';
 import assocDotPath from './assocDotPath';
 import headArg from './headArg';

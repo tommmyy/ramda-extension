@@ -1,4 +1,4 @@
-import { reject, isNil } from 'ramda';
+import { isNil, reject } from 'ramda';
 
 /**
  * Filters out every nil value in a list.
@@ -8,7 +8,7 @@ import { reject, isNil } from 'ramda';
  *
  * @example
  *
- * 		R_.rejectNil([null, undefined, '']); // ['']
+ *        R_.rejectNil([null, undefined, '']); // ['']
  *
  * @sig [a] -> [a]
  *

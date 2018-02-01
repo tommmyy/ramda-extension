@@ -8,7 +8,7 @@ import { join } from 'ramda';
  *
  * @example
  *
- * 		R_.joinWithDash(['a', 'b', 'c']) // 'a-b-c'
+ *        R_.joinWithDash(['a', 'b', 'c']) // 'a-b-c'
  *
  * @sig [String] -> String
  */

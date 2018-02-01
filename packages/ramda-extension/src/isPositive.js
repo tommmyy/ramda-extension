@@ -1,6 +1,5 @@
 import { lt } from 'ramda';
 
-
 /**
  * Returns true if argument is greater than 0.
  *
@@ -9,9 +8,9 @@ import { lt } from 'ramda';
  *
  * @example
  *
- * 		R_.isPositive(3) // true
- * 		R_.isPositive(0) // false
- * 		R_.isPositive(-3) // false
+ *        R_.isPositive(3) // true
+ *        R_.isPositive(0) // false
+ *        R_.isPositive(-3) // false
  *
  * @sig Number -> Boolean
  */

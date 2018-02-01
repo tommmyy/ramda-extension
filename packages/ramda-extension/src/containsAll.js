@@ -1,4 +1,5 @@
-import { curry, compose, isEmpty, difference } from 'ramda';
+import { compose, curry, difference, isEmpty } from 'ramda';
+
 /**
  * Resolves to true if all elements in first list are found within the second list
  *
@@ -12,8 +13,8 @@ import { curry, compose, isEmpty, difference } from 'ramda';
  *
  * @example
  *
- *  	R_.containsAll(['a', 'b'], ['a', 'b', 'c']) // true
- *   	R_.containsAll(['a', 'b', 'd'], ['a', 'b', 'c']) // false
+ *    R_.containsAll(['a', 'b'], ['a', 'b', 'c']) // true
+ *    R_.containsAll(['a', 'b', 'd'], ['a', 'b', 'c']) // false
  *
  * @sig [a] -> [a] -> Boolean
  *

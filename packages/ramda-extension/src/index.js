@@ -42,6 +42,7 @@ export listToString from './listToString';
 export splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
 export constructRegExp from './constructRegExp';
 export rejectNil from './rejectNil';
+export rejectEq from './rejectEq';
 export splitByDot from './splitByDot';
 export joinWithDot from './joinWithDot';
 export joinWithSpace from './joinWithSpace';

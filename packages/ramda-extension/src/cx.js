@@ -5,7 +5,6 @@ import {
 	compose,
 	concat,
 	converge,
-	equals,
 	filter,
 	head,
 	identity,
@@ -15,7 +14,6 @@ import {
 	map,
 	not,
 	o,
-	reject,
 	toPairs,
 	uncurryN,
 	uniq,
@@ -25,11 +23,12 @@ import flattenArgs from './flattenArgs';
 import joinWithSpace from './joinWithSpace';
 import isObject from './isObject';
 import isString from './isString';
+import rejectEq from './rejectEq';
 
 const createSaveModifiers = ifElse(isEmpty, always([identity]));
 
 const getDefinitions = compose(uniq, unnest, map(toPairs));
-const createRejects = map(o(o(reject, equals), head));
+const createRejects = map(o(rejectEq, head));
 const createAppends = map(o(append, head));
 const getRejects = createSaveModifiers(o(createRejects, filter(o(not, last))));
 const getAppends = createSaveModifiers(o(createAppends, filter(last)));

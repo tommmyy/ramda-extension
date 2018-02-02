@@ -11,9 +11,9 @@ import listToString from './listToString';
  *
  * @example
  *
- * 		R_.toPascalCase('hello-world') // 'HelloWorld'
- * 		R_.toPascalCase('hello- world') // 'HelloWorld'
- * 		R_.toPascalCase('  hello-/ world/ ') // 'HelloWorld'
+ *        R_.toPascalCase('hello-world')		// 'HelloWorld'
+ *        R_.toPascalCase('hello- world')		// 'HelloWorld'
+ *        R_.toPascalCase('  hello-/ world/ ')	// 'HelloWorld'
  *
  * @sig String -> String
  */

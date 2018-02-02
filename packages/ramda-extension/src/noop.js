@@ -10,7 +10,7 @@ import alwaysNull from './alwaysNull';
  *
  * @example
  *
- *		R_.noop() // null
+ *        R_.noop() // null
  *
  */
 const noop = alwaysNull;

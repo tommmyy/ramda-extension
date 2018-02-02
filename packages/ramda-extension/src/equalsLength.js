@@ -9,9 +9,9 @@ import { compareLength } from './lengthUtils';
  *
  * @example
  *
- *		const lengthEqualsOne = R_.equalsLength(1)
- *		lengthEqualsOne([{}]) // true
- *		lengthEqualsOne([]) // false
+ *        const lengthEqualsOne = R_.equalsLength(1)
+ *        lengthEqualsOne([{}])	// true
+ *        lengthEqualsOne([])	// false
  *
  * @sig Number -> [a] -> Boolean
  */

@@ -8,7 +8,7 @@ import { reject, isNil } from 'ramda';
  *
  * @example
  *
- * 		R_.rejectNil([null, undefined, '']); // ['']
+ *        R_.rejectNil([null, undefined, '']); // ['']
  *
  * @sig [a] -> [a]
  *

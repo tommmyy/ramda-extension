@@ -22,8 +22,8 @@ import splitByDot from './splitByDot';
  *
  * @example
  *
- *		R_.unfoldObjectDots({'a.b.c': 1, 'd.e.f': 2, 'g': 3})
- *	 	// {a: {b: {c: 1}}, d: {e: {f: 2}}, g: 3}
+ *        R_.unfoldObjectDots({'a.b.c': 1, 'd.e.f': 2, 'g': 3})
+ *        // {a: {b: {c: 1}}, d: {e: {f: 2}}, g: 3}
  *
  * @sig Object -> Object
  */

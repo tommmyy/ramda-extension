@@ -91,6 +91,13 @@
                     >Object</span>
                 </a>
             </li>
+            <li class="func" data-name="camelizeKeys" data-category="Object">
+                <a href="#camelizeKeys">
+                    camelizeKeys
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
             <li class="func" data-name="constructRegExp" data-category="Function">
                 <a href="#constructRegExp">
                     constructRegExp
@@ -210,6 +217,13 @@
                     >List</span>
                 </a>
             </li>
+            <li class="func" data-name="headArg" data-category="Function">
+                <a href="#headArg">
+                    headArg
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
             <li class="func" data-name="isArray" data-category="Type">
                 <a href="#isArray">
                     isArray
@@ -234,6 +248,13 @@
             <li class="func" data-name="isNilOrEmptyString" data-category="Logic">
                 <a href="#isNilOrEmptyString">
                     isNilOrEmptyString
+                    <span data-category="Logic" class="label label-category pull-right"
+                    >Logic</span>
+                </a>
+            </li>
+            <li class="func" data-name="isNotNilObject" data-category="Logic">
+                <a href="#isNotNilObject">
+                    isNotNilObject
                     <span data-category="Logic" class="label label-category pull-right"
                     >Logic</span>
                 </a>
@@ -308,6 +329,13 @@
                     >Object</span>
                 </a>
             </li>
+            <li class="func" data-name="lastArg" data-category="Function">
+                <a href="#lastArg">
+                    lastArg
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
             <li class="func" data-name="listToString" data-category="List">
                 <a href="#listToString">
                     listToString
@@ -343,9 +371,16 @@
                     >Object</span>
                 </a>
             </li>
-            <li class="func" data-name="mergeWithDotPath" data-category="Object">
-                <a href="#mergeWithDotPath">
-                    mergeWithDotPath
+            <li class="func" data-name="mapKeysAndValues" data-category="Function">
+                <a href="#mapKeysAndValues">
+                    mapKeysAndValues
+                    <span data-category="Function" class="label label-category pull-right"
+                    >Function</span>
+                </a>
+            </li>
+            <li class="func" data-name="mapKeysWithValue" data-category="Object">
+                <a href="#mapKeysWithValue">
+                    mapKeysWithValue
                     <span data-category="Object" class="label label-category pull-right"
                     >Object</span>
                 </a>
@@ -425,6 +460,13 @@
                     replicate
                     <span data-category="List" class="label label-category pull-right"
                     >List</span>
+                </a>
+            </li>
+            <li class="func" data-name="resolveDotPath" data-category="Object">
+                <a href="#resolveDotPath">
+                    resolveDotPath
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
                 </a>
             </li>
             <li class="func" data-name="splitByDot" data-category="String">
@@ -770,10 +812,49 @@ that path.</p>
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.assocDotPath(<span class="hljs-string">'a.b.c'</span>, <span class="hljs-number">42</span>, {<span class="hljs-attr">a</span>: {<span class="hljs-attr">b</span>: {<span class="hljs-attr">c</span>: <span class="hljs-number">0</span>}}}); <span class="hljs-comment">//=&gt; {a: {b: {c: 42}}}</span>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.assocDotPath(<span class="hljs-string">'a.b.c'</span>, <span class="hljs-number">42</span>, {<span class="hljs-attr">a</span>: {<span class="hljs-attr">b</span>: {<span class="hljs-attr">c</span>: <span class="hljs-number">0</span>}}}); <span class="hljs-comment">//=&gt; {a: {b: {c: 42}}}</span><span class="hljs-comment">// Any missing or non-object keys in path will be overridden</span>R_.assocDotPath(<span class="hljs-string">'a.b.c'</span>, <span class="hljs-number">42</span>, {<span class="hljs-attr">a</span>: <span class="hljs-number">5</span>}); <span class="hljs-comment">//=&gt; {a: {b: {c: 42}}}</span></code></pre>
+        </section>
+        <div id="camelizeKeys" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#camelizeKeys">camelizeKeys</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/camelizeKeys.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
 
-<span class="hljs-comment">// Any missing or non-object keys in path will be overridden</span>
-R_.assocDotPath(<span class="hljs-string">'a.b.c'</span>, <span class="hljs-number">42</span>, {<span class="hljs-attr">a</span>: <span class="hljs-number">5</span>}); <span class="hljs-comment">//=&gt; {a: {b: {c: 42}}}</span></code></pre>
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">x</span>
+                            <span class="description"><p>Object to transform</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">any</span>
+                        <span class="description"></span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Transform recursevely all keys within object</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">camelizeKeys({  <span class="hljs-string">"co-obj"</span>: {  <span class="hljs-string">"co_string"</span>: <span class="hljs-string">"foo"</span> },  <span class="hljs-string">"co-array"</span>: [<span class="hljs-number">0</span>, <span class="hljs-literal">null</span>, { <span class="hljs-string">"f-f"</span>: <span class="hljs-string">"ff"</span> }],  <span class="hljs-string">"co-number"</span>: <span class="hljs-number">1</span>,  <span class="hljs-string">"co-string"</span>: <span class="hljs-string">"1"</span>,  <span class="hljs-string">"co-fn"</span>: head,});<span class="hljs-comment">// {</span><span class="hljs-comment">//     coArray: [</span><span class="hljs-comment">//         0,</span><span class="hljs-comment">//         null,</span><span class="hljs-comment">//         {</span><span class="hljs-comment">//             fF: "ff"</span><span class="hljs-comment">//         }</span><span class="hljs-comment">//     ],</span><span class="hljs-comment">//     coFn: {},</span><span class="hljs-comment">//     coNumber: 1,</span><span class="hljs-comment">//     coObj: {</span><span class="hljs-comment">//         coString: "foo"</span><span class="hljs-comment">//     },</span><span class="hljs-comment">//     coString: "1"</span><span class="hljs-comment">// }</span></code></pre>
         </section>
         <div id="constructRegExp" class="section-id"></div>
         <section class="card">
@@ -971,9 +1052,9 @@ even nested arrays of strings and objects.</p>
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.cx(<span class="hljs-string">'Table'</span>, [<span class="hljs-string">'MagicTable'</span>], {<span class="hljs-string">'Table--active'</span>: <span class="hljs-literal">true</span> }) <span class="hljs-comment">// 'Table MagicTable Table--active'</span>
-R_.cx(<span class="hljs-string">'Table'</span>, [<span class="hljs-string">'MagicTable'</span>], {<span class="hljs-string">'Table--active'</span>: <span class="hljs-literal">false</span> }) <span class="hljs-comment">// 'Table MagicTable'</span>
-R_.cx([<span class="hljs-string">'Table'</span>, [<span class="hljs-string">'MagicTable'</span>]]) <span class="hljs-comment">// 'Table MagicTable'</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.cx(<span class="hljs-string">'Table'</span>, [<span class="hljs-string">'MagicTable'</span>], {<span class="hljs-string">'Table--active'</span>: <span class="hljs-literal">true</span> })	<span class="hljs-comment">// 'Table MagicTable Table--active'</span>
+R_.cx(<span class="hljs-string">'Table'</span>, [<span class="hljs-string">'MagicTable'</span>], {<span class="hljs-string">'Table--active'</span>: <span class="hljs-literal">false</span> })	<span class="hljs-comment">// 'Table MagicTable'</span>
+R_.cx([<span class="hljs-string">'Table'</span>, [<span class="hljs-string">'MagicTable'</span>]])				<span class="hljs-comment">// 'Table MagicTable'</span></code></pre>
         </section>
         <div id="dispatch" class="section-id"></div>
         <section class="card">
@@ -1099,8 +1180,7 @@ prototype properties onto the new object as well. All non-primitive properties a
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.dotPath(<span class="hljs-string">'a.b'</span>, {<span class="hljs-attr">a</span>: {<span class="hljs-attr">b</span>: <span class="hljs-number">2</span>}}); <span class="hljs-comment">//=&gt; 2</span>
-R_.dotPath(<span class="hljs-string">'a.b'</span>, {<span class="hljs-attr">c</span>: {<span class="hljs-attr">b</span>: <span class="hljs-number">2</span>}}); <span class="hljs-comment">//=&gt; undefined</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.dotPath(<span class="hljs-string">'a.b'</span>, {<span class="hljs-attr">a</span>: {<span class="hljs-attr">b</span>: <span class="hljs-number">2</span>}}); <span class="hljs-comment">//=&gt; 2</span>R_.dotPath(<span class="hljs-string">'a.b'</span>, {<span class="hljs-attr">c</span>: {<span class="hljs-attr">b</span>: <span class="hljs-number">2</span>}}); <span class="hljs-comment">//=&gt; undefined</span></code></pre>
         </section>
         <div id="duplicate" class="section-id"></div>
         <section class="card">
@@ -1172,9 +1252,9 @@ R_.dotPath(<span class="hljs-string">'a.b'</span>, {<span class="hljs-attr">c</s
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.endsWithSuffix(<span class="hljs-string">'o'</span>, <span class="hljs-string">'hello'</span>) <span class="hljs-comment">// true</span>
-R_.endsWithSuffix(<span class="hljs-string">'ello'</span>, <span class="hljs-string">'hello'</span>) <span class="hljs-comment">// true</span>
-R_.endsWithSuffix(<span class="hljs-string">'y'</span>, <span class="hljs-string">'good bye'</span>) <span class="hljs-comment">// false</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.endsWithSuffix(<span class="hljs-string">'o'</span>, <span class="hljs-string">'hello'</span>)		<span class="hljs-comment">// true</span>
+R_.endsWithSuffix(<span class="hljs-string">'ello'</span>, <span class="hljs-string">'hello'</span>)	<span class="hljs-comment">// true</span>
+R_.endsWithSuffix(<span class="hljs-string">'y'</span>, <span class="hljs-string">'good bye'</span>)	<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="equalsEmptyString" class="section-id"></div>
         <section class="card">
@@ -1216,8 +1296,8 @@ R_.endsWithSuffix(<span class="hljs-string">'y'</span>, <span class="hljs-string
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.equalsEmptyString(<span class="hljs-string">''</span>) <span class="hljs-comment">// true</span>
-R_.equalsEmptyString(<span class="hljs-string">'hi'</span>) <span class="hljs-comment">// false</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.equalsEmptyString(<span class="hljs-string">''</span>)	<span class="hljs-comment">// true</span>
+R_.equalsEmptyString(<span class="hljs-string">'hi'</span>)	<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="equalsLength" class="section-id"></div>
         <section class="card">
@@ -1242,8 +1322,8 @@ R_.equalsEmptyString(<span class="hljs-string">'hi'</span>) <span class="hljs-co
 
 
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> lengthEqualsOne = R_.equalsLength(<span class="hljs-number">1</span>)
-lengthEqualsOne([{}]) <span class="hljs-comment">// true</span>
-lengthEqualsOne([]) <span class="hljs-comment">// false</span></code></pre>
+lengthEqualsOne([{}])	<span class="hljs-comment">// true</span>
+lengthEqualsOne([])	<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="equalsZero" class="section-id"></div>
         <section class="card">
@@ -1267,9 +1347,9 @@ lengthEqualsOne([]) <span class="hljs-comment">// false</span></code></pre>
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.equalsZero(<span class="hljs-number">3</span>) <span class="hljs-comment">// false</span>
-R_.equalsZero(<span class="hljs-number">0</span>) <span class="hljs-comment">// true</span>
-R_.equalsZero(<span class="hljs-number">-3</span>) <span class="hljs-comment">// false</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.equalsZero(<span class="hljs-number">3</span>)	<span class="hljs-comment">// false</span>
+R_.equalsZero(<span class="hljs-number">0</span>)	<span class="hljs-comment">// true</span>
+R_.equalsZero(<span class="hljs-number">-3</span>)	<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="findNotNil" class="section-id"></div>
         <section class="card">
@@ -1329,9 +1409,9 @@ R_.equalsZero(<span class="hljs-number">-3</span>) <span class="hljs-comment">//
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.flattenArgs(<span class="hljs-string">'e'</span>, <span class="hljs-string">'f'</span>, <span class="hljs-string">'a'</span>) <span class="hljs-comment">// ['e', 'f', 'a']</span>
-R_.flattenArgs(<span class="hljs-string">'e'</span>, [<span class="hljs-string">'f'</span>, <span class="hljs-string">'a'</span>]) <span class="hljs-comment">// ['e', 'f', 'a']</span>
-R_.flattenArgs(<span class="hljs-string">'e'</span>, [<span class="hljs-string">'f'</span>, [<span class="hljs-string">'a'</span>]]) <span class="hljs-comment">// ['e', 'f', 'a']</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.flattenArgs(<span class="hljs-string">'e'</span>, <span class="hljs-string">'f'</span>, <span class="hljs-string">'a'</span>)		<span class="hljs-comment">// ['e', 'f', 'a']</span>
+R_.flattenArgs(<span class="hljs-string">'e'</span>, [<span class="hljs-string">'f'</span>, <span class="hljs-string">'a'</span>])		<span class="hljs-comment">// ['e', 'f', 'a']</span>
+R_.flattenArgs(<span class="hljs-string">'e'</span>, [<span class="hljs-string">'f'</span>, [<span class="hljs-string">'a'</span>]])	<span class="hljs-comment">// ['e', 'f', 'a']</span></code></pre>
         </section>
         <div id="gteThanLength" class="section-id"></div>
         <section class="card">
@@ -1356,9 +1436,9 @@ R_.flattenArgs(<span class="hljs-string">'e'</span>, [<span class="hljs-string">
 
 
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> lengthSmallerThanEqualsOne = R_.gteThanLength(<span class="hljs-number">1</span>)
-lengthSmallerThanEqualsTwo([{},{}]) <span class="hljs-comment">// false</span>
-lengthSmallerThanEqualsTwo([{}]) <span class="hljs-comment">// true</span>
-lengthSmallerThanEqualsTwo([]) <span class="hljs-comment">// true</span></code></pre>
+lengthSmallerThanEqualsTwo([{},{}])	<span class="hljs-comment">// false</span>
+lengthSmallerThanEqualsTwo([{}])	<span class="hljs-comment">// true</span>
+lengthSmallerThanEqualsTwo([])		<span class="hljs-comment">// true</span></code></pre>
         </section>
         <div id="gtThanLength" class="section-id"></div>
         <section class="card">
@@ -1383,8 +1463,31 @@ lengthSmallerThanEqualsTwo([]) <span class="hljs-comment">// true</span></code><
 
 
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> lengthSmallerThanTwo = R_.gtThanLength(<span class="hljs-number">2</span>)
-lengthSmallerThanTwo([{}]) <span class="hljs-comment">// true</span>
-lengthSmallerThanTwo([{},{}]) <span class="hljs-comment">// false</span></code></pre>
+lengthSmallerThanTwo([{}])	<span class="hljs-comment">// true</span>
+lengthSmallerThanTwo([{},{}])	<span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="headArg" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#headArg">headArg</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/headArg.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+
+
+            <div class="description"><p>Takes first argument from the arguments</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.headArg(<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>) <span class="hljs-comment">// a</span></code></pre>
         </section>
         <div id="isArray" class="section-id"></div>
         <section class="card">
@@ -1433,11 +1536,11 @@ R_.isArray(<span class="hljs-string">''</span>) <span class="hljs-comment">// fa
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isFunction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// true</span>
-R_.isFunction({}) <span class="hljs-comment">// false</span>
-R_.isFunction([]) <span class="hljs-comment">// false</span>
-R_.isFunction(<span class="hljs-string">''</span>) <span class="hljs-comment">// false</span>
-R_.isFunction(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isFunction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})	<span class="hljs-comment">// true</span>
+R_.isFunction({})	<span class="hljs-comment">// false</span>
+R_.isFunction([])	<span class="hljs-comment">// false</span>
+R_.isFunction(<span class="hljs-string">''</span>)	<span class="hljs-comment">// false</span>
+R_.isFunction(<span class="hljs-number">0</span>)	<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="isNegative" class="section-id"></div>
         <section class="card">
@@ -1461,9 +1564,9 @@ R_.isFunction(<span class="hljs-number">0</span>) <span class="hljs-comment">// 
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isNegative(<span class="hljs-number">3</span>) <span class="hljs-comment">// false</span>
-R_.isNegative(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span>
-R_.isNegative(<span class="hljs-number">-3</span>) <span class="hljs-comment">// true</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isNegative(<span class="hljs-number">3</span>)	<span class="hljs-comment">// false</span>
+R_.isNegative(<span class="hljs-number">0</span>)	<span class="hljs-comment">// false</span>
+R_.isNegative(<span class="hljs-number">-3</span>)	<span class="hljs-comment">// true</span></code></pre>
         </section>
         <div id="isNilOrEmptyString" class="section-id"></div>
         <section class="card">
@@ -1487,13 +1590,43 @@ R_.isNegative(<span class="hljs-number">-3</span>) <span class="hljs-comment">//
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isNilOrEmptyString(<span class="hljs-literal">null</span>) <span class="hljs-comment">// true</span>
-R_.isNilOrEmptyString(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// true</span>
-R_.isNilOrEmptyString(<span class="hljs-string">''</span>) <span class="hljs-comment">// true</span>
-R_.isNilOrEmptyString(<span class="hljs-literal">false</span>) <span class="hljs-comment">// false</span>
-R_.isNilOrEmptyString(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span>
-R_.isNilOrEmptyString([]) <span class="hljs-comment">// false</span>
-R_.isNilOrEmptyString({}) <span class="hljs-comment">// false</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isNilOrEmptyString(<span class="hljs-literal">null</span>)	<span class="hljs-comment">// true</span>
+R_.isNilOrEmptyString(<span class="hljs-literal">undefined</span>)<span class="hljs-comment">// true</span>
+R_.isNilOrEmptyString(<span class="hljs-string">''</span>)	<span class="hljs-comment">// true</span>
+R_.isNilOrEmptyString(<span class="hljs-literal">false</span>)	<span class="hljs-comment">// false</span>
+R_.isNilOrEmptyString(<span class="hljs-number">0</span>)	<span class="hljs-comment">// false</span>
+R_.isNilOrEmptyString([])	<span class="hljs-comment">// false</span>
+R_.isNilOrEmptyString({})	<span class="hljs-comment">// false</span></code></pre>
+        </section>
+        <div id="isNotNilObject" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isNotNilObject">isNotNilObject</a>
+                <span class="pull-right">
+                        <span class="label label-category">Logic</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/isNotNilObject.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is not nil object.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isNotNilObject({})		<span class="hljs-comment">// true</span>
+R_.isNotNilObject([])		<span class="hljs-comment">// true</span>
+R_.isNotNilObject(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})	<span class="hljs-comment">// true</span>
+R_.isNotNilObject(<span class="hljs-literal">null</span>)		<span class="hljs-comment">// false</span>
+R_.isNotNilObject()		<span class="hljs-comment">// false</span>
+R_.isNotNilObject(<span class="hljs-number">1</span>)		<span class="hljs-comment">// false</span>
+R_.isNotNilObject(<span class="hljs-string">""</span>)		<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="isNumeric" class="section-id"></div>
         <section class="card">
@@ -1517,19 +1650,19 @@ R_.isNilOrEmptyString({}) <span class="hljs-comment">// false</span></code></pre
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isNumeric(<span class="hljs-number">-1</span>) <span class="hljs-comment">// true</span>
-R_.isNumeric(<span class="hljs-number">0</span>) <span class="hljs-comment">// true</span>
-R_.isNumeric(<span class="hljs-number">1</span>) <span class="hljs-comment">// true</span>
-R_.isNumeric(<span class="hljs-number">1.1</span>) <span class="hljs-comment">// true</span>
-R_.isNumeric(<span class="hljs-literal">Infinity</span>) <span class="hljs-comment">// false</span>
-R_.isNumeric(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// false</span>
-R_.isNumeric(<span class="hljs-string">''</span>) <span class="hljs-comment">// false</span>
-R_.isNumeric(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// false</span>
-R_.isNumeric(<span class="hljs-literal">false</span>) <span class="hljs-comment">// false</span>
-R_.isNumeric(<span class="hljs-literal">null</span>) <span class="hljs-comment">// false</span>
-R_.isNumeric(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// false</span>
-R_.isNumeric({}) <span class="hljs-comment">// false</span>
-R_.isNumeric([]) <span class="hljs-comment">// false</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isNumeric(<span class="hljs-number">-1</span>)	<span class="hljs-comment">// true</span>
+R_.isNumeric(<span class="hljs-number">0</span>)		<span class="hljs-comment">// true</span>
+R_.isNumeric(<span class="hljs-number">1</span>)		<span class="hljs-comment">// true</span>
+R_.isNumeric(<span class="hljs-number">1.1</span>)	<span class="hljs-comment">// true</span>
+R_.isNumeric(<span class="hljs-literal">Infinity</span>)	<span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-literal">NaN</span>)	<span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-string">''</span>)	<span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})	<span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-literal">false</span>)	<span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-literal">null</span>)	<span class="hljs-comment">// false</span>
+R_.isNumeric(<span class="hljs-literal">undefined</span>)	<span class="hljs-comment">// false</span>
+R_.isNumeric({})	<span class="hljs-comment">// false</span>
+R_.isNumeric([])	<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="isObject" class="section-id"></div>
         <section class="card">
@@ -1579,9 +1712,9 @@ R_.isObject(<span class="hljs-string">''</span>) <span class="hljs-comment">// f
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isPositive(<span class="hljs-number">3</span>) <span class="hljs-comment">// true</span>
-R_.isPositive(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span>
-R_.isPositive(<span class="hljs-number">-3</span>) <span class="hljs-comment">// false</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.isPositive(<span class="hljs-number">3</span>)	<span class="hljs-comment">// true</span>
+R_.isPositive(<span class="hljs-number">0</span>)	<span class="hljs-comment">// false</span>
+R_.isPositive(<span class="hljs-number">-3</span>)	<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="isPromise" class="section-id"></div>
         <section class="card">
@@ -1781,6 +1914,29 @@ R_.isString(<span class="hljs-string">''</span>) <span class="hljs-comment">// t
 
 action.type === actionTypes.ITEM_REQUEST <span class="hljs-comment">// true</span></code></pre>
         </section>
+        <div id="lastArg" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#lastArg">lastArg</a>
+                <span class="pull-right">
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/lastArg.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+
+
+            <div class="description"><p>Takes first argument from the arguments</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.lastArg(<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>) <span class="hljs-comment">// c</span></code></pre>
+        </section>
         <div id="listToString" class="section-id"></div>
         <section class="card">
             <h2>
@@ -1853,9 +2009,9 @@ compose(R_.log, R.sum)([<span class="hljs-number">1</span>, <span class="hljs-nu
 
 
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> lengthBiggerThanEqualsOne = R_.lteThanLength(<span class="hljs-number">1</span>)
-lengthBiggerThanEqualsOne([{},{}]) <span class="hljs-comment">// true</span>
-lengthBiggerThanEqualsOne([{}]) <span class="hljs-comment">// true</span>
-lengthBiggerThanEqualsOne([]) <span class="hljs-comment">// false</span></code></pre>
+lengthBiggerThanEqualsOne([{},{}])	<span class="hljs-comment">// true</span>
+lengthBiggerThanEqualsOne([{}])		<span class="hljs-comment">// true</span>
+lengthBiggerThanEqualsOne([])		<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="ltThanLength" class="section-id"></div>
         <section class="card">
@@ -1880,8 +2036,8 @@ lengthBiggerThanEqualsOne([]) <span class="hljs-comment">// false</span></code><
 
 
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> lengthBiggerThanZero = R_.ltThanLength(<span class="hljs-number">0</span>)
-lengthBiggerThanZero([{}]) <span class="hljs-comment">// true</span>
-lengthBiggerThanZero([]) <span class="hljs-comment">// false</span></code></pre>
+lengthBiggerThanZero([{}])	<span class="hljs-comment">// true</span>
+lengthBiggerThanZero([])	<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="mapKeys" class="section-id"></div>
         <section class="card">
@@ -1932,68 +2088,54 @@ lengthBiggerThanZero([]) <span class="hljs-comment">// false</span></code></pre>
 
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.mapKeys(R_.toUpperFirst, {<span class="hljs-attr">x</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">z</span>: <span class="hljs-number">3</span>}); <span class="hljs-comment">//=&gt; {X: 2, Y: 4, Z: 6}</span></code></pre>
         </section>
-        <div id="mergeWithDotPath" class="section-id"></div>
+        <div id="mapKeysAndValues" class="section-id"></div>
         <section class="card">
             <h2>
-                <a tabindex="2" class="name" href="#mergeWithDotPath">mergeWithDotPath</a>
+                <a tabindex="2" class="name" href="#mapKeysAndValues">mapKeysAndValues</a>
                 <span class="pull-right">
-                        <span class="label label-category">Object</span>
-                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/mergeWithDotPath.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                        <span class="label label-category">Function</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/mapKeysAndValues.js"><small class="glyphicon glyphicon-new-window"></small></a>
                 </span>
             </h2>
 
 
+            <div><code>([a] → [b]) → Object → Object</code></div>
 
 
-            <div class="params" data-expanded="false">
-                <a href="#expand" class="toggle-params">Parameters</a>
-                <div class="details panel panel-default">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <span class="type">
-                            </span>
-                            <span class="name">path</span>
-                            <span class="description"><p>The dot path to the value</p>
-</span>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="type">
-                            </span>
-                            <span class="name">mergeFn</span>
-                            <span class="description"><p>The merging function</p>
-</span>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="type">
-                            </span>
-                            <span class="name">value</span>
-                            <span class="description"><p>Value to merge</p>
-</span>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="type">
-                            </span>
-                            <span class="name">obj</span>
-                            <span class="description"><p>The object to clone</p>
-</span>
-                        </li>
-                    </ul>
-                    <div class="panel-body">
-                        <span class="returns">Returns</span>
-                        <span class="type">Object</span>
-                        <span class="description">A new object with merge data</span>
-                    </div>
-                </div>
-            </div>
 
 
-            <div class="description"><p>Merge data in object using custom merge fn.</p>
+            <div class="description"><p>Always returns null.</p>
 </div>
 
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.mergeWithDotPath(<span class="hljs-string">'a.b'</span>, R.merge, { <span class="hljs-attr">d</span>: <span class="hljs-number">30</span> }, {<span class="hljs-attr">a</span>: {<span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-number">20</span> }}}); <span class="hljs-comment">//=&gt; {a: {b: { c: 20, d: 30 }}}</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.mapKeysAndValues(<span class="hljs-function">(<span class="hljs-params">[a, b]</span>) =&gt;</span> [b, a], { <span class="hljs-attr">foo</span>: <span class="hljs-string">"bar"</span>, <span class="hljs-attr">baz</span>: <span class="hljs-string">"boo"</span> })
+<span class="hljs-comment">// { bar: "foo", boo: "baz" }</span></code></pre>
+        </section>
+        <div id="mapKeysWithValue" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#mapKeysWithValue">mapKeysWithValue</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/mapKeysWithValue.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>((String, a) → b) → Object → Object</code></div>
+
+
+
+
+            <div class="description"><p>Map object keys. Mapping functions have both key and value as arguments.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.mapKeysWithValue(<span class="hljs-function">(<span class="hljs-params">key, value</span>) =&gt;</span> value)({ <span class="hljs-attr">foo</span>: <span class="hljs-string">"bar"</span> }) <span class="hljs-comment">// { bar: "bar" }</span></code></pre>
         </section>
         <div id="noop" class="section-id"></div>
         <section class="card">
@@ -2041,12 +2183,12 @@ lengthBiggerThanZero([]) <span class="hljs-comment">// false</span></code></pre>
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notEmpty([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);   <span class="hljs-comment">//=&gt; true</span>
-R_.notEmpty([]);          <span class="hljs-comment">//=&gt; false</span>
-R_.notEmpty(<span class="hljs-string">''</span>);          <span class="hljs-comment">//=&gt; false</span>
-R_.notEmpty(<span class="hljs-literal">null</span>);        <span class="hljs-comment">//=&gt; true</span>
-R_.notEmpty({});          <span class="hljs-comment">//=&gt; false</span>
-R_.notEmpty({<span class="hljs-attr">length</span>: <span class="hljs-number">0</span>}); <span class="hljs-comment">//=&gt; true</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notEmpty([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]);   <span class="hljs-comment">// true</span>
+R_.notEmpty([]);          <span class="hljs-comment">// false</span>
+R_.notEmpty(<span class="hljs-string">''</span>);          <span class="hljs-comment">// false</span>
+R_.notEmpty(<span class="hljs-literal">null</span>);        <span class="hljs-comment">// true</span>
+R_.notEmpty({});          <span class="hljs-comment">// false</span>
+R_.notEmpty({<span class="hljs-attr">length</span>: <span class="hljs-number">0</span>}); <span class="hljs-comment">// true</span></code></pre>
         </section>
         <div id="notNaN" class="section-id"></div>
         <section class="card">
@@ -2074,13 +2216,13 @@ R_.notEmpty({<span class="hljs-attr">length</span>: <span class="hljs-number">0<
                 <a href="#http://stackoverflow.com/questions/9716468/is-there-any-function-like-isnumeric-in-javascript-to-validate-numbers">http://stackoverflow.com/questions/9716468/is-there-any-function-like-isnumeric-in-javascript-to-validate-numbers</a>.
             </div>
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notNaN(<span class="hljs-number">0</span>)			<span class="hljs-comment">// true</span>
-R_.notNaN(<span class="hljs-string">''</span>)			<span class="hljs-comment">// true</span>
-R_.notNaN([])			<span class="hljs-comment">// true</span>
-R_.notNaN(<span class="hljs-literal">null</span>)		<span class="hljs-comment">// true</span>
-R_.notNaN({})			<span class="hljs-comment">// false</span>
-R_.notNaN(<span class="hljs-literal">NaN</span>)			<span class="hljs-comment">// false</span>
-R_.notNaN(<span class="hljs-literal">undefined</span>)	<span class="hljs-comment">// false</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notNaN(<span class="hljs-number">0</span>)            <span class="hljs-comment">// true</span>
+R_.notNaN(<span class="hljs-string">''</span>)           <span class="hljs-comment">// true</span>
+R_.notNaN([])           <span class="hljs-comment">// true</span>
+R_.notNaN(<span class="hljs-literal">null</span>)         <span class="hljs-comment">// true</span>
+R_.notNaN({})           <span class="hljs-comment">// false</span>
+R_.notNaN(<span class="hljs-literal">NaN</span>)          <span class="hljs-comment">// false</span>
+R_.notNaN(<span class="hljs-literal">undefined</span>)    <span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="notNil" class="section-id"></div>
         <section class="card">
@@ -2104,13 +2246,13 @@ R_.notNaN(<span class="hljs-literal">undefined</span>)	<span class="hljs-comment
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notNil(<span class="hljs-literal">null</span>) <span class="hljs-comment">// false</span>
-R_.notNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// false</span>
-R_.notNil(<span class="hljs-string">''</span>) <span class="hljs-comment">// true</span>
-R_.notNil(<span class="hljs-literal">false</span>) <span class="hljs-comment">// true</span>
-R_.notNil(<span class="hljs-number">0</span>) <span class="hljs-comment">// true</span>
-R_.notNil([]) <span class="hljs-comment">// true</span>
-R_.notNil({}) <span class="hljs-comment">// true</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notNil(<span class="hljs-literal">null</span>)		<span class="hljs-comment">// false</span>
+R_.notNil(<span class="hljs-literal">undefined</span>)	<span class="hljs-comment">// false</span>
+R_.notNil(<span class="hljs-string">''</span>)		<span class="hljs-comment">// true</span>
+R_.notNil(<span class="hljs-literal">false</span>)	<span class="hljs-comment">// true</span>
+R_.notNil(<span class="hljs-number">0</span>)		<span class="hljs-comment">// true</span>
+R_.notNil([])		<span class="hljs-comment">// true</span>
+R_.notNil({})		<span class="hljs-comment">// true</span></code></pre>
         </section>
         <div id="notNumeric" class="section-id"></div>
         <section class="card">
@@ -2134,19 +2276,19 @@ R_.notNil({}) <span class="hljs-comment">// true</span></code></pre>
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notNumeric(<span class="hljs-number">-1</span>) <span class="hljs-comment">// false</span>
-R_.notNumeric(<span class="hljs-number">0</span>) <span class="hljs-comment">// false</span>
-R_.notNumeric(<span class="hljs-number">1</span>) <span class="hljs-comment">// false</span>
-R_.notNumeric(<span class="hljs-number">1.1</span>) <span class="hljs-comment">// false</span>
-R_.notNumeric(<span class="hljs-literal">Infinity</span>) <span class="hljs-comment">// true</span>
-R_.notNumeric(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// true</span>
-R_.notNumeric(<span class="hljs-string">''</span>) <span class="hljs-comment">// true</span>
-R_.notNumeric(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// true</span>
-R_.notNumeric(<span class="hljs-literal">false</span>) <span class="hljs-comment">// true</span>
-R_.notNumeric(<span class="hljs-literal">null</span>) <span class="hljs-comment">// true</span>
-R_.notNumeric(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">// true</span>
-R_.notNumeric({}) <span class="hljs-comment">// true</span>
-R_.notNumeric([]) <span class="hljs-comment">// true</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.notNumeric(<span class="hljs-number">-1</span>)	<span class="hljs-comment">// false</span>
+R_.notNumeric(<span class="hljs-number">0</span>)	<span class="hljs-comment">// false</span>
+R_.notNumeric(<span class="hljs-number">1</span>)	<span class="hljs-comment">// false</span>
+R_.notNumeric(<span class="hljs-number">1.1</span>)	<span class="hljs-comment">// false</span>
+R_.notNumeric(<span class="hljs-literal">Infinity</span>)	<span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-literal">NaN</span>)	<span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-string">''</span>)	<span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})	<span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-literal">false</span>)	<span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-literal">null</span>)	<span class="hljs-comment">// true</span>
+R_.notNumeric(<span class="hljs-literal">undefined</span>)<span class="hljs-comment">// true</span>
+R_.notNumeric({})	<span class="hljs-comment">// true</span>
+R_.notNumeric([])	<span class="hljs-comment">// true</span></code></pre>
         </section>
         <div id="overHead" class="section-id"></div>
         <section class="card">
@@ -2217,10 +2359,10 @@ R_.notNumeric([]) <span class="hljs-comment">// true</span></code></pre>
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: <span class="hljs-number">1</span> } }) <span class="hljs-comment">// false</span>
-R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> } }) <span class="hljs-comment">// true</span>
-R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, {}) <span class="hljs-comment">// true</span>
-R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: {} }) <span class="hljs-comment">// true</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: <span class="hljs-number">1</span> } })	<span class="hljs-comment">// false</span>
+R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: <span class="hljs-number">2</span> } })	<span class="hljs-comment">// true</span>
+R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, {}) 		<span class="hljs-comment">// true</span>
+R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>], <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: {} }) 		<span class="hljs-comment">// true</span></code></pre>
         </section>
         <div id="propNotEq" class="section-id"></div>
         <section class="card">
@@ -2244,9 +2386,9 @@ R_.pathNotEq([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.propNotEq(<span class="hljs-string">'a'</span>, <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> }) <span class="hljs-comment">// false</span>
-R_.propNotEq(<span class="hljs-string">'a'</span>, <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: <span class="hljs-number">2</span> }) <span class="hljs-comment">// true</span>
-R_.propNotEq(<span class="hljs-string">'a'</span>, <span class="hljs-number">1</span>, {}) <span class="hljs-comment">// true</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.propNotEq(<span class="hljs-string">'a'</span>, <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: <span class="hljs-number">1</span> })	<span class="hljs-comment">// false</span>
+R_.propNotEq(<span class="hljs-string">'a'</span>, <span class="hljs-number">1</span>, { <span class="hljs-attr">a</span>: <span class="hljs-number">2</span> })	<span class="hljs-comment">// true</span>
+R_.propNotEq(<span class="hljs-string">'a'</span>, <span class="hljs-number">1</span>, {})	<span class="hljs-comment">// true</span></code></pre>
         </section>
         <div id="reduceCallable" class="section-id"></div>
         <section class="card">
@@ -2322,6 +2464,69 @@ R_.reduceCallable(f, [<span class="hljs-number">1</span>, <span class="hljs-numb
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.replicate(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>) <span class="hljs-comment">// [6]</span>
 R_.replicate(<span class="hljs-number">2</span>, <span class="hljs-number">6</span>) <span class="hljs-comment">// [6, 6]</span>
 R_.replicate(<span class="hljs-number">3</span>, <span class="hljs-number">6</span>) <span class="hljs-comment">// [6, 6, 6]</span></code></pre>
+        </section>
+        <div id="resolveDotPath" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#resolveDotPath">resolveDotPath</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub" href="https://github.com/tommmyy/ramda-extension/tree/0.2.1/src/resolveDotPath.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">path</span>
+                            <span class="description"><p>The dot path to the value</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">mergeFn</span>
+                            <span class="description"><p>The merging function</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">value</span>
+                            <span class="description"><p>Value to merge</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">obj</span>
+                            <span class="description"><p>The object to clone</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Object</span>
+                        <span class="description">A new object with merge data</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Merge data in object using custom merge fn.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.mergeWithDotPath(<span class="hljs-string">'a.b'</span>, R.merge, { <span class="hljs-attr">d</span>: <span class="hljs-number">30</span> }, {<span class="hljs-attr">a</span>: {<span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-number">20</span> }}}); <span class="hljs-comment">//=&gt; {a: {b: { c: 20, d: 30 }}}</span></code></pre>
         </section>
         <div id="splitByDot" class="section-id"></div>
         <section class="card">
@@ -2417,9 +2622,9 @@ R_.replicate(<span class="hljs-number">3</span>, <span class="hljs-number">6</sp
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.startsWithPrefix(<span class="hljs-string">'h'</span>, <span class="hljs-string">'hello'</span>) <span class="hljs-comment">// true</span>
-R_.startsWithPrefix(<span class="hljs-string">'hell'</span>, <span class="hljs-string">'hello'</span>) <span class="hljs-comment">// true</span>
-R_.startsWithPrefix(<span class="hljs-string">'h'</span>, <span class="hljs-string">'good bye'</span>) <span class="hljs-comment">// false</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.startsWithPrefix(<span class="hljs-string">'h'</span>, <span class="hljs-string">'hello'</span>)	<span class="hljs-comment">// true</span>
+R_.startsWithPrefix(<span class="hljs-string">'hell'</span>, <span class="hljs-string">'hello'</span>)	<span class="hljs-comment">// true</span>
+R_.startsWithPrefix(<span class="hljs-string">'h'</span>, <span class="hljs-string">'good bye'</span>)	<span class="hljs-comment">// false</span></code></pre>
         </section>
         <div id="toCamelCase" class="section-id"></div>
         <section class="card">
@@ -2443,9 +2648,9 @@ R_.startsWithPrefix(<span class="hljs-string">'h'</span>, <span class="hljs-stri
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toCamelCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'helloWorld'</span>
-R_.toCamelCase(<span class="hljs-string">'hello- world'</span>) <span class="hljs-comment">// 'helloWorld'</span>
-R_.toCamelCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class="hljs-comment">// 'helloWorld'</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toCamelCase(<span class="hljs-string">'hello-world'</span>)		<span class="hljs-comment">// 'helloWorld'</span>
+R_.toCamelCase(<span class="hljs-string">'hello- world'</span>)		<span class="hljs-comment">// 'helloWorld'</span>
+R_.toCamelCase(<span class="hljs-string">'  hello-/ world/ '</span>)	<span class="hljs-comment">// 'helloWorld'</span></code></pre>
         </section>
         <div id="toDotCase" class="section-id"></div>
         <section class="card">
@@ -2469,9 +2674,9 @@ R_.toCamelCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toDotCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'hello.world'</span>
-R_.toDotCase(<span class="hljs-string">'hello/*? world'</span>) <span class="hljs-comment">// 'hello.world'</span>
-R_.toDotCase(<span class="hljs-string">'  hello -/ world/ '</span>) <span class="hljs-comment">// 'hello.world'</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toDotCase(<span class="hljs-string">'hello-world'</span>)		<span class="hljs-comment">// 'hello.world'</span>
+R_.toDotCase(<span class="hljs-string">'hello/*? world'</span>)		<span class="hljs-comment">// 'hello.world'</span>
+R_.toDotCase(<span class="hljs-string">'  hello -/ world/ '</span>)	<span class="hljs-comment">// 'hello.world'</span></code></pre>
         </section>
         <div id="toKebabCase" class="section-id"></div>
         <section class="card">
@@ -2495,9 +2700,9 @@ R_.toDotCase(<span class="hljs-string">'  hello -/ world/ '</span>) <span class=
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toKebabCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'hello-world'</span>
-R_.toKebabCase(<span class="hljs-string">'hello- world'</span>) <span class="hljs-comment">// 'hello-world'</span>
-R_.toKebabCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class="hljs-comment">// 'hello-world'</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toKebabCase(<span class="hljs-string">'hello-world'</span>)		<span class="hljs-comment">// 'hello-world'</span>
+R_.toKebabCase(<span class="hljs-string">'hello- world'</span>)		<span class="hljs-comment">// 'hello-world'</span>
+R_.toKebabCase(<span class="hljs-string">'  hello-/ world/ '</span>)	<span class="hljs-comment">// 'hello-world'</span></code></pre>
         </section>
         <div id="toLowerFirst" class="section-id"></div>
         <section class="card">
@@ -2545,9 +2750,9 @@ R_.toKebabCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toPascalCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'HelloWorld'</span>
-R_.toPascalCase(<span class="hljs-string">'hello- world'</span>) <span class="hljs-comment">// 'HelloWorld'</span>
-R_.toPascalCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class="hljs-comment">// 'HelloWorld'</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toPascalCase(<span class="hljs-string">'hello-world'</span>)		<span class="hljs-comment">// 'HelloWorld'</span>
+R_.toPascalCase(<span class="hljs-string">'hello- world'</span>)		<span class="hljs-comment">// 'HelloWorld'</span>
+R_.toPascalCase(<span class="hljs-string">'  hello-/ world/ '</span>)	<span class="hljs-comment">// 'HelloWorld'</span></code></pre>
         </section>
         <div id="toScreamingSnakeCase" class="section-id"></div>
         <section class="card">
@@ -2571,9 +2776,9 @@ R_.toPascalCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span clas
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toScreamingSnakeCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'HELLO_WORLD'</span>
-R_.toScreamingSnakeCase(<span class="hljs-string">'hello- world'</span>) <span class="hljs-comment">// 'HELLO_WORLD'</span>
-R_.toScreamingSnakeCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class="hljs-comment">// 'HELLO_WORLD'</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toScreamingSnakeCase(<span class="hljs-string">'hello-world'</span>)		<span class="hljs-comment">// 'HELLO_WORLD'</span>
+R_.toScreamingSnakeCase(<span class="hljs-string">'hello- world'</span>)		<span class="hljs-comment">// 'HELLO_WORLD'</span>
+R_.toScreamingSnakeCase(<span class="hljs-string">'  hello-/ world/ '</span>)	<span class="hljs-comment">// 'HELLO_WORLD'</span></code></pre>
         </section>
         <div id="toSnakeCase" class="section-id"></div>
         <section class="card">
@@ -2597,9 +2802,9 @@ R_.toScreamingSnakeCase(<span class="hljs-string">'  hello-/ world/ '</span>) <s
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toSnakeCase(<span class="hljs-string">'hello-world'</span>) <span class="hljs-comment">// 'hello_world'</span>
-R_.toSnakeCase(<span class="hljs-string">'hello- world'</span>) <span class="hljs-comment">// 'hello_world'</span>
-R_.toSnakeCase(<span class="hljs-string">'  hello-/ world/ '</span>) <span class="hljs-comment">// 'hello_world'</span></code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Open in REPL</button><button class = "run-here" data-ramda-extension="0.2.1" data-ramda-version="0.25.0">Run it here</button></div><code class="hljs javascript">R_.toSnakeCase(<span class="hljs-string">'hello-world'</span>)		<span class="hljs-comment">// 'hello_world'</span>
+R_.toSnakeCase(<span class="hljs-string">'hello- world'</span>)		<span class="hljs-comment">// 'hello_world'</span>
+R_.toSnakeCase(<span class="hljs-string">'  hello-/ world/ '</span>)	<span class="hljs-comment">// 'hello_world'</span></code></pre>
         </section>
         <div id="toUpperFirst" class="section-id"></div>
         <section class="card">

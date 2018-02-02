@@ -10,8 +10,8 @@ import { compareLength } from './lengthUtils';
  * @example
  *
  *        const lengthBiggerThanZero = R_.ltThanLength(0)
- *        lengthBiggerThanZero([{}]) // true
- *        lengthBiggerThanZero([]) // false
+ *        lengthBiggerThanZero([{}])	// true
+ *        lengthBiggerThanZero([])	// false
  *
  * @sig Number -> [a] -> Boolean
  */

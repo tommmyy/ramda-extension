@@ -10,8 +10,8 @@ import findNotNil from './findNotNil';
  *
  * @example
  *
- * 		R_.dispatch([R.always(null), R.identity, R.always(null)], 3) // 3
- * 		R_.dispatch([R.always(null), R.identity, R.always(null)], null) // undefined
+ *        R_.dispatch([R.always(null), R.identity, R.always(null)], 3) // 3
+ *        R_.dispatch([R.always(null), R.identity, R.always(null)], null) // undefined
  *
  * @sig [a] -> b|undefined
  */

@@ -1,4 +1,4 @@
-import { apply, compose, curry, last, pair, tap } from 'ramda';
+import { curryN, tap, useWith } from 'ramda';
 
 /**
  * Function with side-effect. Logs input to console and returns that input.
@@ -14,6 +14,6 @@ import { apply, compose, curry, last, pair, tap } from 'ramda';
  *        compose(calculation2, R_.trace('Page A'), calculation1); // logs "Page A" and result of calculation1
  *
  */
-const trace = curry(compose(last, tap(apply(console.log)), pair));
+const trace = useWith(tap, [curryN(2, console.log)]);
 
 export default trace;

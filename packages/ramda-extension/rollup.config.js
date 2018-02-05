@@ -6,7 +6,7 @@ const banner = `
 //  Ramda-extension v${require('./package.json').version}
 //  https://github.com/tommmyy/ramda-extension
 //  (c) 2017-${new Date().getFullYear()}
-//  Ramda-extension may be freely distributed under the MIT license.
+//  Ramda-extension may be freely distributed under the Apache-2.0 license.
 `;
 
 const config = {

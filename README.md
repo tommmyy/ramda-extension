@@ -1,5 +1,6 @@
 # ramda-extension
 
+![RAMDA](https://media.giphy.com/media/l4pSTIv8sada9NmHS/giphy.gif)
 <img src="https://media.giphy.com/media/l4pSTIv8sada9NmHS/giphy.gif" />
 
 [![build status](https://img.shields.io/travis/tommmyy/ramda-extension/master.svg?style=flat-square)](https://travis-ci.org/tommmyy/ramda-extension)

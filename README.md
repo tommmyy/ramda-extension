@@ -2,6 +2,10 @@
 
 [![build status](https://img.shields.io/travis/tommmyy/ramda-extension/master.svg?style=flat-square)](https://travis-ci.org/tommmyy/ramda-extension)
 
+<p>
+	<img src="/ramda_banner.gif" />
+</p>
+
 [See the docs page](https://ramda-extension.firebaseapp.com)
 
 Library that adds utilities functions composed mainly on the top of the marvelous [Ramda](http://ramdajs.com) library.

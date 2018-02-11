@@ -55,6 +55,7 @@ export assocDotPath from './assocDotPath';
 export mergeWithDotPath from './mergeWithDotPath';
 export mapKeys from './mapKeys';
 export applyIfNotNil from './applyIfNotNil';
+export applyCompose from './applyCompose';
 export equalsLength from './equalsLength';
 export gteThanLength from './gteThanLength';
 export gtThanLength from './gtThanLength';

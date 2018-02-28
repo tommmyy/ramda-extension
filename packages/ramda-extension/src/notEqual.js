@@ -1,4 +1,4 @@
-import { not, equals } from 'ramda';
+import { o, not, equals } from 'ramda';
 
 /**
  * Returns true if the arguments are not equal

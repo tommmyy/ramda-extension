@@ -1,4 +1,4 @@
-import { o, not } from 'ramda';
+import { complement } from 'ramda';
 import includes from './includes';
 
 /**
@@ -18,6 +18,6 @@ import includes from './includes';
  *
  * @sig [a] -> b -> Boolean
  */
-const notIncludes = o(not, includes);
+const notInclude = complement(includes);
 
-export default notIncludes;
+export default notInclude;

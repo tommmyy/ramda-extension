@@ -75,3 +75,7 @@ export lastArg from './lastArg';
 export mapKeysWithValue from './mapKeysWithValue';
 export isNotNilObject from './isNotNilObject';
 export camelizeKeys from './camelizeKeys';
+export notEqual from './notEqual';
+export includes from './includes';
+export notInclude from './notInclude';
+

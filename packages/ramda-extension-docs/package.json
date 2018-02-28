@@ -21,7 +21,7 @@
     "less-plugin-clean-css": "1.5.x",
     "marked": "0.3.x",
     "ramda": "0.25.0",
-    "ramda-extension": "0.3.0",
+    "ramda-extension": "0.3.1",
     "walk": "2.3.x"
   }
 }

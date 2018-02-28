@@ -1,4 +1,4 @@
-import { o, not, equals } from 'ramda';
+import { complement, equals } from 'ramda';
 
 /**
  * Returns true if the arguments are not equal
@@ -13,7 +13,8 @@ import { o, not, equals } from 'ramda';
  *        R_.notEqual(1, 2);   // true
  *        R_.notEqual(1, 1);   // false
  *
+ *
  */
-const notEqual = o(not, equals);
+const notEqual = complement(equals);
 
 export default notEqual;

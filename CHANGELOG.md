@@ -1,3 +1,9 @@
+# 0.3.1
+
+* Refactor [notEqual](https://github.com/tommmyy/ramda-extension/blob/master/src/notEqual.js)
+* Docs formatting
+
+
 # 0.3.0
 
 #### List of new functions

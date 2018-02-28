@@ -1,3 +1,19 @@
+# 0.3.0
+
+#### List of new functions
+* [camelizeKeys](https://github.com/tommmyy/ramda-extension/blob/master/src/camelizeKeys.js)
+* [headArg](https://github.com/tommmyy/ramda-extension/blob/master/src/headArg.js)
+* [isNotNilObject](https://github.com/tommmyy/ramda-extension/blob/master/src/isNotNilObject.js)
+* [includes](https://github.com/tommmyy/ramda-extension/blob/master/src/includes.js)
+* [joinWithDash](https://github.com/tommmyy/ramda-extension/blob/master/src/joinWithDash.js)
+* [joinWithUnderscore](https://github.com/tommmyy/ramda-extension/blob/master/src/joinWithUnderscore.js)
+* [lastArg](https://github.com/tommmyy/ramda-extension/blob/master/src/lastArg.js)
+* [mapKeysAndValues](https://github.com/tommmyy/ramda-extension/blob/master/src/mapKeysAndValues.js)
+* [mapKeysWithValue](https://github.com/tommmyy/ramda-extension/blob/master/src/mapKeysWithValue.js)
+* [notEqual](https://github.com/tommmyy/ramda-extension/blob/master/src/notEqual.js)
+* [notInclude](https://github.com/tommmyy/ramda-extension/blob/master/src/notInclude.js)
+* [rejectEq](https://github.com/tommmyy/ramda-extension/blob/master/src/rejectEq.js)
+
 # 0.2.1
 Hotfix release. Some of the new functions were not published to npm.
 

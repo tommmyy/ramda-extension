@@ -23,6 +23,7 @@ import { mapObjIndexed, nthArg } from 'ramda';
  *
  *    action.type === actionTypes.ITEM_REQUEST // true
  *
+ *
  * @sig Object -> Object
  *
  */

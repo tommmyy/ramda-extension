@@ -27,11 +27,11 @@ const camelizeArray = map((x) => camelizeKeys(x));
  * @example
  *
  *      camelizeKeys({
- *        "co-obj": {  "co_string": "foo" },
- *        "co-array": [0, null, { "f-f": "ff" }],
- *        "co-number": 1,
- *        "co-string": "1",
- *        "co-fn": head,
+ *          'co-obj': { co_string: 'foo' },
+ *          'co-array': [0, null, { 'f-f': 'ff' }],
+ *          'co-number': 1,
+ *          'co-string': '1',
+ *          'co-fn': head,
  *      });
  *
  *      // {
@@ -39,15 +39,15 @@ const camelizeArray = map((x) => camelizeKeys(x));
  *      //         0,
  *      //         null,
  *      //         {
- *      //             fF: "ff"
+ *      //             fF: 'ff'
  *      //         }
  *      //     ],
  *      //     coFn: {},
  *      //     coNumber: 1,
  *      //     coObj: {
- *      //         coString: "foo"
+ *      //         coString: 'foo'
  *      //     },
- *      //     coString: "1"
+ *      //     coString: '1'
  *      // }
  *
  */

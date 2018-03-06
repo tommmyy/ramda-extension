@@ -78,4 +78,5 @@ export camelizeKeys from './camelizeKeys';
 export notEqual from './notEqual';
 export includes from './includes';
 export notInclude from './notInclude';
-
+export pipeC from './pipeC';
+export composeC from './composeC';

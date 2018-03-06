@@ -1,10 +1,10 @@
 import { until, flip, identity, concat, useWith } from 'ramda';
 
 /**
- * Takes a predicate, string `padString` and initial value. `padString` is prepend to the output string
+ * Takes a predicate, string `padString` and initial value. `padString` is append to the output string
  * everytime `pred` returns falsy value.
  *
- * @param {fn} pred Called after every prepend of `padString`.
+ * @param {fn} pred Called after every append of `padString`.
  * @param {string} padString String that is added everytime the `pred` returns falsy value
  * @param {string} init Intitial value
  *

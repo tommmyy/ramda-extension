@@ -80,3 +80,7 @@ export includes from './includes';
 export notInclude from './notInclude';
 export pipeC from './pipeC';
 export composeC from './composeC';
+export padLeftUntil from './padLeftUntil';
+export padLeft from './padLeft';
+export padRightUntil from './padRightUntil';
+export padRight from './padRight';

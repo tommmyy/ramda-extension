@@ -56,6 +56,7 @@ export mergeWithDotPath from './mergeWithDotPath';
 export mapKeys from './mapKeys';
 export applyIfNotNil from './applyIfNotNil';
 export equalsLength from './equalsLength';
+export equalsAny from './equalsAny';
 export gteThanLength from './gteThanLength';
 export gtThanLength from './gtThanLength';
 export lteThanLength from './lteThanLength';

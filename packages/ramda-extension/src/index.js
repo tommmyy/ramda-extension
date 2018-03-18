@@ -15,6 +15,7 @@ export notNaN from './notNaN';
 export isNumeric from './isNumeric';
 export notNumeric from './notNumeric';
 export reduceCallable from './reduceCallable';
+export reduceSource from './reduceSource';
 export isNegative from './isNegative';
 export isPositive from './isPositive';
 export equalsZero from './equalsZero';

@@ -47,6 +47,11 @@
     {
       "name": "Jiri Bradle",
       "web": "https://github.com/jbradle"
+    },
+    {
+      "name": "Will Farley",
+      "email": "a.will.farley@gmail.com",
+      "web": "https://github.com/goldhand"
     }
   ],
   "scripts": {

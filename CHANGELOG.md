@@ -1,3 +1,12 @@
+# 0.3.2
+
+#### Bug fixing
+* [#64](https://github.com/tommmyy/ramda-extension/issues/64)
+* [#66](https://github.com/tommmyy/ramda-extension/issues/66)
+
+#### List of new functions
+* [reduceSource](https://github.com/tommmyy/ramda-extension/blob/master/src/reduceSource.js)
+
 # 0.3.1
 
 * Refactor [notEqual](https://github.com/tommmyy/ramda-extension/blob/master/src/notEqual.js)

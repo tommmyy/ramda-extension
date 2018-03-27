@@ -5,7 +5,6 @@
   "description": "ramda-extension website",
   "license": "Apache-2.0",
   "scripts": {
-    "less": "lessc --autoprefix --clean-css ./less/ramda.less ./docs/css/style.css",
     "publishToFirebase": "node ./tools/build && node publishToFirebase",
     "start": "node ./tools/build && serve ./public -p 3333"
   },

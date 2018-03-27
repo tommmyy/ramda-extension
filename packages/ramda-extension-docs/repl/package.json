@@ -1,6 +1,6 @@
 {
   "name": "ramda-repl",
-  "description": "Ramda + Ramda Fantasy + Sanctuary REPL",
+  "description": "Ramda + Ramda-extension + Ramda Fantasy + Sanctuary REPL",
   "version": "1.0.0",
   "dependencies": {
     "babel-core": "6.3.26",
@@ -20,10 +20,6 @@
   },
   "license": "MIT",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ramda/ramda.github.io.git"
-  },
   "scripts": {
     "build": "browserify ./lib/js/main.js -t babelify ./lib/js/repl.js -o ./lib/js/bundle.js",
     "build-examples": "babel-node create-examples.js && npm run build"

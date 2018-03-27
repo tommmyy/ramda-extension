@@ -4,6 +4,8 @@ const fs = require('fs-extra');
 const p = require('./lib/p');
 
 module.exports = () => {
+	console.log('Builing Ramda...');
+
 	spawnSync('yarn', ['build'], { cwd: p('../../ramda-extension'), stdio: 'inherit'});
 
 	fs.removeSync(p('../docs/dist'));

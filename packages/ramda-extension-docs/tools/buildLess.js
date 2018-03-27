@@ -3,15 +3,12 @@ const path = require('path');
 const p = require('./lib/p');
 
 module.exports = () => {
-	console.log('Running JSDoc...');
+	console.log('Builing CSS...');
 
-	spawnSync('jsdoc', [
-		'-c',
-		'.jsdoc.config.json',
-		'--destination',
-		'./docs',
-		'--template',
-		'.',
-		'../ramda-extension/lib',
+	spawnSync('lessc', [
+		'--autoprefix',
+		'--clean-css',
+		'./less/ramda.less',
+		'./docs/css/style.css',
 	], { cwd: p('../'), stdio: 'inherit'});
 };

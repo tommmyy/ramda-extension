@@ -20,6 +20,8 @@ import overHead from './overHead';
  *
  *      // Any missing or non-object keys in path will be overridden
  *      R_.assocDotPath('a.b.c', 42, {a: 5}); //=> {a: {b: {c: 42}}}
+ *
+ * @sig String -> a -> b
  */
 const assocDotPath = curryN(2, compose(apply(assocPath), overHead(splitByDoth), argumentsToList));
 

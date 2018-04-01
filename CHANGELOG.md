@@ -1,3 +1,8 @@
+# 0.3.3
+
+#### Bug fixing
+* [#69](https://github.com/tommmyy/ramda-extension/issues/69)
+
 # 0.3.2
 
 #### Bug fixing

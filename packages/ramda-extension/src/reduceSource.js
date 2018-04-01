@@ -1,5 +1,5 @@
 import { converge, reduce, nthArg, partialRight, unapply, tail} from 'ramda';
-
+import headArg from './headArg';
 /**
  * Extends the reduce functionality by adding the original accumulator value
  * as a third argument and the original list as a fourth argument to the
@@ -18,19 +18,23 @@ import { converge, reduce, nthArg, partialRight, unapply, tail} from 'ramda';
  * @return {*} The reduced result.
  *
  * @example
- *        R_.reduceSource((acc, v, sAcc) => v + acc + sAcc, 1, [1, 2, 3]); //=> 10
- *        R_.reduceSource(R.pipe(R.unapply(R.flatten), R.sum), 0, [1, 2]); //=> 9
+ *        R_.reduceSource((acc, v, sAcc) => v + acc + sAcc, 1, [1, 2, 3]); // 10
+ *        R_.reduceSource(R.pipe(R.unapply(R.flatten), R.sum), 0, [1, 2]); // 9
  *
  * @sig ((a, b, a, [b]) -> a) -> a -> [b] -> a
  */
 const reduceSource = converge(
 	reduce,
-	[converge(partialRight, [
-		nthArg(0), // iteratorFn
-		unapply(tail), // [accumulator, list]
-	]),
-	nthArg(1), // accumulator
-	nthArg(2), // list
+	[
+		converge(
+			partialRight,
+			[
+				headArg, // iteratorFn
+				unapply(tail), // [accumulator, list]
+			]
+		),
+		nthArg(1), // accumulator
+		nthArg(2), // list
 	],
 );
 

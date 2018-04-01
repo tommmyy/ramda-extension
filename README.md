@@ -2,9 +2,7 @@
 
 [![build status](https://img.shields.io/travis/tommmyy/ramda-extension/master.svg?style=flat-square)](https://travis-ci.org/tommmyy/ramda-extension)
 
-<p>
-	<img src="/ramda_banner.gif" />
-</p>
+![Babnner](/ramda_banner.gif)
 
 [See the docs page](https://ramda-extension.firebaseapp.com)
 

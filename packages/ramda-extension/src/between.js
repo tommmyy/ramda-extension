@@ -13,6 +13,8 @@ import { curry } from 'ramda';
  *      R_.between(4, 1, 5); //=> true
  *      R_.between(2.1, 3, 8); //=> false
  *      R_.between(100.1, 100.1, 102); //=> true
+ *      R_.between(100.1)(100.1, 102); //=> true
+
 
  */
 

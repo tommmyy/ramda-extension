@@ -1,10 +1,9 @@
-
+import { curry } from 'ramda';
 /**
  * See if an number (`val`) is within an array of two numbers ('list').
  *
  * @func
  * @category Type
-
  * @param {Number} a Starting value
  * @param {Number} b Ending value
  * @param {Number} val The value to test
@@ -18,11 +17,11 @@
  */
 
 
-const between = (val, a, b) => {
+const between = curry((val, a, b) => {
 	if (val >= a && val <= b) {
 		return true;
 	}
 	return false;
-};
+});
 
 export default between;

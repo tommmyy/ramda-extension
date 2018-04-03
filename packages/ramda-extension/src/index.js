@@ -2,6 +2,7 @@ export alwaysNull from './alwaysNull';
 export alwaysEmptyString from './alwaysEmptyString';
 export alwaysEmptyArray from './alwaysEmptyArray';
 export alwaysEmptyObject from './alwaysEmptyObject';
+export between from './between';
 export isArray from './isArray';
 export isString from './isString';
 export isFunction from './isFunction';

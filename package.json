@@ -1,7 +1,9 @@
 {
   "private": true,
   "license": "Apache-2.0",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "test": "yarn lint && yarn test:js",
     "test:js": "jest --config=./jest.config.json",
@@ -14,5 +16,8 @@
     "eslint-plugin-babel": "4.1.2",
     "eslint-plugin-ramda": "2.3.0",
     "jest": "21.2.1"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.2.2"
   }
 }

@@ -6,7 +6,7 @@
 
         $ git checkout -b <branch>
 
-3.  If adding a function `R.foo`, define it in `packages/ramda-extension/src/foo.js`, export it from
+3.  If adding a function `R_.foo`, define it in `packages/ramda-extension/src/foo.js`, export it from
     `packages/ramda-extension/src/index.js`, and include unit tests in `packages/ramda-extension/src/__tests__/foo-test.js`.
     - We prefer pointfree implementations. See [Thinking in Ramda: Pointfree Style](http://randycoulman.com/blog/2016/06/21/thinking-in-ramda-pointfree-style/).
     - Use composition of functions from Ramda or Ramda-extensioin

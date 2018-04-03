@@ -10,17 +10,16 @@ import { curry } from 'ramda';
  * @return {Boolean}
  * @example
  *
- *      R_.between(4, 1, 5); //=> true
- *      R_.between(2.1, 3, 8); //=> false
- *      R_.between(100.1, 100.1, 102); //=> true
- *      R_.between(100.1)(100.1, 102); //=> true
+ *      R_.between(1, 5, 4); //=> true
+ *      R_.between(3, 8, 2.1); //=> false
+ *      R_.between(100.1, 102, 100.1); //=> true
 
 
  */
 
 
-const between = curry((val, a, b) => {
-	if (val >= a && val <= b) {
+const between = curry((min, max, val) => {
+	if (val >= min && val <= max) {
 		return true;
 	}
 	return false;

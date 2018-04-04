@@ -2,6 +2,8 @@
 
 [![build status](https://img.shields.io/travis/tommmyy/ramda-extension/master.svg?style=flat-square)](https://travis-ci.org/tommmyy/ramda-extension)
 
+![Banner](/ramda_banner.gif)
+
 [See the documentation](https://ramda-extension.firebaseapp.com)
 
 Library that adds utilities functions composed mainly on the top of the marvelous [Ramda](http://ramdajs.com) library.
@@ -40,7 +42,7 @@ import { toKebabCase } from 'ramda-extension';
 toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
 ```
 
- Alternatively you can import it separately if your environment doesn't support treeshaking (See [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports)):
+Alternatively you can import it separately if your environment doesn't support treeshaking (Sse [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports)):
 
 ```js
 import toKebabCase from 'ramda-extension/lib/toKebabCase';

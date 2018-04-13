@@ -1,42 +1,27 @@
-import {
-	always,
-	append,
-	compose,
-	concat,
-	converge,
-	filter,
-	head,
-	identity,
-	ifElse,
-	isEmpty,
-	last,
-	map,
-	not,
-	o,
-	toPairs,
-	uncurryN,
-	uniq,
-	unnest,
-	trim,
-} from 'ramda';
+import { compose, filter, identity, when, anyPass, flatten, values, mapObjIndexed, map, into } from 'ramda';
 import flattenArgs from './flattenArgs';
 import joinWithSpace from './joinWithSpace';
 import isObject from './isObject';
 import isString from './isString';
-import rejectEq from './rejectEq';
-import applyCompose from './applyCompose';
+import { isNumber } from 'util';
 
-const createSaveModifiers = ifElse(isEmpty, always([identity]));
+const filterFalsy = filter(identity);
+const keepObjectStringNumber = filter(anyPass([isObject, isString, isNumber]));
+const keepKeyIfValueIsTruthy = mapObjIndexed((v, k) => v && k);
+const destructObject = compose(
+	filterFalsy,
+	values,
+	keepKeyIfValueIsTruthy
+);
 
-const getDefinitions = compose(uniq, unnest, map(toPairs));
-const createRejects = map(o(rejectEq, head));
-const createAppends = map(o(append, head));
-const getRejects = createSaveModifiers(o(createRejects, filter(o(not, last))));
-const getAppends = createSaveModifiers(o(createAppends, filter(last)));
-
-const createModifiers = o(converge(concat, [getRejects, getAppends]), getDefinitions);
-const createAndApplyModifiers = uncurryN(2, o(applyCompose, createModifiers));
-const handleArgs = converge(createAndApplyModifiers, [filter(isObject), filter(isString)]);
+const transduceArgs = into(
+	[],
+	compose(
+		map(when(isObject, destructObject)),
+		keepObjectStringNumber,
+		filterFalsy
+	)
+);
 
 /**
  * Conditionally joining classNames together.
@@ -59,6 +44,11 @@ const handleArgs = converge(createAndApplyModifiers, [filter(isObject), filter(i
  *
  * @sig String | [String] | Object -> String
  */
-const cx = compose(joinWithSpace, uniq, map(trim), handleArgs, flattenArgs);
+const cx = compose(
+	joinWithSpace,
+	flatten,
+	transduceArgs,
+	flattenArgs
+);
 
 export default cx;

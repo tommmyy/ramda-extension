@@ -85,3 +85,4 @@ export padLeftUntil from './padLeftUntil';
 export padLeft from './padLeft';
 export padRightUntil from './padRightUntil';
 export padRight from './padRight';
+export memoizeWithIdentity from './memoizeWithIdentity';

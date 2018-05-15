@@ -1,6 +1,5 @@
-import { converge, compose, call, juxt, cond, map } from 'ramda';
+import { converge, compose, call, juxt, cond, map, last } from 'ramda';
 import applyCompose from './applyCompose';
-import snd from './snd';
 import xPairs from './xPairs';
 
 /**
@@ -22,7 +21,7 @@ import xPairs from './xPairs';
  * @sig [a] -> b|undefined
  */
 const getPredicates = compose(
-	map(juxt([applyCompose, snd])),
+	map(juxt([applyCompose, last])),
 	xPairs
 );
 

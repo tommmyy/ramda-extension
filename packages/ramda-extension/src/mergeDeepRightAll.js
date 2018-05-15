@@ -1,11 +1,14 @@
 import { reduce, mergeDeepRight } from 'ramda';
 
 /**
- * Returns result of first not nil evaluated functions in the list.
- * Undefined otherwise.
+ * Returns deeply merged object by merging all objects in a passed list. Merging is applied from the right.
+ * See mergeDeepRight from Ramda.
  *
  * @func
  * @category Function
+ *
+ * @param {array} list Array of objects
+ * @returns {object} Merged object
  *
  * @example
  * 		const a = { fooA: { bar: 'a' }, shared: { baz: 1 } };

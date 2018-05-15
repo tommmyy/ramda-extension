@@ -4,6 +4,7 @@ export alwaysEmptyArray from './alwaysEmptyArray';
 export alwaysEmptyObject from './alwaysEmptyObject';
 export applyCompose from './applyCompose';
 export applyPipe from './applyPipe';
+export between from './between';
 export isArray from './isArray';
 export isString from './isString';
 export isFunction from './isFunction';
@@ -91,4 +92,5 @@ export padRight from './padRight';
 export snd from './snd';
 export xPairs from './xPairs';
 export xPairsRight from './xPairsRight';
+export memoizeWithIdentity from './memoizeWithIdentity';
 

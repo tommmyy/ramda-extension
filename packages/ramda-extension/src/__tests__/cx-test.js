@@ -7,6 +7,9 @@ describe('cx', () => {
 	it('should handle strings', () => {
 		expect(cx('one', 'two')).toBe('one two');
 	});
+	it('should trim strings', () => {
+		expect(cx('  one  ', '  two   ')).toBe('one two');
+	});
 	it('should handle arrays', () => {
 		expect(cx(['one', 'two'])).toBe('one two');
 	});

@@ -17,6 +17,7 @@ import {
 	uncurryN,
 	uniq,
 	unnest,
+	trim,
 } from 'ramda';
 import flattenArgs from './flattenArgs';
 import joinWithSpace from './joinWithSpace';
@@ -58,6 +59,6 @@ const handleArgs = converge(createAndApplyModifiers, [filter(isObject), filter(i
  *
  * @sig String | [String] | Object -> String
  */
-const cx = compose(joinWithSpace, uniq, handleArgs, flattenArgs);
+const cx = compose(joinWithSpace, uniq, map(trim), handleArgs, flattenArgs);
 
 export default cx;

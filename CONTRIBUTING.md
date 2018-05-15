@@ -13,8 +13,7 @@
     - Use declarative style over imperative. We do not `while`, `for`, `if` etc. in our codebase.
  
 4.  Make one or more atomic commits. Each commit should have a descriptive
-    commit message, wrapped at 72 characters. Do not commit changes to
-    `dist/ramda.js`.
+    commit message, wrapped at 72 characters.
 
 5.  Run `yarn test` and address any errors. Preferably, fix commits in place using `git
     rebase` or `git commit --amend` to make the changes easier to review and to

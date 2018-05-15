@@ -2,11 +2,15 @@ import dispatchWith from './dispatchWith';
 import notNil from './notNil';
 
 /**
- * Returns result of first not nil evaluated functions in the list.
- * `undefined` otherwise.
+ * Returns first not nil result from evaluation of functions in the list.
+ * Returns `undefined` otherwise.
  *
  * @func
  * @category Function
+ *
+ * @param {array} listFns List of functions
+ * @param {*} values Values applied to functions from `listFns`
+ * @return {any} Returns first not nil result of calling fn from `listFns` with `values`.
  *
  * @example
  *

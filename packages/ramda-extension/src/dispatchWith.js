@@ -3,11 +3,16 @@ import applyCompose from './applyCompose';
 import xPairs from './xPairs';
 
 /**
- * Returns result of first not nil evaluated functions in the list.
- * `undefined` otherwise.
+ * Returns first result from evaluation of functions in the list, that satisfies predicate.
+ * Returns `undefined` otherwise.
  *
  * @func
  * @category Function
+ *
+ * @param {function} predicate Predicate that is applied to result of calling fn from `listFns` with `values`
+ * @param {array} listFns List of functions
+ * @param {*} values Values applied to functions from `listFns`
+ * @return {any} Returns first result of calling fn from `listFns` with `values` that satisfies `predicate`.
  *
  * @example
  * const firstTruthy = dispatchWith(Boolean)([

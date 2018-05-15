@@ -88,3 +88,5 @@ export padRightUntil from './padRightUntil';
 export padRight from './padRight';
 export memoizeWithIdentity from './memoizeWithIdentity';
 export setOver from './setOver';
+export mergeDeepLeftAll from './mergeDeepLeftAll';
+export mergeDeepRightAll from './mergeDeepRightAll';

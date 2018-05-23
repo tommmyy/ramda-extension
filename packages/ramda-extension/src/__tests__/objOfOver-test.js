@@ -1,9 +1,9 @@
 import R from 'ramda';
-import { setOver } from '../';
+import { objOfOver } from '../';
 
-describe('setOver', () => {
+describe('objOfOver', () => {
 	it('returns result of over and set according to lens', () => {
-		expect(setOver(
+		expect(objOfOver(
 			R.lensPath(['a', 'b']),
 			(x) => `Hello ${x}`,
 			{

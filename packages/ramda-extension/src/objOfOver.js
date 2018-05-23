@@ -22,7 +22,7 @@ import viewWith from './viewWith';
  *
  * @example
  *
- * 		R_.setOver(
+ * 		R_.objOfOver(
  * 			R.lensPath(['a', 'b']),
  * 			(x) => "Hello " + x,
  * 			{
@@ -33,6 +33,6 @@ import viewWith from './viewWith';
  * 		// { a: { b: "Hello foo" } }
  *
  */
-const setOver = converge(set, [headArg, viewWith, alwaysEmptyObject]);
+const objOfOver = converge(set, [headArg, viewWith, alwaysEmptyObject]);
 
-export default setOver;
+export default objOfOver;

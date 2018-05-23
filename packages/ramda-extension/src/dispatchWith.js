@@ -8,6 +8,7 @@ import xPairs from './xPairs';
  *
  * @func
  * @category Function
+ * @see R_.dispatch
  *
  * @param {function} predicate Predicate that is applied to result of calling fn from `listFns` with `values`
  * @param {array} listFns List of functions
@@ -15,13 +16,14 @@ import xPairs from './xPairs';
  * @return {any} Returns first result of calling fn from `listFns` with `values` that satisfies `predicate`.
  *
  * @example
- * const firstTruthy = dispatchWith(Boolean)([
- *   prop("foo"),
- *   prop("bar"),
- * ])
  *
- * firstTruthy({foo: "foo", bar: false}) // "foo"
- * firstTruthy({foo: false, bar: "bar" }) // "bar"
+ *        const firstTruthy = dispatchWith(Boolean)([
+ *           prop("foo"),
+ *           prop("bar"),
+ *        ])
+ *
+ *        firstTruthy({foo: "foo", bar: false}) // "foo"
+ *        firstTruthy({foo: false, bar: "bar" }) // "bar"
  *
  * @sig [a] -> b|undefined
  */

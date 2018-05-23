@@ -7,6 +7,7 @@ import notNil from './notNil';
  *
  * @func
  * @category Function
+ * @see R_.dispatchWith
  *
  * @param {array} listFns List of functions
  * @param {*} values Values applied to functions from `listFns`
@@ -19,9 +20,9 @@ import notNil from './notNil';
  *           ifElse(R_.isString, R_.noop, always('Name must be valid.')),
  *        ]);
  *
- * 		  validateName("") // 'Name is required.'
- * 		  validateName(111) // 'Name must be valid.'
- * 		  validateName("Valid name") // undefined
+ *        validateName("") // 'Name is required.'
+ *        validateName(111) // 'Name must be valid.'
+ *        validateName("Valid name") // undefined
  *
  * @sig [a] -> b|undefined
  */

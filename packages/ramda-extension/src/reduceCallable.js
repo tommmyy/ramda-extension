@@ -11,7 +11,8 @@ import { reduce, call } from 'ramda';
  * @example
  *
  *        const f = (a) => (b) => a + b
- *    R_.reduceCallable(f, [1, 2]) // 3
+ *
+ *        R_.reduceCallable(f, [1, 2]) // 3
  *
  */
 const reduceCallable = reduce(call);

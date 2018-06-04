@@ -92,3 +92,8 @@ export padRight from './padRight';
 export xPairs from './xPairs';
 export xPairsRight from './xPairsRight';
 export memoizeWithIdentity from './memoizeWithIdentity';
+export objOfOver from './objOfOver';
+export mergeDeepLeftAll from './mergeDeepLeftAll';
+export mergeDeepRightAll from './mergeDeepRightAll';
+export mapKeysAndValues from './mapKeysAndValues';
+

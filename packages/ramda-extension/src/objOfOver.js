@@ -22,15 +22,15 @@ import viewWith from './viewWith';
  *
  * @example
  *
- * 		R_.objOfOver(
- * 			R.lensPath(['a', 'b']),
- * 			(x) => "Hello " + x,
- * 			{
- * 				a: { b: 'foo' },
- * 				c: 'bar',
- * 			}
- * 		)
- * 		// { a: { b: "Hello foo" } }
+ *        R_.objOfOver(
+ *          R.lensPath(['a', 'b']),
+ *          (x) => "Hello " + x,
+ *          {
+ *            a: { b: 'foo' },
+ *            c: 'bar',
+ *          }
+ *        )
+ *        // { a: { b: "Hello foo" } }
  *
  */
 const objOfOver = converge(set, [headArg, viewWith, alwaysEmptyObject]);

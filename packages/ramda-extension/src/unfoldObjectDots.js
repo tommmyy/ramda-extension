@@ -10,8 +10,8 @@ import {
 	call,
 	identity,
 	compose,
-	apply,
 } from 'ramda';
+import applyCompose from './applyCompose';
 import splitByDot from './splitByDot';
 
 /**
@@ -29,7 +29,7 @@ import splitByDot from './splitByDot';
  */
 const unfoldObjectDots = o(
 	o(mergeAll, values),
-	mapObjIndexed(useWith(flip(call), [identity, compose(apply(compose), map(objOf), splitByDot)]))
+	mapObjIndexed(useWith(flip(call), [identity, compose(applyCompose, map(objOf), splitByDot)]))
 );
 
 export default unfoldObjectDots;

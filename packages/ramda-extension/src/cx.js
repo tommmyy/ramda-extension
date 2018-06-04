@@ -1,7 +1,6 @@
 import {
 	always,
 	append,
-	apply,
 	compose,
 	concat,
 	converge,
@@ -25,6 +24,7 @@ import joinWithSpace from './joinWithSpace';
 import isObject from './isObject';
 import isString from './isString';
 import rejectEq from './rejectEq';
+import applyCompose from './applyCompose';
 
 const createSaveModifiers = ifElse(isEmpty, always([identity]));
 
@@ -35,7 +35,7 @@ const getRejects = createSaveModifiers(o(createRejects, filter(o(not, last))));
 const getAppends = createSaveModifiers(o(createAppends, filter(last)));
 
 const createModifiers = o(converge(concat, [getRejects, getAppends]), getDefinitions);
-const createAndApplyModifiers = uncurryN(2, o(apply(compose), createModifiers));
+const createAndApplyModifiers = uncurryN(2, o(applyCompose, createModifiers));
 const handleArgs = converge(createAndApplyModifiers, [filter(isObject), filter(isString)]);
 
 /**

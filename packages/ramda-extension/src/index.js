@@ -87,6 +87,7 @@ export padLeft from './padLeft';
 export padRightUntil from './padRightUntil';
 export padRight from './padRight';
 export memoizeWithIdentity from './memoizeWithIdentity';
+export objOfOver from './objOfOver';
 export mergeDeepLeftAll from './mergeDeepLeftAll';
 export mergeDeepRightAll from './mergeDeepRightAll';
 export mapKeysAndValues from './mapKeysAndValues';

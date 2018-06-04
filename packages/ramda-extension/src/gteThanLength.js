@@ -1,5 +1,5 @@
 import { gte } from 'ramda';
-import { compareLength } from './lengthUtils';
+import { compareLength } from './internal/lengthUtils';
 
 /**
  * Returns true if length of array is smaller or equals than first argument

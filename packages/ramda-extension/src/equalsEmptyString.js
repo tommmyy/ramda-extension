@@ -1,22 +1,15 @@
-import { equals } from 'ramda';
-import { emptyString } from './internal';
+import equalsToEmptyString from './equalsToEmptyString';
 
 /**
- * Testing if function is equals to ''
+ * Alias for `equalsToEmptyString`.
  *
+ * @deprecated
  * @func
  * @category String
  *
- * @param  {string} string
- * @return {boolean} True if string is empty
- *
- * @example
- *
- *        R_.equalsEmptyString('')	// true
- *        R_.equalsEmptyString('hi')	// false
- *
+ * @see equalsToEmptyString
  * @sig a -> Boolean
  */
-const equalsEmptyString = equals(emptyString);
+const equalsEmptyString = equalsToEmptyString;
 
 export default equalsEmptyString;

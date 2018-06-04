@@ -1,5 +1,5 @@
 import { join } from 'ramda';
-import { emptyString } from './internal';
+import { emptyString } from './internal/primitives';
 
 /**
  * Converts list of strings to string.

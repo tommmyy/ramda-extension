@@ -1,29 +1,36 @@
 export alwaysNull from './alwaysNull';
 export alwaysEmptyString from './alwaysEmptyString';
 export alwaysEmptyArray from './alwaysEmptyArray';
+export alwaysZero from './alwaysZero';
+export alwaysOne from './alwaysOne';
 export alwaysEmptyObject from './alwaysEmptyObject';
+
 export applyCompose from './applyCompose';
 export applyPipe from './applyPipe';
+
 export between from './between';
+
 export isArray from './isArray';
-export isString from './isString';
 export isFunction from './isFunction';
 export isObject from './isObject';
+export isNegative from './isNegative';
+export isNilOrEmptyString from './isNilOrEmptyString';
+export isNotEmpty from './isNotEmpty';
+export isNotNaN from './isNotNaN';
+export isNotNil from './isNotNil';
+export isNotNilObject from './isNotNilObject';
+export isNotNumeric from './isNotNumeric';
+export isNotRegExp from './isNotRegExp';
+export isNumeric from './isNumeric';
+export isPositive from './isPositive';
 export isPromise from './isPromise';
-export notNil from './notNil';
-export notEmpty from './notEmpty';
+export isString from './isString';
+export isRegExp from './isRegExp';
+
 export log from './log';
 export trace from './trace';
-export notNaN from './notNaN';
-export isNumeric from './isNumeric';
-export notNumeric from './notNumeric';
 export reduceCallable from './reduceCallable';
 export reduceSource from './reduceSource';
-export isNegative from './isNegative';
-export isPositive from './isPositive';
-export equalsZero from './equalsZero';
-export equalsEmptyString from './equalsEmptyString';
-export isNilOrEmptyString from './isNilOrEmptyString';
 export findNotNil from './findNotNil';
 export dispatch from './dispatch';
 export dispatchWith from './dispatchWith';
@@ -78,9 +85,8 @@ export valueMirror from './valueMirror';
 export headArg from './headArg';
 export lastArg from './lastArg';
 export mapKeysWithValue from './mapKeysWithValue';
-export isNotNilObject from './isNotNilObject';
 export camelizeKeys from './camelizeKeys';
-export notEqual from './notEqual';
+
 export includes from './includes';
 export notInclude from './notInclude';
 export pipeC from './pipeC';
@@ -96,4 +102,40 @@ export objOfOver from './objOfOver';
 export mergeDeepLeftAll from './mergeDeepLeftAll';
 export mergeDeepRightAll from './mergeDeepRightAll';
 export mapKeysAndValues from './mapKeysAndValues';
+
+export defaultToEmptyArray from './defaultToEmptyArray';
+export defaultToEmptyObject from './defaultToEmptyObject';
+export defaultToEmptyString from './defaultToEmptyString';
+export defaultToFalse from './defaultToFalse';
+export defaultToOne from './defaultToOne';
+export defaultToTrue from './defaultToTrue';
+export defaultToZero from './defaultToZero';
+
+export equalsToEmptyArray from './equalsToEmptyArray';
+export equalsToEmptyObject from './equalsToEmptyObject';
+export equalsToEmptyString from './equalsToEmptyString';
+export equalsToFalse from './equalsToFalse';
+export equalsToOne from './equalsToOne';
+export equalsToNull from './equalsToNull';
+export equalsToTrue from './equalsToTrue';
+export equalsToZero from './equalsToZero';
+
+export notEqual from './notEqual';
+export notEqualToEmptyArray from './notEqualToEmptyArray';
+export notEqualToEmptyObject from './notEqualToEmptyObject';
+export notEqualToEmptyString from './notEqualToEmptyString';
+export notEqualToFalse from './notEqualToFalse';
+export notEqualToNull from './notEqualToNull';
+export notEqualToOne from './notEqualToOne';
+export notEqualToTrue from './notEqualToTrue';
+export notEqualToZero from './notEqualToZero';
+
+// aliases for backward compatibility
+export equalsZero from './equalsToZero';
+export equalsEmptyString from './equalsToEmptyString';
+export notNil from './notNil';
+export notEmpty from './notEmpty';
+export notNaN from './notNaN';
+export notNumeric from './notNumeric';
+
 

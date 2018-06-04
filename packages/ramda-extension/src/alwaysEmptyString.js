@@ -1,5 +1,5 @@
 import { always } from 'ramda';
-import { emptyString } from './internal';
+import { emptyString } from './internal/primitives';
 
 /**
  * Always returns empty string.

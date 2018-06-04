@@ -1,5 +1,5 @@
 import { equals } from 'ramda';
-import { compareLength } from './lengthUtils';
+import { compareLength } from './internal/lengthUtils';
 
 /**
  * Returns true if length of array equals first argument

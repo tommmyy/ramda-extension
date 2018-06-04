@@ -1,5 +1,5 @@
 import { always } from 'ramda';
-import { emptyObject } from './internal';
+import { emptyObject } from './internal/primitives';
 
 /**
  * Always returns empty object.
@@ -11,7 +11,7 @@ import { emptyObject } from './internal';
  *
  *        R_.alwaysEmptyObject() // {}
  *
- * @sig a -> [a]
+ * @sig a -> Object
  */
 const alwaysEmptyObject = always(emptyObject);
 

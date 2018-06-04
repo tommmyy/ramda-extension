@@ -1,19 +1,15 @@
-import { equals } from 'ramda';
+import equalsToZero from './equalsToZero';
 
 /**
- * Returns true if argument equals 0.
+ * Alias for `equalsToZero`.
  *
+ * @deprecated
  * @func
  * @category Math
  *
- * @example
- *
- *        R_.equalsZero(3)	// false
- *        R_.equalsZero(0)	// true
- *        R_.equalsZero(-3)	// false
- *
+ * @see equalsToZero
  * @sig Number -> Boolean
  */
-const equalsZero = equals(0);
+const equalsZero = equalsToZero;
 
 export default equalsZero;

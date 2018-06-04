@@ -1,5 +1,6 @@
 import { o, equals, split, reject } from 'ramda';
-import { emptyString, nonAlphaNumericRegExp } from './internal';
+import { nonAlphaNumericRegExp } from './internal/nonAlphaNumericRegExp';
+import { emptyString } from './internal/primitives';
 
 /**
  * Splits string into list. Delimiter is every sequence of non-alphanumerical values.

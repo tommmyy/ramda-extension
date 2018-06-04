@@ -1,23 +1,15 @@
-import { o, not, isNil } from 'ramda';
+import isNotNil from './isNotNil';
 
 /**
- * Returns true if argument is neither null or undefined.
+ * Alias for `isNotNil`
  *
+ * @deprecated
  * @func
  * @category Logic
- *
- * @example
- *
- *        R_.notNil(null)		// false
- *        R_.notNil(undefined)	// false
- *        R_.notNil('')		// true
- *        R_.notNil(false)	// true
- *        R_.notNil(0)		// true
- *        R_.notNil([])		// true
- *        R_.notNil({})		// true
+ * @see isNotNil
  *
  * @sig a -> Boolean
  */
-const notNil = o(not, isNil);
+const notNil = isNotNil;
 
 export default notNil;

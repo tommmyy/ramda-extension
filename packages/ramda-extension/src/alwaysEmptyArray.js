@@ -1,5 +1,5 @@
 import { always } from 'ramda';
-import { emptyArray } from './internal';
+import { emptyArray } from './internal/primitives';
 
 /**
  * Always returns empty array.
@@ -11,7 +11,7 @@ import { emptyArray } from './internal';
  *
  *        R_.alwaysEmptyArray() // []
  *
- * @sig a -> [a]
+ * @sig a -> Array
  */
 const alwaysEmptyArray = always(emptyArray);
 

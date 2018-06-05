@@ -6,6 +6,10 @@ import equalsToEmptyString from './equalsToEmptyString';
  * @deprecated
  * @func
  * @category String
+ * @example
+ *
+ *        R_.equalsEmptyString('')	// true
+ *        R_.equalsEmptyString('hi')	// false
  *
  * @see equalsToEmptyString
  * @sig a -> Boolean

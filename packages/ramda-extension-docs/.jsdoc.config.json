@@ -1,5 +1,5 @@
 {
   "source": {
-  	"exclude": ["node_modules/ramda/src/index.js"]
+  	"exclude": ["node_modules/ramda/src/index.js", "src/index.js", "src/internals/**"]
   }
 }

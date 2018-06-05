@@ -7,6 +7,12 @@ import equalsToZero from './equalsToZero';
  * @func
  * @category Relation
  *
+ * @example
+ *
+ *        R_.equalsZero(3)	// false
+ *        R_.equalsZero(1)	// true
+ *        R_.equalsZero(-3)	// false
+ *
  * @see equalsToZero
  * @sig a -> Boolean
  */

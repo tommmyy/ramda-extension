@@ -6,13 +6,16 @@ import { equals } from 'ramda';
  * @func
  * @category Relation
  *
+ * @param  {any} value
+ * @return {boolean} True if `value` is 1
+ *
  * @example
  *
  *        R_.equalsToOne(3)	// false
  *        R_.equalsToOne(0)	// true
  *        R_.equalsToOne(-3)	// false
  *
- * @sig any -> Boolean
+ * @sig a -> Boolean
  */
 const equalsToOne = equals(1);
 

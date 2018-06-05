@@ -5,10 +5,10 @@ import equalsToZero from './equalsToZero';
  *
  * @deprecated
  * @func
- * @category Math
+ * @category Relation
  *
  * @see equalsToZero
- * @sig Number -> Boolean
+ * @sig a -> Boolean
  */
 const equalsZero = equalsToZero;
 

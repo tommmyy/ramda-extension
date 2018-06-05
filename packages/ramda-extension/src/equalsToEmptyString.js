@@ -8,7 +8,7 @@ import { emptyString } from './internal/primitives';
  * @category Relation
  *
  * @param  {any} value
- * @return {boolean} True if `value` is empty
+ * @return {boolean} True if `value` is empty string
  *
  * @example
  *

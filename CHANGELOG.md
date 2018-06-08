@@ -1,3 +1,11 @@
+# 0.3.7
+
+#### List of new functions
+* [toggle](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/toggle.js)
+
+#### Bug fixing
+* [Missing function dispatchWith in documentation](https://github.com/tommmyy/ramda-extension/issues/89)
+
 # 0.3.6
 
 #### List of new functions

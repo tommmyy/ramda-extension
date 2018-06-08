@@ -10,7 +10,7 @@ import lteThanLength from './lteThanLength';
  * @param {number} lengthString Length of the output string.
  * @param {string} padString
  * @param {string} init Intitial value
- * @see R_.padLeft, R_.padRightUntil, R_.padRightUntil
+ * @see padLeft, padRightUntil, padRightUntil
  *
  * @return String
  *

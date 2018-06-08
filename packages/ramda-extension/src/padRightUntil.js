@@ -9,7 +9,7 @@ import { until, flip, identity, concat, useWith } from 'ramda';
  * @param {string} init Intitial value
  *
  * @return String
- * @see R_.padLeft, R_.padRight, R_.padLeftUntil
+ * @see padLeft, padRight, padLeftUntil
  *
  * @func
  * @category String

@@ -5,12 +5,14 @@ import { reduce, mergeDeepRight } from 'ramda';
  * See mergeDeepRight from Ramda.
  *
  * @func
- * @category Function
+ * @category Object
  *
+ * @see mergeDeepLeftAll, mergeDeepAllWith, mergeDeepAllWithKey
  * @param {array} list Array of objects
  * @returns {object} Merged object
  *
  * @example
+ *
  * 		const a = { fooA: { bar: 'a' }, shared: { baz: 1 } };
  * 		const b = { fooB: { bar: 'b' }, shared: { baz: 2 } };
  * 		const c = { fooC: { bar: 'c' }, shared: { baz: 3 } };
@@ -23,7 +25,7 @@ import { reduce, mergeDeepRight } from 'ramda';
  * 		// 	shared: { baz: 3 },
  * 		// }
  *
- * @sig [a] -> a
+ * @sig [{a}] -> {a}
  */
 const mergeDeepRightAll = reduce(mergeDeepRight, {});
 

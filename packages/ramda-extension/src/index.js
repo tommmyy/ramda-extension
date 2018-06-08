@@ -99,9 +99,12 @@ export xPairs from './xPairs';
 export xPairsRight from './xPairsRight';
 export memoizeWithIdentity from './memoizeWithIdentity';
 export objOfOver from './objOfOver';
+export mapKeysAndValues from './mapKeysAndValues';
+
 export mergeDeepLeftAll from './mergeDeepLeftAll';
 export mergeDeepRightAll from './mergeDeepRightAll';
-export mapKeysAndValues from './mapKeysAndValues';
+export mergeDeepAllWith from './mergeDeepAllWith';
+export mergeDeepAllWithKey from './mergeDeepAllWithKey';
 
 export defaultToEmptyArray from './defaultToEmptyArray';
 export defaultToEmptyObject from './defaultToEmptyObject';

@@ -2,13 +2,18 @@ import { converge, compose, call, juxt, cond, map, last } from 'ramda';
 import applyCompose from './applyCompose';
 import xPairs from './xPairs';
 
+const getPredicates = compose(
+	map(juxt([applyCompose, last])),
+	xPairs
+);
+
 /**
  * Returns first result from evaluation of functions in the list, that satisfies predicate.
  * Returns `undefined` otherwise.
  *
  * @func
  * @category Function
- * @see R_.dispatch
+ * @see dispatch
  *
  * @param {function} predicate Predicate that is applied to result of calling fn from `listFns` with `values`
  * @param {array} listFns List of functions
@@ -17,7 +22,7 @@ import xPairs from './xPairs';
  *
  * @example
  *
- *        const firstTruthy = dispatchWith(Boolean)([
+ *        const firstTruthy = R_.dispatchWith(Boolean)([
  *           prop("foo"),
  *           prop("bar"),
  *        ])
@@ -27,11 +32,6 @@ import xPairs from './xPairs';
  *
  * @sig [a] -> b|undefined
  */
-const getPredicates = compose(
-	map(juxt([applyCompose, last])),
-	xPairs
-);
-
 const dispatchWith = converge(call(cond), [getPredicates]);
 
 export default dispatchWith;

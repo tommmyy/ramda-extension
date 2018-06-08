@@ -6,7 +6,7 @@ import { of, identity, useWith, xprod } from 'ramda';
  *
  * @func
  * @category List
- * @see R_.xPairsRight
+ * @see xPairsRight
  *
  * @example
  *

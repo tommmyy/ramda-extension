@@ -7,7 +7,7 @@ import notNil from './notNil';
  *
  * @func
  * @category Function
- * @see R_.dispatchWith
+ * @see dispatchWith
  *
  * @param {array} listFns List of functions
  * @param {*} values Values applied to functions from `listFns`

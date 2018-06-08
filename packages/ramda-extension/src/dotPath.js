@@ -1,7 +1,5 @@
-import { curryN, path, compose, apply } from 'ramda';
-import splitByDoth from './splitByDot';
-import argumentsToList from './argumentsToList';
-import overHead from './overHead';
+import { path, useWith, identity } from 'ramda';
+import splitByDot from './splitByDot';
 
 /**
  * Retrieve the value at a given dot path.
@@ -18,6 +16,6 @@ import overHead from './overHead';
  *      R_.dotPath('a.b', {c: {b: 2}}); //=> undefined
  *
  */
-const dotPath = curryN(2, compose(apply(path), overHead(splitByDoth), argumentsToList));
+const dotPath = useWith(path, [splitByDot, identity]);
 
 export default dotPath;

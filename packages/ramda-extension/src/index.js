@@ -134,6 +134,13 @@ export notEqualToTrue from './notEqualToTrue';
 export notEqualToZero from './notEqualToZero';
 
 export toggle from './toggle';
+export dotPathEq from './dotPathEq';
+export dotPathNotEq from './dotPathNotEq';
+export dotPathOr from './dotPathOr';
+export dotPathSatisfies from './dotPathSatisfies';
+export dotPathNotSatisfies from './dotPathNotSatisfies';
+export propNotSatisfies from './propNotSatisfies';
+export pathNotSatisfies from './pathNotSatisfies';
 
 // aliases for backward compatibility
 export equalsZero from './equalsToZero';

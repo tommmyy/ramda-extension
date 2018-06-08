@@ -130,6 +130,8 @@ export notEqualToOne from './notEqualToOne';
 export notEqualToTrue from './notEqualToTrue';
 export notEqualToZero from './notEqualToZero';
 
+export toggle from './toggle';
+
 // aliases for backward compatibility
 export equalsZero from './equalsToZero';
 export equalsEmptyString from './equalsToEmptyString';
@@ -137,5 +139,3 @@ export notNil from './notNil';
 export notEmpty from './notEmpty';
 export notNaN from './notNaN';
 export notNumeric from './notNumeric';
-
-

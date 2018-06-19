@@ -3,7 +3,7 @@ import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
 import joinWithUnderscore from './joinWithUnderscore';
 
 /**
- * Converts string into SCREAMINT_SNAKE_CASE.
+ * Converts string into SCREAMING_SNAKE_CASE.
  *
  * @func
  * @category String

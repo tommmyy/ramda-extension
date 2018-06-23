@@ -1,8 +1,8 @@
-import { always } from 'ramda';
+import alwaysNew from './internal/alwaysNew';
 import { emptyObject } from './internal/primitives';
 
 /**
- * Always returns empty object.
+ * Always returns a new empty object.
  *
  * @func
  * @category Function
@@ -13,6 +13,6 @@ import { emptyObject } from './internal/primitives';
  *
  * @sig a -> Object
  */
-const alwaysEmptyObject = always(emptyObject);
+const alwaysEmptyObject = alwaysNew(emptyObject);
 
 export default alwaysEmptyObject;

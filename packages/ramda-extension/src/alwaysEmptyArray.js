@@ -1,8 +1,8 @@
-import { always } from 'ramda';
+import alwaysNew from './internal/alwaysNew';
 import { emptyArray } from './internal/primitives';
 
 /**
- * Always returns empty array.
+ * Always returns a new empty array.
  *
  * @func
  * @category Function
@@ -13,6 +13,6 @@ import { emptyArray } from './internal/primitives';
  *
  * @sig a -> Array
  */
-const alwaysEmptyArray = always(emptyArray);
+const alwaysEmptyArray = alwaysNew(emptyArray);
 
 export default alwaysEmptyArray;

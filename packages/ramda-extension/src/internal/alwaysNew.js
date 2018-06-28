@@ -8,7 +8,7 @@ import thunkify from '../internal/thunkify';
  * @func
  * @example
  *
- * 	const alwaysNewArray = alwaysNew([]);
+ *  const alwaysNewArray = alwaysNew([]);
  *  const a = alwaysNewArray();
  *  const b = alwaysNewArray();
  *  // a !== b

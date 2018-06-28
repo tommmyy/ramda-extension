@@ -9,13 +9,15 @@
     "test:js": "jest --config=./jest.config.json",
     "test:watch": "yarn test:js -- --watch",
     "test:coverage": "yarn test:js -- --coverage",
-    "lint": "eslint --ext .js ./packages"
+    "lint": "eslint --ext .js ./packages",
+    "generate": "plop --plopfile ./.plop/plopfile.js"
   },
   "devDependencies": {
     "eslint": "4.13.0",
     "eslint-plugin-babel": "4.1.2",
     "eslint-plugin-ramda": "2.3.0",
-    "jest": "21.2.1"
+    "jest": "21.2.1",
+    "plop": "^2.0.0"
   },
   "dependencies": {
     "babel-eslint": "^8.2.2"

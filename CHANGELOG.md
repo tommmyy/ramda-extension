@@ -1,3 +1,11 @@
+# 0.4.0
+
+#### List of new functions
+* [isTruthy](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/isTruthy.js)
+* [isFalsy](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/isFalsy.js)
+* [isNilOrEmpty](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/isNilOrEmpty.js)
+* [mapIndexed](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/mapIndexed.js)
+
 # 0.3.7
 
 #### List of new functions

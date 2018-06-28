@@ -4,7 +4,7 @@ import { useWith, compose, map, fromPairs, toPairs, identity } from 'ramda';
  * Always returns null.
  *
  * @func
- * @category Function
+ * @category Object
  *
  * @example
  *

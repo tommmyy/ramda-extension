@@ -38,6 +38,7 @@ export isString from './isString';
 export isRegExp from './isRegExp';
 export isTruthy from './isTruthy';
 export isFalsy from './isFalsy';
+export isError from './isError';
 
 export log from './log';
 export trace from './trace';

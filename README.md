@@ -32,7 +32,7 @@ $ yarn add ramda ramda-extension
 
 ## Usage
 
-We supports cjs and es6 modules syntax.
+We support cjs and es6 modules syntax.
 
 Import function as a named export (not recommended without [treeshaking](https://webpack.js.org/guides/tree-shaking/)):
 

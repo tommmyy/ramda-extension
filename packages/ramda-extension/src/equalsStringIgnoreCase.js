@@ -19,4 +19,6 @@ import { useWith, equals, toLower } from 'ramda';
  *
  * @sig a -> b -> Boolean
  */
-export default useWith(equals, [toLower, toLower]);
+const equalsStringIgnoreCase = useWith(equals, [toLower, toLower]);
+
+export default equalsStringIgnoreCase;

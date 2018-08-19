@@ -51,6 +51,7 @@ export noop from './noop';
 export startsWithPrefix from './startsWithPrefix';
 export startsWithPrefixIgnoreCase from './startsWithPrefixIgnoreCase';
 export endsWithSuffix from './endsWithSuffix';
+export endsWithSuffixIgnoreCase from './endsWithSuffixIgnoreCase';
 export argumentsToList from './argumentsToList';
 export containsAll from './containsAll';
 export containsAny from './containsAny';

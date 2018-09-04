@@ -19,4 +19,6 @@ import { startsWith, toUpper, useWith } from 'ramda';
  *
  * @sig a -> b -> Boolean
  */
-export default useWith(startsWith, [toUpper, toUpper]);
+const startsWithPrefixIgnoreCase = useWith(startsWith, [toUpper, toUpper]);
+
+export default startsWithPrefixIgnoreCase;

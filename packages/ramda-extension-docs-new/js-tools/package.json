@@ -1,0 +1,20 @@
+{
+  "name": "js-tools",
+  "private": true,
+  "version": "0.0.1",
+  "description": "docs generator",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "node ./build",
+    "jsdoc": "jsdoc -c .jsdoc.config.json --destination ./build --template . ../../ramda-extension/lib"
+  },
+  "devDependencies": {
+    "fs-extra": "4.0.3",
+    "handlebars": "4.x.x",
+    "highlight.js": "9.x.x",
+    "jsdoc": "3.4.x",
+    "marked": "0.3.x",
+    "ramda": "0.25.0",
+    "walk": "2.3.x"
+  }
+}

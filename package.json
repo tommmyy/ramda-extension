@@ -1,9 +1,14 @@
 {
   "private": true,
   "license": "Apache-2.0",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "ramda-extension-docs-new/**"
+    ]
+  },
   "scripts": {
     "test": "yarn lint && yarn test:js",
     "test:js": "jest --config=./jest.config.json",

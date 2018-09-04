@@ -1,0 +1,20 @@
+{
+  "name": "ramda-extension-docs-new",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "start": "shadow-cljs watch app",
+    "repl": "shadow-cljs clj-repl",
+    "release": "shadow-cljs release app",
+    "pom": "shadow-cljs pom",
+    "server": "server public"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.6.6"
+  },
+  "dependencies": {
+    "create-react-class": "^15.6.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}

@@ -1,0 +1,9 @@
+{:source-paths ["src"]
+ :dependencies [[cljs-ajax "0.7.3"] [reagent "0.8.1"]]
+ :builds {:app {:output-dir "public/build"
+                :asset-path "build"
+                :target :browser
+                :modules {:main {:entries [app.main]}}
+                :devtools {:after-load app.main/reload!
+                           :http-root "public"
+                           :http-port 8080}}}}

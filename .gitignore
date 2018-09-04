@@ -6,6 +6,10 @@ es
 dist
 lib
 coverage
+target
+.nrepl-port
+.shadow-cljs
+public/js
 
 # Exclude IDE project folders
 .idea

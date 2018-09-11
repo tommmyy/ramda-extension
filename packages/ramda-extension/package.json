@@ -22,8 +22,8 @@
     "camelizeKeys"
   ],
   "description": "Helpful functions built on top of the mighty Ramda",
-  "module": "es/index.js",
-  "main": "lib/index.js",
+  "module": "es/ramda-extension.js",
+  "main": "lib/ramda-extension.js",
   "files": [
     "es",
     "lib",
@@ -55,23 +55,20 @@
     }
   ],
   "scripts": {
-    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
-    "build:cjs": "cross-env BABEL_ENV=cjs babel src --out-dir lib",
-    "build:umd": "cross-env BABEL_ENV=rollup NODE_ENV=development rollup -c -o dist/ramda-extension.js",
-    "build:umd:min": "cross-env BABEL_ENV=rollup NODE_ENV=production rollup -c -o dist/ramda-extension.min.js",
-    "build": "yarn build:es && yarn build:cjs && yarn build:umd && yarn build:umd:min",
+    "build:commonjs": "cross-env NODE_ENV=cjs rollup -c -o lib/ramda-extension.js",
+    "build:es": "cross-env BABEL_ENV=es NODE_ENV=es rollup -c -o es/ramda-extension.js",
+    "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -o dist/ramda-extension.js",
+    "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/ramda-extension.min.js",
+    "build": "yarn build:commonjs && yarn build:es && yarn build:umd && yarn build:umd:min",
     "clean": "rimraf es lib dist"
   },
   "peerDependencies": {
     "ramda": "^0.24.0 || ^0.25.0"
   },
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-eslint": "6.1.2",
-    "babel-jest": "21.2.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-preset-env": "1.6.1",
-    "babel-preset-stage-1": "^6.24.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-preset-react-union": "^0.7.1",
     "benchmark": "^2.1.4",
     "classnames": "^2.2.5",
     "cross-env": "2.0.0",
@@ -79,9 +76,11 @@
     "fs-extra": "^4.0.3",
     "ramda": "^0.25.0",
     "rimraf": "2.5.3",
-    "rollup": "^0.50.0",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^2.0.1"
+    "rollup": "^0.65.2",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-terser": "^2.0.2"
   }
 }

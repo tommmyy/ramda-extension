@@ -1,6 +1,7 @@
 const fs = require('fs-extra');
 const R = require('ramda');
-const p = require('./lib/p');
+
+const p = require('./utils/p');
 
 const buildLess = require('./buildLess');
 const buildRamda = require('./buildRamda');

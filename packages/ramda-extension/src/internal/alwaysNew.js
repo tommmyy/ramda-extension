@@ -6,6 +6,7 @@ import thunkify from '../internal/thunkify';
  * is passed in each time it's called.
  *
  * @func
+ * @private
  * @example
  *
  *  const alwaysNewArray = alwaysNew([]);

@@ -1,6 +1,6 @@
 const { spawnSync } = require('child_process');
 const path = require('path');
-const p = require('./lib/p');
+const p = require('./utils/p');
 
 module.exports = () => {
 	console.log('Running JSDoc...');

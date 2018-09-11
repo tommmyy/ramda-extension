@@ -3,7 +3,7 @@ import flattenArgs from './flattenArgs';
 import joinWithSpace from './joinWithSpace';
 import isObject from './isObject';
 import isString from './isString';
-import { isNumber } from 'util';
+import isNumber from './isNumber';
 
 const filterFalsy = filter(identity);
 const keepObjectStringNumber = filter(anyPass([isObject, isString, isNumber]));

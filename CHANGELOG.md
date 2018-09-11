@@ -1,3 +1,22 @@
+# 0.5.0
+
+#### List of new functions
+
+* [defaultArgs](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/defaultArgs.js)
+* [equalsStringIgnoreCase](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/equalsStringIgnoreCase.js)
+* [startsWithPrefixIgnoreCase](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/startsWithPrefixIgnoreCase.js)
+* [isError](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/isError.js)
+
+
+#### Other
+
+* [cx](https://github.com/tommmyy/ramda-extension/commit/2ddf1e58cd166c91c36654281d012cfc27a703be#diff-7903dade1d4b71c2d4cb8869b8254454) - Performance improvement
+
+#### Bug fixing
+* [`alwaysEmptyObject` and `alwaysEmptyArray` do not always return empty array or object](https://github.com/tommmyy/ramda-extension/issues/97)
+* [indentation of examples](https://github.com/tommmyy/ramda-extension/issues/52)
+* [Option 'run it here' does not work](https://github.com/tommmyy/ramda-extension/issues/68)
+
 # 0.4.0
 
 #### List of new functions

@@ -1,7 +1,10 @@
-import uglify from 'rollup-plugin-uglify';
-import resolve from 'rollup-plugin-node-resolve';
+import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
+import replace from 'rollup-plugin-replace';
+import commonjs from 'rollup-plugin-commonjs';
+import { terser } from 'rollup-plugin-terser';
 
+const env = process.env.NODE_ENV;
 const banner = `
 //  Ramda-extension v${require('./package.json').version}
 //  https://github.com/tommmyy/ramda-extension
@@ -11,31 +14,56 @@ const banner = `
 
 const config = {
 	input: 'src/index.js',
-	output: {
-		format: 'umd',
-		name: 'R_',
-		exports: 'named',
-	},
-	globals: {
-		ramda: 'R',
-	},
-	banner,
-	plugins: [
-		resolve({
-			customResolveOptions: {
-				moduleDirectory: 'node_modules',
-			},
-		}),
-		babel({
-			include: 'src/**',
-		}),
-	],
 	external: ['ramda'],
+	plugins: [],
 };
 
-if (process.env.NODE_ENV === 'production') {
+const globals = {
+	ramda: 'R',
+};
+
+if (env === 'es' || env === 'cjs') {
+	config.output = {
+		format: env,
+		indent: false,
+		banner,
+		globals,
+	};
 	config.plugins.push(
-		uglify({
+		nodeResolve({
+			jsnext: true,
+		}),
+		babel()
+	);
+}
+
+if (env === 'development' || env === 'production') {
+	config.output = {
+		format: 'umd',
+		name: 'R_',
+		indent: false,
+		banner,
+		globals,
+	};
+
+	config.plugins.push(
+		nodeResolve({
+			jsnext: true,
+		}),
+		babel({
+			exclude: '**/node_modules/**',
+		}),
+		replace({
+			'process.env.NODE_ENV': JSON.stringify(env),
+		})
+	);
+}
+
+config.plugins.push(commonjs());
+
+if (env === 'production') {
+	config.plugins.push(
+		terser({
 			compress: {
 				pure_getters: true,
 				unsafe: true,
@@ -47,3 +75,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 export default config;
+

@@ -4,7 +4,7 @@ const path = require('path');
 const R = require('ramda');
 
 const {defaultTo, map, pipe, prop} = R;
-
+const prettier = require('prettier');
 const handlebars = require('handlebars');
 const hljs = require('highlight.js');
 const helper = require('jsdoc/util/templateHelper');
@@ -15,10 +15,9 @@ const versionExtension = require('../ramda-extension/package.json').version;
 
 const prettifyCode = R.pipe(
 	R.join('\n'),
-	R.split('\n'),
-	R.map(R.trim),
-	R.join('\n'),
-	R.replace(/^[ ]{5}/gm, ''),
+	(x) => prettier.format(x, {
+		parser: 'babylon',
+	}),
 	(s) => hljs.highlight('javascript', s).value
 );
 

@@ -14,7 +14,7 @@ import { flip, contains } from 'ramda';
  * @example
  *
  *    R_.includes(['e', 'f'], 'e') // true
- *    R_.includes(['a', 'f'], 'a']) // false
+ *    R_.includes(['a', 'f'], 'a') // false
  *
  * @sig [a] -> b -> Boolean
  */

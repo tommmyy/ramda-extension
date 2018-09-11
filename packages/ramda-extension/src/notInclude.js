@@ -14,7 +14,7 @@ import includes from './includes';
  * @example
  *
  *    R_.notInclude(['e', 'f'], 'e') // false
- *    R_.notInclude(['a', 'f'], 'a']) // true
+ *    R_.notInclude(['a', 'f'], 'a') // true
  *
  * @sig [a] -> b -> Boolean
  */

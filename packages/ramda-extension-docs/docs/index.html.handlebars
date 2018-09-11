@@ -152,7 +152,7 @@
             {{/if}}
 
             {{#if example}}
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="{{@root.versionExtension}}" data-ramda-version="{{@root.version}}">Open in REPL</button><button class = "run-here" data-ramda-extension="{{@root.versionExtension}}" data-ramda-version="{{@root.version}}">Run it here</button></div><code class="hljs javascript">{{{example}}}</code></pre>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="{{@root.versionExtension}}" data-ramda-version="{{@root.version}}">Open in REPL</button></div><code class="hljs javascript">{{{example}}}</code></pre>
             {{/if}}
         </section>
         {{/each}}
@@ -160,6 +160,15 @@
     <script src="dist/ramda.js"></script>
     <script src="dist/ramda-extension.js"></script>
     <script src="main.js"></script>
-    <script src = "https://embed.runkit.com"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125543584-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-125543584-1');
+    </script>
 </body>
 </html>

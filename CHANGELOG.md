@@ -1,3 +1,15 @@
+# 0.5.1
+
+#### List of new functions
+
+* [isNumber](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/isNumber.js)
+* [endsWithSuffixIgnoreCase](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/endsWithSuffixIgnoreCase.js)
+
+#### Other
+
+* [Babel 7](https://github.com/tommmyy/ramda-extension/issues/114) - Performance improvement
+
+
 # 0.5.0
 
 #### List of new functions

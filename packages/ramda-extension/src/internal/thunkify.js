@@ -7,6 +7,7 @@ const alwaysApply = curry((fn, args) => () => apply(fn, args));
  * its result is needed, providing lazy evaluation of arguments.
  *
  * @func
+ * @private
  * @example
  *
  *      R_.thunkify(R.identity)(42)(); //=> 42

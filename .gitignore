@@ -12,6 +12,7 @@ coverage
 *.iml
 *.sublime-project
 *.sublime-workspace
+*.vscode
 .history
 jsconfig.json
 

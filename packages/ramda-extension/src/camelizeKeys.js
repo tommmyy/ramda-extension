@@ -1,4 +1,5 @@
-import { T, compose, cond, fromPairs, toPairs, identity, juxt, map, o, head, last } from 'ramda';
+import { T, cond, identity, juxt, map, o, head, last } from 'ramda';
+import mapKeysAndValues from './mapKeysAndValues';
 import toCamelCase from './toCamelCase';
 import isNotNilObject from './isNotNilObject';
 import isArray from './isArray';
@@ -6,18 +7,17 @@ import isFunction from './isFunction';
 
 // Must be written as arrow `x => camelizeKeys(x)` due to recursion
 // prettier-ignore
-const camelizeObj = compose(
-	fromPairs,
-	map(juxt([
+const camelizeObj = mapKeysAndValues(
+	juxt([
 		o(toCamelCase, head),
 		o((x) => camelizeKeys(x), last),
-	])),
-	toPairs
+	])
 );
+
 const camelizeArray = map((x) => camelizeKeys(x));
 
 /**
- * Transform recursevely all keys within object
+ * Recursively camelize all keys within an object or array
  *
  * @func
  * @category Object
@@ -42,7 +42,7 @@ const camelizeArray = map((x) => camelizeKeys(x));
  *      //             fF: 'ff'
  *      //         }
  *      //     ],
- *      //     coFn: {},
+ *      //     coFn: [Function],
  *      //     coNumber: 1,
  *      //     coObj: {
  *      //         coString: 'foo'

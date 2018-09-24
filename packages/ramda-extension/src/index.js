@@ -160,3 +160,4 @@ export pathNotSatisfies from './pathNotSatisfies';
 export mapIndexed from './mapIndexed';
 export isNilOrEmpty from './isNilOrEmpty';
 export isNumber from './isNumber';
+export isPlainObject from './isPlainObject';

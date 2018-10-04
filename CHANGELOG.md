@@ -1,3 +1,11 @@
+# 0.6.1
+
+#### List of new functions
+
+* [flattenValues](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/flattenValues.js)
+* [searchInArray](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/searchInArray.js)
+* [searchInArrayWith](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/searchInArrayWith.js)
+
 # 0.6.0
 
 #### List of new functions

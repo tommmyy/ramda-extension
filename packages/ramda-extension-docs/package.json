@@ -6,21 +6,22 @@
   "license": "Apache-2.0",
   "scripts": {
     "publishToFirebase": "node ./tools/build && node ./tools/publishToFirebase",
-    "start": "node ./tools/build && serve ./public -p 3333"
+    "start_": "node ./tools/build && serve -p 3333 public",
+    "start": "serve -p 3333 public"
   },
   "devDependencies": {
-    "bootstrap": "3.3.x",
-    "fs-extra": "4.0.3",
-    "handlebars": "4.x.x",
-    "highlight.js": "9.x.x",
-    "jsdoc": "3.4.x",
-    "less": "2.7.x",
-    "less-plugin-autoprefix": "1.5.x",
-    "less-plugin-clean-css": "1.5.x",
-    "marked": "0.3.x",
+    "bootstrap": "^3.3.0",
+    "fs-extra": "^4.0.3",
+    "handlebars": "^4.0.0",
+    "highlight.js": "^9.0.0",
+    "jsdoc": "~3.4.0",
+    "less": "~2.7.0",
+    "less-plugin-autoprefix": "^1.5.0",
+    "less-plugin-clean-css": "^1.5.0",
+    "marked": "~0.3.0",
     "prettier": "^1.14.2",
-    "ramda": "0.25.0",
-    "serve": "6.5.3",
-    "walk": "2.3.x"
+    "ramda": "^0.25.0",
+    "serve": "10.0.2",
+    "walk": "^2.3.0"
   }
 }

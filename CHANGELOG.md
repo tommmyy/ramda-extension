@@ -1,3 +1,9 @@
+# 0.6.0
+
+#### List of new functions
+
+* [isPlainObject](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/isPlainObject.js)
+
 # 0.5.1
 
 #### List of new functions

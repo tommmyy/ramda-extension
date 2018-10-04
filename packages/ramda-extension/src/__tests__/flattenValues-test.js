@@ -4,27 +4,27 @@ describe('flattenValues', () => {
 	it('should recursively flatten values', () => {
 		expect(
 			flattenValues([
-				'ahoj',
+				'hi',
 				{ foo: 'bar' },
-				{ foo: 'ahoj' },
+				{ foo: 'hi' },
 				{
 					foo: {
-						bar: ['cuuus', { foo: 'ahoj' }],
+						bar: ['cuuus', { foo: 'hi' }],
 					},
 				},
-				['haha', 'ahoj'],
-				['haha', { foo: 'ahoj' }],
+				['haha', 'hi'],
+				['haha', { foo: 'hi' }],
 			])
 		).toEqual([
-			'ahoj',
+			'hi',
 			'bar',
-			'ahoj',
+			'hi',
 			'cuuus',
-			'ahoj',
+			'hi',
 			'haha',
-			'ahoj',
+			'hi',
 			'haha',
-			'ahoj',
+			'hi',
 		]);
 	});
 });

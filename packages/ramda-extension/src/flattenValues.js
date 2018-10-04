@@ -1,4 +1,4 @@
-import { values, flatten, map, cond, T, __, append, o } from 'ramda';
+import { values, flatten, map, cond, T, o, of } from 'ramda';
 import isArray from './isArray';
 import isObject from './isObject';
 
@@ -17,23 +17,23 @@ const recursiveObject = (r) => o(flattenValues, values)(r);
  * @example
  *
  *        R_.flattenValues([
- *				'ahoj',
+ *				'hi',
  *				{ foo: 'bar' },
- *				{ foo: 'ahoj' },
+ *				{ foo: 'hi' },
  *				{
  *					foo: {
- *						bar: ['cuuus', { foo: 'ahoj' }],
+ *						bar: ['cuuus', { foo: 'hi' }],
  *					},
  *				},
- *				['haha', 'ahoj'],
- *				['haha', { foo: 'ahoj' }],
- *			]) // ['ahoj','bar','ahoj','cuuus','ahoj','haha','ahoj','haha','ahoj']
+ *				['haha', 'hi'],
+ *				['haha', { foo: 'hi' }],
+ *			]) // ['hi','bar','hi','cuuus','hi','haha','hi','haha','hi']
  *
  */
 const flattenValues = cond([
 	[isArray, recursiveArray],
 	[isObject, recursiveObject],
-	[T, append(__, [])],
+	[T, of],
 ]);
 
 export default flattenValues;

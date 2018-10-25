@@ -161,3 +161,5 @@ export mapIndexed from './mapIndexed';
 export isNilOrEmpty from './isNilOrEmpty';
 export isNumber from './isNumber';
 export isPlainObject from './isPlainObject';
+export applyIfFunction from './applyIfFunction';
+export callIfFunction from './callIfFunction';

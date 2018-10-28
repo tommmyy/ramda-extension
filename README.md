@@ -38,9 +38,12 @@ Import function as a named export (not recommended without [treeshaking](https:/
 
 ```js
 import { toKebabCase } from 'ramda-extension';
+import { flatten } from 'ramda'; // standard ramda function (if needed)
 
 toKebabCase('I wanna eat my kebab.') // "i-wanna-eat-my-kebab"
+flatten([1, 2, [3, 4], 5]) // [1, 2, 3, 4, 5]
 ```
+* NOTE: standard ramda functions are still accessed via 'ramda'
 
 Alternatively you can import it separately if your environment doesn't support treeshaking (Sse [babel-plugin-transform-imports](https://www.npmjs.com/package/babel-plugin-transform-imports)):
 

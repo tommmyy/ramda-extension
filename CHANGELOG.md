@@ -1,3 +1,16 @@
+# 0.7.0
+We updated to be in sync with Ramda 0.26.0.
+
+#### Depracations
+* [includes](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/includes.js) and [notInclude](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/notInclude.js) due to [ramda#2452](https://github.com/ramda/ramda/pull/2452)
+
+#### List of new functions
+
+* [callIfFunction](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/callIfFunction.js)
+* [applyIfFunction](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/applyIfFunction.js)
+* [flipIncludes](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/flipIncludes.js)
+* [notFlipIncludes](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/notFlipIncludes.js)
+
 # 0.6.1
 
 #### List of new functions

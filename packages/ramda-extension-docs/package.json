@@ -6,8 +6,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "publishToFirebase": "node ./tools/build && node ./tools/publishToFirebase",
-    "start_": "node ./tools/build && serve -p 3333 public",
-    "start": "serve -p 3333 public"
+    "start": "node ./tools/build && serve -p 3333 public"
   },
   "devDependencies": {
     "bootstrap": "^3.3.0",

@@ -1,7 +1,7 @@
-import { flip, contains } from 'ramda';
+import { flip, includes } from 'ramda';
 
 /**
- * Returns `true` if if `list` includes `item`.
+ * Returns `true` if `list` includes `item`.
  *
  * @func
  * @category List
@@ -17,6 +17,6 @@ import { flip, contains } from 'ramda';
  *
  * @sig [a] -> b -> Boolean
  */
-const flipIncludes = flip(contains);
+const flipIncludes = flip(includes);
 
 export default flipIncludes;

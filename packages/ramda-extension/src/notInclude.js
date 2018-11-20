@@ -11,7 +11,7 @@ import notFlipInclude from './notFlipInclude';
  * @param {Array} list
  * @param {any} item
  * @return {Boolean} Returns `false` if `list` flipIncludes `item`.
- * @depracated
+ * @deprecated
  *
  * @example
  *

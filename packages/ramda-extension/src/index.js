@@ -163,3 +163,4 @@ export isNumber from './isNumber';
 export isPlainObject from './isPlainObject';
 export applyIfFunction from './applyIfFunction';
 export callIfFunction from './callIfFunction';
+export flipIncludes from './flipIncludes';

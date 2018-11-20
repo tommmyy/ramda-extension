@@ -4,3 +4,4 @@ es
 lib
 dist
 ramda-extension-docs
+*.swp

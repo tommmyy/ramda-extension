@@ -1,15 +1,17 @@
-import { complement } from 'ramda';
-import includes from './includes';
+import notFlipInclude from './notFlipInclude';
 
 /**
- * Returns `false` if any of the items from `list` includes `item`.
+ * Returns `false` if any of the items from `list` flipIncludes `item`.
+ *
+ * Deprecated due to breaking change in Ramda. Use `R_.notFlipInclude`.
  *
  * @func
  * @category List
  *
  * @param {Array} list
  * @param {any} item
- * @return {Boolean} Returns `false` if `list` includes `item`.
+ * @return {Boolean} Returns `false` if `list` flipIncludes `item`.
+ * @depracated
  *
  * @example
  *
@@ -18,6 +20,6 @@ import includes from './includes';
  *
  * @sig [a] -> b -> Boolean
  */
-const notInclude = complement(includes);
+const notInclude = notFlipInclude;
 
 export default notInclude;

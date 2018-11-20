@@ -11,7 +11,7 @@ import flipIncludes from './flipIncludes';
  * @param {Array} list
  * @param {any} item
  * @return {Boolean} Returns `true` if `list` includes `item`.
- * @depracated
+ * @deprecated
  *
  * @example
  *

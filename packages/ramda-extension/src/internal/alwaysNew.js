@@ -1,5 +1,4 @@
-import { clone } from 'ramda';
-import thunkify from '../internal/thunkify';
+import { clone, thunkify } from 'ramda';
 
 /**
  * Returns a function that creates new instances of whatever argument

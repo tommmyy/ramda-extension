@@ -1,4 +1,4 @@
-# 0.7.0
+# 0.7.1
 We updated to be in sync with Ramda 0.26.0.
 
 #### Depracations

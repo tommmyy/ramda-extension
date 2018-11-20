@@ -1,8 +1,9 @@
-
-import { flip, contains } from 'ramda';
+import flipIncludes from './flipIncludes';
 
 /**
  * Returns `true` if if `list` includes `item`.
+ *
+ * Deprecated due to breaking change in Ramda. Use `R_.flipIncludes` instead.
  *
  * @func
  * @category List
@@ -10,6 +11,7 @@ import { flip, contains } from 'ramda';
  * @param {Array} list
  * @param {any} item
  * @return {Boolean} Returns `true` if `list` includes `item`.
+ * @depracated
  *
  * @example
  *
@@ -18,6 +20,6 @@ import { flip, contains } from 'ramda';
  *
  * @sig [a] -> b -> Boolean
  */
-const includes = flip(contains);
+const includes = flipIncludes;
 
 export default includes;

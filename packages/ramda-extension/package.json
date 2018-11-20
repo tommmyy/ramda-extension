@@ -63,24 +63,24 @@
     "clean": "rimraf es lib dist"
   },
   "peerDependencies": {
-    "ramda": "^0.24.0 || ^0.25.0"
+    "ramda": "^0.24.0 || ^0.25.0 || ^0.26.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.1.0",
     "babel-core": "^7.0.0-0",
-    "babel-preset-react-union": "^0.7.1",
+    "babel-preset-react-union": "^0.8.2",
     "benchmark": "^2.1.4",
-    "classnames": "^2.2.5",
-    "cross-env": "2.0.0",
+    "classnames": "^2.2.6",
+    "cross-env": "5.2.0",
     "escope": "3.6.0",
-    "fs-extra": "^4.0.3",
-    "ramda": "^0.25.0",
-    "rimraf": "2.5.3",
-    "rollup": "^0.65.2",
+    "fs-extra": "^7.0.1",
+    "ramda": "^0.26.0",
+    "rimraf": "2.6.2",
+    "rollup": "^0.67.3",
     "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-replace": "^2.0.0",
-    "rollup-plugin-terser": "^2.0.2"
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-terser": "^3.0.0"
   }
 }

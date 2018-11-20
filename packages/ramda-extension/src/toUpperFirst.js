@@ -12,6 +12,6 @@ import { o, join, adjust, toUpper } from 'ramda';
  *
  * @sig String -> String
  */
-const toUpperFirst = o(join(''), adjust(toUpper, 0));
+const toUpperFirst = o(join(''), adjust(0, toUpper));
 
 export default toUpperFirst;

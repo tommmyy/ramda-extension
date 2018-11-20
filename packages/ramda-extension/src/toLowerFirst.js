@@ -12,6 +12,6 @@ import { o, join, adjust, toLower } from 'ramda';
  *
  * @sig String -> String
  */
-const toLowerFirst = o(join(''), adjust(toLower, 0));
+const toLowerFirst = o(join(''), adjust(0, toLower));
 
 export default toLowerFirst;

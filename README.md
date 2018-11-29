@@ -76,3 +76,7 @@ The minified version:
 ```
 
 _NOTE_: Ramda itself is not part of bundle, you need to add it manually
+
+## Articles & Resources
+
+- [Why are we not afraid to think functionally with Ramda?](https://medium.com/@tyna.kamenicka/why-are-we-not-afraid-to-think-functionally-with-ramda-fb17f733fde8#c898-5ab767b22b17)

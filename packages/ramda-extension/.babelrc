@@ -1,7 +1,5 @@
 {
-  "presets": [
-    "babel-preset-react-union"
-  ],
+  "presets": ["babel-preset-react-union"],
   "env": {
     "commonjs": {
       "plugins": [
@@ -12,6 +10,9 @@
           }
         ]
       ]
+    },
+    "es": {
+      "plugins": ["annotate-pure-calls"]
     }
   }
 }

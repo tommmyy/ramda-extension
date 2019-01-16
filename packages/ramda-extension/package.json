@@ -22,7 +22,7 @@
     "camelizeKeys"
   ],
   "description": "Helpful functions built on top of the mighty Ramda",
-  "module": "es/ramda-extension.js",
+  "module": "es/index.js",
   "main": "lib/ramda-extension.js",
   "files": [
     "es",
@@ -54,27 +54,28 @@
       "web": "https://github.com/goldhand"
     }
   ],
+  "sideEffects": false,
   "scripts": {
     "build:commonjs": "cross-env NODE_ENV=cjs rollup -c -o lib/ramda-extension.js",
-    "build:es": "cross-env BABEL_ENV=es NODE_ENV=es rollup -c -o es/ramda-extension.js",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -o dist/ramda-extension.js",
     "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/ramda-extension.min.js",
     "build": "yarn build:commonjs && yarn build:es && yarn build:umd && yarn build:umd:min",
     "clean": "rimraf es lib dist"
   },
   "peerDependencies": {
-    "ramda": "^0.24.0 || ^0.25.0 || ^0.26.0"
+    "ramda": "^0.26.1"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.1.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "babel-core": "^7.0.0-0",
-    "babel-preset-react-union": "^0.8.2",
+    "babel-preset-react-union": "^0.11.0",
     "benchmark": "^2.1.4",
     "classnames": "^2.2.6",
     "cross-env": "5.2.0",
     "escope": "3.6.0",
     "fs-extra": "^7.0.1",
-    "ramda": "^0.26.0",
+    "ramda": "^0.26.1",
     "rimraf": "2.6.2",
     "rollup": "^0.67.3",
     "rollup-plugin-babel": "^4.0.3",

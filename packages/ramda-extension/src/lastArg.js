@@ -1,7 +1,7 @@
 import { nthArg } from 'ramda';
 
 /**
- * Takes first argument from the arguments
+ * Takes last argument from the arguments
  *
  * @func
  * @category Function

@@ -13,7 +13,7 @@ import { flip, includes } from 'ramda';
  * @example
  *
  *    R_.flipIncludes(['e', 'f'], 'e') // true
- *    R_.flipIncludes(['a', 'f'], 'a') // false
+ *    R_.flipIncludes(['e', 'f'], 'a') // false
  *
  * @sig [a] -> b -> Boolean
  */

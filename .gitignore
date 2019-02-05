@@ -6,6 +6,7 @@ es
 dist
 lib
 coverage
+.firebase
 
 # Exclude IDE project folders
 .idea

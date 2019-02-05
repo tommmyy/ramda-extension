@@ -14,7 +14,7 @@ import flipIncludes from './flipIncludes';
  * @example
  *
  *    R_.notFlipInclude(['e', 'f'], 'e') // false
- *    R_.notFlipInclude(['a', 'f'], 'a') // true
+ *    R_.notFlipInclude(['e', 'f'], 'a') // true
  *
  * @sig [a] -> b -> Boolean
  */

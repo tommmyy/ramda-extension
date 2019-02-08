@@ -734,6 +734,13 @@
                     >Object</span>
                 </a>
             </li>
+            <li class="func" data-name="mergeWithDotPath" data-category="Object">
+                <a href="#mergeWithDotPath">
+                    mergeWithDotPath
+                    <span data-category="Object" class="label label-category pull-right"
+                    >Object</span>
+                </a>
+            </li>
             <li class="func" data-name="noop" data-category="Function">
                 <a href="#noop">
                     noop
@@ -956,13 +963,6 @@
                     replicate
                     <span data-category="List" class="label label-category pull-right"
                     >List</span>
-                </a>
-            </li>
-            <li class="func" data-name="resolveDotPath" data-category="Object">
-                <a href="#resolveDotPath">
-                    resolveDotPath
-                    <span data-category="Object" class="label label-category pull-right"
-                    >Object</span>
                 </a>
             </li>
             <li class="func" data-name="splitByDot" data-category="String">
@@ -5071,6 +5071,71 @@ R_.mergeDeepRightAll([a, b, c]);
 <span class="hljs-comment">// }</span>
 </code></pre>
         </section>
+        <div id="mergeWithDotPath" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#mergeWithDotPath">mergeWithDotPath</a>
+                <span class="pull-right">
+                        <span class="label label-category">Object</span>
+                        <a target="_blank" title="View source on GitHub"
+                        href="https://github.com/tommmyy/ramda-extension/tree/v0.7.2/packages/ramda-extension/src/mergeWithDotPath.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">path</span>
+                            <span class="description"><p>The dot path to the value</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">mergeFn</span>
+                            <span class="description"><p>The merging function</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">value</span>
+                            <span class="description"><p>Value to merge</p>
+</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">obj</span>
+                            <span class="description"><p>The object to clone</p>
+</span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Object</span>
+                        <span class="description">A new object with merge data</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Merge data in object using custom merge fn.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.7.2" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R_.mergeWithDotPath(<span class="hljs-string">"a.b"</span>, R.merge, { <span class="hljs-attr">d</span>: <span class="hljs-number">30</span> }, { <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-number">20</span> } } }); <span class="hljs-comment">//=&gt; {a: {b: { c: 20, d: 30 }}}</span>
+</code></pre>
+        </section>
         <div id="noop" class="section-id"></div>
         <section class="card">
             <h2>
@@ -6386,71 +6451,6 @@ R_.reduceSource(
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.7.2" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R_.replicate(<span class="hljs-number">1</span>, <span class="hljs-number">6</span>); <span class="hljs-comment">// [6]</span>
 R_.replicate(<span class="hljs-number">2</span>, <span class="hljs-number">6</span>); <span class="hljs-comment">// [6, 6]</span>
 R_.replicate(<span class="hljs-number">3</span>, <span class="hljs-number">6</span>); <span class="hljs-comment">// [6, 6, 6]</span>
-</code></pre>
-        </section>
-        <div id="resolveDotPath" class="section-id"></div>
-        <section class="card">
-            <h2>
-                <a tabindex="2" class="name" href="#resolveDotPath">resolveDotPath</a>
-                <span class="pull-right">
-                        <span class="label label-category">Object</span>
-                        <a target="_blank" title="View source on GitHub"
-                        href="https://github.com/tommmyy/ramda-extension/tree/v0.7.2/packages/ramda-extension/src/resolveDotPath.js"><small class="glyphicon glyphicon-new-window"></small></a>
-                </span>
-            </h2>
-
-
-
-
-            <div class="params" data-expanded="false">
-                <a href="#expand" class="toggle-params">Parameters</a>
-                <div class="details panel panel-default">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <span class="type">
-                            </span>
-                            <span class="name">path</span>
-                            <span class="description"><p>The dot path to the value</p>
-</span>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="type">
-                            </span>
-                            <span class="name">mergeFn</span>
-                            <span class="description"><p>The merging function</p>
-</span>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="type">
-                            </span>
-                            <span class="name">value</span>
-                            <span class="description"><p>Value to merge</p>
-</span>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="type">
-                            </span>
-                            <span class="name">obj</span>
-                            <span class="description"><p>The object to clone</p>
-</span>
-                        </li>
-                    </ul>
-                    <div class="panel-body">
-                        <span class="returns">Returns</span>
-                        <span class="type">Object</span>
-                        <span class="description">A new object with merge data</span>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="description"><p>Merge data in object using custom merge fn.</p>
-</div>
-
-
-
-
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.7.2" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R_.mergeWithDotPath(<span class="hljs-string">"a.b"</span>, R.merge, { <span class="hljs-attr">d</span>: <span class="hljs-number">30</span> }, { <span class="hljs-attr">a</span>: { <span class="hljs-attr">b</span>: { <span class="hljs-attr">c</span>: <span class="hljs-number">20</span> } } }); <span class="hljs-comment">//=&gt; {a: {b: { c: 20, d: 30 }}}</span>
 </code></pre>
         </section>
         <div id="splitByDot" class="section-id"></div>

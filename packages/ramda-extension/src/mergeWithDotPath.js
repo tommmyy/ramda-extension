@@ -4,6 +4,9 @@ import assocDotPath from './assocDotPath';
 import headArg from './headArg';
 import lastArg from './lastArg';
 
+const resolveDotPath = converge(dotPath, [headArg, lastArg]);
+const performMerge = converge(call, [nthArg(1), resolveDotPath, nthArg(2)]);
+
 /**
  * Merge data in object using custom merge fn.
  *
@@ -19,8 +22,10 @@ import lastArg from './lastArg';
  *
  *      R_.mergeWithDotPath('a.b', R.merge, { d: 30 }, {a: {b: { c: 20 }}}); //=> {a: {b: { c: 20, d: 30 }}}
  */
-const resolveDotPath = converge(dotPath, [headArg, lastArg]);
-const performMerge = converge(call, [nthArg(1), resolveDotPath, nthArg(2)]);
-const mergeWithDotPath = converge(assocDotPath, [headArg, performMerge, lastArg]);
+const mergeWithDotPath = converge(assocDotPath, [
+	headArg,
+	performMerge,
+	lastArg,
+]);
 
 export default mergeWithDotPath;

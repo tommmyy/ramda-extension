@@ -1,7 +1,7 @@
 import { equals } from 'ramda';
 
 /**
- * Returns true if argument equals to 0.
+ * Returns true if argument equals to 1.
  *
  * @func
  * @category Relation
@@ -12,7 +12,7 @@ import { equals } from 'ramda';
  * @example
  *
  *        R_.equalsToOne(3)	// false
- *        R_.equalsToOne(0)	// true
+ *        R_.equalsToOne(1)	// true
  *        R_.equalsToOne(-3)	// false
  *
  * @sig a -> Boolean

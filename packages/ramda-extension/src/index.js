@@ -165,3 +165,4 @@ export applyIfFunction from './applyIfFunction';
 export callIfFunction from './callIfFunction';
 export flipIncludes from './flipIncludes';
 export notFlipInclude from './notFlipInclude';
+export isBoolean from './isBoolean';

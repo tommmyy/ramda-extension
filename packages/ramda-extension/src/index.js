@@ -166,3 +166,4 @@ export callIfFunction from './callIfFunction';
 export flipIncludes from './flipIncludes';
 export notFlipInclude from './notFlipInclude';
 export isBoolean from './isBoolean';
+export ensureArray from './ensureArray';

@@ -1,7 +1,14 @@
-# 0.7.2
-- We updated to be in sync with Ramda 0.26.1.
-- Improved es build. See [#133](https://github.com/tommmyy/ramda-extension/pull/133)
+# [Unpublished]
 
+#### List of new functions
+* [isBoolean](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/isBoolean.js)
+
+#### Fixes
+* [Tests for `isNumeric` and `isNumber`](https://github.com/tommmyy/ramda-extension/pull/141)
+
+# 0.7.2
+* We updated to be in sync with Ramda 0.26.1.
+* Improved es build. See [#133](https://github.com/tommmyy/ramda-extension/pull/133)
 
 # 0.7.1
 We updated to be in sync with Ramda 0.26.0.

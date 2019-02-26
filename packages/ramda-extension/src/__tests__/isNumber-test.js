@@ -1,14 +1,19 @@
-import { any, equals } from 'ramda';
+import { all, equals } from 'ramda';
 import { isNumber } from '../';
 
 describe('isNumber', () => {
 	it('returns true for numbers', () => {
-		expect(any(equals(true), [isNumber(Infinity), isNumber(NaN), isNumber(1), isNumber(1.1)])).toBe(true);
+		expect(all(equals(true), [
+			isNumber(Infinity),
+			isNumber(NaN),
+			isNumber(1),
+			isNumber(1.1),
+		])).toBeTruthy();
 	});
 
 	it('returns false for infinite numbers and non-number types', () => {
 		expect(
-			any(equals(true), [
+			all(equals(false), [
 				isNumber(''),
 				isNumber(() => {}),
 				isNumber(false),
@@ -17,6 +22,6 @@ describe('isNumber', () => {
 				isNumber({}),
 				isNumber([]),
 			])
-		).toBe(false);
+		).toBeTruthy();
 	});
 });

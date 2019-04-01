@@ -454,6 +454,13 @@
                     >Type</span>
                 </a>
             </li>
+            <li class="func" data-name="isBoolean" data-category="Type">
+                <a href="#isBoolean">
+                    isBoolean
+                    <span data-category="Type" class="label label-category pull-right"
+                    >Type</span>
+                </a>
+            </li>
             <li class="func" data-name="isError" data-category="Type">
                 <a href="#isError">
                     isError
@@ -3577,6 +3584,41 @@ R_.includes([<span class="hljs-string">"a"</span>, <span class="hljs-string">"f"
 
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.7.2" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R_.isArray([]); <span class="hljs-comment">// true</span>
 R_.isArray(<span class="hljs-string">""</span>); <span class="hljs-comment">// false</span>
+</code></pre>
+        </section>
+        <div id="isBoolean" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#isBoolean">isBoolean</a>
+                <span class="pull-right">
+                        <span class="label label-category">Type</span>
+                        <a target="_blank" title="View source on GitHub"
+                        href="https://github.com/tommmyy/ramda-extension/tree/v0.7.2/packages/ramda-extension/src/isBoolean.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Boolean</code></div>
+
+
+
+
+            <div class="description"><p>Returns true if argument is type of Boolean.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.7.2" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R_.isBoolean(<span class="hljs-literal">true</span>); <span class="hljs-comment">// true</span>
+R_.isBoolean(<span class="hljs-literal">false</span>); <span class="hljs-comment">// true</span>
+R_.isBoolean(<span class="hljs-number">1</span>); <span class="hljs-comment">// false</span>
+R_.isBoolean(<span class="hljs-string">""</span>); <span class="hljs-comment">// false</span>
+R_.isBoolean(<span class="hljs-string">"true"</span>); <span class="hljs-comment">// false</span>
+R_.isBoolean({}); <span class="hljs-comment">// false</span>
+R_.isBoolean([]); <span class="hljs-comment">// false</span>
+R_.isBoolean(<span class="hljs-literal">NaN</span>); <span class="hljs-comment">// false</span>
+R_.isBoolean(<span class="hljs-literal">null</span>); <span class="hljs-comment">// false</span>
+R_.isBoolean(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// false</span>
 </code></pre>
         </section>
         <div id="isError" class="section-id"></div>

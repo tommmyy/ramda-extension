@@ -9,8 +9,8 @@ import isArray from './isArray';
  *
  * @example
  *
- *        R_.ensureArray("yo") // ["yo"]
- *        R_.ensureArray(["yo"]) // ["yo"]
+ *        R_.ensureArray("A string yo.") // ["A string yo."]
+ *        R_.ensureArray(["an array item yo"]) // ["an array item yo"]
  *        R_.ensureArray([{ consoleLog: "yo" }]) // [{ consoleLog: "yo" }]
 
  * @sig a -> Array

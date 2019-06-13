@@ -3,6 +3,8 @@
 #### List of new functions
 * [isBoolean](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/isBoolean.js)
 * [toEntry](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/toEntry.js)
+* [get](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/get.js)
+* [ensureArray](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/ensureArray.js)
 
 #### Fixes
 * [Tests for `isNumeric` and `isNumber`](https://github.com/tommmyy/ramda-extension/pull/141)

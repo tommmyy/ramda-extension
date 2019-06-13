@@ -168,3 +168,4 @@ export notFlipInclude from './notFlipInclude';
 export isBoolean from './isBoolean';
 export ensureArray from './ensureArray';
 export toEntries from './toEntries';
+export get from './get';

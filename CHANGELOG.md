@@ -4,7 +4,7 @@
 
 #### List of new functions
 * [isBoolean](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/isBoolean.js)
-* [toEntry](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/toEntry.js)
+* [toEntries](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/toEntries.js)
 * [get](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/get.js)
 * [ensureArray](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/ensureArray.js)
 

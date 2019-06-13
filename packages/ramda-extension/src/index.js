@@ -167,3 +167,4 @@ export flipIncludes from './flipIncludes';
 export notFlipInclude from './notFlipInclude';
 export isBoolean from './isBoolean';
 export toEntries from './toEntries';
+export get from './get';

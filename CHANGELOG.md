@@ -1,5 +1,7 @@
 # [Unpublished]
 
+# [0.8.0]
+
 #### List of new functions
 * [isBoolean](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/isBoolean.js)
 * [toEntry](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/toEntry.js)

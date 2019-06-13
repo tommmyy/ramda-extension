@@ -321,6 +321,13 @@
                     >String</span>
                 </a>
             </li>
+            <li class="func" data-name="ensureArray" data-category="List">
+                <a href="#ensureArray">
+                    ensureArray
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
             <li class="func" data-name="equalsEmptyString" data-category="String">
                 <a href="#equalsEmptyString">
                     equalsEmptyString
@@ -2819,6 +2826,34 @@ R_.endsWithSuffix(<span class="hljs-string">"y"</span>, <span class="hljs-string
 R_.endsWithSuffixIgnoreCase(<span class="hljs-string">"ELLO"</span>, <span class="hljs-string">"hello"</span>); <span class="hljs-comment">// true</span>
 R_.endsWithSuffixIgnoreCase(<span class="hljs-string">"hello"</span>, <span class="hljs-string">"hello"</span>); <span class="hljs-comment">// true</span>
 R_.endsWithSuffixIgnoreCase(<span class="hljs-string">"o"</span>, <span class="hljs-string">"good bye"</span>); <span class="hljs-comment">// false</span>
+</code></pre>
+        </section>
+        <div id="ensureArray" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#ensureArray">ensureArray</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub"
+                        href="https://github.com/tommmyy/ramda-extension/tree/v0.7.2/packages/ramda-extension/src/ensureArray.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>a → Array</code></div>
+
+
+
+
+            <div class="description"><p>Wraps input in an Array if it&#39;s not an Array already.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.7.2" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R_.ensureArray(<span class="hljs-string">"A string yo."</span>); <span class="hljs-comment">// ["A string yo."]</span>
+R_.ensureArray([<span class="hljs-string">"an array item yo."</span>]); <span class="hljs-comment">// ["an array item yo."]</span>
+R_.ensureArray([{ <span class="hljs-attr">consoleLog</span>: <span class="hljs-string">"yo"</span> }]); <span class="hljs-comment">// [{ consoleLog: "yo" }]</span>
 </code></pre>
         </section>
         <div id="equalsEmptyString" class="section-id"></div>

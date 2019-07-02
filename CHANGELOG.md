@@ -1,5 +1,18 @@
 # [Unpublished]
 
+#### List of new functions
+* [uniqMap](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqMap.js)
+* [uniqFilter](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqFilter.js)
+* [uniqLength](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqLength.js)
+* [uniqTake](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqTake.js)
+* [uniqTakeLast](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqTakeLast.js)
+* [uniqTakeWhile](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqTakeWhile.js)
+* [uniqTakeLastWhile](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqTakeLastWhile.js)
+* [uniqDropLast](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqDropLast.js)
+* [uniqDropWhile](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqDropWhile.js)
+* [uniqDropLastWhile](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqDropLastWhile.js)
+* [uniqMap](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqMap.js)
+
 # 0.8.0
 
 #### List of new functions

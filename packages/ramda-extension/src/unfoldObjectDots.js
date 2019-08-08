@@ -1,6 +1,5 @@
 import {
 	o,
-	mergeAll,
 	values,
 	mapObjIndexed,
 	map,
@@ -13,6 +12,7 @@ import {
 } from 'ramda';
 import applyCompose from './applyCompose';
 import splitByDot from './splitByDot';
+import mergeDeepRightAll from './mergeDeepRightAll';
 
 /**
  * Unfolds input object by dot delimetered path inside its keys.
@@ -28,8 +28,17 @@ import splitByDot from './splitByDot';
  * @sig Object -> Object
  */
 const unfoldObjectDots = o(
-	o(mergeAll, values),
-	mapObjIndexed(useWith(flip(call), [identity, compose(applyCompose, map(objOf), splitByDot)]))
+	o(mergeDeepRightAll, values),
+	mapObjIndexed(
+		useWith(flip(call), [
+			identity,
+			compose(
+				applyCompose,
+				map(objOf),
+				splitByDot
+			),
+		])
+	)
 );
 
 export default unfoldObjectDots;

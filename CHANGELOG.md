@@ -1,4 +1,7 @@
 # [Unpublished]
+ Nothing :)
+
+# 0.9.0 
 
 #### List of new functions
 * [uniqMap](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqMap.js)

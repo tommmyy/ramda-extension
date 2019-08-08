@@ -13,6 +13,9 @@
 * [uniqDropLastWhile](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqDropLastWhile.js)
 * [uniqMap](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqMap.js)
 
+#### Fixes
+* [unfoldObjectDots](https://github.com/tommmyy/ramda-extension/pull/151) - unfoldObjectDots did not merge same objects properly
+
 # 0.8.0
 
 #### List of new functions

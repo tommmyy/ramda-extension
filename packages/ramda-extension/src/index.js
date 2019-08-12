@@ -180,3 +180,5 @@ export uniqTakeLastWhile from './uniqTakeLastWhile';
 export uniqDropLast from './uniqDropLast';
 export uniqDropWhile from './uniqDropWhile';
 export uniqDropLastWhile from './uniqDropLastWhile';
+export uniqAppend from './uniqAppend';
+export uniqPrepend from './uniqPrepend';

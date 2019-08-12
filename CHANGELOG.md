@@ -1,6 +1,14 @@
 # [Unpublished]
  Nothing :)
 
+# 0.9.1 
+
+#### List of new functions
+* [uniqAppend](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqAppend.js)
+* [uniqPrepend](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/uniqPrepend.js)
+* [groupByProp](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/groupByProp.js)
+* [groupByPath](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/groupByPath.js)
+
 # 0.9.0 
 
 #### List of new functions

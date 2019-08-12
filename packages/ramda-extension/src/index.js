@@ -183,3 +183,4 @@ export uniqDropLastWhile from './uniqDropLastWhile';
 export uniqAppend from './uniqAppend';
 export uniqPrepend from './uniqPrepend';
 export groupByPath from './groupByPath';
+export groupByProp from './groupByProp';

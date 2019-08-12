@@ -1,20 +1,20 @@
-import { groupBy, useWith, path, identity } from 'ramda';
+import { groupBy, useWith, prop, identity } from 'ramda';
 
 /**
- * Groups values in the list by the property found by provided path.
+ * Groups values in the list by the property found by provided key.
  *
  * @func
  * @category Object
  *
- * @param  Array path
+ * @param  Array prop
  * @param  Array list
  *
- * @return Object An object with the output of determined by `path` for keys,
+ * @return Object An object with the output of determined by `prop` for keys,
  * mapped to arrays of elements that produced that key.
  *
  * @example
  *
- *        R_.groupByPath(["id"])([
+ *        R_.groupByProp("id")([
  *          { id: 1 },
  *          { id: 3 },
  *          { id: 1, name: "c" }
@@ -37,8 +37,8 @@ import { groupBy, useWith, path, identity } from 'ramda';
  *    ]
  *  }
  *
- * @sig [String] -> [a] -> {String -> [a]}
+ * @sig String -> [a] -> {String -> [a]}
  */
-const groupByPath = useWith(groupBy, [path, identity]);
+const groupByProp = useWith(groupBy, [prop, identity]);
 
-export default groupByPath;
+export default groupByProp;

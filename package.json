@@ -10,6 +10,7 @@
     "test:watch": "yarn test:js -- --watch",
     "test:coverage": "yarn test:js -- --coverage",
     "lint": "eslint --ext .js ./packages",
+    "lint:fix": "yarn lint --fix",
     "generate": "plop --plopfile ./.plop/plopfile.js"
   },
   "devDependencies": {

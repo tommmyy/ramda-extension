@@ -184,3 +184,4 @@ export uniqAppend from './uniqAppend';
 export uniqPrepend from './uniqPrepend';
 export groupByPath from './groupByPath';
 export groupByProp from './groupByProp';
+export capitalizeFirst from './capitalizeFirst';

@@ -6,8 +6,8 @@ import { replace, toLower, unless, isNil } from 'ramda';
  * @func
  * @category String
  *
- * @param {any} x Any string
- * @return {any} Description
+ * @param {any} x Any String
+ * @return {any} String starting with lower-case letter
  *
  * @example
  *

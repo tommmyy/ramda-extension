@@ -7,7 +7,7 @@ import { replace, toUpper, unless, isNil } from 'ramda';
  * @category String
  *
  * @param {any} x Any string
- * @return {any} String startinng with upper-case letter
+ * @return {any} String starting with upper-case letter
  *
  * @example
  *

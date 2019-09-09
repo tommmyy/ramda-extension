@@ -186,3 +186,4 @@ export groupByPath from './groupByPath';
 export groupByProp from './groupByProp';
 export capitalizeFirst from './capitalizeFirst';
 export capitalizeAll from './capitalizeAll';
+export decapitalizeAll from './decapitalizeAll';

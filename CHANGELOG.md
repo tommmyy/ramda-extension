@@ -1,5 +1,4 @@
-# [Unpublished]
-
+# 0.10.0
 #### List of new functions
 * [decapitalizeAll](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/decapitalizeAll.js)
 * [capitalizeAll](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/capitalizeAll.js)

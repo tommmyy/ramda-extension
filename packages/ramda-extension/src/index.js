@@ -188,3 +188,4 @@ export capitalizeFirst from './capitalizeFirst';
 export decapitalizeFirst from './decapitalizeFirst';
 export capitalizeAll from './capitalizeAll';
 export decapitalizeAll from './decapitalizeAll';
+export filterByPropInList from './filterByPropInList';

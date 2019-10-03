@@ -7,6 +7,11 @@ import {curry, filter, propSatisfies} from 'ramda';
  * @func
  * @category List
  *
+ * @param {string} prop Property to look for the inclusion in the list
+ * @param {[any]} keys List of valid property values
+ * @param {[Object]} objs List of objects to filter
+ * @return {[Object]} List of objects with the valid property values
+ *
  * @example
  *		const validKeys = ["A", "D"];
  *		const objs = [
@@ -15,12 +20,12 @@ import {curry, filter, propSatisfies} from 'ramda';
  *			{ key: "E" },
  *		];
  *
- *  	R_.filterByPropInList(validKeys, "key", objs) // [{ key: "A" }]
+ *  	R_.filterByPropInList("key", validKeys, objs) // [{ key: "A" }]
  *
  * @sig [string] -> string -> [object] -> [object]
  *
  */
-const filterByPropInList = curry((keys, prop, objs) => {
+const filterByPropInList = curry((prop, keys, objs) => {
 	const keySet = new Set(keys);
 	return filter(propSatisfies((p) => keySet.has(p), prop), objs);
 });

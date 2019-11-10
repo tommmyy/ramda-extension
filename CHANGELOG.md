@@ -1,3 +1,7 @@
+# 0.10.1
+#### Fixes 
+* [Missing `flattenValues` docs](https://github.com/tommmyy/ramda-extension/pull/168)
+
 # 0.10.0
 #### List of new functions
 * [decapitalizeAll](https://github.com/tommmyy/ramda-extension/blob/master/packages/ramda-extension/src/decapitalizeAll.js)

@@ -7,7 +7,7 @@ import { o, map, apply, objOf, toPairs } from 'ramda';
  * @category Object
  *
  * @param {any} object
- * @return {[any]} Description
+ * @return {Array} Description
  *
  * @example
  *

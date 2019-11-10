@@ -7,7 +7,7 @@ import { flip, path } from 'ramda';
  * @category Object
  *
  * @param {any} x
- * @param {[any]} path
+ * @param {Array} path
  * @return {any} Slice of x
  *
  * @example

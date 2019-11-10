@@ -447,6 +447,13 @@
                     >List</span>
                 </a>
             </li>
+            <li class="func" data-name="flattenValues" data-category="List">
+                <a href="#flattenValues">
+                    flattenValues
+                    <span data-category="List" class="label label-category pull-right"
+                    >List</span>
+                </a>
+            </li>
             <li class="func" data-name="flipIncludes" data-category="List">
                 <a href="#flipIncludes">
                     flipIncludes
@@ -1613,10 +1620,7 @@ R_.applyIfNotNil(<span class="hljs-literal">undefined</span>, nums); <span class
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.10.0" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R.compose(
-  R.sum,
-  R_.argumentsToList
-)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 6</span>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.10.0" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R.compose(R.sum, R_.argumentsToList)(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 6</span>
 </code></pre>
         </section>
         <div id="assocDotPath" class="section-id"></div>
@@ -3745,6 +3749,60 @@ R_.flattenArgs(<span class="hljs-string">"e"</span>, [<span class="hljs-string">
 R_.flattenArgs(<span class="hljs-string">"e"</span>, [<span class="hljs-string">"f"</span>, [<span class="hljs-string">"a"</span>]]); <span class="hljs-comment">// ['e', 'f', 'a']</span>
 </code></pre>
         </section>
+        <div id="flattenValues" class="section-id"></div>
+        <section class="card">
+            <h2>
+                <a tabindex="2" class="name" href="#flattenValues">flattenValues</a>
+                <span class="pull-right">
+                        <span class="label label-category">List</span>
+                        <a target="_blank" title="View source on GitHub"
+                        href="https://github.com/tommmyy/ramda-extension/tree/v0.10.0/packages/ramda-extension/src/flattenValues.js"><small class="glyphicon glyphicon-new-window"></small></a>
+                </span>
+            </h2>
+
+
+            <div><code>{k: v} → [v]</code></div>
+
+
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">value</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Array</span>
+                        <span class="description">array of values</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="description"><p>Recursively flatten values from object and array.</p>
+</div>
+
+
+
+
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.10.0" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R_.flattenValues([
+  <span class="hljs-string">"hi"</span>,
+  { <span class="hljs-attr">foo</span>: <span class="hljs-string">"bar"</span> },
+  {
+    <span class="hljs-attr">foo</span>: {
+      <span class="hljs-attr">bar</span>: [<span class="hljs-string">"baz"</span>, { <span class="hljs-attr">foofoo</span>: <span class="hljs-string">"hi"</span> }]
+    }
+  },
+  [<span class="hljs-string">"bar"</span>, <span class="hljs-string">"hi"</span>],
+  [<span class="hljs-string">"barbar"</span>, { <span class="hljs-attr">hrun</span>: <span class="hljs-string">"hi"</span> }]
+]); <span class="hljs-comment">// ['hi','bar','baz','hi','hi','hi']</span>
+</code></pre>
+        </section>
         <div id="flipIncludes" class="section-id"></div>
         <section class="card">
             <h2>
@@ -3824,7 +3882,7 @@ R_.flipIncludes([<span class="hljs-string">"e"</span>, <span class="hljs-string"
                         <li class="list-group-item">
                             <span class="type">
                             </span>
-                            <span class="name"></span>
+                            <span class="name">path</span>
                             <span class="description"></span>
                         </li>
                     </ul>
@@ -5098,10 +5156,7 @@ action.type === actionTypes.ITEM_REQUEST; <span class="hljs-comment">// true</sp
 
 
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.10.0" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R_.log(<span class="hljs-string">"hello"</span>); <span class="hljs-comment">// logs 'hello'</span>
-compose(
-  R_.log,
-  R.sum
-)([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// logs 4</span>
+compose(R_.log, R.sum)([<span class="hljs-number">1</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// logs 4</span>
 </code></pre>
         </section>
         <div id="lteThanLength" class="section-id"></div>
@@ -6847,7 +6902,7 @@ R_.propNotSatisfies(positive, <span class="hljs-string">"a"</span>, { <span clas
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.10.0" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> f = <span class="hljs-function"><span class="hljs-params">a</span> =&gt;</span> b =&gt; a + b;
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.10.0" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript"><span class="hljs-keyword">const</span> f = <span class="hljs-function"><span class="hljs-params">a</span> =&gt;</span> <span class="hljs-function"><span class="hljs-params">b</span> =&gt;</span> a + b;
 
 R_.reduceCallable(f, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">// 3</span>
 </code></pre>
@@ -6915,14 +6970,7 @@ iterator function.</p>
 
 
 	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.10.0" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">R_.reduceSource(<span class="hljs-function">(<span class="hljs-params">acc, v, sAcc</span>) =&gt;</span> v + acc + sAcc, <span class="hljs-number">1</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]); <span class="hljs-comment">// 10</span>
-R_.reduceSource(
-  R.pipe(
-    R.unapply(R.flatten),
-    R.sum
-  ),
-  <span class="hljs-number">0</span>,
-  [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
-); <span class="hljs-comment">// 9</span>
+R_.reduceSource(R.pipe(R.unapply(R.flatten), R.sum), <span class="hljs-number">0</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]); <span class="hljs-comment">// 9</span>
 </code></pre>
         </section>
         <div id="rejectEq" class="section-id"></div>
@@ -7233,6 +7281,24 @@ R_.toDotCase(<span class="hljs-string">"  hello -/ world/ "</span>); <span class
             <div><code>{String: a, …} → [{String: a}]</code></div>
 
 
+            <div class="params" data-expanded="false">
+                <a href="#expand" class="toggle-params">Parameters</a>
+                <div class="details panel panel-default">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="type">
+                            </span>
+                            <span class="name">object</span>
+                            <span class="description"></span>
+                        </li>
+                    </ul>
+                    <div class="panel-body">
+                        <span class="returns">Returns</span>
+                        <span class="type">Array</span>
+                        <span class="description">Description</span>
+                    </div>
+                </div>
+            </div>
 
 
             <div class="description"><p>Creates array of entries from object.</p>
@@ -7485,11 +7551,7 @@ Similar to &quot;log&quot; but allows to label logged value. Should be used only
 
 
 
-	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.10.0" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">compose(
-  calculation2,
-  R_.trace(<span class="hljs-string">"Page A"</span>),
-  calculation1
-); <span class="hljs-comment">// logs "Page A" and result of calculation1</span>
+	    <pre><div class = "try-repl" ><button class = "send-repl" data-ramda-extension="0.10.0" data-ramda-version="^0.26.1">Open in REPL</button></div><code class="hljs javascript">compose(calculation2, R_.trace(<span class="hljs-string">"Page A"</span>), calculation1); <span class="hljs-comment">// logs "Page A" and result of calculation1</span>
 </code></pre>
         </section>
         <div id="unfoldObjectDots" class="section-id"></div>

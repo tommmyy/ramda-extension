@@ -8,18 +8,21 @@ const buildRamda = require('./buildRamda');
 const buildJsdoc = require('./buildJsdoc');
 const buildRepl = require('./buildRepl');
 
-const filter = R.o(R.not, R.anyPass([
-	R.endsWith('handlebars'),
-	R.endsWith('examples'),
-	R.endsWith('.babelrc'),
-	R.endsWith('.gitignore'),
-	R.endsWith('create-examples.js'),
-	R.endsWith('handlebars'),
-	R.endsWith('index.pug'),
-	R.endsWith('npm-shrinkwrap.json'),
-	R.endsWith('package.json'),
-	R.endsWith('README.md'),
-]));
+const filter = R.o(
+	R.not,
+	R.anyPass([
+		R.endsWith('handlebars'),
+		R.endsWith('examples'),
+		R.endsWith('.babelrc'),
+		R.endsWith('.gitignore'),
+		R.endsWith('create-examples.js'),
+		R.endsWith('handlebars'),
+		R.endsWith('index.pug'),
+		R.endsWith('npm-shrinkwrap.json'),
+		R.endsWith('package.json'),
+		R.endsWith('README.md'),
+	])
+);
 
 console.log('Builing Website...');
 

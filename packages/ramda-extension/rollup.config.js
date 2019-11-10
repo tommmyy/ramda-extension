@@ -33,7 +33,10 @@ if (env === 'es' || env === 'cjs') {
 		nodeResolve({
 			jsnext: true,
 		}),
-		babel()
+		babel({
+			rootMode: 'upward',
+			runtimeHelpers: true,
+		})
 	);
 }
 
@@ -52,6 +55,8 @@ if (env === 'development' || env === 'production') {
 		}),
 		babel({
 			exclude: '**/node_modules/**',
+			rootMode: 'upward',
+			runtimeHelpers: true,
 		}),
 		replace({
 			'process.env.NODE_ENV': JSON.stringify(env),
@@ -75,4 +80,3 @@ if (env === 'production') {
 }
 
 export default config;
-

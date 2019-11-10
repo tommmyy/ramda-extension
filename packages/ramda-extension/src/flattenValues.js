@@ -6,28 +6,29 @@ const recursiveArray = (r) => o(flatten, map(flattenValues))(r);
 const recursiveObject = (r) => o(flattenValues, values)(r);
 
 /**
- * Returns flatten values from object and array. Recursively.
+ * Recursively flatten values from object and array.
  *
  * @func
- * @category Array, Object
+ * @category List
  *
  * @param  {Array|Object} value
  * @return {Array} array of values
+ *
+ * @sig {k: v} → [v]
  *
  * @example
  *
  *        R_.flattenValues([
  *				'hi',
  *				{ foo: 'bar' },
- *				{ foo: 'hi' },
  *				{
  *					foo: {
- *						bar: ['cuuus', { foo: 'hi' }],
+ *						bar: ['baz', { foofoo: 'hi' }],
  *					},
  *				},
- *				['haha', 'hi'],
- *				['haha', { foo: 'hi' }],
- *			]) // ['hi','bar','hi','cuuus','hi','haha','hi','haha','hi']
+ *				['bar', 'hi'],
+ *				['barbar', { hrun: 'hi' }],
+ *			]) // ['hi','bar','baz','hi','hi','hi']
  *
  */
 const flattenValues = cond([

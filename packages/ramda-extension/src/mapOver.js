@@ -1,4 +1,4 @@
-import {uncurryN, map, over, lensProp} from 'ramda';
+import {binary, compose, map, over, uncurryN} from 'ramda';
 
 /**
  * Maps over a specific property on a list of objects, it returns a new list of objects
@@ -6,8 +6,8 @@ import {uncurryN, map, over, lensProp} from 'ramda';
  * @func
  * @category List
  *
+ * @param {Lens} lens
  * @param {Function} fn The function to be called on every specified property element of the `list`.
- * @param {string} prop The property to be modified.
  * @param {Array} list The list to be iterated over.
  * @return {Array} The new list.
  *
@@ -18,11 +18,11 @@ import {uncurryN, map, over, lensProp} from 'ramda';
  *			{ value: 2 },
  *			{ value: 3 },
  *		];
+ *		const valueLens = R.lensProp("value");
+ *		R_.mapOver(valueLens, R.add(100), objs) // [{ value: 101 }, { value: 102 }, { value: 103 }]
  *
- *		R_.mapOver(R.add(100), "value", objs) // [{ value: 101 }, { value: 102 }, { value: 103 }]
- *
- * @sig (* -> *) -> string -> [object] -> [object]
+ * @sig Lens s a -> (* -> *) -> [object] -> [object]
  */
-const mapOver = uncurryN(3, (fn, prop) => map(over(lensProp(prop), fn)));
+const mapOver = uncurryN(3, compose(map, binary(over)));
 
 export default mapOver;

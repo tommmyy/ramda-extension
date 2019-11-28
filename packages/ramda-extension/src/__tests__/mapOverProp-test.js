@@ -1,5 +1,5 @@
-import { mapOver } from '../';
-import {add, lensProp} from 'ramda';
+import { mapOverProp } from '../';
+import { add } from 'ramda';
 
 describe('mapOver', () => {
 	it('Changes the specified property', () => {
@@ -9,9 +9,7 @@ describe('mapOver', () => {
 			{ value: 3 },
 		];
 
-		const lensValue = lensProp('value');
-
-		expect(mapOver(lensValue)(add(100))(objs)).toEqual([
+		expect(mapOverProp('value')(add(100))(objs)).toEqual([
 			{ value: 101 },
 			{ value: 102 },
 			{ value: 103 },

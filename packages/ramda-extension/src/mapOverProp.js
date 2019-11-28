@@ -19,9 +19,9 @@ import mapOver from './mapOver';
  *			{ value: 2 },
  *		];
  *		const valueLens = R.lensProp("value");
- *		R_.mapOver("value", R.add(100), objs) // [{ value: 101 }, { value: 102 }]
+ *		R_.mapOverProp("value", R.add(100), objs) // [{ value: 101 }, { value: 102 }]
  *
- * @sig (* -> *) -> string -> [object] -> [object]
+ * @sig string -> (* -> *) -> [object] -> [object]
  */
 const mapOverProp = useWith(mapOver, [lensProp, identity, identity]);
 

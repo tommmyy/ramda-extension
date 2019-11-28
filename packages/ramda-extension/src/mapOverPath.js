@@ -9,7 +9,7 @@ import mapOver from './mapOver';
  * @category List
  *
  * @param {string[]} path The path to be modified.
- * @param {Function} fn The function to be called on every specified property element of the `list`.
+ * @param {Function} fn The function to be called on every specified path element of the `list`.
  * @param {Array} list The list to be iterated over.
  * @return {Array} The new list.
  *
@@ -20,10 +20,10 @@ import mapOver from './mapOver';
  *			{ value: { id: 2 } },
  *		];
  *		const valueLens = R.lensProp("value");
- *		R_.mapOver(["value", "id"], R.add(100), objs) // [{ value: { id: 101 } }, { value: { id: 102 } }]
+ *		R_.mapOverPath(["value", "id"], R.add(100), objs) // [{ value: { id: 101 } }, { value: { id: 102 } }]
  *
- * @sig (* -> *) -> string -> [object] -> [object]
+ * @sig string[] -> (* -> *) -> [object] -> [object]
  */
-const mapOverProp = useWith(mapOver, [lensPath, identity, identity]);
+const mapOverPath = useWith(mapOver, [lensPath, identity, identity]);
 
-export default mapOverProp;
+export default mapOverPath;

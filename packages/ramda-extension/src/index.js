@@ -182,3 +182,6 @@ export { default as capitalizeFirst } from './capitalizeFirst';
 export { default as decapitalizeFirst } from './decapitalizeFirst';
 export { default as capitalizeAll } from './capitalizeAll';
 export { default as decapitalizeAll } from './decapitalizeAll';
+export { default as mapOver } from './mapOver';
+export { default as mapOverProp } from './mapOverProp';
+export { default as mapOverPath } from './mapOverPath';

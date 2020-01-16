@@ -10,5 +10,8 @@ describe('toKebabCase', () => {
 		toKebabCaseUtil('   hello  ', 'hello');
 		toKebabCaseUtil('hello world', 'hello-world');
 		toKebabCaseUtil('hello world AND univerSe', 'hello-world-and-universe');
+		toKebabCaseUtil('Ahoj světe', 'ahoj-svete');
+		toKebabCaseUtil('   Tschüss Freund', 'tschuss-freund');
+		toKebabCaseUtil('Adiós  amigo español   ', 'adios-amigo-espanol');
 	});
 });

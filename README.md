@@ -1,4 +1,4 @@
-# ramda-extension
+# Ramda Extension
 
 [![build status](https://img.shields.io/travis/tommmyy/ramda-extension/master.svg?style=flat-square)](https://travis-ci.org/tommmyy/ramda-extension)
 

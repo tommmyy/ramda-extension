@@ -1,82 +1,86 @@
-import nodeResolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
-import replace from 'rollup-plugin-replace';
-import commonjs from 'rollup-plugin-commonjs';
-import { terser } from 'rollup-plugin-terser';
+import replace from "@rollup/plugin-replace";
+import autoExternal from "rollup-plugin-auto-external";
+import path from "path";
+import cjsPlugin from "@rollup/plugin-commonjs";
+import { terser as terserPlugin } from "rollup-plugin-terser";
+import nodeResolvePlugin from "@rollup/plugin-node-resolve";
+import babelPlugin from "rollup-plugin-babel";
 
-const env = process.env.NODE_ENV;
-const banner = `
-//  Ramda-extension v${require('./package.json').version}
-//  https://github.com/tommmyy/ramda-extension
-//  (c) 2016-${new Date().getFullYear()}
-//  Ramda-extension may be freely distributed under the Apache-2.0 license.
-`;
+const cjs = cjsPlugin({
+	include: /node_modules/
+});
 
-const config = {
-	input: 'src/index.js',
-	external: ['ramda'],
-	plugins: [],
-};
+const terser = terserPlugin({
+	compress: {
+		pure_getters: true,
+		unsafe: true,
+		unsafe_comps: true,
+		warnings: false
+	}
+});
+
+const nodeResolve = nodeResolvePlugin();
+
+const babel = envName =>
+	babelPlugin({
+		runtimeHelpers: true,
+		envName,
+		rootMode: "upward"
+	});
+
+const plugins = { cjs, terser, nodeResolve, babel };
+
+const PACKAGE_ROOT_PATH = __dirname;
+const INPUT_FILE = path.join(PACKAGE_ROOT_PATH, "src/index.js");
 
 const globals = {
-	ramda: 'R',
+	ramda: "R"
 };
 
-if (env === 'es' || env === 'cjs') {
-	config.output = {
-		format: env,
-		indent: false,
-		banner,
-		globals,
-	};
-	config.plugins.push(
-		nodeResolve({
-			jsnext: true,
-		}),
-		babel({
-			rootMode: 'upward',
-			runtimeHelpers: true,
-		})
-	);
-}
+const globalName = "R_";
+const fileName = "ramda-extension";
 
-if (env === 'development' || env === 'production') {
-	config.output = {
-		format: 'umd',
-		name: 'R_',
-		indent: false,
-		banner,
-		globals,
-	};
+export default [
+	// UMD Development
+	{
+		input: INPUT_FILE,
+		output: {
+			file: path.join(PACKAGE_ROOT_PATH, "dist", `${fileName}.js`),
+			format: "umd",
+			name: globalName,
+			indent: false,
+			globals
+		},
+		external: x => x.includes("ramda"),
+		plugins: [
+			// Bundle all in one file for umd distribution for `validarium` package
+			replace({ "process.env.NODE_ENV": JSON.stringify("development") }),
+			autoExternal(),
+			plugins.nodeResolve,
+			plugins.babel("umd"),
+			plugins.cjs
+		]
+	},
 
-	config.plugins.push(
-		nodeResolve({
-			jsnext: true,
-		}),
-		babel({
-			exclude: '**/node_modules/**',
-			rootMode: 'upward',
-			runtimeHelpers: true,
-		}),
-		replace({
-			'process.env.NODE_ENV': JSON.stringify(env),
-		})
-	);
-}
-
-config.plugins.push(commonjs());
-
-if (env === 'production') {
-	config.plugins.push(
-		terser({
-			compress: {
-				pure_getters: true,
-				unsafe: true,
-				unsafe_comps: true,
-				warnings: false,
-			},
-		})
-	);
-}
-
-export default config;
+	// UMD Production
+	{
+		input: INPUT_FILE,
+		external: x => x.includes("ramda"),
+		output: {
+			file: path.join(PACKAGE_ROOT_PATH, "dist", `${fileName}.min.js`),
+			format: "umd",
+			name: globalName,
+			indent: false,
+			globals
+		},
+		plugins: [
+			// Bundle all in one file for umd distribution for `validarium` package
+			autoExternal(),
+			replace({ "process.env.NODE_ENV": JSON.stringify("production") }),
+			plugins.nodeResolve,
+			plugins.babel("umd"),
+			plugins.cjs,
+			plugins.terser
+		]
+	}
+];

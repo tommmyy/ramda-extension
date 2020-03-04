@@ -5,8 +5,9 @@
   "description": "ramda-extension website",
   "license": "Apache-2.0",
   "scripts": {
-    "publishToFirebase": "node ./tools/build && node ./tools/publishToFirebase",
-    "start": "node ./tools/build && serve -p 3333 public"
+    "publishToFirebase": "yarn build && node ./tools/publishToFirebase",
+    "build": "node ./tools/build",
+    "start": "yarn build && serve -p 3333 public"
   },
   "devDependencies": {
     "babel-eslint": "10.0.3",

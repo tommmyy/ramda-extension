@@ -1,20 +1,22 @@
-module.exports = (api) => {
-	api.cache.using(() => process.env.NODE_ENV);
+module.exports = api => {
+	const env = api.env();
+
+	const ramdaSrc = env === "es" ? "es" : "src";
 
 	return {
-		presets: ['babel-preset-react-union'],
-		plugins: [
-			...(api.env('commonjs') ?
-				[
-					[
-						'@babel/plugin-transform-modules-commonjs',
-						{
-							loose: true,
-						},
-					],
-				  ] :
-				[]),
-			...(api.env('es') ? ['babel-plugin-annotate-pure-calls'] : []),
+		presets: [
+			[
+				"babel-preset-react-union",
+				{
+					test: env === "commonjs",
+					loose: true,
+					library: true,
+					universal: false
+				}
+			]
 		],
+		plugins: [
+			...(api.env("es") ? ["babel-plugin-annotate-pure-calls"] : [])
+		]
 	};
 };

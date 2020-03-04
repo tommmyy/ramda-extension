@@ -1,6 +1,6 @@
 {
   "name": "ramda-extension",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -67,11 +67,11 @@
     "ramda": "^0.26.1"
   },
   "devDependencies": {
-    "babel-core": "^7.0.0-bridge",
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@rollup/plugin-replace": "^2.3.1",
+    "babel-core": "^7.0.0-bridge",
     "benchmark": "^2.1.4",
     "classnames": "^2.2.6",
     "escope": "3.6.0",

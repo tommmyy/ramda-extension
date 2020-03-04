@@ -1,3 +1,7 @@
+# 0.10.2
+#### Changes 
+* [Better bundling](https://github.com/tommmyy/ramda-extension/pull/172)
+
 # 0.10.1
 #### Fixes 
 * [Missing `flattenValues` docs](https://github.com/tommmyy/ramda-extension/pull/168)

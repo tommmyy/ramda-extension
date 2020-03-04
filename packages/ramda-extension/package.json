@@ -77,7 +77,7 @@
     "escope": "3.6.0",
     "fs-extra": "^8.1.0",
     "ramda": "^0.26.1",
-    "rimraf": "3.0.0",
+    "rimraf": "3.0.2",
     "rollup": "^1.32.0",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-babel": "^4.3.3",

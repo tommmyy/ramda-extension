@@ -8,6 +8,15 @@ lib
 coverage
 .firebase
 
+
+packages/**/build
+packages/**/es
+packages/**/dist
+packages/**/lib
+
+*:p
+:w
+
 # Exclude IDE project folders
 .idea
 *.iml

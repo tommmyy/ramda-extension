@@ -1,22 +1,22 @@
-module.exports = api => {
+module.exports = (api) => {
 	const env = api.env();
-
-	const ramdaSrc = env === "es" ? "es" : "src";
 
 	return {
 		presets: [
 			[
-				"babel-preset-react-union",
+				'babel-preset-react-union',
 				{
-					test: env === "commonjs",
+					test:
+						['commonjs', 'test'].includes(env) ||
+						process.env.NODE_ENV === 'test',
 					loose: true,
 					library: true,
-					universal: false
-				}
-			]
+					universal: false,
+				},
+			],
 		],
 		plugins: [
-			...(api.env("es") ? ["babel-plugin-annotate-pure-calls"] : [])
-		]
+			...(api.env('es') ? ['babel-plugin-annotate-pure-calls'] : []),
+		],
 	};
 };

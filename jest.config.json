@@ -1,13 +1,11 @@
 {
   "rootDir": "./packages",
-  "testMatch": [
-  	"**/__tests__/**/*.js?(x)",
-  	"**/?(*.)(spec|test).js?(x)"
-  ],
+  "testMatch": ["**/__tests__/**/*.js?(x)", "**/?(*.)(spec|test).js?(x)"],
   "modulePathIgnorePatterns": [
-  	"/node_modules/",
-  	"/es/",
-  	"/dist/",
-  	"/lib/"
+    "/node_modules/",
+    "/es/",
+    "/dist/",
+    "/build/",
+    "/lib/"
   ]
 }

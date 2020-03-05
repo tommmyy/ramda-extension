@@ -64,7 +64,7 @@
     "clean": "rimraf es lib dist"
   },
   "peerDependencies": {
-    "ramda": "^0.26.1"
+    "ramda": ">=0.26.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",

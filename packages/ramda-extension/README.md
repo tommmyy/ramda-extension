@@ -112,7 +112,7 @@ You can use Ramda-extension directly in the browser:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/ramda@latest/dist/ramda.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/ramda-extension@latest/dist/ramda-extension.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ramda-extension@latest/dist/ramda-extension.min.js"></script>
 ```
 
 ## Articles & Resources

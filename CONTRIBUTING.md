@@ -26,3 +26,6 @@
 
 7.  Open a pull request.
 
+## README.md as symlink - Windows users attention!
+See [Stack overflow](https://stackoverflow.com/questions/49980639/specify-alternate-project-level-readme-md-on-github).
+

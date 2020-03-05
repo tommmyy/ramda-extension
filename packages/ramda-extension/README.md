@@ -132,5 +132,5 @@ See the [contribution guide](https://github.com/tommmyy/ramda-extension/blob/mas
 
 ## License
 
-All packages are distributed under the Apache 2.0 license. See the license [here](https://github.com/lundegaard/validarium/blob/master/LICENSE.md).
+All packages are distributed under the Apache 2.0 license. See the license [here](https://github.com/tommmyy/ramda-extension/blob/master/LICENSE.md).
 

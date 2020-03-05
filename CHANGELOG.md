@@ -1,5 +1,7 @@
-# Unreleased
+# 0.10.3
+
 #### Fixes 
+* [Benevolent peerDependencies](https://github.com/tommmyy/ramda-extension/pull/177)
 * [Fixing missing devDependency](https://github.com/tommmyy/ramda-extension/pull/173)
 * [Updating dependencies](https://github.com/tommmyy/ramda-extension/pull/174)
 

@@ -10,7 +10,7 @@ import equalsToZero from './equalsToZero';
  * @example
  *
  *        R_.equalsZero(3)	// false
- *        R_.equalsZero(1)	// true
+ *        R_.equalsZero(0)	// true
  *        R_.equalsZero(-3)	// false
  *
  * @see equalsToZero

@@ -1,5 +1,5 @@
 import { concat, always } from 'ramda';
-import defaultArgs from '../defaulArgs';
+import defaultArgs from '../defaultArgs';
 
 describe('defaultArgs', () => {
 	const calledFn = (...args) => args;

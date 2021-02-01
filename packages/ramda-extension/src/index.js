@@ -119,7 +119,6 @@ export { default as mergeDeepLeftAll } from './mergeDeepLeftAll';
 export { default as mergeDeepRightAll } from './mergeDeepRightAll';
 export { default as mergeDeepAllWith } from './mergeDeepAllWith';
 export { default as mergeDeepAllWithKey } from './mergeDeepAllWithKey';
-export { default as defaultArgs } from './defaultArgs'
 export { default as defaultToEmptyArray } from './defaultToEmptyArray';
 export { default as defaultToEmptyObject } from './defaultToEmptyObject';
 export { default as defaultToEmptyString } from './defaultToEmptyString';

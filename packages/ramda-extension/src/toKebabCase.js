@@ -1,6 +1,8 @@
-import { o, map, toLower } from 'ramda';
+import { o, map, toLower, compose, replace, curry } from 'ramda';
 import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
 import joinWithDash from './joinWithDash';
+
+const normalize = curry((form, str) => str.normalize(form));
 
 /**
  * Converts string into kebab-case.
@@ -16,9 +18,11 @@ import joinWithDash from './joinWithDash';
  *
  * @sig String -> String
  */
-const toKebabCase = o(
+const toKebabCase = compose(
 	joinWithDash,
-	o(map(toLower), splitByNonAlphaNumeric)
+	o(map(toLower), splitByNonAlphaNumeric),
+	replace(/[\u0300-\u036f]/g, ''),
+	normalize('NFD')
 );
 
 export default toKebabCase;

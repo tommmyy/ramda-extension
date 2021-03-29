@@ -16,9 +16,6 @@ import joinWithDash from './joinWithDash';
  *
  * @sig String -> String
  */
-const toKebabCase = o(
-	joinWithDash,
-	o(map(toLower), splitByNonAlphaNumeric)
-);
+const toKebabCase = o(joinWithDash, o(map(toLower), splitByNonAlphaNumeric));
 
 export default toKebabCase;

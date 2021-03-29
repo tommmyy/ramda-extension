@@ -1,4 +1,14 @@
-import { juxt, flip, T, always, useWith, compose, equals, identity, cond } from 'ramda';
+import {
+	juxt,
+	flip,
+	T,
+	always,
+	useWith,
+	compose,
+	equals,
+	identity,
+	cond,
+} from 'ramda';
 import argumentsToList from './argumentsToList';
 
 const equalsAndAlways = useWith(argumentsToList, [equals, always]);

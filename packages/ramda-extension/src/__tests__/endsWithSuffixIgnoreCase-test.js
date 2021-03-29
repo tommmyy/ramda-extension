@@ -2,7 +2,7 @@ import { endsWithSuffixIgnoreCase } from '../';
 
 describe('endsWithSuffixIgnoreCase', () => {
 	it('should be defined', () => {
-	    expect(endsWithSuffixIgnoreCase).toBeDefined();
+		expect(endsWithSuffixIgnoreCase).toBeDefined();
 	});
 	describe('when two equal strings are passed', () => {
 		it('should return true', () => {

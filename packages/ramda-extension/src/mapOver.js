@@ -1,4 +1,4 @@
-import {binary, compose, map, over, uncurryN} from 'ramda';
+import { binary, compose, map, over, uncurryN } from 'ramda';
 
 /**
  * Maps over a specific property on a list of objects, it returns a new list of objects

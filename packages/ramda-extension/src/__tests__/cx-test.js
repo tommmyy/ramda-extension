@@ -94,12 +94,20 @@ describe('classNames', function() {
 				nonEmptyList: [1, 2, 3],
 				greaterZero: 1,
 			})
-		).toEqual('nonEmptyString whitespace function emptyObject nonEmptyObject emptyList nonEmptyList greaterZero');
+		).toEqual(
+			'nonEmptyString whitespace function emptyObject nonEmptyObject emptyList nonEmptyList greaterZero'
+		);
 	});
 	xit('should be fast as classnames +- 100 ops/sec', () => {
 		return new Promise((resolve, reject) => {
 			const suite = new Benchmark.Suite();
-			const args = ['foo', { bar: true, duck: false }, 'baz', { quux: true }, ['b', { c: true, d: false }]];
+			const args = [
+				'foo',
+				{ bar: true, duck: false },
+				'baz',
+				{ quux: true },
+				['b', { c: true, d: false }],
+			];
 			suite
 				.add('classNames', function() {
 					classNames(...args);
@@ -117,7 +125,9 @@ describe('classNames', function() {
 					if (cxOps >= classNames - 100) {
 						resolve();
 					}
-					reject(`cx is about ${Math.round(classNamesOps / cxOps)} times slower`);
+					reject(
+						`cx is about ${Math.round(classNamesOps / cxOps)} times slower`
+					);
 				})
 				.run();
 		});

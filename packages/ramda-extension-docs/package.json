@@ -1,29 +1,29 @@
 {
-  "name": "ramda-extension-docs",
-  "private": true,
-  "version": "0.0.1",
-  "description": "ramda-extension website",
-  "license": "Apache-2.0",
-  "scripts": {
-    "publishToFirebase": "yarn build && node ./tools/publishToFirebase",
-    "build": "node ./tools/build",
-    "start": "yarn build && serve -p 3333 public"
-  },
-  "devDependencies": {
-    "bootstrap": "^4.6.0",
-    "eslint": "^7.23.0",
-    "fs-extra": "^9.1.0",
-    "handlebars": "^4.7.7",
-    "highlight.js": "^10.7.1",
-    "jsdoc": "~3.6.6",
-    "less": "~4.1.1",
-    "less-plugin-autoprefix": "^2.0.0",
-    "less-plugin-clean-css": "^1.5.0",
-    "marked": "~2.0.1",
-    "plop": "^2.6.0",
-    "prettier": "^2.2.1",
-    "ramda": "^0.27.1",
-    "serve": "11.3.2",
-    "walk": "^2.3.0"
-  }
+	"name": "ramda-extension-docs",
+	"private": true,
+	"version": "0.0.1",
+	"description": "ramda-extension website",
+	"license": "Apache-2.0",
+	"scripts": {
+		"publishToFirebase": "yarn build && node ./tools/publishToFirebase",
+		"build": "node ./tools/build",
+		"start": "yarn build && serve -p 3333 public"
+	},
+	"devDependencies": {
+		"bootstrap": "^4.6.0",
+		"eslint": "^7.23.0",
+		"fs-extra": "^9.1.0",
+		"handlebars": "^4.7.7",
+		"highlight.js": "^10.7.1",
+		"jsdoc": "~3.6.6",
+		"less": "~4.1.1",
+		"less-plugin-autoprefix": "^2.0.0",
+		"less-plugin-clean-css": "^1.5.0",
+		"marked": "~2.0.1",
+		"plop": "^2.6.0",
+		"prettier": "^2.2.1",
+		"ramda": "^0.27.1",
+		"serve": "11.3.2",
+		"walk": "^2.3.0"
+	}
 }

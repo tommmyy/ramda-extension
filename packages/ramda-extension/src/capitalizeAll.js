@@ -21,5 +21,3 @@ import { replace, toUpper, unless, isNil } from 'ramda';
 const capitalizeAll = unless(isNil, replace(/(\b\w(?!\s))/g, toUpper));
 
 export default capitalizeAll;
-
-

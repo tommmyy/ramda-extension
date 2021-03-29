@@ -14,6 +14,8 @@ describe('ensureArray', () => {
 
 	it('should keep arrays as is', () => {
 		expect(ensureArray(['an array item yo.'])).toEqual(['an array item yo.']);
-		expect(ensureArray([['yoNestedArrayItem']])).toEqual([['yoNestedArrayItem']]);
+		expect(ensureArray([['yoNestedArrayItem']])).toEqual([
+			['yoNestedArrayItem'],
+		]);
 	});
 });

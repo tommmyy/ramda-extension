@@ -1,6 +1,5 @@
 import { is } from 'ramda';
 
-
 /**
  * Returns true if argument is RegExp.
  *

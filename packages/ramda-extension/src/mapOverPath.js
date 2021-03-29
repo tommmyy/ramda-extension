@@ -1,6 +1,5 @@
-import {identity, lensPath, useWith} from 'ramda';
+import { identity, lensPath, useWith } from 'ramda';
 import mapOver from './mapOver';
-
 
 /**
  * Maps over a specific path on a list of objects, it returns a new list of objects

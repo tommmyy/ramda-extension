@@ -1,4 +1,4 @@
-import {identity, lensProp, useWith} from 'ramda';
+import { identity, lensProp, useWith } from 'ramda';
 import mapOver from './mapOver';
 
 /**

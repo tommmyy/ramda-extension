@@ -1,4 +1,13 @@
-import { flip, prepend, apply, last, juxt, compose, identity, useWith } from 'ramda';
+import {
+	flip,
+	prepend,
+	apply,
+	last,
+	juxt,
+	compose,
+	identity,
+	useWith,
+} from 'ramda';
 
 import mapKeysAndValues from './mapKeysAndValues';
 

@@ -1,7 +1,6 @@
 import { complement } from 'ramda';
 import dotPathSatisfies from './dotPathSatisfies';
 
-
 /**
  * Returns `true` if the specified object property at given dot path not satisfies the given predicate; false otherwise.
  *

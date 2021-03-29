@@ -1,7 +1,6 @@
 import { complement } from 'ramda';
 import dotPathEq from './dotPathEq';
 
-
 /**
  * Determines whether a dot path on an object has a specific value
  * in `R_.notEqual` terms.

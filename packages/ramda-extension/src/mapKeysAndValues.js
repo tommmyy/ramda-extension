@@ -16,5 +16,3 @@ import { useWith, compose, map, fromPairs, toPairs, identity } from 'ramda';
 const mapKeysAndValues = useWith(compose(fromPairs, map), [identity, toPairs]);
 
 export default mapKeysAndValues;
-
-

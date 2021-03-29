@@ -5,7 +5,10 @@ describe('rejectEq', () => {
 		expect(rejectEq).toBeDefined();
 	});
 	it('should filter values that equals to first argument', () => {
-		expect(rejectEq('foo', ['foo', 'bar', 'foo', 'bar'])).toEqual(['bar', 'bar']);
+		expect(rejectEq('foo', ['foo', 'bar', 'foo', 'bar'])).toEqual([
+			'bar',
+			'bar',
+		]);
 	});
 	it('should support currying', () => {
 		const rejectFoo = rejectEq('foo');

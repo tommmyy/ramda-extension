@@ -15,16 +15,6 @@ describe('flattenValues', () => {
 				['haha', 'hi'],
 				['haha', { foo: 'hi' }],
 			])
-		).toEqual([
-			'hi',
-			'bar',
-			'hi',
-			'cuuus',
-			'hi',
-			'haha',
-			'hi',
-			'haha',
-			'hi',
-		]);
+		).toEqual(['hi', 'bar', 'hi', 'cuuus', 'hi', 'haha', 'hi', 'haha', 'hi']);
 	});
 });

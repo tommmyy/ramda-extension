@@ -1,4 +1,15 @@
-import { compose, filter, identity, when, anyPass, flatten, values, mapObjIndexed, map, into } from 'ramda';
+import {
+	compose,
+	filter,
+	identity,
+	when,
+	anyPass,
+	flatten,
+	values,
+	mapObjIndexed,
+	map,
+	into,
+} from 'ramda';
 import flattenArgs from './flattenArgs';
 import joinWithSpace from './joinWithSpace';
 import isObject from './isObject';
@@ -8,11 +19,7 @@ import isNumber from './isNumber';
 const filterFalsy = filter(identity);
 const keepObjectStringNumber = filter(anyPass([isObject, isString, isNumber]));
 const keepKeyIfValueIsTruthy = mapObjIndexed((v, k) => v && k);
-const destructObject = compose(
-	filterFalsy,
-	values,
-	keepKeyIfValueIsTruthy
-);
+const destructObject = compose(filterFalsy, values, keepKeyIfValueIsTruthy);
 
 const transduceArgs = into(
 	[],
@@ -44,11 +51,6 @@ const transduceArgs = into(
  *
  * @sig String | [String] | Object -> String
  */
-const cx = compose(
-	joinWithSpace,
-	flatten,
-	transduceArgs,
-	flattenArgs
-);
+const cx = compose(joinWithSpace, flatten, transduceArgs, flattenArgs);
 
 export default cx;

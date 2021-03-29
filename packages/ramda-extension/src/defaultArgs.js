@@ -56,10 +56,7 @@ const createTransformationPipeWithSuppliedFn = o(
 );
 
 const waitForArguments = pipe2(argumentsToList);
-const callInputsAndWaitForArguments = pipe(
-	call,
-	waitForArguments
-);
+const callInputsAndWaitForArguments = pipe(call, waitForArguments);
 
 /**
  * Creates default arguments for given function

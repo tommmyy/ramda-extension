@@ -9,7 +9,7 @@ describe('pathNotSatisfies', () => {
 		});
 
 	const positive = (x) => x > 0;
-	itHelper(positive, ['a', 'b'], { }, true);
+	itHelper(positive, ['a', 'b'], {}, true);
 	itHelper(positive, ['a', 'b'], { a: { b: -2 } }, true);
 	itHelper(positive, ['a', 'b'], { a: { b: 3 } }, false);
 });

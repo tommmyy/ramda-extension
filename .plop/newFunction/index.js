@@ -45,10 +45,7 @@ module.exports = {
 		},
 		{
 			type: 'append',
-			path: path.join(
-				rootDir,
-				'packages/ramda-extension/src/index.js'
-			),
+			path: path.join(rootDir, 'packages/ramda-extension/src/index.js'),
 			templateFile: path.join(__dirname, './root.js.hbs'),
 			separator: '',
 			pattern: /\n$/gi,

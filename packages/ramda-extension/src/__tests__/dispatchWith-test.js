@@ -5,10 +5,7 @@ const notFalse = R.complement(R.equals)(false);
 
 describe('dispatchWith', () => {
 	it('should return first not false result', () => {
-		expect(dispatchWith(
-			notFalse,
-			[R.F, R.identity, R.F]
-		)(3)).toBe(3);
+		expect(dispatchWith(notFalse, [R.F, R.identity, R.F])(3)).toBe(3);
 	});
 
 	it('should be variadic', () => {
@@ -20,9 +17,8 @@ describe('dispatchWith', () => {
 	});
 
 	it('should return undefined', () => {
-		expect(dispatchWith(
-			notFalse,
-			[R.F, R.identity, R.F]
-		)(false)).toBe(undefined);
+		expect(dispatchWith(notFalse, [R.F, R.identity, R.F])(false)).toBe(
+			undefined
+		);
 	});
 });

@@ -5,6 +5,6 @@ describe('equalsToEmptyObject', () => {
 		expect(equalsToEmptyObject({})).toBe(true);
 	});
 	it('return false', () => {
-		expect(equalsToEmptyObject({ramda: true})).toBe(false);
+		expect(equalsToEmptyObject({ ramda: true })).toBe(false);
 	});
 });

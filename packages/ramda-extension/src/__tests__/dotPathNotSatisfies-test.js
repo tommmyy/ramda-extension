@@ -11,7 +11,7 @@ describe('dotPathNotSatisfies', () => {
 	const positive = (y) => y > 0;
 
 	itHelper(positive, 'a.b', {}, true);
-	itHelper(positive, 'a.b', { a: { b: 1} }, false);
+	itHelper(positive, 'a.b', { a: { b: 1 } }, false);
 	itHelper(positive, 'a.b', { a: { c: 3 } }, true);
-	itHelper(positive, 'a.c', { a: { b: -3} }, true);
+	itHelper(positive, 'a.c', { a: { b: -3 } }, true);
 });

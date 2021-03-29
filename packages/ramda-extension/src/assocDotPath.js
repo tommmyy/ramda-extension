@@ -23,6 +23,9 @@ import overHead from './overHead';
  *
  * @sig String -> a -> b
  */
-const assocDotPath = curryN(2, compose(apply(assocPath), overHead(splitByDoth), argumentsToList));
+const assocDotPath = curryN(
+	2,
+	compose(apply(assocPath), overHead(splitByDoth), argumentsToList)
+);
 
 export default assocDotPath;

@@ -15,6 +15,9 @@ import { emptyString } from './internal/primitives';
  * @sig String -> [String]
  *
  */
-const splitByNonAlphaNumeric = o(reject(equals(emptyString)), split(nonAlphaNumericRegExp));
+const splitByNonAlphaNumeric = o(
+	reject(equals(emptyString)),
+	split(nonAlphaNumericRegExp)
+);
 
 export default splitByNonAlphaNumeric;

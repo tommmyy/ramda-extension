@@ -1,7 +1,6 @@
 import { pathEq, identity, useWith } from 'ramda';
 import splitByDoth from './splitByDot';
 
-
 /**
  * Determines whether a dot path on an object has a specific value
  * in `R.equals` terms.

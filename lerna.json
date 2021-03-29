@@ -1,0 +1,15 @@
+{
+	"packages": ["packages/*"],
+	"command": {
+		"init": {
+			"exact": true
+		},
+		"publish": {
+			"ignoreChanges": ["*.md", "test/**"],
+			"conventionalCommits": true
+		}
+	},
+	"npmClient": "yarn",
+	"useWorkspaces": true,
+	"version": "0.0.0"
+}

@@ -1,7 +1,6 @@
 import { pathOr, identity, useWith } from 'ramda';
 import splitByDoth from './splitByDot';
 
-
 /**
  * If the given, non-null object has a value at the given dot path,
  * returns the value at that path. Otherwise returns the provided default value.

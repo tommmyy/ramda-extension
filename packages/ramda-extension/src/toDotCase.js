@@ -16,9 +16,6 @@ import joinWithDot from './joinWithDot';
  *
  * @sig String -> String
  */
-const toDotCase = o(
-	joinWithDot,
-	o(map(toLower), splitByNonAlphaNumeric)
-);
+const toDotCase = o(joinWithDot, o(map(toLower), splitByNonAlphaNumeric));
 
 export default toDotCase;

@@ -3,12 +3,14 @@ import { isNumber } from '../';
 
 describe('isNumber', () => {
 	it('returns true for numbers', () => {
-		expect(all(equals(true), [
-			isNumber(Infinity),
-			isNumber(NaN),
-			isNumber(1),
-			isNumber(1.1),
-		])).toBeTruthy();
+		expect(
+			all(equals(true), [
+				isNumber(Infinity),
+				isNumber(NaN),
+				isNumber(1),
+				isNumber(1.1),
+			])
+		).toBeTruthy();
 	});
 
 	it('returns false for infinite numbers and non-number types', () => {

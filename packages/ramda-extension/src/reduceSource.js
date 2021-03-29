@@ -1,4 +1,4 @@
-import { converge, reduce, nthArg, partialRight, unapply, tail} from 'ramda';
+import { converge, reduce, nthArg, partialRight, unapply, tail } from 'ramda';
 import headArg from './headArg';
 /**
  * Extends the reduce functionality by adding the original accumulator value
@@ -23,19 +23,13 @@ import headArg from './headArg';
  *
  * @sig ((a, b, a, [b]) -> a) -> a -> [b] -> a
  */
-const reduceSource = converge(
-	reduce,
-	[
-		converge(
-			partialRight,
-			[
-				headArg, // iteratorFn
-				unapply(tail), // [accumulator, list]
-			]
-		),
-		nthArg(1), // accumulator
-		nthArg(2), // list
-	],
-);
+const reduceSource = converge(reduce, [
+	converge(partialRight, [
+		headArg, // iteratorFn
+		unapply(tail), // [accumulator, list]
+	]),
+	nthArg(1), // accumulator
+	nthArg(2), // list
+]);
 
 export default reduceSource;

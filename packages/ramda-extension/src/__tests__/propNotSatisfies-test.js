@@ -10,7 +10,7 @@ describe('propNotSatisfies', () => {
 
 	const positive = (x) => x > 0;
 
-	itHelper(positive, 'a', { }, true);
+	itHelper(positive, 'a', {}, true);
 	itHelper(positive, 'a', { a: -1 }, true);
 	itHelper(positive, 'a', { a: 3 }, false);
 });

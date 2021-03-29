@@ -9,8 +9,10 @@
 		"test:js": "jest --config=./jest.config.json",
 		"test:watch": "yarn test:js -- --watch",
 		"test:coverage": "yarn test:js -- --coverage",
-		"build": "yarn ramda-extension build && yarn docs build",
-		"prepare": "husky install",
+		"build": "yarn ramda-extension build",
+		"build:docs": "yarn docs build",
+		"publish:docs": "yarn docs publishToFirebase",
+		"prepare": "husky install && yarn ramda-extension build",
 		"format": "prettier --ignore-path .gitignore --write '**/*.{js,json}' && yarn lint --fix",
 		"lint": "eslint --ext .js ./packages",
 		"lint:fix": "yarn lint --fix",
@@ -19,7 +21,7 @@
 		"docs": "yarn workspace ramda-extension-docs",
 		"postinstall": "husky install",
 		"prepublishOnly": "pinst --disable",
-		"postpublish": "pinst --enable"
+		"postpublishOnly": "pinst --enable && yarn publishDocs"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.12.8",

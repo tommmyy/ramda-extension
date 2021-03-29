@@ -5,7 +5,8 @@
 	"description": "ramda-extension website",
 	"license": "Apache-2.0",
 	"scripts": {
-		"publishToFirebase": "yarn build && node ./tools/publishToFirebase",
+		"publishToFirebase": "yarn build && yarn deployToFirebase",
+		"deployToFirebase": "yarn build && node ./tools/deployToFirebase.js",
 		"build": "node ./tools/build",
 		"start": "yarn build && serve -p 3333 public"
 	},

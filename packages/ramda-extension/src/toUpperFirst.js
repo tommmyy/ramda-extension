@@ -1,4 +1,6 @@
-import { o, join, adjust, toUpper } from 'ramda';
+import { o, join, adjust, toUpper, unless, isEmpty } from 'ramda';
+
+const adjustFirstLetter = o(join(''), adjust(0, toUpper));
 
 /**
  * Capitalize first letter.
@@ -8,10 +10,11 @@ import { o, join, adjust, toUpper } from 'ramda';
  *
  * @example
  *
+ *        R_.toUpperFirst('') // ''
  *        R_.toUpperFirst('hello world') // 'Hello world'
  *
  * @sig String -> String
  */
-const toUpperFirst = o(join(''), adjust(0, toUpper));
+const toUpperFirst = unless(isEmpty, adjustFirstLetter);
 
 export default toUpperFirst;

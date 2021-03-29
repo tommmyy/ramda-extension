@@ -51,9 +51,7 @@ export default [
 			indent: false,
 			globals,
 		},
-		external: (x) => x.includes('ramda'),
 		plugins: [
-			// Bundle all in one file for umd distribution for `validarium` package
 			replace({ 'process.env.NODE_ENV': JSON.stringify('development') }),
 			autoExternal(),
 			plugins.nodeResolve,
@@ -65,7 +63,6 @@ export default [
 	// UMD Production
 	{
 		input: INPUT_FILE,
-		external: (x) => x.includes('ramda'),
 		output: {
 			file: path.join(PACKAGE_ROOT_PATH, 'dist', `${fileName}.min.js`),
 			format: 'umd',
@@ -74,7 +71,6 @@ export default [
 			globals,
 		},
 		plugins: [
-			// Bundle all in one file for umd distribution for `validarium` package
 			autoExternal(),
 			replace({ 'process.env.NODE_ENV': JSON.stringify('production') }),
 			plugins.nodeResolve,

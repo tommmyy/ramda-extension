@@ -5,10 +5,7 @@ describe('defaultArgs', () => {
 	const calledFn = (...args) => args;
 	it('should default arguments - args and input same length', () => {
 		expect(
-			defaultArgs(['default1', 'default2'], calledFn)(
-				undefined,
-				'defined'
-			)
+			defaultArgs(['default1', 'default2'], calledFn)(undefined, 'defined')
 		).toEqual(['default1', 'defined']);
 	});
 	it('should default arguments - args are bigger than input', () => {

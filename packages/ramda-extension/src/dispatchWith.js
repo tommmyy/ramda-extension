@@ -2,10 +2,7 @@ import { converge, compose, call, juxt, cond, map, last } from 'ramda';
 import applyCompose from './applyCompose';
 import xPairs from './xPairs';
 
-const getPredicates = compose(
-	map(juxt([applyCompose, last])),
-	xPairs
-);
+const getPredicates = compose(map(juxt([applyCompose, last])), xPairs);
 
 /**
  * Returns first result from evaluation of functions in the list, that satisfies predicate.

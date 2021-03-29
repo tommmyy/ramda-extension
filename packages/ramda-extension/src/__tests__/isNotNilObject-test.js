@@ -1,7 +1,6 @@
 import isNotNilObject from '../isNotNilObject';
 import { formatJSVal } from '../testUtils';
 
-
 describe('isNotNilObject', () => {
 	const itHelper = (input, expected) =>
 		it(`${formatJSVal(input)} should be ${expected}`, () => {

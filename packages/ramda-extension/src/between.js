@@ -17,7 +17,6 @@ import { curry } from 'ramda';
 
  */
 
-
 const between = curry((min, max, val) => {
 	if (val >= min && val <= max) {
 		return true;

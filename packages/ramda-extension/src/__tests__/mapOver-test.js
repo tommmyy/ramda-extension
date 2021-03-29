@@ -1,13 +1,9 @@
 import { mapOver } from '../';
-import {add, lensProp} from 'ramda';
+import { add, lensProp } from 'ramda';
 
 describe('mapOver', () => {
 	it('Changes the specified property', () => {
-		const objs = [
-			{ value: 1 },
-			{ value: 2 },
-			{ value: 3 },
-		];
+		const objs = [{ value: 1 }, { value: 2 }, { value: 3 }];
 
 		const lensValue = lensProp('value');
 

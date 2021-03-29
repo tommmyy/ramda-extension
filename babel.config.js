@@ -15,8 +15,6 @@ module.exports = (api) => {
 				},
 			],
 		],
-		plugins: [
-			...(api.env('es') ? ['babel-plugin-annotate-pure-calls'] : []),
-		],
+		plugins: [...(api.env('es') ? ['babel-plugin-annotate-pure-calls'] : [])],
 	};
 };

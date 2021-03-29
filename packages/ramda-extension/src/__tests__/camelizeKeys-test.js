@@ -10,8 +10,7 @@ describe('camelizeKeys', () => {
 		).toEqual({
 			fooBar: '',
 			fooBaz: '',
-		})
-	);
+		}));
 
 	it('should handle objects recursively', () =>
 		expect(
@@ -28,8 +27,7 @@ describe('camelizeKeys', () => {
 				fooBar: '',
 				fooBaz: '',
 			},
-		})
-	);
+		}));
 
 	it('should handle functions as values in objects', () => {
 		const fn = () => {};
@@ -56,18 +54,24 @@ describe('camelizeKeys', () => {
 			fooBar: '',
 			fooBaz: 1,
 			fooBoo: true,
-		})
-	);
+		}));
 
 	it('should handle arrays', () =>
-		expect(camelizeKeys([{ 'foo-bar': '' }, { 'foo-bar': '' }])).toEqual([{ fooBar: '' }, { fooBar: '' }])
-	);
+		expect(camelizeKeys([{ 'foo-bar': '' }, { 'foo-bar': '' }])).toEqual([
+			{ fooBar: '' },
+			{ fooBar: '' },
+		]));
 
 	it('should handle arrays recursively', () =>
-		expect(camelizeKeys([{ 'foo-bar': '' }, { 'foo-bar': '' }, [{ 'foo-bar': '' }, { 'foo-bar': '' }]])).toEqual([
+		expect(
+			camelizeKeys([
+				{ 'foo-bar': '' },
+				{ 'foo-bar': '' },
+				[{ 'foo-bar': '' }, { 'foo-bar': '' }],
+			])
+		).toEqual([
 			{ fooBar: '' },
 			{ fooBar: '' },
 			[{ fooBar: '' }, { fooBar: '' }],
-		])
-	);
+		]));
 });

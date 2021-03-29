@@ -32,11 +32,7 @@ const unfoldObjectDots = o(
 	mapObjIndexed(
 		useWith(flip(call), [
 			identity,
-			compose(
-				applyCompose,
-				map(objOf),
-				splitByDot
-			),
+			compose(applyCompose, map(objOf), splitByDot),
 		])
 	)
 );

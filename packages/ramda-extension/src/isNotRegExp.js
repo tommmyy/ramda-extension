@@ -1,7 +1,6 @@
 import { complement } from 'ramda';
 import isRegExp from './isRegExp';
 
-
 /**
  * Returns true if argument is not RegExp.
  *

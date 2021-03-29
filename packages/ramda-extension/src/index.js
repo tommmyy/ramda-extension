@@ -44,13 +44,9 @@ export { default as dispatch } from './dispatch';
 export { default as dispatchWith } from './dispatchWith';
 export { default as noop } from './noop';
 export { default as startsWithPrefix } from './startsWithPrefix';
-export {
-	default as startsWithPrefixIgnoreCase,
-} from './startsWithPrefixIgnoreCase';
+export { default as startsWithPrefixIgnoreCase } from './startsWithPrefixIgnoreCase';
 export { default as endsWithSuffix } from './endsWithSuffix';
-export {
-	default as endsWithSuffixIgnoreCase,
-} from './endsWithSuffixIgnoreCase';
+export { default as endsWithSuffixIgnoreCase } from './endsWithSuffixIgnoreCase';
 export { default as argumentsToList } from './argumentsToList';
 export { default as containsAll } from './containsAll';
 export { default as containsAny } from './containsAny';

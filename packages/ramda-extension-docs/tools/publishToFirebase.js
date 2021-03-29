@@ -1,3 +1,3 @@
 const { spawnSync } = require('child_process');
 
-spawnSync('firebase', ['deploy'], { stdio: 'inherit'});
+spawnSync('firebase', ['deploy'], { stdio: 'inherit' });

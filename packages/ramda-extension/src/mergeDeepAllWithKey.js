@@ -30,6 +30,9 @@ import { __, useWith, reduce, mergeDeepWithKey, identity } from 'ramda';
  * @sig ((String, a, a) -> a) -> [{a}] -> {a}
  */
 
-const mergeDeepAllWithKey = useWith(reduce(__, {}), [mergeDeepWithKey, identity]);
+const mergeDeepAllWithKey = useWith(reduce(__, {}), [
+	mergeDeepWithKey,
+	identity,
+]);
 
 export default mergeDeepAllWithKey;

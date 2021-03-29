@@ -42,9 +42,16 @@ describe('reduceSource', () => {
 	});
 	it('has working examples', () => {
 		// (1+1+1) + (2+3+1) + (3+6+1) => 10
-		const example1 = reduceSource((acc, v, sAcc) => v + acc + sAcc, 1, [1, 2, 3]);
+		const example1 = reduceSource((acc, v, sAcc) => v + acc + sAcc, 1, [
+			1,
+			2,
+			3,
+		]);
 		// (0+1+0+1+2) + (4+2+0+1+2) => 9
-		const example2 = reduceSource(R.pipe(R.unapply(R.flatten), R.sum), 0, [1, 2]);
+		const example2 = reduceSource(R.pipe(R.unapply(R.flatten), R.sum), 0, [
+			1,
+			2,
+		]);
 		expect(example1).toBe(10);
 		expect(example2).toBe(9);
 	});

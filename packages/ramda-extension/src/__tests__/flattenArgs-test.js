@@ -11,7 +11,12 @@ describe('flattenArgs', () => {
 		expect(flattenArgs('one', ['two', 'tree'])).toEqual(['one', 'two', 'tree']);
 	});
 	it('should return flatten array from nested array arguments', () => {
-		expect(flattenArgs('one', ['two', ['tree', 'four'], 'five']))
-			.toEqual(['one', 'two', 'tree', 'four', 'five']);
+		expect(flattenArgs('one', ['two', ['tree', 'four'], 'five'])).toEqual([
+			'one',
+			'two',
+			'tree',
+			'four',
+			'five',
+		]);
 	});
 });

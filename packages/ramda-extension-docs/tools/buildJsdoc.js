@@ -5,13 +5,17 @@ const p = require('./utils/p');
 module.exports = () => {
 	console.log('Running JSDoc...');
 
-	spawnSync('jsdoc', [
-		'-c',
-		'.jsdoc.config.json',
-		'--destination',
-		'./docs',
-		'--template',
-		'.',
-		'../ramda-extension/lib',
-	], { cwd: p('../'), stdio: 'inherit'});
+	spawnSync(
+		'jsdoc',
+		[
+			'-c',
+			'.jsdoc.config.json',
+			'--destination',
+			'./docs',
+			'--template',
+			'.',
+			'../ramda-extension/lib',
+		],
+		{ cwd: p('../'), stdio: 'inherit' }
+	);
 };

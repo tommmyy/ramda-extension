@@ -7,10 +7,7 @@ describe('isBoolean', () => {
 	});
 
 	it('returns true for Boolean type', () => {
-		expect(all(equalsToTrue, [
-			isBoolean(true),
-			isBoolean(false),
-		])).toBeTruthy();
+		expect(all(equalsToTrue, [isBoolean(true), isBoolean(false)])).toBeTruthy();
 	});
 
 	it('returns false for non-Boolean type', () => {

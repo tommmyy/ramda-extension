@@ -1,7 +1,6 @@
 import { pathSatisfies, identity, useWith } from 'ramda';
 import splitByDoth from './splitByDot';
 
-
 /**
  * Returns `true` if the specified object property at given dot path satisfies the given predicate; false otherwise.
  *
@@ -23,6 +22,10 @@ import splitByDoth from './splitByDot';
  * @sig (a -> Boolean) → String → {a} → Boolean
  *
  */
-const dotPathSatisfies = useWith(pathSatisfies, [identity, splitByDoth, identity]);
+const dotPathSatisfies = useWith(pathSatisfies, [
+	identity,
+	splitByDoth,
+	identity,
+]);
 
 export default dotPathSatisfies;

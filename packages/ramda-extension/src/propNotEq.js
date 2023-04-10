@@ -8,11 +8,11 @@ import { complement, propEq } from 'ramda';
  *
  * @example
  *
- *        R_.propNotEq('a', 1, { a: 1 })	// false
- *        R_.propNotEq('a', 1, { a: 2 })	// true
- *        R_.propNotEq('a', 1, {})	// true
+ *        R_.propNotEq(1, 'a', { a: 1 })	// false
+ *        R_.propNotEq(1, 'a', { a: 2 })	// true
+ *        R_.propNotEq(1, 'a', {})	// true
  *
- * @sig String → a → Object → Boolean
+ * @sig a → String → Object → Boolean
  */
 const propNotEq = complement(propEq);
 

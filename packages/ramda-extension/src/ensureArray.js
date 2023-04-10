@@ -15,6 +15,6 @@ import isArray from './isArray';
 
  * @sig a -> Array
  */
-const ensureArray = unless(isArray, of);
+const ensureArray = unless(isArray, of(Array));
 
 export default ensureArray;

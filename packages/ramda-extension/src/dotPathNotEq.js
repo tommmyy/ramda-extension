@@ -7,17 +7,17 @@ import dotPathEq from './dotPathEq';
  *
  * @func
  * @category Object
- * @param {String} path The dot path to use.
  * @param {any} eq Value for `R_.notEqual`.
+ * @param {String} path The dot path to use.
  * @param {Object} obj The object to retrieve the nested property from and compare with `eq`.
  * @return {*} True if value on dot path equals to `eq`.
  *
  * @example
  *
- *      R_.dotPathNotEq('a.b', 2, {a: {b: 2}}); //=> false
- *      R_.dotPathNotEq('a.b', 2, {c: {b: 2}}); //=> true
+ *      R_.dotPathNotEq(2, 'a.b', {a: {b: 2}}); //=> false
+ *      R_.dotPathNotEq(2, 'a.b', {c: {b: 2}}); //=> true
  *
- * @sig String -> a -> {a} -> Boolean
+ * @sig a -> String -> {a} -> Boolean
  *
  */
 const dotPathNotEq = complement(dotPathEq);

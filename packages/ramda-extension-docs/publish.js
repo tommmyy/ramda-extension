@@ -35,7 +35,7 @@ const simplifySee = R.pipe(
 	R.map(R.replace(/^R[.]/, ''))
 );
 
-const titleFilter = pipe(R.propEq('title'), R.filter);
+const titleFilter = pipe(R.propEq(R._, 'title'), R.filter);
 
 const valueProp = R.chain(prop('value'));
 

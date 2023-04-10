@@ -14,6 +14,6 @@ import { of, identity, useWith, xprod } from 'ramda';
  *
  * @sig a -> [b] -> [[a, b]]
  */
-const xPairs = useWith(xprod, [of, identity]);
+const xPairs = useWith(xprod, [of(Array), identity]);
 
 export default xPairs;

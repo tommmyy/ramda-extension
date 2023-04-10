@@ -3,14 +3,14 @@ import { dotPathEq } from '../';
 const s = (x) => JSON.stringify(x, null, 2);
 
 describe('dotPathEq', () => {
-	const itHelper = (path, eq, x, result) =>
+	const itHelper = (eq, path, x, result) =>
 		it(`for path ${s(path)}, value to equal ${s(eq)} object ${s(
 			x
 		)} returns ${result}`, () => {
-			expect(dotPathEq(path)(eq)(x)).toEqual(result);
+			expect(dotPathEq(eq)(path)(x)).toEqual(result);
 		});
 
-	itHelper('a.b', 3, {}, false);
-	itHelper('a.b', 3, { a: { b: 1 } }, false);
-	itHelper('a.b', 3, { a: { b: 3 } }, true);
+	itHelper(3, 'a.b', {}, false);
+	itHelper(3, 'a.b', { a: { b: 1 } }, false);
+	itHelper(3, 'a.b', { a: { b: 3 } }, true);
 });

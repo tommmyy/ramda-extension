@@ -20,7 +20,7 @@ const performMerge = converge(call, [nthArg(1), resolveDotPath, nthArg(2)]);
  * @return {Object} A new object with merge data
  * @example
  *
- *      R_.mergeWithDotPath('a.b', R.merge, { d: 30 }, {a: {b: { c: 20 }}}); //=> {a: {b: { c: 20, d: 30 }}}
+ *      R_.mergeWithDotPath('a.b', R.mergeRight, { d: 30 }, {a: {b: { c: 20 }}}); //=> {a: {b: { c: 20, d: 30 }}}
  */
 const mergeWithDotPath = converge(assocDotPath, [
 	headArg,

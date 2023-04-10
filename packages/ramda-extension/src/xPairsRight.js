@@ -14,6 +14,6 @@ import { useWith, flip, xprod, of, identity } from 'ramda';
  *
  * @sig a -> [b] -> [[b, a]]
  */
-const xPairsRight = useWith(flip(xprod), [of, identity]);
+const xPairsRight = useWith(flip(xprod), [of(Array), identity]);
 
 export default xPairsRight;

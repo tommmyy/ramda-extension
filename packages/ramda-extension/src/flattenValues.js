@@ -34,7 +34,7 @@ const recursiveObject = (r) => o(flattenValues, values)(r);
 const flattenValues = cond([
 	[isArray, recursiveArray],
 	[isObject, recursiveObject],
-	[T, of],
+	[T, of(Array)],
 ]);
 
 export default flattenValues;

@@ -19,7 +19,7 @@
 		"generate": "plop --plopfile ./.plop/plopfile.js",
 		"ramda-extension": "yarn workspace ramda-extension",
 		"docs": "yarn workspace ramda-extension-docs",
-		"postinstall": "husky install",
+		"_postinstall": "husky install",
 		"prepublish": "pinst --disable",
 		"postpublish": "pinst --enable && yarn publish:docs"
 	},

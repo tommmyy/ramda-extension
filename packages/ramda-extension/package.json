@@ -64,7 +64,7 @@
 		"clean": "rimraf es lib dist"
 	},
 	"peerDependencies": {
-		"ramda": ">=0.26.1"
+		"ramda": ">=0.29.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.12.8",
@@ -78,7 +78,7 @@
 		"classnames": "^2.2.6",
 		"escope": "3.6.0",
 		"fs-extra": "^9.1.0",
-		"ramda": "^0.27.1",
+		"ramda": "^0.29.0",
 		"rimraf": "3.0.2",
 		"rollup": "^2.43.1",
 		"rollup-plugin-auto-external": "^2.0.0",

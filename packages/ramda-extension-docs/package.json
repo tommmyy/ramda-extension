@@ -11,7 +11,7 @@
 		"start": "yarn build && serve -p 3333 public"
 	},
 	"devDependencies": {
-		"bootstrap": "^4.6.0",
+		"bootstrap": "^3.0.0",
 		"eslint": "^7.23.0",
 		"fs-extra": "^9.1.0",
 		"handlebars": "^4.7.7",
@@ -23,7 +23,7 @@
 		"marked": "~2.0.1",
 		"plop": "^2.6.0",
 		"prettier": "^2.2.1",
-		"ramda": "^0.27.1",
+		"ramda": "^0.29.0",
 		"serve": "11.3.2",
 		"walk": "^2.3.0"
 	}

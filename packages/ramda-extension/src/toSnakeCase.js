@@ -1,5 +1,5 @@
 import { o, map, toLower } from 'ramda';
-import splitByNonAlphaNumeric from './splitByNonAlphaNumeric';
+import splitByNonDowncaseAlphaNumeric from './splitByNonDowncaseAlphaNumeric';
 import joinWithUnderscore from './joinWithUnderscore';
 
 /**
@@ -13,12 +13,13 @@ import joinWithUnderscore from './joinWithUnderscore';
  *        R_.toSnakeCase('hello-world')		// 'hello_world'
  *        R_.toSnakeCase('hello- world')		// 'hello_world'
  *        R_.toSnakeCase('  hello-/ world/ ')	// 'hello_world'
+ *        R_.toSnakeCase('helloWorld')	// 'hello_world'
  *
  * @sig String -> String
  */
 const toSnakeCase = o(
 	joinWithUnderscore,
-	o(map(toLower), splitByNonAlphaNumeric)
+	o(map(toLower), splitByNonDowncaseAlphaNumeric)
 );
 
 export default toSnakeCase;

@@ -62,6 +62,7 @@ export { default as toDotCase } from './toDotCase';
 export { default as toScreamingSnakeCase } from './toScreamingSnakeCase';
 export { default as listToString } from './listToString';
 export { default as splitByNonAlphaNumeric } from './splitByNonAlphaNumeric';
+export { default as splitByNonDowncaseAlphaNumeric } from './splitByNonDowncaseAlphaNumeric';
 export { default as constructRegExp } from './constructRegExp';
 export { default as rejectNil } from './rejectNil';
 export { default as rejectEq } from './rejectEq';

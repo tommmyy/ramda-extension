@@ -53,6 +53,7 @@ export { default as containsAny } from './containsAny';
 export { default as containsNone } from './containsNone';
 export { default as unfoldObjectDots } from './unfoldObjectDots';
 export { default as toUpperFirst } from './toUpperFirst';
+export { default as toTitleCase } from './toTitleCase';
 export { default as toLowerFirst } from './toLowerFirst';
 export { default as toCamelCase } from './toCamelCase';
 export { default as toPascalCase } from './toPascalCase';

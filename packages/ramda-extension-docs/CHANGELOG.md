@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/tommmyy/ramda-extension/compare/v0.12.0...v0.13.0) (2025-04-01)
+
+
+### Features
+
+* docs ([845ac31](https://github.com/tommmyy/ramda-extension/commit/845ac31e71dd0ad8c6ca3c55be97b5a9666487f9))
+
+
+
+
+
 # [0.12.0](https://github.com/tommmyy/ramda-extension/compare/v0.11.0...v0.12.0) (2023-04-10)
 
 

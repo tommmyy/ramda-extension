@@ -22,9 +22,9 @@
 		"camelizeKeys"
 	],
 	"description": "Helpful functions built on top of the mighty Ramda",
-	"unpkg": "dist/ramda-extension.js",
-	"module": "es/index.js",
-	"main": "lib/index.js",
+	"unpkg": "dist/ramda-extension.min.js",
+	"module": "./es/index.js",
+	"main": "./lib/index.js",
 	"files": [
 		"es",
 		"lib",
@@ -64,7 +64,7 @@
 		"clean": "rimraf es lib dist"
 	},
 	"peerDependencies": {
-		"ramda": ">=0.29.0"
+		"ramda": ">=0.30.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.12.8",
@@ -78,11 +78,24 @@
 		"classnames": "^2.2.6",
 		"escope": "3.6.0",
 		"fs-extra": "^9.1.0",
-		"ramda": "^0.29.0",
+		"ramda": "^0.30.1",
 		"rimraf": "3.0.2",
 		"rollup": "^2.43.1",
 		"rollup-plugin-auto-external": "^2.0.0",
 		"rollup-plugin-babel": "^4.4.0",
 		"rollup-plugin-terser": "^7.0.2"
+	},
+	"exports": {
+		".": {
+			"require": "./lib/index.js",
+			"import": "./es/index.js",
+			"default": "./lib/index.js"
+		},
+		"./es/*": "./es/*.js",
+		"./lib/*": "./lib/*.js",
+		"./dist/*": "./dist/*.js",
+		"./es/": "./es/",
+		"./lib/": "./lib/",
+		"./dist/": "./dist/"
 	}
 }

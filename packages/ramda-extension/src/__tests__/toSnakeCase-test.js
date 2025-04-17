@@ -9,6 +9,7 @@ describe('toSnakeCase', () => {
 		toSnakeCaseUtil('hello-', 'hello');
 		toSnakeCaseUtil('   hello  ', 'hello');
 		toSnakeCaseUtil('hello world', 'hello_world');
-		toSnakeCaseUtil('hello world AND univerSe', 'hello_world_and_universe');
+		toSnakeCaseUtil('hello world AND universe', 'hello_world_and_universe');
+		toSnakeCaseUtil('fooBar', 'foo_bar');
 	});
 });

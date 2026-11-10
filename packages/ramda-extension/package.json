@@ -58,7 +58,7 @@
 	"sideEffects": false,
 	"scripts": {
 		"build": "yarn clean && yarn build:es && yarn build:cjs && yarn build:umd",
-		"build:es": "cross-env BABEL_ENV=es babel --ignore '**/__tests__/*.js'  --root-mode upward src --out-dir es",
+		"build:es": "cross-env BABEL_ENV=es babel --ignore '**/__tests__/*.js'  --root-mode upward src --out-dir es && node -e \"require('fs').writeFileSync('es/package.json', JSON.stringify({ type: 'module' }) + '\\n')\"",
 		"build:cjs": "cross-env BABEL_ENV=commonjs babel --ignore '**/__tests__/*.js'  --root-mode upward src --out-dir lib",
 		"build:umd": "rollup -c ./rollup.config.js",
 		"clean": "rimraf es lib dist"

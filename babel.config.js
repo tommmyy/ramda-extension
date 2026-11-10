@@ -1,6 +1,27 @@
+const addImportExtension = () => {
+	const addExtension = (nodePath) => {
+		const source = nodePath.node.source;
+
+		if (
+			source &&
+			/^\.\.?\//.test(source.value) &&
+			!/\.[cm]?js$/.test(source.value)
+		) {
+			source.value = `${source.value}.js`;
+		}
+	};
+
+	return {
+		visitor: {
+			ImportDeclaration: addExtension,
+			ExportNamedDeclaration: addExtension,
+			ExportAllDeclaration: addExtension,
+		},
+	};
+};
+
 module.exports = (api) => {
 	const env = api.env();
-
 	return {
 		presets: [
 			[
@@ -15,6 +36,9 @@ module.exports = (api) => {
 				},
 			],
 		],
-		plugins: [...(api.env('es') ? ['babel-plugin-annotate-pure-calls'] : [])],
+		plugins:
+			env === 'es'
+				? ['babel-plugin-annotate-pure-calls', addImportExtension]
+				: [],
 	};
 };
